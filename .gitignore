@@ -5,6 +5,7 @@
 .jekyll-metadata
 .ruby-version
 /_assets/
+/_build/
 /_common/root/
 /_data/
 /_includes/
@@ -20,6 +21,7 @@ bs-config.js
 build-docs.sh
 copy_content.sh
 copy_local.sh
+modify-config.sh
 Dockerfile
 Gemfile
 Gemfile.lock
