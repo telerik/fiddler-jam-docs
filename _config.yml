@@ -1,5 +1,5 @@
 # The public documentation URL, used for sitemap.xml
-url: "https://docs.telerik.com/telerik-product-dev"
+url: "https://docs.telerik.com/fiddler-jam"
 
 # Exclude files which should not be in the output
 exclude: [README.md, Gemfile, Gemfile.lock]
@@ -36,10 +36,10 @@ has_api_reference: false
 ff-sheet-id: 3e851bb4-5930-46e5-98d6-4fda8cd0bcc9
 
 # The google services configuration
-google_analytics: UA-111455-1
-google_tag_manager: GTM-6X92
-gcs_engine: '1111111111:aaaaaaa'
-gcs_api_key: 'AAAAA-ZZZZZZZZZZZZZZZZZz'
+google_analytics: UA-111455-1  # TODO after the URLs are confirmed
+google_tag_manager: GTM-6X92 
+gcs_engine: '1111111111:aaaaaaa' # TODO after the URLs are confirmed
+gcs_api_key: 'AAAAA-ZZZZZZZZZZZZZZZZZz' # TODO after the URLs are confirmed
 
 edit_repo_url: https://github.com/telerik/docs-content-seed/edit/master
 
