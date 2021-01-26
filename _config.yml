@@ -1,0 +1,75 @@
+# The public documentation URL, used for sitemap.xml
+url: "https://docs.telerik.com/telerik-product-dev"
+
+# Exclude files which should not be in the output
+exclude: [README.md, Gemfile, Gemfile.lock]
+exclude_navigation: ["knowledge-base/*"]
+
+## List your directory names and order here, like this:
+navigation:
+    getting-started:
+        title: Getting Started
+        position: 1
+
+## Product title
+product: "Progress Telerik Product"
+platform: fiddler-jam
+
+## The application virtual path
+baseurl: /fiddler-jam
+
+## Assign layout and category per different paths
+defaults:
+-
+    scope:
+        path: ""
+    values:
+        layout: "documentation"
+        category: "default"
+        product: "fiddler-jam"
+        editable: false
+
+has_kb_portal: false
+has_api_reference: false
+
+# Feedback Form ID
+ff-sheet-id: 111111111111111111
+
+# The google services configuration
+google_analytics: UA-111455-1
+google_tag_manager: GTM-6X92
+gcs_engine: '1111111111:aaaaaaa'
+gcs_api_key: 'AAAAA-ZZZZZZZZZZZZZZZZZz'
+
+edit_repo_url: https://github.com/telerik/docs-content-seed/edit/master
+
+footer:
+-
+  title: "Getting Started"
+  links:
+    "Download Now": https://www.telerik.com/download
+-
+  title: "Community"
+  links:
+    "Forums": https://www.telerik.com/forums
+    "Blogs": https://www.telerik.com/blogs
+    "Feedback Portal": https://feedback.telerik.com
+  
+footer_social: 
+    facebook: https://www.facebook.com/Telerik/
+    youtube: https://www.youtube.com/user/TelerikInc
+    linkedin: https://www.linkedin.com/showcase/telerik/ 
+    twitter: https://twitter.com/TelerikFiddler/ 
+
+# Assets pipeline configuration
+assets:
+    cachebust: soft
+    js_compressor: uglifier
+
+## Do not edit below this line
+safe: false
+markdown: MarkdownProcessor
+kramdown:
+    toc_levels: 2..3
+    smart_quotes: ["quot", "quot", "quot", "quot"]
+    input: GFM
