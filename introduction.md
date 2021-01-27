@@ -16,4 +16,4 @@ Fiddler Jam logs all HTTP(S) traffic between your Chrome browser and the Interne
 
 ## Installation
 
-Install the Fiddler Jam Chrome extension. <!--TODO add more info here -->
+Install the Fiddler Jam Chrome extension.
