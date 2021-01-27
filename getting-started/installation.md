@@ -12,7 +12,7 @@ position: 10
 
 1. Open **Google Chrome** (or your preffered Chromium browser) on your desktop/laptop.
 2. Ensure you are not on incognito mode.
-3. Open this Chrome Web Store page for Fiddler Jam <!-- TODO update the link once it is published in the extension store -->
+3. Open this Chrome Web Store page for Fiddler Jam.
 4. Click **_Add to Chrome_**.
 5. You will be shown a list of accesses. Click on **_Add extension_**.
 6. The extension can now be accessed by clicking on the icon of the extension on the address bar of Google Chrome.
