@@ -38,8 +38,8 @@ ff-sheet-id: 3e851bb4-5930-46e5-98d6-4fda8cd0bcc9
 # The google services configuration
 google_analytics: UA-111455-1  # TODO after the URLs are confirmed
 google_tag_manager: GTM-6X92 
-gcs_engine: '1111111111:aaaaaaa' # TODO after the URLs are confirmed
-gcs_api_key: 'AAAAA-ZZZZZZZZZZZZZZZZZz' # TODO after the URLs are confirmed
+gcs_engine: '752200f3728b3d92f' # TODO after the URLs are confirmed
+gcs_api_key: 'AIzaSyDb6GdIgfIVlHubf-i0CpahRjtkCz9o6cE' # TODO after the URLs are confirmed
 
 hide_contact_support: true
 edit_repo_url: https://github.com/telerik/docs-content-seed/edit/master
