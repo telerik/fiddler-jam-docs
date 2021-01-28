@@ -1,6 +1,6 @@
 ---
 title: Recording a log
-slug: get-started-recording-logs
+slug: recording-logs
 tags: Fiddler Jam logs, Fiddler Jam capturing, Fiddler Jam recording
 publish: true
 position: 20
