@@ -1,6 +1,6 @@
 ---
 title: Installation
-slug: get-started-installation
+slug: installation
 tags: Fiddler Jam installation, Fiddler Jam Extension, Fiddler chrome extension, Jam Chrome extension
 publish: true
 position: 10

@@ -10,9 +10,12 @@ navigation:
     getting-started:
         title: Getting Started
         position: 10
-    advanced-guides:
-        title: Advanced Guides
+    extension-users:
+        title: Extension Usage
         position: 20
+    web-portal:
+        title: Web Portal
+        position: 30
 ## Product title
 product: "Progress Telerik Fiddler Jam"
 platform: fiddler-jam
