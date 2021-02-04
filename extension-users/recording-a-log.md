@@ -1,7 +1,7 @@
 ---
 title: Recording a log
 slug: recording-logs
-tags: Fiddler Jam logs, Fiddler Jam capturing, Fiddler Jam recording
+tags: redocr Fiddler Jam log, Fiddler Jam logs, Fiddler Jam capturing, Fiddler Jam recording
 publish: true
 position: 20
 ---
@@ -11,7 +11,7 @@ position: 20
 
 Recording the captured traffic is the core action provided by Fiddler Jam. A **Log** in the context of Fiddler Jam is a collection of sessions captured, screenshots and other information after extension user has recorded. The record the ongoing traffic (in the focused browser tab) follow these steps:
 
-1. Launch **Fiddler Jam** by clicking on the extension icon ![Extension main icon](../images/ext-icons/small-logo.png)
+1. Launch **Fiddler Jam** by clicking on the extension icon ![Extension main icon](../images/ext/ext-icons/small-logo.png)
 2. Expand the **_Capture Options_** and choose the preffered settings. For example, you could enable screenshots by enabling the **_Take screenshots while capturing_** switch.
 3. Click on **_Start Capture_** to begin recording. Fiddler Jam will start recording all network activity in your current browser tab.
 4. Google chrome wiil inform you via a message that says _“’Fiddler Jam’ started debugging the browser”_. Do not click on _Cancel_.
