@@ -31,7 +31,7 @@ defaults:
         product: "fiddler"
         editable: true
 
-has_kb_portal: true
+has_kb_portal: false
 has_api_reference: false
 
 # Feedback Form ID generated on 26th of January 2021 (by TM)
