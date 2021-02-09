@@ -1,6 +1,6 @@
 ---
 title: Recording a log
-slug: recording-logs
+slug: fj-recording-logs
 tags: redocr Fiddler Jam log, Fiddler Jam logs, Fiddler Jam capturing, Fiddler Jam recording
 publish: true
 position: 20

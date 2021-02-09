@@ -1,6 +1,6 @@
 ---
 title: Submitting a log
-slug: submitting-logs
+slug: fj-submitting-logs
 tags: submit Fiddler Jam logs, send Fiddler Jam logs, Fiddler Jam logs, Fiddler Jam capturing, Fiddler Jam recording,
 publish: true
 position: 30
