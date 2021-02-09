@@ -12,7 +12,7 @@ position: 30
 Logs captured by Fiddler Jam can be submitted to the web portal, shared via email or saved as Fiddler archive (HAR).
 
 
-1. [Record a log]({%slug recording-logs%}).
+1. [Record a log]({%slug fj-recording-logs%}).
 2. Click on **Stop Capture** to immediatly stop the recording.
 3. Click on **Get Link** to submit the generated log. The action will generate a sharable link for the current user. Additionaly it will also submit the log to the Fiddler Jam cloud space.
 4. When you click on **Copy URL** the unique URL will be copied to your machine’s clipboard. You can paste it into any other place you need.
