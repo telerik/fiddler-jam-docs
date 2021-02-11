@@ -34,13 +34,18 @@ position: 100
 - Save their recordings and share them via the cloud.  
 
 **Your support team (also referred to as [portal users](#fiddler-jam-terminology))) will then...**  
-- Open the customer-provided issue in the **web portal** via a browser.
+- Open the customer-provided issue in the **Fiddler Jam portal** via a browser.
 - Access the protected private workspace where logs are stored.
 - Triage the issue, add context and share with the development team.
 
+
+## What is Fiddler Jam portal?
+
+The [**Fiddler Jam portal**](https://jam.getfiddler.com) is an online space that holds the captured logs. Only registered users have access to the Jam portal, and only users with permission could view a generated log.
+
 ## What is a portal user?
 
-**_A:_** A portal users are accounts created for your organization to access the [Fiddler Jam web portal](https://jam.getfiddler.com/). This includes both support and development.
+**_A:_** A portal users are accounts created for your organization to access the [Fiddler Jam portal](https://jam.getfiddler.com/). This includes both support and development.
 
 ## Who can access details of a submitted log?
 
@@ -62,13 +67,13 @@ position: 100
 
 | Term      |   Description |
 |---    |---    |
-|  extension user  |   end-user who have encountered an issue on your web application |
-|  web portal   |   A central website for accessing call logs stored on the cloud    |
-|   portal user    | account created for your organization to access the web portal. This includes both support and development |
-|   session |   a network activity that is captured by Fiddler. it contains request and response information together   |
-|   log |   a collection of sessions captured, screenshots, and other information after extension user has started to capture and then stopped   |
-|   workspace   |   common location to access all logs submitted for one domain name. sub-domains are treated the same as main domains and will be individual spaces    |
-|  public workspace     |   space to which extension users have submitted sessions, but the domain name does not have any portal users yet   |
-|  private workspace    |   space of a domain name with portal users    |
-|   password protected log  |   log created with a password |
-|   log URL |  direct URL for accessing the submitted log of any space on the web portal    |
+|  extension user  |   End-user who have encountered an issue on your web application |
+|  Fiddler Jam portal   |   A central website for accessing call logs stored on the cloud    |
+|  portal user    | Account created for your organization to access the web portal. This includes both support and development |
+|  session |   A network activity that is captured by Fiddler. it contains request and response information together   |
+|  log |   A collection of sessions captured, screenshots, and other information after extension user has started to capture and then stopped   |
+|  workspace   |   Common location to access all logs submitted for one domain name. sub-domains are treated the same as main domains and will be individual spaces    |
+|  public workspace     |   Space to which extension users have submitted sessions, but the domain name does not have any portal users yet   |
+|  private workspace    |   Space of a domain name with portal users    |
+|  password protected log  |   Log created with a password |
+|  log URL |  Direct URL for accessing the submitted log of any space on the web portal    |
