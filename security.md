@@ -1,6 +1,6 @@
 ---
 title: Security
-slug: security
+slug: fj-security
 tags: Fiddler Jam security, Fiddler Jam password protection, FIddler Jam encryption, Fiddler Jam masked cookies, Fiddler Jam capturing security concernts
 publish: true
 position: 90
