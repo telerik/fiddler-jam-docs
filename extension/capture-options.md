@@ -17,13 +17,13 @@ Fiddler Jam provides several specific capture options. These options allow you t
 
 This option will take a screenshot of each action the users do while capturing progress. Each screenshot will be added to the ongoing recording as a PNG file. The activities that will trigger a screenshot are clickable actions (buttons, following links), interactions with forms, etc. By default, the **_Take screenshots while capturing_** is **enabled**.
 
->important The screenshots will be available only when accessing the recorded log through the Fiddler Jam portal. A recorded log exported as HAR or opened directly in Fiddler Everywhere won't contain screenshots.
+>important The screenshots will be available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [FIddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain screenshots.
 
 ## Capture console
 
 This option will capture everything written in the developer console. By default, the **_Capture console_** is **enabled**.
 
->important The console logs will be available only when accessing the recorded log through the Fiddler Jam portal. A recorded log exported as HAR or opened directly in Fiddler Everywhere won't contain console logs.
+>important The console logs will be available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [FIddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain console logs.
 
 ## Mask cookies
 
