@@ -11,7 +11,7 @@ position: 50
 After [recording a log]({%slug fj-recording-logs%}), the Fiddler Jam extension provides several options for setting the log accessibility through the generated link. Use the **Link Options** drop-down to generate a sharable log with the proper access level.
 
 - [Anyone with this link](#anyone-with-this-link)
-- [Anyone with link and password](anyone-with-link-and-password)
+- [Anyone with link and password](#anyone-with-link-and-password)
 - [Share with specific people](#share-with-specific-people)
 
 ![Link generation options](../images/ext/ext-images/extension-link-options.png)
