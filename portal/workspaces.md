@@ -7,3 +7,5 @@ position: 10
 ---
 
 # Workspaces
+
+The Fiddler Jam portal uses workspaces to save and organize the recorded logs. Users with the [**editor role**]({%slug fj-portal%}) can create, edit and delete a workspace.

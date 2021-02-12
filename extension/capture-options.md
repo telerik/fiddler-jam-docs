@@ -11,6 +11,11 @@ position: 40
 
 Fiddler Jam provides several specific capture options. These options allow you to enable or disable certain functionalities in order to improve the recorded output.
 
+- [Take screenshots while capturing](#take-screenshots-while-capturing)
+- [Capture console](#capture-console)
+- [Mask cookies](#mask-cookies)
+- [Capture post data](#capture-post-data)
+
 ![Fiddler Jam Capture Options](../images/ext/ext-images/extension-capture-options.png)
 
 ## Take screenshots while capturing
