@@ -13,16 +13,16 @@ The [Fiddler Jam portal](https://jam.getfiddler.com) is the cloud space where th
 
 ## Portal
 
-The [Fiddler Jam portal](https://jam.getfiddler.com) is accessible for all users wtih an active seat. The Fiddler Jam login accepts using custom credentials or Google authentication but the portal will be accessible only for usernames/emails that are part of an active subscription. Depending on the user assigned role, the Fiddler Jam portal will provide different level of accessability and features as follows:
+The [Fiddler Jam portal](https://jam.getfiddler.com) is accessible for all users with an active seat. The Fiddler Jam login accepts using custom credentials or Google authentication, but the portal will be accessible only for usernames/emails that are part of an active subscription. Depending on the user assigned role, the Fiddler Jam portal will provide a different level of accessibility and features as follows:
 
-- Unregistered users won't be able to open the Fiddler Jam portal or to load generated Fiddler Jam links.
-- Registered users with the **viewer** role are able to see only logs added to a workspace. If a viewer opens a public link, a page will inform the user that the links needs to be added to the account workspace.
-- Registered users with the **editor** role are able to open public logs (automatically added to workspace), to create and manage workspaces, to manage existings logs (manage, add and remove from workspaces).
+- Unregistered users won't be able to open the Fiddler Jam portal or load generated Fiddler Jam links.
+- Registered users with the **viewer** role can see only logs added to a workspace. If a viewer opens a public link, a page will inform the user that the links need to be added to the account workspace.
+Registered users with the **editor** role can open public logs (automatically added to workspace), create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
 
 
 ## Subscriptions
 
-Fiddler Jam portal provides different subscription plans to accomodate the different usage needs.
+Fiddler Jam portal provides different subscription plans to accommodate the different user needs.
 
 | __Features__ |  __Basic__ | __Grow__ | __Business__ | __Enterprise__ |
 |---|---|---|---|---|
@@ -36,4 +36,4 @@ Fiddler Jam portal provides different subscription plans to accomodate the diffe
 
 ### Trial Plan
 
-Activate the trial plan to test Fiddler Jam portal for 30 days. During the trial period the quotas for [the Business plan](#business-plan) will be effective.
+Activate the trial plan to test the Fiddler Jam portal for 30 days.  The trial period applies the quotas for [the Business plan](#business-plan)

@@ -10,17 +10,17 @@ position: 100
 
 ## What is Fiddler Jam?  
 
-**_A:_** Fiddler Jam is a troubleshooting solution for support & dev teams. The **Fiddler Jam Chrome extension** and the **Fiddler Jam portal** are the interconnected components are the core of Fiddler Jam.
+**_A:_** Fiddler Jam is a troubleshooting solution for support & dev teams. The **Fiddler Jam Chrome extension** and the **Fiddler Jam portal** are the interconnected components that are the core of Fiddler Jam.
 
 ## What is the purpose of Fiddler Jam?  
 
-**_A:_** Fiddler Jam helps **end-users** (also referred to as [**extension users**](#fiddler-jam-terminology)) to isolate issues by capturing HTTP(S) network logs in the customer's environment. It then enables the secure sharing of these logs between the customers and your support teams with the help of the [**Fiddler Jam portral**](https://jam.getfiddler.com). Finally, with full [**Fiddler Everywhere**](https://docs.telerik.com/fiddler-everywhere/introduction) integration, the development team can load the logs and replicate the issue locally, using tooling they are already comfortable with.  
+**_A:_** Fiddler Jam helps **end-users** (also referred to as [**extension users**](#fiddler-jam-terminology)) to isolate issues by capturing HTTP(S) network logs in the customer's environment. It then enables the secure sharing of these logs between the customers and your support teams with the help of the [**Fiddler Jam portal**](https://jam.getfiddler.com). Finally, with full [**Fiddler Everywhere**](https://docs.telerik.com/fiddler-everywhere/introduction) integration, the development team can load the logs and replicate the issue locally, using tooling they are already comfortable with.  
 
 ## Who can use the Fiddler Jam Chrome extension?
 
 **_A:_** Anyone with Google Chrome can install and use [**the Chrome extension**](#). There is no login or registration required.
 
-## What is Fiddler Jam portal?
+## What is the Fiddler Jam portal?
 
 The [**Fiddler Jam portal**](https://jam.getfiddler.com) is an online space where the captured logs can be accessed and maintained. 
 
@@ -52,7 +52,7 @@ Only registered users with active seats have access to the Jam portal.
 
 **_A:_** Any portal users of the workspace for which the submission was made.
 
-## Who can access details of a password protected log?
+## Who can access the details of a password-protected log?
 
 **_A:_** Any portal user with the password to unlock it. After opening the log via a password, the corresponding portal user will have complete access to the sessions.
 
@@ -71,7 +71,7 @@ Only registered users with active seats have access to the Jam portal.
 |  extension user  |   End-user who have encountered an issue on your web application and are using the Fiddler Jam extension |
 |  Fiddler Jam portal   |   A central website for accessing call logs stored on the cloud    |
 |  portal user    | Account created for your organization to access the web portal. This includes both support and development. The portal users  |
-|  session |   A network activity that is captured by Fiddler. it contains request and response information together   |
+|  session |   A network activity that Fiddler captures. it contains request and response information together   |
 |  log |   A collection of sessions captured, screenshots, and other information after extension user has started to capture and then stopped   |
 |  workspace   |   Common location to access all logs submitted for one domain name. sub-domains are treated the same as main domains and will be individual spaces    |
 |  public workspace     |   Space to which extension users have submitted sessions, but the domain name does not have any portal users yet   |
