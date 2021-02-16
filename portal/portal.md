@@ -32,7 +32,7 @@ Fiddler Jam portal provides different subscription plans to accommodate the diff
 | Email Support | **Unlimited*** | **Unlimited*** |  **Priority** |  **Priority** |
 | Price (US Dollars) | 10 USD | 20 USD |  24 USD | Contact us |
 
-*subject to fair usage policy. Learn more about the support offering [here]({%slug fj-support%}).
+*subject to fair usage policy. Learn more about the support offering [here](#).
 
 ### Trial Plan
 
