@@ -18,14 +18,14 @@ An editor can add the submitted log to the workspace as follows:
 
 - Use the **Add To Workspace** button in the top-right corner of the dashboard. Note that password-protected logs will require entering the log password before the action is executed.
 - Enter the following details
-    - Log title. Accepts free-form text.
-    - (Optional) Description. Accepts free-form text.
-    - Submitted by. Accepts free-form text.
-    - Workspace. Choose from a drop-down list of an existing organizational workspaces.
+    1. **Title**. The input will appeasr as log title in the workspace log list.
+    2. (_Optional_) **Description**. The input will appear as a log description in the workspace log list.
+    3. **Submitted by**. The input will appear as the log creator alongside the submittion date.
+    4. **Workspace**. Choose from a drop-down list of an existing organizational workspaces.
 - Click on **Done**. On succsess, you will see a confirmation notification and the log will be loaded in the selected workspace. Note that password-protected logs will require entering the log password after the action is executed.
 - (Optional) Open the workspace to review the list entry via **Open Workspace** button or directly continue to work with the submitted log.
 
-![Add submitted log to existing workspace](../images/portal/workspace/fj-portal-add-to-workspace.png)
+![Add submitted log to existing workspace](../images/portal/workspaces/fj-portal-add-to-workspace.png)
 
 ## Default Workspace
 
