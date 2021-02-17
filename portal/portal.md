@@ -8,7 +8,7 @@ position: 10
 
 # Fiddler Jam Portal
 
-The [Fiddler Jam portal](https://jam.getfiddler.com) is the cloud space where logs submitted from you or other users can be viewed, organized and analysed. The Fiddler Jam portal is accessible only for users with active [Fiddler Jam portal subscriptions](#subscriptions). The Fiddler Jam portal provide different means to organize, access and work with submitted logs. The portal allows settings up different roles for the portal users with different access rights.
+The [Fiddler Jam portal](https://jam.getfiddler.com) is the cloud space where logs submitted from you or other users can be viewed, organized, and analyzed. The Fiddler Jam portal is accessible only for users with active [Fiddler Jam portal subscriptions](#subscriptions). The Fiddler Jam portal provides different means to organize, access, and work with submitted logs. The portal allows settings up different roles for the portal users with different access rights.
 
 
 ## Portal Users
@@ -27,7 +27,7 @@ Learn more about :
 
 ## Using Submitted Logs
 
-The Fiddler Jam portal allows organizing, accessing and reusing the log submitted by an extension user. Logs can be added to workspaces, edited, shared, downloaded or opened directly in FIddler Everywhere for in-depth analysis.
+The Fiddler Jam portal allows organizing, accessing, and reusing the log submitted by an extension user. Logs can be added to workspaces, edited, shared, downloaded, or opened directly in Fiddler Everywhere for in-depth analysis.
 
 Learn more about:
 - [The portal workspaces]({%slug fj-workspaces%})

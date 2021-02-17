@@ -48,3 +48,5 @@ The editor role comes with the following advantages and limitations:
 - The editor can access logs not added to a workspace.
 - The editor can edit and remove logs added to the workspace.
 - The editor can add shared logs to a workspace. Logs added to a workspace will be accessible to all viewers.
+- Password-protected logs can only be accessed from an editor with knowledge of the password.
+- Logs shared with specific editors (based on the registered email) can only be accessed from that same explicitly listed editors.
