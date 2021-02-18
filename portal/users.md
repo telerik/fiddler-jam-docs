@@ -23,13 +23,13 @@ Everyone who uses the Fiddler Jam Chrome extension can be described as an extens
 
  All users who have an active Fiddler Jam license can be referred to as Fiddler Jam portal users. Those users can have different roles based on the license seats.
 
-- **Viewer role**: The viewer can submit and view **recorded logs** based on the Fiddler Jam account quota.
-- **Editor role**: The editor can submit, view, and maintain **recorded logs** and **workspaces** based on the Fiddler Jam account quota.
+- [**Viewer role**](#viewer-role): The viewer can submit and view **recorded logs** based on the Fiddler Jam account quota.
+- [**Editor role**](#editor-r): The editor can submit, view, and maintain **recorded logs** and **workspaces** based on the Fiddler Jam account quota.
 - **Account owner**: The user who purchased the Fiddler Jam license from [the Fiddler dashboard](https://dashboard.getfiddler.com/). This role manages the subscription seats, payment, and assigning the **editor** or **viewer** roles.
 
 ### Viewer Role
 
-All subscription plans are coming with unlimited seats for assigning viewer roles. Assign a viewer role to an existing account through [the Fiddler dashboard site](https://dashboard.getfiddler.com).
+All subscription plans are coming with unlimited seats for assigning viewer roles. Assign a viewer role to an existing account through [the Fiddler dashboard](https://dashboard.getfiddler.com).
 
 The viewer role comes with the following advantages and limitations:
 
@@ -40,7 +40,7 @@ The viewer role comes with the following advantages and limitations:
 
 ### Editor Role
 
-Depending on the subscription plan, each license will provide a different number of seats with the editor role. Assign an editor role to an existing account through [the Fiddler dashboard site](https://dashboard.getfiddler.com).
+Depending on the subscription plan, each license will provide a different number of seats with the editor role. Assign an editor role to an existing account through [the Fiddler dashboard](https://dashboard.getfiddler.com).
 
 The editor role comes with the following advantages and limitations:
 
@@ -48,3 +48,5 @@ The editor role comes with the following advantages and limitations:
 - The editor can access logs not added to a workspace.
 - The editor can edit and remove logs added to the workspace.
 - The editor can add shared logs to a workspace. Logs added to a workspace will be accessible to all viewers.
+- Password-protected logs can only be accessed from an editor with knowledge of the password.
+- Logs shared with specific editors (based on the registered email) can only be accessed from that same explicitly listed editors.
