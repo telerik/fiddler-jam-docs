@@ -24,7 +24,7 @@ Collaboration is the main feature of Fiddler Jam. Submitting a recorded log is e
 
 ## Save as File
 
-Alternatively, instead of sharing a link, you could generate and share a HAR file. 
+Alternatively, instead of sharing a link, you could generate and transmit a HAR file. 
 
 1. Click on **Save as File** to download the log as an archive ([HAR format](https://en.wikipedia.org/wiki/HAR_(file_format))). 
 2. The HAR archive will be named **fiddler_jam_XXX_jam.getfiddler.com** where XXX is a GUID of the recorded log.

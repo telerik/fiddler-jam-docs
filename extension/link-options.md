@@ -22,7 +22,7 @@ The option allows any Fiddler Jam portal user to open the recorded logs. Only po
 
 ## Anyone with link and password
 
-This option provides the option to protect your recorded log with your own password. The content will be encrypted with AES-CTR, and only portal users with the password will be able to open the recorded log.
+This option provides the option to protect your recorded log with your password. The content will be encrypted with AES-CTR, and only portal users with the password will be able to open the recorded log.
 
 >tip The password needs to be at least eight characters long and contain at least one lowercase letter, one uppercase letter, and one number!
 
