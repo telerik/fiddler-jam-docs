@@ -20,4 +20,6 @@ Recording the captured traffic is the core action provided by Fiddler Jam. A **L
 7. Click on **_Capturing…_** to see details of your ongoing recording.
 8. Click on **_Stop Capture_** to end the recording.
 
-At this point, the captured traffic is recorded as a log but is not yet saved. Learn more about the collaboration options like [generating a link](), [direct sharing](), [saving as file](), and [adding logs to workspaces]().
+At this point, the captured traffic is recorded as a log but is not yet saved anywhere. Proceed with [submitting the recorded log to the JAM portal]({%slug fj-submitting-logs%}#submit-via-link) or by [saving the log as a file]({%slug fj-submitting-logs%}#save-as-file).
+
+>tip To reset the Fiddler Jam extension and start a new capturing, use the **Capture Again** button.
