@@ -6,6 +6,6 @@ publish: true
 position: 40
 ---
 
-# Portal Logs
+# Working With Submitted Logs
 
 <!-- TODO: add section about elaborate capture details like screenshots, console logs  that can be linked to other systems like Jira, Freshdesk, etc.>
