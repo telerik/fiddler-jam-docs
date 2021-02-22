@@ -36,7 +36,7 @@ Learn more about:
 
 ## Subscriptions
 
-Fiddler Jam portal provides different subscription plans to accommodate the different user needs.
+Fiddler Jam portal provides various subscription plans to accommodate the different user needs.
 
 | __Features__ |  __Basic__ | __Grow__ | __Business__ | __Enterprise__ |
 |---|---|---|---|---|
