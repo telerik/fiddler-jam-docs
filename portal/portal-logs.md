@@ -15,6 +15,7 @@ Once a recorded traffic is submitted by an extension user, the log is uploaded t
 After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension users know the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) to the portal user (e.g. a support engeneer with Fiddler Jam subscription and editor role).
 
 Notice that to protect the content of the submistted log the following rules are in order:
+
 1. The submitted log can only be opened by a portal user that meets the access right requirments set by the extension user via [the link generation options]({%slug fj-link-options%}))
 2. Initially, the submitted log can only be opened by a portal user with [the **editor** role]({%slug fj-users%}#editor-role). Quota restrictions apply for the editor opening the log based on the active subscription (refer to the _Reports per month_ row in [the subscription comparision table]({%slug fj-portal%}#subscriptions)).
 3. (_Optional_) Add the submitted log to a workspace. Logs that are not added to a workspace will be automativcally deleted after 30 days period. 
@@ -27,11 +28,11 @@ Once a submitted log is opened in the Fiddler Jam portal, there are multiple fun
 
 - [Editing log's details](#log-details) (title, description, etc.).
 - [Investigating the log's captured traffic in details (requests and responses)](#traffic-inspection). 
-- Inspecting the taken screenshots.
-- Analyzing the developer's console logs.
-- Deep dive investigation through Fiddler Everywhere.
-- [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).
-- Load HAR for mocking.
+- [Inspecting the taken screenshots](#screenshot-inspection).
+- [Analyzing the developer's console logs](#console-log-inspection).
+- [Reload JAM log for mocking](#mocking-log).
+- [Deep dive investigation through Fiddler Everywhere]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
+- [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).SKu
 - [Adding submitted logs to organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
 
 
@@ -86,3 +87,6 @@ In case, the extension user has explicitly enabled the developer's console logs 
 - Select on a console log line in the Captured Logs list. The console log loads in a custom inspector.
 - Use the **Details** inspector for examining the console log.
 - Use the **Stack Trace** inspector for inspection the stack trace.
+
+
+## Mocking Log
