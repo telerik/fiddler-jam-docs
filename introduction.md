@@ -8,17 +8,31 @@ position: 0
 
 # Welcome to Fiddler Jam
 
-**Fiddler Jam** is a troubleshooting solution for support and development teams to help them troubleshoot issues quickly, easily, and securely. How does it work? Customers share network logs via a Chrome extension instead of manually attaching them to an email or a support ticket. The support team analyzes the logs for troubleshooting. Developers debug further by inspecting the logs in Fiddler Everywhere.
+**Fiddler Jam** is a troubleshooting solution for support and development teams to help them troubleshoot issues quickly, easily, and securely. How does it work? Customers share network logs via a Chrome extension instead of manually attaching them to an email or a support ticket. The support team analyzes the logs for troubleshooting in a safe cloud space. Developers debug further by inspecting the logs in the Fiddler Everywhere application.
 
-**HTTP(S) traffic Inspection & Analysis**
+**HTTP(S) Traffic Inspection & Analysis**
 
-Fiddler Jam logs all HTTP(S) traffic between your Chrome browser and the Internet.
+The Fiddler Jam Chrome extension logs all HTTP(S) traffic between your Chrome browser and the Internet.
 
-## Installation
+**Cloud Space Submissions**
 
-Install the [Fiddler Jam extension](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj) directly from the Chrome Extensions store.
+Recorded logs can be easily submitted to the FIddler Jam portal where they can be saved, organized, analysed and shared with other collaborators.
 
-![Welcome to Fiddler Jam](images/ext/ext-icons/welcome.png)
+**Fiddler Everywhere Integration**
+
+Submitted logs are compatible with Fiddler Everywhere for in-depth investigation.
+
+
+## Chrome Extension Installation
+
+Enable and properly configure the Fiddler Jam extension by following [the instalation steps]({%slug fj-installation%}).
+
+If you are familiar with how a Chrome extension works, you could skip the above tutorial and directly install the [Chrome extension](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj) from the Google Chrome Extensions store.
+
+
+## Fiddler Jam Portal
+
+[The Fiddler Jam portal]({%slug fj-portal%}) is a cloud space to safely store, organaze and anaylize submitted logs coming from your customers. Some of the portal key features includes access right user roles, safe online storage and one-click integration with Fiddler Everywhere.
 
 ## Documentation
 
@@ -41,4 +55,6 @@ We believe documentation is best when the content is a product of collaboration 
 ## License
 
 Licensing agreement and detailed information about the different licenses you should acquire are available in the [Licensing](https://www.telerik.com/purchase/license-agreement/fiddler-everywhere) section.
+
+![Welcome to Fiddler Jam](images/ext/ext-icons/welcome.png)
 
