@@ -23,13 +23,3 @@ Collaboration is the main feature of Fiddler Jam. Submitting a recorded log is e
 4. Click on **Copy URL** to store the unique URL to your machine's clipboard. Use this link to share the recorded logs with other Fiddler Jam portal users.
 
 >tip Logs submitted to the Fiddler Jam portal are **not** publicly available. Only FIddler Jam [portal users]({%slug fj-users%}#portal-users) with [the proper access rights]({%slug fj-link-options%}) will are able to open a submitted log.
-
-## Save as File
-
-Alternatively, instead of submitting the log to the Fiddler Jam portal, you could generate and transmit a HAR file. 
-
-1. Click on **Save as File** to download the log as an archive ([HAR format](https://en.wikipedia.org/wiki/HAR_(file_format))). 
-2. The HAR archive will be named **fiddler_jam_XXX_jam.getfiddler.com** where XXX is a GUID of the recorded log.
-3. Examine the recorded log locally (e.g., via [FIddler Everywhere](https://www.telerik.com/download/fiddler-everywhere)) or share it by sending the archive to collaborators.
-
->important HAR is a known format and can be recognized and loaded in multiple network tools. However, It will lack some of the extras provided by Fiddler Jam. A HAR file won't contain the Fiddler Jam screenshots and won't include the developer console logs.

@@ -50,4 +50,4 @@ Fiddler Jam portal provides various subscription plans to accommodate the differ
 
 ## Trial Plan
 
-Activate the trial plan to test the Fiddler Jam portal for 30 days.  The trial period applies the quotas for the Business plan.
+Activate the trial plan to test the Fiddler Jam portal for 14 days.  The trial period applies the quotas for the Business plan.
