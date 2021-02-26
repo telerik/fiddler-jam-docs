@@ -10,7 +10,7 @@ position: 100
 
 ## What is Fiddler Jam?  
 
-**_A:_** Fiddler Jam is a troubleshooting solution for support & dev teams. The **Fiddler Jam Chrome extension** and the **Fiddler Jam portal** are the interconnected components that are the core of Fiddler Jam.
+**_A:_** Fiddler Jam is a troubleshooting solution for support & developers teams. The **Fiddler Jam Chrome extension** and the **Fiddler Jam portal** are the interconnected components that are the core of Fiddler Jam.
 
 ## What is the purpose of Fiddler Jam?  
 
@@ -18,22 +18,22 @@ position: 100
 
 ## Who can use the Fiddler Jam Chrome extension?
 
-**_A:_** Anyone with Google Chrome can install and use [**the Chrome extension**](#). There is no login or registration required.
+**_A:_** Anyone with Google Chrome can install and use [**the Chrome extension**](#). There is no login or registration required. The Chrome extension is easy to use and doesn't require advanced knowledge or any previous debugging experience.
 
 ## What is the Fiddler Jam portal?
 
-The [**Fiddler Jam portal**](https://jam.getfiddler.com) is an online space where the captured logs can be accessed and maintained. 
+The [**Fiddler Jam portal**](https://jam.getfiddler.com) is an online space where the captured logs can be accessed and maintained. The Fiddler Jam portal is the place where the support engineers and developers could analyze, share and maintain logs submitted by the extension users.
 
 ## Who can use the Fiddler Jam portal?
 
-Only registered users with active seats have access to the Jam portal.
+Only registered users with active seats have access to the Jam portal. Licenses and seats can be activated from t[he dashboard site](https://dashboard.getfiddler.com).
 
 ## So how does Fiddler Jam work... really?  
 
 **_A:_**  
 
 **Your customers (also referred to as [extension users](#fiddler-jam-terminology))) will...**  
-- Install a lightweight client (starting with a Chrome browser extension).
+- Install the lightweight Chrome extension.
 - Start recording network requests/responses.
 - Reproduce the issue at hand.
 - Save their recordings and share them via the generated link (upload to cloud space).  
@@ -43,6 +43,9 @@ Only registered users with active seats have access to the Jam portal.
 - Access the protected private workspace where logs are stored.
 - Triage the issue, add context and share with the development team.
 
+## What is an extension user?
+
+**_A:_** An extension user is everyone who uses the Fiddler Jam Chrome extension.
 
 ## What is a portal user?
 
@@ -71,10 +74,12 @@ Only registered users with active seats have access to the Jam portal.
 |  extension user  |   End-user who have encountered an issue on your web application and are using the Fiddler Jam extension |
 |  Fiddler Jam portal   |   A central website for accessing call logs stored on the cloud    |
 |  portal user    | Account created for your organization to access the web portal. This includes both support and development. The portal users  |
-|  session |   A network activity that Fiddler captures. it contains request and response information together   |
-|  log |   A collection of sessions captured, screenshots, and other information after extension user has started to capture and then stopped   |
+|  viewer role  |  A portal user assigned with [the viewer role]({%slug fj-users%}#viewer-role) |
+|  agent role  |  A portal user assigned with [the agent role]({%slug fj-users%}#agent-role) |
+|  session |   A network activity that Fiddler captures. it contains HTTP(S) request and response information together   |
+|  log |   A collection of captured HTTP(S) sessions, screenshots, console logs, and other information recorded by an extension user   |
 |  workspace   |   Common location to access all logs submitted for one domain name. sub-domains are treated the same as main domains and will be individual spaces    |
 |  public workspace     |   Space to which extension users have submitted sessions, but the domain name does not have any portal users yet   |
 |  private workspace    |   Space of a domain name with portal users    |
-|  password protected log  |   Log created with a password |
-|  log URL |  Direct URL for accessing the submitted log of any space on the web portal    |
+|  password-protected log  |   Log created with a password |
+|  log URL |  Direct URL for accessing the submitted log of any space on the web portal  |
