@@ -26,7 +26,7 @@ This option will take a screenshot of each action the users do while capturing p
 
 ## Capture console
 
-This option will capture everything outputted in the developer console including the log level and the stack trace. By default, the **_Capture console_** is **enabled**.
+This option will capture everything outputted in the developer console, including the log and available stack traces. By default, the **_Capture console_** is **enabled**.
 
 >important The console logs will be available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [FIddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain console logs.
 
@@ -40,4 +40,4 @@ This option will capture post data (for example, data from forms, input text fie
 
 ## Security concerns
 
-Capturing all outgoing and incoming traffic for the current tab might expose sensitive and/or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}).
+Capturing all outgoing and incoming traffic for the current tab might expose sensitive or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}).
