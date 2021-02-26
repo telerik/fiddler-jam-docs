@@ -32,7 +32,7 @@ Once a submitted log is opened in the Fiddler Jam portal, there are multiple fun
 - [Analyzing the developer's console logs](#console-log-inspection).
 - [Reload JAM log for mocking](#mocking-log).
 - [Deep dive investigation through Fiddler Everywhere]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
-- [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).SKu
+- [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).
 - [Adding submitted logs to organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
 
 
@@ -62,7 +62,8 @@ Each FIddler Jam log contains a list of captured HTTP sessions and request/respo
 
 To investigate specific HTTP session:
 - Open the submitted log.
-- Select a session line.
+- Select a session line. 
+    >tip Each captured HTTP(S) session has a unique line ID which can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
 - The Request and Response inspectors load the session content (headers, body, cookies, etc.). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked.
 
 ![Portal log UI](../images/portal/logs/fj-portal-log-usage.png)
@@ -88,5 +89,3 @@ In case the extension user has explicitly enabled the developer's console logs c
 - Use the **Details** inspector for examining the console log.
 - Use the **Stack Trace** inspector for inspection of the stack trace.
 
-
-## Mocking Log
