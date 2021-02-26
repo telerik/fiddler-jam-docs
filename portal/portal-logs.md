@@ -8,19 +8,19 @@ position: 40
 
 # Working With Submitted Logs
 
-Once an extension user submits recorded traffic, the log is uploaded to the Fiddler Jam cloud space. By default, the uploaded logs will be stored for 30 days in the cloud storage, and then they will be deleted. With the Fiddler Jam portal, any editor with access rights could save, organize, analyze and work with the provided records. 
+Once an extension user submits recorded traffic, the log is uploaded to the Fiddler Jam cloud space. By default, the uploaded logs will be stored for 30 days in the cloud storage, and then they will be deleted. With the Fiddler Jam portal, any agent with access rights could save, organize, analyze and work with the provided records. 
 
 ## Open Submitted Logs
 
-After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension users know the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) to the portal user (e.g., a support engineer with Fiddler Jam subscription and editor role).
+After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension users know the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) to the portal user (e.g., a support engineer with Fiddler Jam subscription and agent role).
 
 Notice that to protect the content of the submitted log, the following rules are in order:
 
 1. The submitted log can only be opened by a portal user that meets the access right requirements set by the extension user via [the link generation options]({%slug fj-link-options%}))
-2. Initially, the submitted log can only be opened by a portal user with [the **editor** role]({%slug fj-users%}#editor-role). Quota restrictions apply for the editor opening the log based on the active subscription (refer to the _Reports per month_ row in [the subscription comparison table]({%slug fj-portal%}#subscriptions)).
+2. Initially, the submitted log can only be opened by a portal user with [the **agent** role]({%slug fj-users%}#agent-role). Quota restrictions apply for the agent opening the log based on the active subscription (refer to the _Reports per month_ row in [the subscription comparison table]({%slug fj-portal%}#subscriptions)).
 3. (_Optional_) Add the submitted log to a workspace. Logs that are not added to a workspace will be automatically deleted after 30 days period. 
 
-In order for portal users with a **viewer** role to be able to open the submitted log, the log must be added to a workspace (by an editor), and the extension user should have set an appropriate access level during the link generation.
+In order for portal users with a **viewer** role to be able to open the submitted log, the log must be added to a workspace (by an agent), and the extension user should have set an appropriate access level during the link generation.
 
 ## Working with Logs
 

@@ -17,13 +17,13 @@ The Fiddler Jam login accepts using custom credentials or Google authentication,
 
 - Unregistered users won't be able to open the Fiddler Jam portal or load generated Fiddler Jam links.
 - Registered users with the **viewer** role can see only logs added to a workspace. If a viewer opens a public link, a page will inform the user that the links need to be added to the account workspace.
-- Registered users with the **editor** role can open public logs (automatically added to workspace), create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
+- Registered users with the **agent** role can open public logs (automatically added to workspace), create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
 
 Learn more about :
 - [The Fiddler Jam **extension users**]({%slug fj-users%}#extension-users)
 - [The Fiddler Jam **portal users**]({%slug fj-users%}#portal-users)
 - [The portal users with **Viewer** role]({%slug fj-users%}#viewer-role)
-- [The portal users with **Editor** role]({%slug fj-users%}#editor-role)
+- [The portal users with **Agent** role]({%slug fj-users%}#agent-role)
 
 ## Using Submitted Logs
 
@@ -41,7 +41,7 @@ Fiddler Jam portal provides various subscription plans to accommodate the differ
 | __Features__ |  __Basic__ | __Grow__ | __Business__ | __Enterprise__ |
 |---|---|---|---|---|
 | Viewer role seats | **Unlimited** | **Unlimited** | **Unlimited** | **Unlimited** |
-| Editor role seats | Up to 2 | Up to 10 | Up to 20 | Contact us |
+| Agent role seats | Up to 2 | Up to 10 | Up to 20 | Contact us |
 | Reports per month per license | 10 | 30 | **Unlimited** | **Unlimited** |
 | Email Support | **Unlimited*** | **Unlimited*** |  **Priority** |  **Priority** |
 | Price (US Dollars) | 9 USD | 19 USD |  23 USD | Contact us |
