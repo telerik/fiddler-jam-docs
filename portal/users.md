@@ -23,9 +23,10 @@ Everyone who uses the Fiddler Jam Chrome extension can be described as an extens
 
  All users who have an active Fiddler Jam license can be referred to as Fiddler Jam portal users. Those users can have different roles based on the license seats.
 
-- [**Viewer role**](#viewer-role): The viewer can submit and view **recorded logs** based on the Fiddler Jam account quota.
-- [**Agent role**](#agent-role): The agent can submit, view, and maintain **recorded logs** and **workspaces** based on the Fiddler Jam account quota.
+- [**Viewer role**](#viewer-role): The viewer can open **submitted logs** added to a workspace.
+- [**Agent role**](#agent-role): The agent can view, and maintain **submitted logs** and **workspaces** based on the Fiddler Jam account quota.
 - **Account owner**: The user who purchased the Fiddler Jam license from [the Fiddler dashboard](https://dashboard.getfiddler.com/). This role manages the subscription seats, payment, and assigning the **agent** or **viewer** roles.
+
 
 ### Viewer Role
 
@@ -33,7 +34,7 @@ All subscription plans are coming with unlimited seats for assigning viewer role
 
 The viewer role comes with the following advantages and limitations:
 
-- The viewer can access all logs that are added to the account workspace.
+- The viewer can access all logs that are added to the organization workspace. Password-protected logs can only be accessed from a viewer with knowledge of the password.
 - The viewer can't access logs not added to a workspace.
 - The viewer can't edit and remove logs added to the workspace.
 
@@ -44,9 +45,8 @@ Depending on the subscription plan, each license will provide a different number
 
 The agent role comes with the following advantages and limitations:
 
-- The agent can access all logs that are added to the account workspace.
+- The agent can access all logs that are added to the account workspace. Password-protected logs can only be accessed from an agent with knowledge of the password.
 - The agent can access logs not added to a workspace.
 - The agent can edit and remove logs added to the workspace.
 - The agent can add shared logs to a workspace. Logs added to a workspace will be accessible to all viewers.
-- Password-protected logs can only be accessed from an agent with knowledge of the password.
-- Logs shared with specific agents (based on the registered email) can only be accessed from that same explicitly listed agents.
+- Logs shared with specific agents (based on the registered email) can be accessed from all users with access to the workspace.

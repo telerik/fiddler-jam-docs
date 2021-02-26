@@ -15,15 +15,16 @@ The [Fiddler Jam portal](https://jam.getfiddler.com) is the cloud space where lo
 
 The Fiddler Jam login accepts using custom credentials or Google authentication, but the portal will be accessible only for usernames/emails that are part of an active subscription. Depending on the user assigned role, the Fiddler Jam portal will provide a different level of accessibility and features as follows:
 
-- Unregistered users won't be able to open the Fiddler Jam portal or load generated Fiddler Jam links.
+- Unregistered users won't be able to open the Fiddler Jam portal or load generated Fiddler Jam links. Note that no registration is needed to use the Fiddler Jam Chrome extension.
 - Registered users with the **viewer** role can see only logs added to a workspace. If a viewer opens a public link, a page will inform the user that the links need to be added to the account workspace.
-- Registered users with the **agent** role can open public logs (automatically added to workspace), create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
+- Registered users with the **agent** role can open public logs, create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
 
 Learn more about :
 - [The Fiddler Jam **extension users**]({%slug fj-users%}#extension-users)
 - [The Fiddler Jam **portal users**]({%slug fj-users%}#portal-users)
 - [The portal users with **Viewer** role]({%slug fj-users%}#viewer-role)
 - [The portal users with **Agent** role]({%slug fj-users%}#agent-role)
+
 
 ## Using Submitted Logs
 
@@ -38,7 +39,7 @@ Learn more about:
 
 Fiddler Jam portal provides various subscription plans to accommodate the different user needs.
 
-| __Features__ |  __Basic__ | __Grow__ | __Business__ | __Enterprise__ |
+| **Features** |  **Starter** | **Pro**** | **Business** | **Enterprise** |
 |---|---|---|---|---|
 | Viewer role seats | **Unlimited** | **Unlimited** | **Unlimited** | **Unlimited** |
 | Agent role seats | Up to 2 | Up to 10 | Up to 20 | Contact us |
@@ -50,4 +51,4 @@ Fiddler Jam portal provides various subscription plans to accommodate the differ
 
 ## Trial Plan
 
-Activate the trial plan to test the Fiddler Jam portal for 14 days.  The trial period applies the quotas for the Business plan.
+Activate the trial plan to test the Fiddler Jam portal for 14 days. The trial period applies the quotas for the Business plan.
