@@ -11,13 +11,15 @@ position: 90
 
 Fiddler Jam is a Chrome extension tool that can capture the ongoing tab activity and generate links with the captured activity logs. With such functionality, a particular set of security is added as functionality to Fiddler Jam to protect its users' privacy and allow you to share logs with some information being entirely stripped. Here are the must-know highlights when capturing and sharing Fiddler Jam logs.
 
-- Fiddler Jam captures only the content of the currently **focused** Chrome tab.
+- When Fiddler Jam starts capturing a red dot will indicate that there is an ongoing recording.
+
+- Fiddler Jam captures the content of the Chrome tab where Fiddler Jam capturing is inialized plus all tabbs and windows opened from that tab (and all tabs and windows opened from them). All tabs and windows with active capturing will have the red dot indication in the Fiddler Jam extension.
 
 - The default settings (see the [**Capture Options**](#capture-options) below) will mask cookies values and won't record any post data (input from text fields, forms, etc.)
 
 - The password-protected logs are encrypted with AES-CTR.
 
-- The Fiddler Jam logs are stored in a cloud storage based in EU. The Fiddle Jam team doesn't have access to and can't recover password-protected log content. See more about the password protecting option in the [**Sharing Links**](#sharing-links) option.
+- The Fiddler Jam logs are stored in a cloud storage based in US, North Virginia. The Fiddle Jam team doesn't have access to and can't recover password-protected log content. See more about the password protecting option in the [**Sharing Links**](#sharing-links) option.
 
 ## Capture Options
 

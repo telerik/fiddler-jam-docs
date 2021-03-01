@@ -53,15 +53,15 @@ Only registered users with active seats have access to the Jam portal. Licenses 
 
 ## Who can access details of a submitted log?
 
-**_A:_** Any portal users of the workspace for which the submission was made.
+**_A:_** That depends on [the link generation options]({%slug fj-link-options%}) chosed by the extension user. **Public links** are accessible for any portal user with the **agent** role. **A link shared with specific people** will be avccessible only for the concrete portal user with agent role. **Link with password-protection** will be accessible only for portal user with agent role and knowledge of the password.
 
 ## Who can access the details of a password-protected log?
 
-**_A:_** Any portal user with the password to unlock it. After opening the log via a password, the corresponding portal user will have complete access to the sessions.
+**_A:_** Any portal user with agent role and with the password to unlock it. After opening the log via a password, the corresponding portal user will have complete access to the sessions.
 
 ## What level of access do portal users get?
 
-**_A:_** Portal users have access to logs of the workspace they have been assigned only.
+**_A:_** Portal users have access to logs of the workspace they have been assigned and will have access to all public links.
 
 ## Where are the logs stored?
 
@@ -78,8 +78,6 @@ Only registered users with active seats have access to the Jam portal. Licenses 
 |  agent role  |  A portal user assigned with [the agent role]({%slug fj-users%}#agent-role) |
 |  session |   A network activity that Fiddler captures. it contains HTTP(S) request and response information together   |
 |  log |   A collection of captured HTTP(S) sessions, screenshots, console logs, and other information recorded by an extension user   |
-|  workspace   |   Common location to access all logs submitted for one domain name. sub-domains are treated the same as main domains and will be individual spaces    |
-|  public workspace     |   Space to which extension users have submitted sessions, but the domain name does not have any portal users yet   |
-|  private workspace    |   Space of a domain name with portal users    |
+|  workspace   |   A workspace is an organizational placeholder for logs. The workspace provides means to organize and share logs with your collaborators (withint the organizational account)   |
 |  password-protected log  |   Log created with a password |
 |  log URL |  Direct URL for accessing the submitted log of any space on the web portal  |
