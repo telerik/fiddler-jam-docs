@@ -8,19 +8,19 @@ position: 40
 
 # Working With Submitted Logs
 
-Once an extension user submits recorded traffic, the log is uploaded to the Fiddler Jam cloud space. By default, the uploaded logs will be stored for 30 days in the cloud storage, and then they will be deleted. With the Fiddler Jam portal, any editor with access rights could save, organize, analyze and work with the provided records. 
+Once an extension user submits recorded traffic, the log is uploaded to the Fiddler Jam cloud space. By default, the uploaded logs will be stored for 30 days in the cloud storage, and then they will be deleted. With the Fiddler Jam portal, any agent with access rights could save, organize, analyze and work with the provided records. 
 
 ## Open Submitted Logs
 
-After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension users know the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) to the portal user (e.g., a support engineer with Fiddler Jam subscription and editor role).
+After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension users know the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) to the portal user (e.g., a support engineer with Fiddler Jam subscription and agent role).
 
 Notice that to protect the content of the submitted log, the following rules are in order:
 
 1. The submitted log can only be opened by a portal user that meets the access right requirements set by the extension user via [the link generation options]({%slug fj-link-options%}))
-2. Initially, the submitted log can only be opened by a portal user with [the **editor** role]({%slug fj-users%}#editor-role). Quota restrictions apply for the editor opening the log based on the active subscription (refer to the _Reports per month_ row in [the subscription comparison table]({%slug fj-portal%}#subscriptions)).
+2. Initially, the submitted log can only be opened by a portal user with [the **agent** role]({%slug fj-users%}#agent-role). Quota restrictions apply for the agent opening the log based on the active subscription (refer to the _Reports per month_ row in [the subscription comparison table]({%slug fj-portal%}#subscriptions)).
 3. (_Optional_) Add the submitted log to a workspace. Logs that are not added to a workspace will be automatically deleted after 30 days period. 
 
-In order for portal users with a **viewer** role to be able to open the submitted log, the log must be added to a workspace (by an editor), and the extension user should have set an appropriate access level during the link generation.
+In order for portal users with a **viewer** role to be able to open the submitted log, the log must be added to a workspace (by an agent), and the extension user should have set an appropriate access level during the link generation.
 
 ## Working with Logs
 
@@ -32,7 +32,7 @@ Once a submitted log is opened in the Fiddler Jam portal, there are multiple fun
 - [Analyzing the developer's console logs](#console-log-inspection).
 - [Reload JAM log for mocking](#mocking-log).
 - [Deep dive investigation through Fiddler Everywhere]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
-- [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).SKu
+- [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).
 - [Adding submitted logs to organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
 
 
@@ -62,7 +62,8 @@ Each FIddler Jam log contains a list of captured HTTP sessions and request/respo
 
 To investigate specific HTTP session:
 - Open the submitted log.
-- Select a session line.
+- Select a session line. 
+    >tip Each captured HTTP(S) session has a unique line ID which can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
 - The Request and Response inspectors load the session content (headers, body, cookies, etc.). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked.
 
 ![Portal log UI](../images/portal/logs/fj-portal-log-usage.png)
@@ -88,5 +89,3 @@ In case the extension user has explicitly enabled the developer's console logs c
 - Use the **Details** inspector for examining the console log.
 - Use the **Stack Trace** inspector for inspection of the stack trace.
 
-
-## Mocking Log

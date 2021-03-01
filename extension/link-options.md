@@ -18,16 +18,16 @@ After [recording a log]({%slug fj-recording-logs%}), the Fiddler Jam extension p
 
 ## Anyone with this link
 
-The option allows any Fiddler Jam portal user to open the recorded logs. Only portal users will have full access to the recorded information. Extensions users will be able to see limited information from the recorded logs.
+The option allows any Fiddler Jam portal user to open the recorded logs. Only portal users will have full access to the recorded information.
 
 ## Anyone with link and password
 
-This option provides the option to protect your recorded log with your password. The content is encrypted with AES-CTR, and only portal users with the password will open the recorded log.
+This option provides the option to protect your recorded log with your password. The content is encrypted with AES-CTR, and only portal users with **appropriate access rights** and **access to the user-defined password** will be able to open the log.
 
 >tip The password needs to be at least eight characters long and contain at least one lowercase letter, one uppercase letter, and one number!
 
 ## Share with specific people
 
-This option allows you to list specific users via their emails. Only users explicitly listed in the email list will be able to open the recorded log. The recipients need to be portal users in the Fiddler Jam portal.
+This option allows you to list specific users via their emails. Only users explicitly listed in the email list will be able to open the recorded log. The recipients need to be portal users with the appropriate rights in the Fiddler Jam portal.
 
 ![Sharing with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails.png)

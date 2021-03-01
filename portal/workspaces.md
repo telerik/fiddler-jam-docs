@@ -8,13 +8,13 @@ position: 30
 
 # Workspaces
 
-The Fiddler Jam portal uses workspaces to save and organize the submitted logs. With workspaces, you can manage teams, permissions, and restrictions based on your organization or requirement. Only portal users with the [**editor role**]({%slug fj-users%}#editor-role) can create, edit, delete a workspace and add newly submitted logs to an existing workspace. Users with the [**viewer role**]({%slug fj-users%}#viewer-role) can only access and review logs added to the account workspace.
+The Fiddler Jam portal uses workspaces to save and organize the submitted logs. With workspaces, you can manage teams, and permissions based on your organization or requirement. Only portal users with the [**agent role**]({%slug fj-users%}#agent-role) can create, edit, delete a workspace and add newly submitted logs to an existing workspace. Users with the [**viewer role**]({%slug fj-users%}#viewer-role) can only access and review logs added to the account workspace.
 
 ## Add Submitted Log to Workspace
 
-Any log submitted by an extension user is initially accessible based on [the predefined link generation options]({%slug fj-link-options%}). When an editor (with access right) opens the submitted link initially, it won't be part of any workspace. Submitted logs that are not added to a workspace will expire within 30 days. Logs added to an organizational workspace won't expire and can only be removed by the organization editors.
+Any log submitted by an extension user is initially accessible based on [the predefined link generation options]({%slug fj-link-options%}). When an agent (with access right) opens the submitted link initially, it won't be part of any workspace. Submitted logs that are not added to a workspace will expire within 30 days. Logs added to an organizational workspace won't expire and can only be removed by the organization agents.
 
-An editor can add the submitted log to the workspace as follows:
+An agent can add the submitted log to the workspace as follows:
 
 - Use the **Add To Workspace** button in the top-right corner of the dashboard. Note that password-protected logs will require entering the log password before the action is executed.
 - Enter the following details
@@ -27,11 +27,11 @@ An editor can add the submitted log to the workspace as follows:
 
 ![Add submitted log to existing workspace](../images/portal/workspaces/fj-portal-add-to-workspace.png)
 
-## Default Workspace
+## Workspace Name
 
-Each Fiddlem Jam subscription creates a default workspace for the organization called **_Default Workspace_**. 
+Each Fiddlem Jam subscription creates a default workspace for the organization called **_<subscription-type> Workspace_** (for example, **_Trial Workspace_** or **_Pro Workspace_**). 
 
-An editor can rename the default workspace as follows:
+An agent can rename the default workspace name as follows:
 
 - Select the workspace you would like to edit.
 - Click on the **Rename workspace** button at the top-right corner.

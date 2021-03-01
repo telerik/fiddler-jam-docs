@@ -28,7 +28,7 @@ Pin the **Fiddler Jam** extension for faster access. A pinned extension will app
 - Click on the **Extensions** button from the Google Chrome toolbar (next to your profile avatar). 
 - Click on the pin next to **Fiddler Jam** extension.
 
-## Management page (Chrome)
+## Extensions Management page (Chrome)
 
 Some specific extension information and settings are accessible via the Chrome management page.
 - Click on the **Extensions** button from the Google Chrome toolbar (next to your profile avatar). 

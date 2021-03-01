@@ -26,6 +26,7 @@ Any log submitted to the Fiddler Jam portal could be directly opened in Fiddler 
 - Click on the **Open in Fiddler** button.
 - The captured session is opened as a HAR file in Fiddler Everywhere. You can use the full capabilities of the desktop tool to proceed with the debugging process.
 
+>tip Each captured HTTP(S) session has a unique line ID which can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
 
 ## HAR Files (Fiddler Jam Portal)
 

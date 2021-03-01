@@ -8,22 +8,30 @@ position: 0
 
 # Welcome to Fiddler Jam
 
-**Fiddler Jam** is a troubleshooting solution for support and development teams to help them troubleshoot issues quickly, easily, and securely. How does it work? Customers share network logs via a Chrome extension instead of manually attaching them to an email or a support ticket. The support team analyzes the logs for troubleshooting in a safe cloud space. Developers debug further by inspecting the logs in the Fiddler Everywhere application.
+**Fiddler Jam** is a troubleshooting solution for support and development teams to help them troubleshoot issues quickly, easily, and securely. How does it work? Customers share network logs via a Chrome extension instead of manually attaching them to an email or a support ticket. The support team analyzes the logs for troubleshooting in a safe cloud space. Developers debug further by inspecting the logs in the [Fiddler Jam portal](https://jam.getfiddler.com) or with the help of Fiddler Everywhere application.
 
 **HTTP(S) Traffic Inspection & Analysis**
 
 The Fiddler Jam Chrome extension logs all HTTP(S) traffic between your Chrome browser and the Internet.
 
+**Screenshots on User Interactions**
+
+Extended log information with screenshots for each user interaction with the page (clicks) during the HTTP(S) traffic recording. Empower your recording with visual information related to specific reproduction workflows.
+
+**Record Developer Logs**
+
+Record the developer's console logs for additional debug information and to investiagte complex issues on-the-fly.
+
 **Cloud Space Submissions**
 
-Recorded logs can be easily submitted to the FIddler Jam portal where they can be saved, organized, analysed and shared with other collaborators.
+Recorded logs can be easily submitted to the FIddler Jam portal where they can be saved, organized, analysed and shared with other collaborators. The Fiddler Jam cloud portal provide means to control accessability by providing access rights.
 
 **Fiddler Everywhere Integration**
 
 Submitted logs are compatible with Fiddler Everywhere for in-depth investigation.
 
 
-## Chrome Extension Installation
+## Chrome Extension Getting Started
 
 Enable and properly configure the Fiddler Jam extension by following [the instalation steps]({%slug fj-installation%}).
 
