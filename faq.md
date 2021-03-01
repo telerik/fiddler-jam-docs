@@ -22,7 +22,7 @@ position: 100
 
 ## What is the Fiddler Jam portal?
 
-The [**Fiddler Jam portal**](https://jam.getfiddler.com) is an online space where the captured logs can be accessed and maintained. The Fiddler Jam portal is the place where the support engineers and developers could analyze, share and maintain logs submitted by the extension users.
+The [**Fiddler Jam portal**](https://jam.getfiddler.com) is an online space where the captured logs can be accessed and maintained. The Fiddler Jam portal is where the support engineers and developers could analyze, share and sustain logs submitted by the extension users.
 
 ## Who can use the Fiddler Jam portal?
 
@@ -53,11 +53,11 @@ Only registered users with active seats have access to the Jam portal. Licenses 
 
 ## Who can access details of a submitted log?
 
-**_A:_** That depends on [the link generation options]({%slug fj-link-options%}) chosed by the extension user. **Public links** are accessible for any portal user with the **agent** role. **A link shared with specific people** will be avccessible only for the concrete portal user with agent role. **Link with password-protection** will be accessible only for portal user with agent role and knowledge of the password.
+**_A:_** That depends on [the link generation options]({%slug fj-link-options%}) chosed by the extension user. **Public links** are accessible for any portal user with the **agent** role. **A link shared with specific people** will be accessible only for the concrete portal user with an agent role. **Link with password-protection** will be accessible only for portal users with agent role and knowledge of the password.
 
 ## Who can access the details of a password-protected log?
 
-**_A:_** Any portal user with agent role and with the password to unlock it. After opening the log via a password, the corresponding portal user will have complete access to the sessions.
+**_A:_** Any portal user with agent role and password to unlock it. After opening the log via a password, the corresponding portal user will have complete access to the sessions.
 
 ## What level of access do portal users get?
 
@@ -78,6 +78,6 @@ Only registered users with active seats have access to the Jam portal. Licenses 
 |  agent role  |  A portal user assigned with [the agent role]({%slug fj-users%}#agent-role) |
 |  session |   A network activity that Fiddler captures. it contains HTTP(S) request and response information together   |
 |  log |   A collection of captured HTTP(S) sessions, screenshots, console logs, and other information recorded by an extension user   |
-|  workspace   |   A workspace is an organizational placeholder for logs. The workspace provides means to organize and share logs with your collaborators (withint the organizational account)   |
+|  workspace   |   A workspace is an organizational placeholder for logs. The workspace provides means to organize and share logs with your collaborators (within the organizational account)   |
 |  password-protected log  |   Log created with a password |
 |  log URL |  Direct URL for accessing the submitted log of any space on the web portal  |
