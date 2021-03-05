@@ -12,13 +12,13 @@ Once an extension user submits recorded traffic, the log is uploaded to the Fidd
 
 ## Open Submitted Logs
 
-After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension users know the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) to the portal user (e.g., a support engineer with Fiddler Jam subscription and agent role).
+After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension user knows the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) with the portal user (e.g., a support engineer with Fiddler Jam subscription and agent role).
 
-Notice that to protect the content of the submitted log, the following rules are in order:
+To protect the content of the submitted log, the following rules apply:
 
-1. The submitted log can only be opened by a portal user that meets the access right requirements set by the extension user via [the link generation options]({%slug fj-link-options%}))
+1. The submitted log can only be opened by a portal user who meets the access right requirements set by the extension user via [the link generation options]({%slug fj-link-options%})).
 2. Initially, the submitted log can only be opened by a portal user with [the **agent** role]({%slug fj-users%}#agent-role). Quota restrictions apply for the agent opening the log based on the active subscription (refer to the _Reports per month_ row in [the subscription comparison table]({%slug fj-portal%}#subscriptions)).
-3. (_Optional_) Add the submitted log to a workspace. Logs that are not added to a workspace will be automatically deleted after 30 days period. 
+3. (_Optional_) The submitted log can be added to a workspace. Logs that are not added to a workspace will be automatically deleted after 30 days period. 
 
 In order for portal users with a **viewer** role to be able to open the submitted log, the log must be added to a workspace (by an agent), and the extension user should have set an appropriate access level during the link generation.
 
@@ -27,10 +27,10 @@ In order for portal users with a **viewer** role to be able to open the submitte
 Once a submitted log is opened in the Fiddler Jam portal, there are multiple functionalities that the portal UI provides like:
 
 - [Editing log's details](#log-details) (title, description, etc.).
-- [Investigating the log's captured traffic in details (requests and responses)](#traffic-inspection). 
+- [Investigating the log's captured traffic in detail (requests and responses)](#traffic-inspection). 
 - [Inspecting the taken screenshots](#screenshot-inspection).
 - [Analyzing the developer's console logs](#console-log-inspection).
-- [Reload JAM log for mocking](#mocking-log).
+- [Reload the JAM log for mocking](#mocking-log).
 - [Deep dive investigation through Fiddler Everywhere]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
 - [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).
 - [Adding submitted logs to organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
@@ -38,13 +38,13 @@ Once a submitted log is opened in the Fiddler Jam portal, there are multiple fun
 
 ## Log Details
 
-To edit new submitted log details:
+To edit the log details of a newly submitted log:
 
 - Open the submitted log and click on **Add to Workspace**.
 - In the prompted window, edit the log details (_title_, _description_, _submitted by_, _workspace_).
 - Click **Done** when ready. The log will be added to the selected workspace with the new details.
 
-To edit the details of a log added in a workspace:
+To edit the details of a log that is already added in a workspace:
 
 - Open the submitted log from the workspace.
 - Click on the **Edit Log Details** icon (top-right corner next to _Open Workspace_).
@@ -54,13 +54,13 @@ To edit the details of a log added in a workspace:
 
 ## Using Logs
 
-Depending on [the capture options]({%slug fj-capture-options%}), a Fiddler Jam log could contain the captured traffic (sessions), screenshots, and developer's console logs.
+Depending on the selected [capture options]({%slug fj-capture-options%}), a Fiddler Jam log could contain the captured traffic (sessions), screenshots, and developer's console logs.
 
 ### Traffic Inspection
 
-Each FIddler Jam log contains a list of captured HTTP sessions and request/response inspectors. On the left side, called **Captured Logs**, the UI provides the list of captured HTTP sessions, screenshots, and console logs. On the right side, called **Inspectors**, the Fiddler Jam UI provides the **Request** and the **Response** inspectors (when an HTTP session is selected) or the screenshot/console logs preview screen (when a screenshot or a console log is selected).
+Each FIddler Jam log contains a list of captured HTTP sessions and request/response inspectors. On the left side, called **Captured Logs**, the UI provides the list of captured HTTP sessions, screenshots, and console logs. On the right side, called **Inspectors**, the Fiddler Jam UI provides the **Request** and**Response** inspectors (when an HTTP session is selected) or the screenshot/console logs preview screen (when a screenshot or a console log is selected).
 
-To investigate specific HTTP session:
+To investigate a specific HTTP session:
 - Open the submitted log.
 - Select a session line. 
     >tip Each captured HTTP(S) session has a unique line ID which can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
@@ -83,7 +83,7 @@ In case the extension user has explicitly enabled the screenshot capturing, a Fi
 
 ### Console Log Inspection
 
-In case the extension user has explicitly enabled the developer's console logs capturing a Fiddler Jam log will also contain console log lines.
+In case the extension user has explicitly enabled the developer's console logs capturing, a Fiddler Jam log will also contain console log lines.
 
 - Select a console log line in the Captured Logs list. The console log loads in a custom inspector.
 - Use the **Details** inspector for examining the console log.
