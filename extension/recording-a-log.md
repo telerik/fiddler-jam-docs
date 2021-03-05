@@ -13,17 +13,17 @@ Log recording is the core functionality provided by Fiddler Jam. A **Log** in Fi
 
 1. Launch **Fiddler Jam** by clicking on the extension icon ![Extension main icon](../images/ext/ext-icons/small-logo.png).
 
-1. Expand the [**Capture Options**]({%slug fj-capture-options%}) and choose the preferred settings.
+2. Expand the [**Capture Options**]({%slug fj-capture-options%}) and choose the preferred settings.
 
-1. Click **Start Capture** to begin recording. Fiddler Jam will start recording all network activity in your current browser tab.
+3. Click **Start Capture** to begin recording. Fiddler Jam will start recording all network activity in your current browser tab.
 
-   >important Chrome displays an informational banner: **"Fiddler Jam" started debugging this browser**. Closing the notification or clicking **Cancel** will stop the capturing session. No log will be saved.
+   >important Chrome displays an informational banner: **"Fiddler Jam" started debugging this browser**. Closing the notification or clicking **Cancel** won't stop the capturing session. Use the **Stop Capture** button (see the 5th step) to cancel an ongoing recording.
 
-1. Click anywhere in the browser tab to hide the Fiddler Jam window and to continue recording. To bring the Fiddler Jam window back, click the extension's icon.
+4. Click anywhere in the browser tab to hide the Fiddler Jam window and to continue recording. To bring the Fiddler Jam window back, click the extension's icon.
 
    At any time during recording, you can click **_Capturing…_** to see details about what Fiddler Jam records.
 
-1. Click  **Stop Capture** to end the recording.
+5. Click  **Stop Capture** to end the recording.
 
 At this point, the captured traffic is recorded as a log but is not yet saved anywhere. Proceed with [submitting the recorded log to the JAM portal]({%slug fj-submitting-logs%}#submit-via-link) or by [saving the log as a file]({%slug fj-submitting-logs%}#save-as-file).
 
