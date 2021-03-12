@@ -30,7 +30,7 @@ Any log submitted to the Fiddler Jam portal could be directly opened in Fiddler 
 
 ## HAR Files (Fiddler Jam Portal)
 
-Any log submitted to the Fiddler Jam portal could be exported/imported as HAR files while using the portal UI.
+Any log submitted to the Fiddler Jam portal could be exported as HAR files while using the portal UI.
 
 ### Export HAR
 

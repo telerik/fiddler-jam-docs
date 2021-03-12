@@ -24,7 +24,7 @@ Everyone who uses the Fiddler Jam Chrome extension can be described as an extens
 All users who have an active Fiddler Jam [subscription]({%slug fj-portal%}#subscriptions) can be referred to as Fiddler Jam portal users. Those users can have different roles based on the available seats in the subscription.
 
 - [**Viewer role**](#viewer-role): The viewer can open **submitted logs** added to a workspace.
-- [**Agent role**](#agent-role): The agent can view and maintain **submitted logs** and **workspaces** based on the Fiddler Jam account quota.
+- [**Agent role**](#agent-role): The agent can view and maintain **submitted logs** and **workspaces logs** based on the Fiddler Jam account quota.
 - **Account owner**: The user who purchased the Fiddler Jam license from [the Fiddler dashboard](https://dashboard.getfiddler.com/). This role manages the subscription seats, payment, and assigning the **agent** or **viewer** roles.
 
 
