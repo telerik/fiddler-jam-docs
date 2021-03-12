@@ -37,17 +37,8 @@ Learn more about:
 
 ## Subscriptions
 
-Fiddler Jam portal provides various subscription plans to accommodate the different user needs.
+Fiddler Jam portal provides various subscription plans to accommodate the different user needs. Visit [https://www.telerik.com/fiddler-jam] for more information about the subscription plans.
 
-| **Features** |  **Starter** | **Pro**** | **Business** | **Enterprise** |
-|---|---|---|---|---|
-| Viewer role seats | **Unlimited** | **Unlimited** | **Unlimited** | **Unlimited** |
-| Agent role seats | Up to 2 | Up to 10 | Up to 20 | Contact us |
-| Reports per month per license | 10 | 30 | **Unlimited** | **Unlimited** |
-| Email Support | **Unlimited*** | **Unlimited*** |  **Priority** |  **Priority** |
-| Price (US Dollars) | 9 USD | 19 USD |  23 USD | Contact us |
-
-*subject to fair usage policy. Learn more about the support offering [here](#).
 
 ## Trial Plan
 
