@@ -37,7 +37,7 @@ Learn more about:
 
 ## Subscriptions
 
-Fiddler Jam portal provides various subscription plans to accommodate the different user needs. Visit [https://www.telerik.com/fiddler-jam] for more information about the subscription plans.
+Fiddler Jam portal provides various subscription plans to accommodate the different user needs. Visit [https://www.telerik.com/fiddler-jam](https://www.telerik.com/fiddler-jam) for more information about the subscription plans.
 
 
 ## Trial Plan
