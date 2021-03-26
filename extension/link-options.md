@@ -31,3 +31,13 @@ This option provides the opportunity to protect your recorded log with a passwor
 This option allows you to list specific users via their emails. Only users explicitly listed in the email list will be able to open the recorded log. The recipients need to be portal users with the appropriate rights in the Fiddler Jam portal.
 
 ![Sharing with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails.png)
+
+## Next Steps
+
+Learn more about:
+
+- What is the [Fiddler Jam portal]({%slug fj-portal%}).
+- What is a [Fiddler Jam portal user]({%slug fj-users%}#portal-users) and how to become one.
+- How to [work with submitted logs in the Fiddler Jam portal]({%slug fj-portal-logs%}).
+- How to [organize received logs into portal workspaces]({%slug fj-workspaces%})
+- How to [use the Fiddler Everywhere desktop application for deep-dive investigation of Jam logs]({%slug fj-advanced-analysis%}).
