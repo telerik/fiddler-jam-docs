@@ -14,9 +14,10 @@ Fiddler Jam provides several specific capture options. These options allow you t
 - [Take screenshots while capturing](#take-screenshots-while-capturing)
 - [Capture console](#capture-console)
 - [Mask cookies](#mask-cookies)
-- [Capture post data](#capture-post-data)
+- [Mask post data](#mask-post-data)
+- [Disable Cache](#disable-cache)
 
-![Fiddler Jam Capture Options](../images/ext/ext-images/extension-capture-options.png)
+![Fiddler Jam Capture Options](../images/ext/ext-images/extension-start-capturing-extended.png)
 
 ## Take screenshots while capturing
 
@@ -34,10 +35,25 @@ This option will capture everything outputted in the developer console, includin
 
 This option will mask any cookies that are part of the captured requests and responses. Masking hides all cookie values while the cookie key names remain visible. By default, **Mask cookies** is **enabled**.
 
-## Capture post data
+## Mask post data
 
-This option will capture post data (for example, data from forms, input text fields, etc.). Post data is also the request body sent via POST/PUT/PATCH methods. By default, **Capture post data** is **disabled**.
+This option will mask any post data (for example, data from forms, input text fields, etc.). Post data is also the request body sent via POST/PUT/PATCH methods. By default, **Mask post data** is **enabled**.
+
+## Disable cache
+
+This option will set the value of the `Cache-Control` and `Prasgma` headers to `no-cache` on each network request. By default, **Disable cache** is **enabled**.
 
 ## Security concerns
 
 Capturing all outgoing and incoming traffic for the current tab might expose sensitive or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}).
+
+## Next Steps
+
+Learn more about:
+
+- What is the [Fiddler Jam portal]({%slug fj-portal%}).
+- What is a [Fiddler Jam portal user]({%slug fj-users%}#portal-users) and how to become one.
+- How to [work with submitted logs in the Fiddler Jam portal]({%slug fj-portal-logs%}).
+- How to [organize received logs into portal workspaces]({%slug fj-workspaces%})
+- How to [use the Fiddler Everywhere desktop application for deep-dive investigation of Jam logs]({%slug fj-advanced-analysis%}).
+

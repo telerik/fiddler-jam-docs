@@ -12,15 +12,15 @@ position: 10
 
 ## Install Fiddler Jam
 
-> You can't add Chrome extensions when you browse in Incognito mode or as a guest.
+1. Open the **Google Chrome** browser on your computer.
 
-1. Open **Google Chrome** on your computer.
+2. Open the [Chrome Web Store page for Fiddler Jam](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
 
-1. Open the [Chrome Web Store page for Fiddler Jam](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
+3. Click **_Add to Chrome_**.
 
-1. Click **_Add to Chrome_**.
+4. On the confirmation popup, click **_Add extension_**.
 
-1. On the confirmation popup, click **_Add extension_**.
+>important You can't add Chrome extensions when you browse in Incognito mode or as a guest.
 
 To use the extension, click the Fiddler Jam icon to the right of Chrome's address bar. If you have multiple extensions and the Fiddler Jam icon isn't visible, click the Chrome Extensions icon to reveal Fiddler Jam. You can also [pin Fiddler Jam](#pin-fiddler-jam) for faster access.
 
@@ -32,7 +32,16 @@ A pinned extension appears in the Chrome toolbar next to your profile avatar and
 
 1. Click the **Extensions** button on the Google Chrome toolbar (next to your profile avatar).
 
-1. Click the pin next to **Fiddler Jam** extension.
+2. Click the pin next to **Fiddler Jam** extension.
+
+![Fiddler Jam Chrome Extension](../images/ext/ext-images/extension-capture-options.png)
+
+## Initial Jam Extension Screen
+
+After а successful installation of the Fiddler Jam extension, the Welcome screen prompts the new user to read and accept the [Terms of Service](https://www.telerik.com/purchase/license-agreement/fiddler-jam-beta) and the [Privacy Policy](https://www.progress.com/legal/privacy-policy).
+
+![Welcome screen of Fiddler Jam extension](../images/ext/ext-images/extension-welcome-screen.png)
+
 
 ## Manage Extensions in Chrome
 

@@ -25,6 +25,18 @@ Collaboration is the main feature of Fiddler Jam. You can easily submit a log in
 
     - If you selected **Share with specific people**: Click **Share Captured Logs** to submit the generated log. This sends an email notification to the specified recipients and then generates a shareable link. Simultaneously, the log is uploaded to the Fiddler Jam cloud. Only the log creator and the specified recipients can view the log.
 
-3. Click **Copy URL** to store the unique URL to your machine's clipboard. Use this link to share the recorded logs with other Fiddler Jam portal users.
+3. Click **Copy Link** to store the unique URL to your machine's clipboard. Use this link to share the recorded logs with other Fiddler Jam [portal users]({%slug fj-users%}#portal-users).
+
+![Copy link screen](../images/ext/ext-images/extension-link-options-copy-link.png)
 
 >tip Logs submitted to the Fiddler Jam portal **are private**. Only Fiddler Jam [portal users]({%slug fj-users%}#portal-users) with [the proper access rights]({%slug fj-link-options%}) are able to open a submitted log.
+
+## Next Steps
+
+Learn more about:
+
+- What is the [Fiddler Jam portal]({%slug fj-portal%}).
+- What is a [Fiddler Jam portal user]({%slug fj-users%}#portal-users) and how to become one.
+- How to [work with submitted logs in the Fiddler Jam portal]({%slug fj-portal-logs%}).
+- How to [organize received logs into portal workspaces]({%slug fj-workspaces%})
+- How to [use the Fiddler Everywhere desktop application for deep-dive investigation of Jam logs]({%slug fj-advanced-analysis%}).
