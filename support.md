@@ -14,9 +14,9 @@ position: 900
 
 Users who have purchased a paid subscription can reach out to the Fiddler Jam team for help. The table below shows a comparison between the different plans and their respective level of support. All support options are subject to fair usage policy.
 
-|   |**Starter**   |**Growth**   |**Busines**  |  **Custom** |
-|---|---|---|---|---|
-| Email support |  __Standard Support__ |  __Standard Support__ | __Priority Support__* | __Contact Us__ |
+|   |**Starter**   |**Growth**   |**Busines**  | 
+|---|---|---|---|
+| Email support |  __Standard Support__ |  __Standard Support__ | __Priority Support__* | 
 
 
 *With __Priority support__, your cases are escalated to the top of our queue.
