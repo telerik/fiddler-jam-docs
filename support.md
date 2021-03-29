@@ -12,14 +12,14 @@ position: 900
 
 ## Who has access to support?
 
-Users who have purchased a paid subscription can reach out to the Fiddler Jam team for help. The table below shows a comparison between the different plans and their respective level of support. All support options are subject to [__fair usage policy__](#what-is-the-fair-usage-policy?).
+Users who have purchased a paid subscription can reach out to the Fiddler Jam team for help. The table below shows a comparison between the different plans and their respective level of support. All support options are subject to fair usage policy.
 
 |   |**Starter**   |**Growth**   |**Busines**  |  **Custom** |
 |---|---|---|---|---|
 | Email support |  __Standard Support__ |  __Standard Support__ | __Priority Support__* | __Contact Us__ |
 
 
-*With **Priority support**, your cases are escalated to the top of our queue.
+*With __Priority support__, your cases are escalated to the top of our queue.
 
 
 ## What is the Fair Usage Policy?
