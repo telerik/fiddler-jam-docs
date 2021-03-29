@@ -12,9 +12,9 @@ position: 900
 
 ## Who has access to support?
 
-Users who have purchased a paid subscription can reach out to the Fiddler Jam team for help. The table below shows a comparison between the different plans and their respective level of support. All support options are subject to fair usage policy.
+Users who have purchased a paid subscription can reach out to the Fiddler Jam team for help. The table below shows a comparison between the different plans and their respective level of support. All support options are subject to a fair usage policy.
 
-|   |**Starter**   |**Growth**   |**Busines**  | 
+|   | **Starter**   |**Growth**   | **Business**  | 
 |---|---|---|---|
 | Email support |  __Standard Support__ |  __Standard Support__ | __Priority Support__* | 
 
