@@ -1,5 +1,6 @@
 ---
 title: Recording a log
+description: Basic step-by-step instructions for recording a log with the Fiddler Jam extension
 slug: fj-recording-logs
 tags: record Fiddler Jam log, Fiddler Jam logs, Fiddler Jam capturing, Fiddler Jam recording, capture traffic with Jam, Fiddler Jam HTTPS traffic 
 publish: true

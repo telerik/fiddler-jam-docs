@@ -1,5 +1,6 @@
 ---
 title: Submitted Logs
+description: Fiddler Jam portal log essentials and usage instructions
 slug: fj-portal-logs
 tags: Fiddler Jam portal logs, Fiddler Jam accessing submitted log, Jam submitted log
 publish: true
