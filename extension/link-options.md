@@ -1,5 +1,6 @@
 ---
 title: Link Options
+description: Details and options on link generation for sharing traffic captured from the Fiddler Jam extension
 slug: fj-link-options
 tags: submit Fiddler Jam, Fiddler Jam link generation, Fiddler Jam URL link, Fiddler Jam portal links, Jam sharing, Jam collaboration, Fiddler collaboration options
 publish: true

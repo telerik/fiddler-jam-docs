@@ -1,5 +1,6 @@
 ---
 title: Advanced Log Analysis
+description: Using Jam logs alongside Fiddler Everywhere desktop application for in-depth analysis
 slug: fj-advanced-analysis
 tags: Fiddler Jam log in Fiddler Everywhere, advanced Fiddler Jam analysis, Jam integration with Fiddler Everywhere, Open in Fiddler, Fiddler Jam HAR files, Jam HAR, JAM Everywhere
 publish: true

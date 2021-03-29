@@ -1,5 +1,6 @@
 ---
 title: Users & Roles
+description: Fiddler Jam extensions and portal users and details about the user options
 slug: fj-users
 tags: Fiddler Jam portal users, Fiddler Jam viewer, Fiddler Jam agents, Jam extension users
 publish: true
