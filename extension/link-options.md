@@ -22,7 +22,7 @@ The option **Share with link** allows any Fiddler Jam portal user with the link 
 
 Only registered [Fiddler Jam portal users]({%slug fj-users%}#portal-users) with the appropriate rights will have access to the recorded information.
 
-![Share with link](../images/ext/ext-images/eextension-link-options-password.png)
+![Share with link](../images/ext/ext-images/extension-link-options-password.png)
 
 
 ## Share with specific people
