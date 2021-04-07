@@ -1,6 +1,6 @@
 ---
-title: Capture Options
-description: Fiddler Jam extension capturing and recording options
+title: Advanced Options
+description: Fiddler Jam extension advanced capturing and recording options.
 slug: fj-capture-options
 tags: record Fiddler Jam, Fiddler Jam options, Fiddler Jam capturing options, Fiddler Jam recording
 publish: true
@@ -8,9 +8,9 @@ position: 40
 ---
 
 
-# Capture Options
+# Advanced Options
 
-Fiddler Jam provides several specific capture options. These options allow you to enable or disable certain functionalities in order to modify the recorded output:
+Fiddler Jam provides several advanced capture options. These options allow you to enable or disable certain functionalities in order to modify the recorded output:
 
 - [Take screenshots while capturing](#take-screenshots-while-capturing)
 - [Capture console](#capture-console)
@@ -18,7 +18,7 @@ Fiddler Jam provides several specific capture options. These options allow you t
 - [Mask post data](#mask-post-data)
 - [Disable Cache](#disable-cache)
 
-![Fiddler Jam Capture Options](../images/ext/ext-images/extension-start-capturing-extended.png)
+![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended.png)
 
 ## Take screenshots while capturing
 
