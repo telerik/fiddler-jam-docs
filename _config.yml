@@ -55,13 +55,13 @@ footer:
 -
   title: "Getting Started"
   links:
-    "Download Now": https://www.telerik.com/download/fiddler-jam
+    "Try Now": https://www.telerik.com/fiddler-jam
 -
   title: "Community"
   links:
     "Forums": https://community.getfiddler.com/support/discussions
     "Blogs": https://www.telerik.com/blogs/tag/fiddler
-    "Feedback Portal": https://feedback.telerik.com/fiddler-jam
+    "Feedback Portal": https://community.getfiddler.com/support/discussions/forums/12000000868
   
 footer_social: 
     facebook: https://www.facebook.com/Telerik/
