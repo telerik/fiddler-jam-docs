@@ -9,7 +9,7 @@ position: 50
 
 # Sharing Options
 
-After [recording a log]({%slug fj-recording-logs%}), the Fiddler Jam extension provides two options for sharing the log. Both possibilities could apply additional security by enabling the password protection option.
+The Fiddler Jam extension provides two options for sharing [recorded logs]({%slug fj-recording-logs%}). Both alternatives allow additional security via [password protection](#password-protection-for-recorded-logs).
 
 - [Share with link](#share-with-link)
 - [Share with specific people](#share-with-specific-people)
