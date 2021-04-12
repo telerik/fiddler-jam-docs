@@ -27,7 +27,7 @@ Log recording is the core functionality provided by Fiddler Jam. A **Log** in Fi
 
    ![Stop capturing screen](../images/ext/ext-images/extension-stop-capturing.png)
 
-1. Before submitting the log, you could check the recorded log by clicking on **Capture Successful** line. The **Capture Details** screen will load with a list of the captured sessions, screenshots, console logs, etc. Go back to the previous screen to generate a link and submit the log to the cloud portal.
+1. Before submitting the recorded log, you can review it by clicking on the **Capture Successful** line. The **Capture Details** screen will load with a list of the captured sessions, screenshots, console logs, etc. Go back to the previous screen to generate a link and submit the log to the cloud portal.
 
    ![Stop capturing screen](../images/ext/ext-images/extension-link-options-show-sessions.png)
 
