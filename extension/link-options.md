@@ -16,7 +16,7 @@ The Fiddler Jam extension provides two options for sharing [recorded logs]({%slu
 
 ![Link generation options](../images/ext/ext-images/extension-link-options.png)
 
-## Share with link
+## Share with a Link
 
 The option **Share with link** allows any Fiddler Jam portal user with the link to open the recorded logs. Additionally, the log could be protected with a password by enabling the **Password protection** switch. The password must be at least eight characters long, must contain at least one lowercase, one uppercase, and one number.
 
