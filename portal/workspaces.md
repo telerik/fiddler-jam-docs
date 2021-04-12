@@ -1,6 +1,6 @@
 ---
 title: Workspaces
-description: Brief introduction about Fiddler Jam workspaces 
+description: Fiddler Jam portal workspaces are account folders for organizing logs submitted from the Fiddler Jam extension users.
 slug: fj-workspaces
 tags: Fiddler Jam workspaces, Fiddler Jam space, Fiddler Jam cloud, Fiddler Jam portal logs
 publish: true

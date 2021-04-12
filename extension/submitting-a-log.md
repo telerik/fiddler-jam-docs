@@ -18,13 +18,13 @@ Collaboration is the main feature of Fiddler Jam. You can easily submit a log in
 
 1. [Record a log]({%slug fj-recording-logs%}).
 
-2. From the [**Sharing options**]({%slug fj-link-options%}), set the access level for the recorded log (public or shared with specific people) and optionally protect the log with a password.
+2. From the [**Sharing options**]({%slug fj-link-options%}), set the access level for the recorded log (public or shared with specific people) and optionally [protect the log with a password]({%slug fj-link-options%}#password-protection-for-recorded-logs).
 
-   The default drop-down selection is **Share with link**, which will create a public link. You could protect the log with a password by enabling the **Password protection** switch. The password must be at least eight characters long, must contain at least one lowercase, one uppercase, and one number. Click **Get Link** to submit the recorded Fiddler JAM log and generate a sharable link. The link points to the cloud space in the Jam portal that contains the submitted log. This URL is accessible only for Fiddler Jam [portal users]({%slug fj-users%}#portal-users) with the appropriate access rights.
+   The default drop-down selection is **Share with link**, which will create a public link. Click **Get Link** to submit the recorded Fiddler JAM log and generate a sharable link. The link points to the cloud space in the Jam portal that contains the submitted log. This URL is accessible only for Fiddler Jam [portal users]({%slug fj-users%}#portal-users) with the appropriate access rights.
 
    ![Share with specific people option](../images/ext/ext-images/extension-link-options-password.png)
    
-   Alternatively, you could select **Share with specific people**, which will create a link only for the portal users added explicitly via their account email. You could protect the log with a password by enabling the **Password protection** switch. The password must be at least eight characters long, must contain at least one lowercase, one uppercase, and one number. Click **Share Captured Logs** to submit the recorded Fiddler JAM log. This action sends an email notification to the specified recipients and then generates a shareable link. Simultaneously, the log is uploaded to the Fiddler Jam cloud space. This URL is accessible only for Fiddler Jam [portal users]({%slug fj-users%}#portal-users) with the appropriate access rights.
+   Alternatively, you could select **Share with specific people**, which will create a link only for the portal users added explicitly via their account email. Click **Share Captured Logs** to submit the recorded Fiddler JAM log. This action sends an email notification to the specified recipients and then generates a shareable link. Simultaneously, the log is uploaded to the Fiddler Jam cloud space. This URL is accessible only for Fiddler Jam [portal users]({%slug fj-users%}#portal-users) with the appropriate access rights.
 
    ![Share with specific people option](../images/ext/ext-images/extension-link-options-sharing-via-emails-popu.png)
 

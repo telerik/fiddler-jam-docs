@@ -31,7 +31,7 @@ Log recording is the core functionality provided by Fiddler Jam. A **Log** in Fi
 
    ![Stop capturing screen](../images/ext/ext-images/extension-link-options-show-sessions.png)
 
-1. At this point, the captured traffic is recorded as a log but is not yet saved anywhere. Choose the appropriate [**Sharing Options**]({%slug fj-link-options%}), use the **Get Link** button and proceed with [submitting the recorded log to the JAM portal]({%slug fj-submitting-logs%}#submit-via-link).
+1. At this point, the captured traffic is recorded as a log but is not yet submitted and saved in the Fiddler Jam portal cloud space. Choose the appropriate [**Sharing Options**]({%slug fj-link-options%}), use the **Get Link** button to proceed with [submitting and saving the recorded log to the JAM portal]({%slug fj-submitting-logs%}#submit-via-link).
 
    ![Generate Link](../images/ext/ext-images/extension-link-options-password.png)
 
