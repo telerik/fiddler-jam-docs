@@ -27,7 +27,7 @@ Only registered [Fiddler Jam portal users]({%slug fj-users%}#portal-users) with 
 
 ## Share with specific people
 
-This option allows you to list specific users via their emails. Only users explicitly listed in the email list will be able to open the recorded log. Additionally, the log could be protected with a password by enabling the **Password protection** switch. The password must be at least eight characters long, must contain at least one lowercase, one uppercase, and one number.
+This option allows you to list specific [Fiddler Jam portal users]({%slug fj-users%}#portal-users) via their account emails. Only users from the email list will be able to open the recorded log. The log can also be [protected with a password](#password-protection-for-recorded-logs).
 
 The email recipients need to be [Fiddler Jam portal users]({%slug fj-users%}#portal-users) with the appropriate rights.
 
