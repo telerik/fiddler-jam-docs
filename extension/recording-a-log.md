@@ -45,7 +45,7 @@ During recording, Fiddler Jam monitors the HTTP/HTTPS traffic, but it can also c
 
 >tip To reset the Fiddler Jam extension and start a new capturing session, use the **Capture Again** button.
 
-Additionally, Fiddler Jam provides switches for masking cookies, post data and for disabling the cache from [the Advanced options]({%slug fj-capture-options%}).
+Additionally, the Fiddler Jam [advanced options]({%slug fj-capture-options%}) allow you to mask cookies, post data and disable the browser cache.
 
 ## Next Steps
 
