@@ -10,7 +10,7 @@ position: 30
 
 # Submitting a Log
 
-Logs recorded by the Fiddler Jam extension can be submitted to the [Fiddler Jam portal]({%slug fj-portal%}) and shared with portal users via email or a direct link.
+Fiddler Jam logs can be submitted to the [Fiddler Jam portal]({%slug fj-portal%}) and shared with portal users via email or a direct link.
 
 ## Submit via Link
 
