@@ -22,7 +22,6 @@ Link sharing allows [registered Fiddler Jam portal users]({%slug fj-users%}#port
 
 Only registered [Fiddler Jam portal users]({%slug fj-users%}#portal-users) with the appropriate rights will have access to the recorded information.
 
-![Share with link](../images/ext/ext-images/extension-link-options-password.png)
 
 
 ## Share with Specific People
