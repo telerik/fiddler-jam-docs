@@ -13,7 +13,7 @@ Once an extension user submits recorded traffic, the log is uploaded to the Fidd
 
 ## Open Submitted Logs
 
-After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension user knows the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) with the portal user (e.g.,,, a support engineer with Fiddler Jam subscription and agent role).
+After a Fiddler Jam user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only this user knows the exact address of the log. The next step is for the extension user to share the generated link with other portal users (e.g., a support engineer with Fiddler Jam subscription and agent role). The access rules are set via [the link generation options]({%slug fj-link-options%}).
 
 To protect the content of the submitted log, the following rules apply:
 
@@ -98,4 +98,3 @@ In case the extension user has explicitly enabled the developer's console logs c
 - Use the **Stack Trace** inspector for inspection of the stack trace.
 
 ![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-consolelogs.png)
-
