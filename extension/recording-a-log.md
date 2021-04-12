@@ -37,7 +37,7 @@ Log recording is the core functionality provided by Fiddler Jam. A **Log** in Fi
 
 ## Additional Recording Options
 
-During log recording, Fiddler Jam could capture not only the HTTP/HTTPS traffic but also:
+During recording, Fiddler Jam monitors the HTTP/HTTPS traffic, but it can also capture:
 
 - **Screenshots**: If the **_Take screenshots while capturing_** switch is enabled, a screenshot will be recorded every time you click on the loaded page.
 
