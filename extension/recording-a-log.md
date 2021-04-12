@@ -14,7 +14,7 @@ Log recording is the core functionality provided by Fiddler Jam. A **Log** in Fi
 
 1. Launch **Fiddler Jam** by clicking on the extension icon ![Extension main icon](../images/ext/ext-icons/small-logo.png).
 
-1. (Optional) Expand the [**Advanced Options**]({%slug fj-capture-options%}) and choose the preferred settings. By default, all advanced options are turned on.
+1. (Optional) Expand [**Advanced Options**]({%slug fj-capture-options%}) and choose the preferred settings. By default, all advanced options are enabled.
 
 1. Click **Start Capture** to begin recording. Fiddler Jam will start recording all network activity in your current browser tab. Click anywhere in the browser tab to hide the Fiddler Jam window and to continue recording. To bring the Fiddler Jam window back, click the extension's icon.
 
