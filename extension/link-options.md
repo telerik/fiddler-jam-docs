@@ -1,6 +1,6 @@
 ---
 title: Sharing Options
-description: An article about the sharing and security options for submitting a recorded Fiddler Jam logs.
+description: Sharing and security options for recorded Fiddler Jam logs. Share with a link or with specific people, and use an optional password. 
 slug: fj-link-options
 tags: submit Fiddler Jam, Fiddler Jam link generation, Fiddler Jam URL link, Fiddler Jam portal links, Jam sharing, Jam collaboration, Fiddler collaboration options
 publish: true
