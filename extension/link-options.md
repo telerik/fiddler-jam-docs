@@ -33,6 +33,16 @@ The email recipients need to be [Fiddler Jam portal users]({%slug fj-users%}#por
 
 ![Share with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails-popu.png)
 
+## Password Protection for Recorded Logs
+
+Recorded logs can be protected with a password, no matter if they are shared with a link or with specific users. Use the **Password protection** switch. The password must:
+
+* be at least 8 characters long
+* contain both lowercase and uppercase letters
+* contain at least one number
+
+![Share with link](../images/ext/ext-images/extension-link-options-password.png)
+
 ## Next Steps
 
 Learn more about:
