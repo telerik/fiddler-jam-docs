@@ -60,7 +60,7 @@ Depending on the selected [capture options]({%slug fj-capture-options%}), a Fidd
 
 ### Traffic Inspection
 
-Each FIddler Jam log contains a list of captured HTTP sessions and request/response inspectors. On the left side, called **Captured Logs**, the UI provides the list of captured HTTP sessions, screenshots, and console logs. On the right side, called **Inspectors**, the Fiddler Jam UI provides the **Request**, and **Response** inspectors (when an HTTP session is selected) or the screenshot/console logs preview screen (when a screenshot or a console log is selected).
+Each Fiddler Jam log contains a list of captured HTTP sessions and request/response inspectors. On the left side, called **Captured Logs**, the UI provides the captured HTTP sessions, screenshots, and console logs. On the right side, called **Inspectors**, Fiddler Jam provides the **Request** and **Response** inspectors (when an HTTP session is selected), or the screenshot/console logs preview screen (when a screenshot or a console log is selected).
 
 To investigate a specific HTTP session:
 - Open the submitted log.
