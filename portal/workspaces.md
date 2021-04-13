@@ -21,7 +21,7 @@ An agent can rename the default workspace name as follows:
 - Click on the **Rename workspace** button at the top-right corner.
 - Enter the new workspace name and click on **Rename**.
 
->tip The current version of the Fiddler Jam dashboard doesn't allow creating additional workspaces. Please contact us directly if you need to make more than one workspace.
+>tip The current version of the Fiddler Jam dashboard doesn't allow creating additional workspaces. Please [contact us directly](mailto:support@getfiddler.com) if you need to create multiple workspaces.
 
 ## Add Submitted Log to Workspace
 
