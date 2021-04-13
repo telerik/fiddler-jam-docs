@@ -10,7 +10,7 @@ position: 30
 
 # Submitting a Log
 
-Logs captured by the Fiddler Jam extension can be submitted to the [Fiddler Jam portal]({%slug fj-portal%}), shared with portal users via email, or saved as a [JSON-formatted archive (**HAR**)](https://en.wikipedia.org/wiki/HAR_(file_format)).
+Fiddler Jam logs can be submitted to the [Fiddler Jam portal]({%slug fj-portal%}) and shared with portal users via email or a direct link.
 
 ## Submit via Link
 
@@ -18,13 +18,15 @@ Collaboration is the main feature of Fiddler Jam. You can easily submit a log in
 
 1. [Record a log]({%slug fj-recording-logs%}).
 
-2. From the [**Link Generation options**]({%slug fj-link-options%}), select the access level you would like to apply to the recorded logs.
+2. From the [**Sharing options**]({%slug fj-link-options%}), set the access level for the recorded log (public or shared with specific people) and optionally [protect the log with a password]({%slug fj-link-options%}#password-protection-for-recorded-logs).
 
-   The default drop-down selection is **Anyone with this link**. You could also create a password-protected link by using the **Anyone with link and password** option or share the recorded logs with specific people via email by using the **Share with specific people** option.
+   The default drop-down selection is **Share with link**, which will create a public link. Click **Get Link** to submit the recorded Fiddler JAM log and generate a sharable link. The link points to the cloud space in the Jam portal that contains the submitted log. This URL is accessible only for Fiddler Jam [portal users]({%slug fj-users%}#portal-users) with the appropriate access rights.
 
-    - If you selected **Anyone with this link** or **Anyone with link and password**: Click **Get Link** to submit the generated log. This generates a sharable link for the current user. Simultaneously, the log is uploaded to the Fiddler Jam cloud.
+   ![Share with specific people option](../images/ext/ext-images/extension-link-options-password.png)
+   
+   Alternatively, you could select **Share with specific people**, which will create a link only for the portal users added explicitly via their account email. Click **Share Captured Logs** to submit the recorded Fiddler JAM log. This action sends an email notification to the specified recipients and then generates a shareable link. Simultaneously, the log is uploaded to the Fiddler Jam cloud space. This URL is accessible only for Fiddler Jam [portal users]({%slug fj-users%}#portal-users) with the appropriate access rights.
 
-    - If you selected **Share with specific people**: Click **Share Captured Logs** to submit the generated log. This sends an email notification to the specified recipients and then generates a shareable link. Simultaneously, the log is uploaded to the Fiddler Jam cloud. Only the log creator and the specified recipients can view the log.
+   ![Share with specific people option](../images/ext/ext-images/extension-link-options-sharing-via-emails-popu.png)
 
 3. Click **Copy Link** to store the unique URL to your machine's clipboard. Use this link to share the recorded logs with other Fiddler Jam [portal users]({%slug fj-users%}#portal-users).
 

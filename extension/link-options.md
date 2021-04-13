@@ -1,37 +1,44 @@
 ---
-title: Link Options
-description: Details and options on link generation for sharing traffic captured from the Fiddler Jam extension
+title: Sharing Options
+description: Sharing and security options for recorded Fiddler Jam logs. Share with a link or with specific people, and use an optional password. 
 slug: fj-link-options
 tags: submit Fiddler Jam, Fiddler Jam link generation, Fiddler Jam URL link, Fiddler Jam portal links, Jam sharing, Jam collaboration, Fiddler collaboration options
 publish: true
 position: 50
 ---
 
-# Link Options
+# Sharing Options
 
-After [recording a log]({%slug fj-recording-logs%}), the Fiddler Jam extension provides several options for setting the log accessibility through the generated link. Use the **Link Options** drop-down to generate a sharable log with the proper access level:
+The Fiddler Jam extension provides two options for sharing [recorded logs]({%slug fj-recording-logs%}). Both alternatives allow additional security via [password protection](#password-protection-for-recorded-logs).
 
-- [Anyone with this link](#anyone-with-this-link)
-- [Anyone with link and password](#anyone-with-link-and-password)
+- [Share with a link](#share-with-a-link)
 - [Share with specific people](#share-with-specific-people)
 
 ![Link generation options](../images/ext/ext-images/extension-link-options.png)
 
-## Anyone with this link
+## Share with a Link
 
-The option allows any Fiddler Jam portal user with the link to open the recorded logs. Only registered portal users will have full access to the recorded information.
+Link sharing allows [registered Fiddler Jam portal users]({%slug fj-users%}#portal-users) to open a recorded log, if they have the link. The log can be additionally [protected with a password](#password-protection-for-recorded-logs).
 
-## Anyone with link and password
+Only registered [Fiddler Jam portal users]({%slug fj-users%}#portal-users) with the appropriate rights will have access to the recorded information.
 
-This option provides the opportunity to protect your recorded log with a password. The content is encrypted with AES-CTR, and only portal users with **appropriate access rights** and **access to the user-defined password** will be able to open the log.
 
->tip The password needs to be at least eight characters long and contain at least one lowercase letter, one uppercase letter, and one number.
 
-## Share with specific people
+## Share with Specific People
 
-This option allows you to list specific users via their emails. Only users explicitly listed in the email list will be able to open the recorded log. The recipients need to be portal users with the appropriate rights in the Fiddler Jam portal.
+This option allows you to list specific [Fiddler Jam portal users]({%slug fj-users%}#portal-users) via their account emails. Only users from the email list will be able to open the recorded log. The log can also be [protected with a password](#password-protection-for-recorded-logs).
 
-![Sharing with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails.png)
+![Share with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails-popu.png)
+
+## Password Protection for Recorded Logs
+
+Recorded logs can be protected with a password, no matter if they are shared with a link or with specific users. Use the **Password protection** switch. The password must:
+
+* be at least 8 characters long
+* contain both lowercase and uppercase letters
+* contain at least one number
+
+![Share with link](../images/ext/ext-images/extension-link-options-password.png)
 
 ## Next Steps
 

@@ -13,7 +13,7 @@ Once an extension user submits recorded traffic, the log is uploaded to the Fidd
 
 ## Open Submitted Logs
 
-After an extension user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only the extension user knows the exact address of the log. The next step is for the extension user to share the generated link (with the access rules set via [the link generation options]({%slug fj-link-options%})) with the portal user (e.g., a support engineer with Fiddler Jam subscription and agent role).
+After a Fiddler Jam user submits a log, the log is uploaded to the Fiddler Jam cloud space. At this moment, only this user knows the exact address of the log. The next step is for the extension user to share the generated link with other portal users (e.g., a support engineer with Fiddler Jam subscription and agent role). The access rules are set via [the link generation options]({%slug fj-link-options%}).
 
 To protect the content of the submitted log, the following rules apply:
 
@@ -31,7 +31,6 @@ Once a submitted log is opened in the Fiddler Jam portal, there are multiple fun
 - [Investigating the log's captured traffic in detail (requests and responses)](#traffic-inspection). 
 - [Inspecting the taken screenshots](#screenshot-inspection).
 - [Analyzing the developer's console logs](#console-log-inspection).
-- [Reload the JAM log for mocking](#mocking-log).
 - [Deep dive investigation through Fiddler Everywhere]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
 - [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).
 - [Adding submitted logs to organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
@@ -52,6 +51,8 @@ To edit the details of a log that is already added in a workspace:
 - Edit the log's _title_, _description_, and _submitted by_ fields.
 - Click on **Done** when ready.
 
+![Edit log details](../images/portal/logs/fj-portal-log-edit-details.png)
+
 
 ## Using Logs
 
@@ -59,13 +60,18 @@ Depending on the selected [capture options]({%slug fj-capture-options%}), a Fidd
 
 ### Traffic Inspection
 
-Each FIddler Jam log contains a list of captured HTTP sessions and request/response inspectors. On the left side, called **Captured Logs**, the UI provides the list of captured HTTP sessions, screenshots, and console logs. On the right side, called **Inspectors**, the Fiddler Jam UI provides the **Request** and**Response** inspectors (when an HTTP session is selected) or the screenshot/console logs preview screen (when a screenshot or a console log is selected).
+Each Fiddler Jam log contains a list of captured HTTP sessions and request/response inspectors. On the left side, called **Captured Logs**, the UI provides the captured HTTP sessions, screenshots, and console logs. On the right side, called **Inspectors**, Fiddler Jam provides the **Request** and **Response** inspectors (when an HTTP session is selected), or the screenshot/console logs preview screen (when a screenshot or a console log is selected).
 
 To investigate a specific HTTP session:
 - Open the submitted log.
+- (Optional) Filter by search term (while using the Search text field) or Filter by log type (while using the Filter button)
 - Select a session line. 
+    - If the selected line is an HTTP session, then the **Request** and **Response** inspectors load the session content (headers, body, cookies, etc.). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked. 
+    - If the selected line is a screenshot, a **Preview** inspector will load the taken screenshot depicting the moment of the user interaction.
+    - If the selected line is a console log, a **Console Log** inspector will load the log details and stack trace.
+
     >tip Each captured HTTP(S) session has a unique line ID which can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
-- The Request and Response inspectors load the session content (headers, body, cookies, etc.). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked.
+
 
 ![Portal log UI](../images/portal/logs/fj-portal-log-usage.png)
 
@@ -76,17 +82,19 @@ To investigate a specific HTTP session:
 
 In case the extension user has explicitly enabled the screenshot capturing, a Fiddler Jam log will also contain screenshot lines for each user interaction made from the extension user (while the recording is on). 
 
-- Select a screenshot line in the Captured Logs list. The screenshot loads in a screenshot preview inspector.
+- Select a screenshot line in the Captured Logs list - the screenshot loads in a screenshot preview inspector.
 - Use the **Save** icon to download the screenshot locally as a PNG file.
 
 >tip Fiddler Jam extension will take screenshots on user interactions like following a link, pressing a button, etc.
 
+![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-screenshots.png)
 
 ### Console Log Inspection
 
 In case the extension user has explicitly enabled the developer's console logs capturing, a Fiddler Jam log will also contain console log lines.
 
-- Select a console log line in the Captured Logs list. The console log loads in a custom inspector.
+- Select a console log line in the Captured Logs list - the console log loads in a custom inspector.
 - Use the **Details** inspector for examining the console log.
 - Use the **Stack Trace** inspector for inspection of the stack trace.
 
+![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-consolelogs.png)
