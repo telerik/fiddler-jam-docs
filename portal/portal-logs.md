@@ -36,7 +36,7 @@ Once a submitted log is opened in the Fiddler Jam portal, there are multiple fun
 - [Adding submitted logs to organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
 
 
-## Log Details
+## Edit Log Details
 
 To edit the log details of a newly submitted log:
 
@@ -72,7 +72,6 @@ To investigate a specific HTTP session:
 
     >tip Each captured HTTP(S) session has a unique line ID which can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
 
-
 ![Portal log UI](../images/portal/logs/fj-portal-log-usage.png)
 
 >tip The traffic list and the inspectors are inspired by the Fiddler Everywhere UI. Learn more on how to use [the Request and Response inspectors](https://docs.telerik.com/fiddler-everywhere/user-guide/live-traffic/inspector-types) to investigate the captured traffic.
@@ -98,3 +97,16 @@ In case the extension user has explicitly enabled the developer's console logs c
 - Use the **Stack Trace** inspector for inspection of the stack trace.
 
 ![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-consolelogs.png)
+
+
+### Filters
+
+A Fiddler Jam log could contain exsessive number of recoreded HTTP requests, screenshots, and console logs. Use the search text input to filter out all requests containing the search term within the URL or in the Request Headers. Use the **Filters** (the icon next to the search text input) to filter out the different log entries (requests, screenshots, and console logs).
+
+![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-filtering.png)
+
+### More Log Details
+
+Each log stores detailed technical information about its creation which could further ease the support process. Access technical details like platform, date & time when the log was recorded, Jam extension version, etc., by pressing the **MORE** option next to the log's description.
+
+![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-more.png)

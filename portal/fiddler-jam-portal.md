@@ -43,15 +43,6 @@ Fiddler Jam portal provides various subscription plans to accommodate the differ
 
 ## Trial Plan
 
-Activate the trial plan to test the Fiddler Jam portal for 14 days and utilize the following advantages:
-
-- Share unlimited links to extension logs
-- Add unlimited portal viewers
-- View unlimited extension logs
-- Get priority support
-
-### Activate The Fiddler Jam Trial
-
 To activate the Fiddler Jam portal 14-days trial, execute the steps as follows:
 
 - Open [jam.getfiddler.com](https://jam.getfiddler.com/) page.
@@ -59,6 +50,8 @@ To activate the Fiddler Jam portal 14-days trial, execute the steps as follows:
 - Accept the Fiddler Jam license agreement.
 - Activate your trial by clicking on the **Start 14-Day Trial** button.
 
-![Start 14-Day Trial](../images/portal/trial/fj-trial-flow-try-14-days-002.png)
-
 That's all! No credit card is needed! Your Fiddler Jam workspace is automatically created, and you could immediately start using the Fiddler Jam portal to open, share and make a deep-dive investigation for the submitted Fiddler Jam extension logs.
+
+Activate the trial plan to test the Fiddler Jam portal for 14 days and utilize the following advantages:
+
+![Start 14-Day Trial](../images/portal/trial/fj-trial-flow-try-14-days-002.png)
