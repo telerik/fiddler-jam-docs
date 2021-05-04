@@ -1,7 +1,7 @@
 ---
-title: FAQ
+title: FAQ 
+description: Frequently asked questions about Fiddler Jam
 slug: faq
-tags: faq, frequently asked questions, Fiddler Jam terminology, Fiddler Jam help
 publish: true
 position: 100
 ---
@@ -53,11 +53,11 @@ Only registered users with active seats have access to the Jam portal. Licenses 
 
 ## Who can access details of a submitted log?
 
-**_A:_** That depends on [the link generation options]({%slug fj-link-options%}) chosed by the extension user. **Public links** are accessible for any portal user with the **agent** role. **A link shared with specific people** will be accessible only for the concrete portal user with an agent role. **Link with password-protection** will be accessible only for portal users with agent role and knowledge of the password.
+**_A:_** That depends on [the link generation options]({%slug fj-link-options%}) chosed by the extension user. **Public links** are accessible for any Fiddler Jam portal user. Link generated via the **Share with specific people** option are accessible only for the concrete Fiddler Jam portal users. Links generated with the **password-protection** option are be accessible only for Fiddler Jam portal users with knowledge of the password.
 
 ## Who can access the details of a password-protected log?
 
-**_A:_** Any portal user with agent role and password to unlock it. After opening the log via a password, the corresponding portal user will have complete access to the sessions.
+**_A:_** Any portal user and password to unlock it. After opening the log via a password, the corresponding portal user will have complete access to the sessions.
 
 ## What level of access do portal users get?
 
@@ -73,9 +73,8 @@ Only registered users with active seats have access to the Jam portal. Licenses 
 |---    |---    |
 |  extension user  |   End-user who have encountered an issue on your web application and are using the Fiddler Jam extension |
 |  Fiddler Jam portal   |   A central website for accessing call logs stored on the cloud    |
-|  portal user    | Account created for your organization to access the web portal. This includes both support and development. The portal users  |
-|  viewer role  |  A portal user assigned with [the viewer role]({%slug fj-users%}#viewer-role) |
-|  agent role  |  A portal user assigned with [the agent role]({%slug fj-users%}#agent-role) |
+|  Fiddler Jam portal user    | Account created for your organization to access the web portal. This includes both support and development. By default the Fiddler Jam portal users are having read and write rights and they can  |
+|  viewer role  |  A Fiddler Jam portal user explicitly assigned with [the viewer role]({%slug fj-users%}#viewer-role). The viewer role has rescricted read rights. |
 |  session |   A network activity that Fiddler captures. it contains HTTP(S) request and response information together   |
 |  log |   A collection of captured HTTP(S) sessions, screenshots, console logs, and other information recorded by an extension user   |
 |  workspace   |   A workspace is an organizational placeholder for logs. The workspace provides means to organize and share logs with your collaborators (within the organizational account)   |

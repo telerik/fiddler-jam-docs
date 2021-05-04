@@ -1,9 +1,8 @@
 ---
-title: Support
+title: Support 
 page_title: Support
 description: Fiddler Jam support options and service-level agreements
 slug: jam-support-page
-tags: Fiddler Jam support, Jam business version, Fiddler Jam paid support
 published: true
 position: 900
 ---

@@ -25,20 +25,22 @@ Fiddler Jam is a Chrome extension tool that can capture the ongoing tab activity
 
 The **Capture Options** menu provides some useful functionalities to will be applied during the capturing. Before you record a log, consider the following security concerns.
 
-- **Screenshots** - This option will add a screenshot of your initial action from the active Chrome tab. Before you record a log, consider disabling the screenshot option if your screen shows sensitive data. **Turned ON by default**.
+- **Take screenshots while capturing** - This option will add a screenshot of your initial action from the active Chrome tab. Before you record a log, consider disabling the screenshot option if your screen shows sensitive data. **Turned ON by default**.
 
 - **Capture console** - This option will include any developers console outputs in the recorded log. Before you record a log, consider disabling this functionality if your console logs contain sensitive information. **Turned ON by default**.
 
-- **Masking Cookies** - When active, this option masks all cookies values (cookie key names are still readable!) so that they won't be visible to the agents receiving the log. **Turned ON by default**.
+- **Mask cookies** - When active, this option masks all cookies values (cookie key names are still readable!) so that they won't be visible to the portal users receiving the log. **Turned ON by default**.
 
-- **Capture Post Data** - This option captures the user's information in text inputs and forms. That might include sensitive information like usernames, personal information, etc. **Turned OFF by default**.
+- **Mask post data** - This option captures the user's information in text inputs and forms. That might include sensitive information like usernames, personal information, etc. **Turned ON by default**.
+
+- **Disable cache** - This option sets the `Cache-Control` and `Pragma` headers to **no-cache** value on each network request. **Turned ON by default**.
 
 ## Sharing Links
 
 Once [a log is recorded]({%slug fj-recording-logs%}), the Fiddler Jam extension generates a unique link. The logs are distributed as HAR files.
 
-- For logs generated with **Anyone with this link** option:  Any [Fiddler Jam portal agent]({%slug fj-portal%}) could open the link.
+- For logs generated with **Share as link** option:  Any [Fiddler Jam portal users and viewers]({%slug fj-portal%}) could open the link.
 
-- For logs generated with **Anyone with link and password** option: Only [Fiddler Jam portal agent]({%slug fj-portal%}) that knows the password could open the link. The logs are distributed as HAR files, which are encrypted with the AES-CTR encryption algorithm.
+- For logs generated with **Share with specific people** options:  Only [Fiddler Jam portal users and viewers]({%slug fj-portal%}) that is explicitly included in the share list will be able to open the link.
 
-- For logs generated with **Share with specific people** options:  Only [Fiddler Jam portal agent]({%slug fj-portal%}) that is explicitly included in the share list will be able to open the link.
+- For logs generated with **Password protection** option: Only [Fiddler Jam portal users and viewers]({%slug fj-portal%}) that knows the password could open the link. The logs are distributed as HAR files, which are encrypted with the AES-CTR encryption algorithm.

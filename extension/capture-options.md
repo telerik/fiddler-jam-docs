@@ -1,5 +1,5 @@
 ---
-title: Advanced Options
+title: Advanced Options 
 description: Fiddler Jam extension advanced capturing and recording options.
 slug: fj-capture-options
 tags: record Fiddler Jam, Fiddler Jam options, Fiddler Jam capturing options, Fiddler Jam recording
@@ -53,7 +53,7 @@ Capturing all outgoing and incoming traffic for the current tab might expose sen
 Learn more about:
 
 - What is the [Fiddler Jam portal]({%slug fj-portal%}).
-- What is a [Fiddler Jam portal user]({%slug fj-users%}#portal-users) and how to become one.
+- What is the difference between [Fiddler Jam portal user]({%slug fj-users%}#user-role), [Fiddler Jam portal viewer]({%slug fj-users%}#viewer-role) and how to become one.
 - How to [work with submitted logs in the Fiddler Jam portal]({%slug fj-portal-logs%}).
 - How to [organize received logs into portal workspaces]({%slug fj-workspaces%})
 - How to [use the Fiddler Everywhere desktop application for deep-dive investigation of Jam logs]({%slug fj-advanced-analysis%}).

@@ -1,5 +1,5 @@
 ---
-title: Copyright
+title: Copyright 
 page_title: Copyright
 description: Fiddler Jam copyright details
 slug: license-copyright

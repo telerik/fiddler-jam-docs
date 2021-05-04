@@ -1,8 +1,7 @@
 ---
 title: Fiddler Jam Portal
-description: Introduction to the Fiddler Jam cloud portal
+description: Essentials about using the Fiddler Jam cloud portal
 slug: fj-portal
-tags: Fiddler Jam portal, Fiddler Jam site, Fiddler Jam web, Fiddler Jam portal users
 publish: true
 position: 10
 ---
@@ -17,14 +16,13 @@ The [Fiddler Jam portal](https://jam.getfiddler.com) is the cloud space where lo
 The Fiddler Jam login accepts using custom credentials or Google authentication, but the portal will be accessible only for usernames/emails that are part of an active subscription. Depending on the user assigned role, the Fiddler Jam portal will provide a different level of accessibility and features as follows:
 
 - Unregistered users won't be able to open the Fiddler Jam portal or load generated Fiddler Jam links. Note that no registration is needed to use the Fiddler Jam Chrome extension.
-- Registered users with the **viewer** role can see only logs [added to a workspace]({%slug fj-workspaces%}#add-submitted-log-to-workspace). If a viewer opens a public link, a page will inform the user that the links need to be added to the account workspace.
-- Registered users with the **agent** role can open public logs, create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
+- Fiddler Jam portal seats with the **viewer** role can see only logs [added to a workspace]({%slug fj-workspaces%}#add-submitted-log-to-workspace). If a viewer opens a public link, a page will inform the user that the links need to be added to the account workspace.
+- Fiddler Jam portal seats with the **user** role can open public logs, create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
 
 Learn more about :
 - [The Fiddler Jam **extension users**]({%slug fj-users%}#extension-users)
-- [The Fiddler Jam **portal users**]({%slug fj-users%}#portal-users)
-- [The portal users with **Viewer** role]({%slug fj-users%}#viewer-role)
-- [The portal users with **Agent** role]({%slug fj-users%}#agent-role)
+- [The Fiddler Jam portal seats with **Viewer** role]({%slug fj-users%}#viewer-role)
+- [The Fiddler Jam portal seats with **User** role]({%slug fj-users%}#user-role)
 
 
 ## Using Submitted Logs
