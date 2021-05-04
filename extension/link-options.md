@@ -15,11 +15,11 @@ The Fiddler Jam extension provides two options for sharing [recorded logs]({%slu
 
 ![Link generation options](../images/ext/ext-images/extension-link-options.png)
 
-## Share with a Link
+## Share As Link
 
 Link sharing allows [registered Fiddler Jam portal users]({%slug fj-users%}#portal-users) to open a recorded log, if they have the link. The log can be additionally [protected with a password](#password-protection-for-recorded-logs).
 
-Only registered [Fiddler Jam portal users]({%slug fj-users%}#portal-users) with the appropriate rights will have access to the recorded information.
+Only [Fiddler Jam portal users]({%slug fj-users%}#user-role) with knowledge of the password (if any) will have access to the recorded information.
 
 
 

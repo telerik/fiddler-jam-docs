@@ -86,7 +86,7 @@ Suppose the extension user has explicitly enabled the screenshot capturing. In t
 
 >tip Fiddler Jam extension will take screenshots on user interactions like following a link, pressing a button, etc.
 
-![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-screenshots.png)
+![Fiddler Jam Log Screenshots](../images/portal/logs/fj-portal-log-screenshots.png)
 
 ### Console Log Inspection
 
@@ -96,4 +96,24 @@ If the extension user has explicitly enabled the developer's console logs captur
 - Use the **Details** inspector for examining the console log.
 - Use the **Stack Trace** inspector for inspection of the stack trace.
 
-![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-consolelogs.png)
+![Fiddler Jam Console Logs](../images/portal/logs/fj-portal-log-consolelogs.png)
+
+
+### Details Inspection
+
+Each submitted log will contain additional details with the extended environment and log information. The details are available through the **More** link next to the log description. The following information can be extracted from each line:
+
+- **Name** - The name of the log as saved in the workspace
+- **Submitted by** - The name of the portal user that submitted the log.
+- **Description** - The custom description for the submitted log.
+- **Domain** - The domain name from the captured sessions.
+- **Starting URL** - The initial URL used when capturing was started by the extension user.
+- **Date Time** - A timestamp when the capturing was started plus the duration of the capturing in HH:MM:SS
+- **Platform** - The operating system version.
+- **Jam Extension** - The version of the Fiddler Jam extension.
+- **Type** - The type of the platform (for example, _Desktop_ or _Mobile_).
+- **Locale** - The encoding used by the extension user.
+- **Timezone** - The timezone used by the extension user.
+
+![Fiddler Jam Log Details](../images/portal/logs/fj-portal-log-details.png)
+
