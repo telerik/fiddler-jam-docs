@@ -1,5 +1,5 @@
 ---
-title: Recording a log | Fiddler Jam
+title: Recording a log 
 description: Basic step-by-step instructions for recording a log (capturing, screenshots, and extra settings) with the Fiddler Jam extension
 slug: fj-recording-logs
 publish: true

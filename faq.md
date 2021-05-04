@@ -1,5 +1,5 @@
 ---
-title: FAQ | Fiddler Jam
+title: FAQ 
 description: Frequently asked questions about Fiddler Jam
 slug: faq
 publish: true

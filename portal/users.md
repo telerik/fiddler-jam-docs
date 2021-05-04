@@ -1,5 +1,5 @@
 ---
-title: Users & Roles | Fiddler Jam
+title: Users & Roles 
 description: Fiddler Jam extensions users, portal users and portal viewers
 slug: fj-users
 publish: true
@@ -36,7 +36,7 @@ The portal users' seat comes with the following advantages and limitations:
 - Logs [shared with specific people]({%slug fj-link-options%}#share-with-specific-people) (based on the registered email) can be accessed from all users with access to the workspace.
 
 
-### Viewer Role
+## Viewer Role
 
 All subscription plans are coming with unlimited seats for the **viewer** role. Assign a portal viewer to an existing account through [the Fiddler dashboard](https://dashboard.getfiddler.com).
 

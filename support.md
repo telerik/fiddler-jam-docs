@@ -1,5 +1,5 @@
 ---
-title: Support | Fiddler Jam
+title: Support 
 page_title: Support
 description: Fiddler Jam support options and service-level agreements
 slug: jam-support-page

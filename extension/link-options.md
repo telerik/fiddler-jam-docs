@@ -1,5 +1,5 @@
 ---
-title: Sharing Options | Fiddler Jam
+title: Sharing Options 
 description: Sharing and security options for recorded Fiddler Jam logs. Share with a link or with specific people, and use an optional password. 
 slug: fj-link-options
 publish: true

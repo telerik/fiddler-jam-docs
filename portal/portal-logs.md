@@ -1,5 +1,5 @@
 ---
-title: Submitted Logs | Fiddler Jam
+title: Submitted Logs 
 description: Essentials and usage instructions for working with submitted Fiddler Jam portal log
 slug: fj-portal-logs
 publish: true
