@@ -98,10 +98,16 @@ If the extension user has explicitly enabled the developer's console logs captur
 
 ![Fiddler Jam Console Logs](../images/portal/logs/fj-portal-log-consolelogs.png)
 
+### Filters
+
+A Fiddler Jam log could contain exsessive number of recoreded HTTP requests, screenshots, and console logs. Use the search text input to filter out all requests containing the search term within the URL or in the Request Headers. Use the **Filters** (the icon next to the search text input) to filter out the different log entries (requests, screenshots, and console logs).
+
+![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-filtering.png)
+
 
 ### Details Inspection
 
-Each submitted log will contain additional details with the extended environment and log information. The details are available through the **More** link next to the log description. The following information can be extracted from each line:
+Each log stores detailed technical information about its creation which could further ease the support process. Access technical details like platform, date & time when the log was recorded, Jam extension version, etc., by pressing the **MORE** option next to the log's description.
 
 - **Name** - The name of the log as saved in the workspace
 - **Submitted by** - The name of the portal user that submitted the log.
