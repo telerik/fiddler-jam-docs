@@ -1,7 +1,7 @@
 ---
-title: FAQ
+title: FAQ | Fiddler Jam
+description: Frequently asked questions about Fiddler Jam
 slug: faq
-tags: faq, frequently asked questions, Fiddler Jam terminology, Fiddler Jam help
 publish: true
 position: 100
 ---

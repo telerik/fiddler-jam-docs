@@ -1,8 +1,7 @@
 ---
-title: Submitting a log
+title: Submitting a log | Fiddler Jam
 description: Step-by-step instructions for submitting a recorded Jam log
 slug: fj-submitting-logs
-tags: submit Fiddler Jam logs, send Fiddler Jam logs, Fiddler Jam logs, Fiddler Jam capturing, Fiddler Jam recording,
 publish: true
 position: 30
 ---

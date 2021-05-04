@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Installation | Fiddler Jam
 description: Instructions for Fiddler Jam extension installation for Google Chrome or other Chromium browsers
 slug: fj-installation
 tags: Fiddler Jam installation, Fiddler Jam Extension, Fiddler chrome extension, Jam Chrome extension

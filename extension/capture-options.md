@@ -1,5 +1,5 @@
 ---
-title: Advanced Options
+title: Advanced Options | Fiddler Jam
 description: Fiddler Jam extension advanced capturing and recording options.
 slug: fj-capture-options
 tags: record Fiddler Jam, Fiddler Jam options, Fiddler Jam capturing options, Fiddler Jam recording

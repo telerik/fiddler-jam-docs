@@ -1,8 +1,7 @@
 ---
 title: Fiddler Jam Portal
-description: Introduction to the Fiddler Jam cloud portal
+description: Essentials about using the Fiddler Jam cloud portal
 slug: fj-portal
-tags: Fiddler Jam portal, Fiddler Jam site, Fiddler Jam web, Fiddler Jam portal users
 publish: true
 position: 10
 ---
