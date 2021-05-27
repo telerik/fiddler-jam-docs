@@ -42,3 +42,12 @@ Fiddler Jam portal provides various subscription plans to accommodate the differ
 ## Trial Plan
 
 Activate the trial plan to test the Fiddler Jam portal for 14 days. The trial period applies the quotas for the Business plan.
+
+
+## Privacy Settings
+
+Your information and usage statistics help us understand product usage better and continue building the product you love. To subscribe/unsubscribe from participating in the usage statistics sharing:
+
+1. Open __Settings > Privacy__ menu (accessible from the top-right corner from the account icon)
+2. Check/uncheck the __Automatically send data to help us improve the product__ option depending on whether you want to send usage statistics. 
+3. Click on __Save__ to apply the change.
