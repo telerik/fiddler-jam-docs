@@ -14,7 +14,7 @@ An active Internet connection with access to the URLs listed below is required t
 
 ```
 https://*.getfiddler.com/
-https://amazonaws.com/
+https://*.amazonaws.com/
 ```
 
 
