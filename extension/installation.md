@@ -9,7 +9,13 @@ position: 10
 
 # Installation
 
-**Fiddler Jam** is an extension for [Google Chrome](https://www.google.com/chrome/). Add it to your browser by using the Chrome Web Store as described below.
+**Fiddler Jam** is an extension for [Google Chrome](https://www.google.com/chrome/). The extension requires active internet connection with access to the following URL:
+
+```
+https://*.getfiddler.com/
+```
+
+Add it to your browser by using the Chrome Web Store as described below.
 
 ## Install Fiddler Jam
 
