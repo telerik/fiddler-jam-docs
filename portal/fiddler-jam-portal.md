@@ -10,6 +10,13 @@ position: 10
 
 The [Fiddler Jam portal](https://jam.getfiddler.com) is the cloud space where logs submitted from you or other users can be viewed, organized, and analyzed. The Fiddler Jam portal is accessible only for users with active [Fiddler Jam portal subscriptions](#subscriptions). The Fiddler Jam portal provides various means to organize, access, and work with submitted logs. The portal allows [account owners]({%slug fj-users%}#portal-users) to set up different roles for the portal users with different access rights.
 
+An active internet connection with access to the URLs listed below is required to access the Fiddler Jam portal.
+
+```
+https://*.getfiddler.com/
+https://amazonaws.com/
+```
+
 
 ## Portal Users
 
