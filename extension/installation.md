@@ -13,6 +13,7 @@ position: 10
 
 ```
 https://*.getfiddler.com/
+https://amazonaws.com/
 ```
 
 Add it to your browser by using the Chrome Web Store as described below.
