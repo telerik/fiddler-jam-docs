@@ -63,11 +63,21 @@ Some specific information and settings are accessible via the extension's manage
 
 - Click on the **Details** button.
 
-On this management page, you could allow Fiddler Jam to work in incognito mode.
+On this management page, you could set Fiddler Jam [site access](#site-access) and the option to [work in incognito mode](#allow-in-incognito).
 
-### Enable Fiddler Jam in Incognito Mode
+### Site Access
 
-By default, all Chrome extensions are disabled in incognito mode. To explicitly enable Fiddler Jam and debug your sites in incognito mode, follow these steps:
+The **Site Access** extension settings provide the option to limit the extension for a specific site. The option **on click** is not applicable for the Fiddler Jam extension as it does not provides an opportunity to permit access to the mandatory backend endpoints. By default, most Chrome exceptions are available on all sites (using the option **On all sites**). 
+
+To use Fiddler Jam on specific sites only, scroll down to **Site access**, select the **On specific site** option, and add the required endpoints:
+
+- _The address of the specific site you will use alongside the Fiddler Jam extension_
+- [https://api.getfiddler.com/](https://api.getfiddler.com/)
+- [https://fiddler-backend-production.s3-accelerate.amazonaws.com/](https://fiddler-backend-production.s3-accelerate.amazonaws.com/)
+
+### Allow in Incognito
+
+By default, most Chrome extensions are disabled in incognito mode. To explicitly enable Fiddler Jam and debug your sites in incognito mode, follow these steps:
 
 1. Open the [management page](#manage-extensions-in-chrome).
 
