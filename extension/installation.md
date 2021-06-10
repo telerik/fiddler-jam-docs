@@ -71,9 +71,11 @@ The **Site Access** extension settings provide the option to limit the extension
 
 To use Fiddler Jam on specific sites only, scroll down to **Site access**, select the **On specific site** option, and add the required endpoints:
 
-- _The address of the specific site you will use alongside the Fiddler Jam extension_
-- [https://api.getfiddler.com/](https://api.getfiddler.com/)
-- [https://fiddler-backend-production.s3-accelerate.amazonaws.com/](https://fiddler-backend-production.s3-accelerate.amazonaws.com/)
+```
+<The URL of the specific site you will use alongside the Fiddler Jam extension>
+https://api.getfiddler.com/](https://api.getfiddler.com/
+https://fiddler-backend-production.s3-accelerate.amazonaws.com/
+```
 
 ### Allow in Incognito
 
