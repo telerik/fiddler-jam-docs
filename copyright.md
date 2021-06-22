@@ -1,9 +1,7 @@
 ---
 title: Copyright 
-page_title: Copyright
 description: Fiddler Jam copyright details
 slug: license-copyright
-tags: copyright
 published: True
 position: 1000
 ---

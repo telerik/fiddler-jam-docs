@@ -2,7 +2,6 @@
 title: Introduction 
 description: Fiddler Jam is a network troubleshooting solution for capturing, recording and collaboration on HTTP/HTTPS browser issues.
 slug: introduction
-tags: introduction
 publish: true
 position: 0
 ---
