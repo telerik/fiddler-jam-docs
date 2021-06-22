@@ -1,7 +1,7 @@
 ---
 title: Security
+description: Security and technical details about the Fiddler Jam capturing and sharing information.
 slug: fj-security
-tags: Fiddler Jam security, Fiddler Jam password protection, FIddler Jam encryption, Fiddler Jam masked cookies, Fiddler Jam capturing security concerns
 publish: true
 position: 90
 ---

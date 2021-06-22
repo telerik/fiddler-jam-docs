@@ -2,7 +2,6 @@
 title: Installation 
 description: Instructions for Fiddler Jam extension installation for Google Chrome or other Chromium browsers
 slug: fj-installation
-tags: Fiddler Jam installation, Fiddler Jam Extension, Fiddler chrome extension, Jam Chrome extension
 publish: true
 position: 10
 ---
@@ -84,3 +83,7 @@ By default, most Chrome extensions are disabled in incognito mode. To explicitly
 1. Open the [management page](#manage-extensions-in-chrome).
 
 1. Scroll down to **Allow in Incognito** and use the switch to enable the feature.
+
+### Error Handling
+
+In some casses, the Fiddler Jam extension might have troubles submitting a log. Use the [error handling instructions]({%slug fj-submitting-logs%}#error-handling) to investigate the issue and send us more information.
