@@ -84,3 +84,8 @@ By default, most Chrome extensions are disabled in incognito mode. To explicitly
 1. Open the [management page](#manage-extensions-in-chrome).
 
 1. Scroll down to **Allow in Incognito** and use the switch to enable the feature.
+
+
+## Error Handling
+
+In some cases your Fiddler Jam extension might experience issues while capturing or trying to submit a log. To resolve such issues follow [the error handling instructions]({%slug fj-submitting-logs%}#error-handling).
