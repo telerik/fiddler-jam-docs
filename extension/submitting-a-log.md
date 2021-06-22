@@ -42,3 +42,21 @@ Learn more about:
 - How to [work with submitted logs in the Fiddler Jam portal]({%slug fj-portal-logs%}).
 - How to [organize received logs into portal workspaces]({%slug fj-workspaces%})
 - How to [use the Fiddler Everywhere desktop application for deep-dive investigation of Jam logs]({%slug fj-advanced-analysis%}).
+
+
+## Error Handling
+
+Submitting a FIddler Jam log is an operation that requires access to specific API endpoints, and specific access level for the user that accesses the Internet through the browser. Some users might experience issue while starting the extension, capturing traffic, or submitting a generated FIddler Jam log. In case, you are facing similar scenario, follow the following steps:
+
+- Verify that you have active Internet access
+- Verify that you have access to the following test endpoint: [https://fiddler-backend-production.s3.amazonaws.com/connectivity-test/check.html](https://fiddler-backend-production.s3.amazonaws.com/connectivity-test/check.html)
+
+In case, the issue resides elssewhere, proceed with collecting the error data from your browser.
+
+- Open [chrome://extensions/?id=fnkjlegmkbicdodlheligomlfbdblpf](chrome://extensions/?id=fnkjlegmkbicdodlheligomlfbdblpf). When the Fiddler Jam extension is installed the link will open the Fiddler Jam extension details page. Scroll down and enable the **Collect errors** toggle.
+- Submit a test session, then open chrome://extensions/ and send us a screenshot of the errors
+
+_Example error collected_
+![Fiddler Jam extension with enabled and collected errors](../images/ext/support/fj-extension-error-logs.png)
+
+![Fiddler Jam error details](../images/ext/support/fj-extension-error-logs-details.png)
