@@ -17,6 +17,7 @@ https://*.getfiddler.com/
 https://*.amazonaws.com/
 ```
 
+>tip You can use [our conectivity check link](https://fiddler-backend-production.s3.amazonaws.com/connectivity-test/check.html) to test your ability to access the required Fiddler endpoints.
 
 ## Portal Users
 
@@ -51,10 +52,28 @@ Fiddler Jam portal provides various subscription plans to accommodate the differ
 Activate the trial plan to test the Fiddler Jam portal for 14 days. The trial period applies the quotas for the Business plan.
 
 
-## Privacy Settings
+## Menu
+
+The Fiddler Jam portal menu is accessible from the top-right corner from the account icon. The menu consists the following options:
+
+- [Settings](#settings)
+- [My Resources](#my-resources)
+- [Sign Out](#sign-out)
+
+### Settings
+
+### Privacy Settings
 
 Your information and usage statistics help us understand product usage better and continue building the product you love. To subscribe/unsubscribe from participating in the usage statistics sharing:
 
 1. Open __Settings > Privacy__ menu (accessible from the top-right corner from the account icon)
 2. Check/uncheck the __Automatically send data to help us improve the product__ option depending on whether you want to send usage statistics. 
 3. Click on __Save__ to apply the change.
+
+### My Resources
+
+The **My Resources** option will popup a window that contains basic Fiddler Jam usage instructions and fast resource links to the Fiddler Jam documentation site and YouTube videos. This layout automatically appears the first time the user loads the Fiddler Jam portal page.
+
+### Sign Out
+
+Use the **Sign Out** option to log out the currently active user.
