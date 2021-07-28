@@ -2,7 +2,6 @@
 title: Advanced Options 
 description: Fiddler Jam extension advanced capturing and recording options.
 slug: fj-capture-options
-tags: record Fiddler Jam, Fiddler Jam options, Fiddler Jam capturing options, Fiddler Jam recording
 publish: true
 position: 40
 ---
@@ -15,10 +14,10 @@ Fiddler Jam provides several advanced capture options. These options allow you t
 - [Take screenshots while capturing](#take-screenshots-while-capturing)
 - [Capture console](#capture-console)
 - [Mask cookies](#mask-cookies)
-- [Mask post data](#mask-post-data)
+- [Mask all post data](#mask-all-post-data)
 - [Disable Cache](#disable-cache)
 
-![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended.png)
+![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-003.png)
 
 ## Take screenshots while capturing
 
@@ -36,13 +35,21 @@ This option will capture everything outputted in the developer console, includin
 
 This option will mask any cookies that are part of the captured requests and responses. Masking hides all cookie values while the cookie key names remain visible. By default, **Mask cookies** is **enabled**.
 
-## Mask post data
+## Mask all post data
 
 This option will mask any post data (for example, data from forms, input text fields, etc.). Post data is also the request body sent via POST/PUT/PATCH methods. By default, **Mask post data** is **enabled**.
 
 ## Disable cache
 
 This option will set the value of the `Cache-Control` and `Prasgma` headers to `no-cache` on each network request. By default, **Disable cache** is **enabled**.
+
+## Capture storage info
+
+This option will capture local or session storage data from each inspected Chrome tab.
+
+## Capture video
+
+This option will capture video recording from the inspected Chrome tab.
 
 ## Security concerns
 
