@@ -29,6 +29,7 @@ Once a submitted log is opened in the Fiddler Jam portal, there are multiple fun
 - [Editing log's details](#log-details) (title, description, etc.).
 - [Investigating the log's captured traffic in detail (requests and responses)](#traffic-inspection). 
 - [Inspecting the taken screenshots](#screenshot-inspection).
+- [Inspecting the recorded video](#video-recording-inspection).
 - [Analyzing the developer's console logs](#console-log-inspection).
 - [Deep dive investigation through Fiddler Everywhere]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
 - [Exporting as HAR file]({%slug fj-advanced-analysis%}#export-har).
@@ -87,6 +88,10 @@ Suppose the extension user has explicitly enabled the screenshot capturing. In t
 >tip Fiddler Jam extension will take screenshots on user interactions like following a link, pressing a button, etc.
 
 ![Fiddler Jam Log Screenshots](../images/portal/logs/fj-portal-log-screenshots.png)
+
+### Video Recording Inspection
+
+When the extension user explicitly enables the video recording, all of his action in the browser tasb are outputed in a video recording.
 
 ### Console Log Inspection
 

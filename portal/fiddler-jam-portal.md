@@ -21,7 +21,6 @@ https://*.amazonaws.com/
 
 When you open the Fiddler Jam portal, it loads a sample log that as a reference. You can [add new logs by opening a log link]({%slug fj-portal-logs%}#open-submitted-logs), [inspect log details]({%slug fj-portal-logs%}#working-with-logs), organize submitted logs into [workspaces]({%slug fj-workspaces%}), [open logs in Fiddler Everywhere for deep-dive debugging]({%slug fj-advanced-analysis%}), and share logs with Fiddler Jam collaborators.
 
-
 ![Portal menu options](../images/portal/menu/portal-landing-page.png)
 
 
