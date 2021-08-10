@@ -35,6 +35,7 @@ defaults:
         category: "default"
         product: "fiddler"
         editable: true
+        announcementUrl: "https://docs.telerik.com/kendo-api/announcements/fiddler"
 
 has_kb_portal: false
 has_api_reference: false
