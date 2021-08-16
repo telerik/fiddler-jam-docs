@@ -9,26 +9,26 @@ position: 90
 
 ## Fiddler Jam Security
 
-Fiddler Jam extension is a Chrome extension tool that can capture the ongoing tab activity and generate links with the captured activity logs. With such functionality, a particular set of security is added as functionality to Fiddler Jam to protect its users' privacy and allow you to share logs with some information being entirely stripped. Here are the must-know highlights when capturing and sharing Fiddler Jam logs.
+Fiddler Jam extension is a Chrome extension tool that can capture the ongoing tab activity and generate links with the captured activity logs. With such functionality, a particular set of security is added to Fiddler Jam to protect its users' privacy and allow you to share logs with some information being entirely stripped. Here are the must-know highlights when capturing and sharing Fiddler Jam logs.
 
 - When Fiddler Jam starts capturing, a red dot will indicate that there is an ongoing recording.
 
 - Fiddler Jam captures the Chrome tab's content where Fiddler Jam capturing is initialized plus all tabs and windows opened from that tab (and all tabs and windows opened from them). All tabs and windows with active capturing will have the red dot indication in the Fiddler Jam extension.
 
-- By default (**Mask all post data** swithed off), Fiddler Jam will try to automatically mask sensitive POST data (when the data is in known formats). Data received in unknown format will be considered sensetive by default and will be masked at 100%. Switching  **Mask all post data** on will explicitly turn on masking of all POST data. Learn more about [the sensetive data masking and the known formats](#masking-sensetive-data). 
+- By default (**Mask all post data** switched off), Fiddler Jam will try to mask sensitive POST data (when the information is in known formats). Data received in an unknown format will be considered sensitive by default and masked at 100%. Switching  **Mask all post data** on will explicitly turn on masking of all POST data. Learn more about [the sensitive data masking and the known formats](#masking-sensitive-data). 
 
 - The default settings (see the [**Capture Options**](#capture-options) below) will mask cookies values.
 
 - The password-protected logs are encrypted with AES-CTR.
 
-- The Fiddler Jam logs are stored in cloud storage based in the US, North Virginia. The Fiddle Jam team doesn't have access to and can't recover password-protected log content. See more about the password protecting option in the [**Sharing Links**](#sharing-links) option.
+- The Fiddler Jam logs are stored in cloud storage based in the US, North Virginia. The Fiddle Jam team doesn't have access to and can't recover password-protected log content. See more about the password-protecting option in the [**Sharing Links**](#sharing-links) option.
 
 - By default, The FiddlerJam portal site is collecting usage statistics data. Learn more about how to enable and disable the collection of usage data via the [Privacy settings]({%slug fj-portal%}#privacy-settings) 
 
 
-## Masking Sensetive Data
+## Masking Sensitive Data
 
-By default, the Fiddler Jam extension will start capturing with the advanced option **Mask all post data** switched **off**. In that state, the Fiddler Jam extension will try to automatically mask all sensetive data that is contained in one of the following known formats (MIME types):
+By default, the Fiddler Jam extension will start capturing with the advanced option **Mask all post data** switched **off**. In that state, the Fiddler Jam extension will try to automatically mask all sensitive data that is contained in one of the following known formats (MIME types):
 
 - **application/json**
 - **application/xml**
@@ -40,11 +40,12 @@ Data in other unsupported MIME types or unknown formats is fully masked.
 
 When the advanced option **Mask all post data** is switched **on**, all POST data (including the known formats listed above) is fully masked.
 
-### What is Sensetive Data
+### What is Sensitive Data
 
-Fiddler Jam considers the following as a sensetive data:
+Fiddler Jam considers the following as a sensitive data:
 
 1. POST data where the **property name** is tested for keywords that can contain potentially sensitive data such as:
+
     - rsa, dsa, ed25519, ecdsa which are cryptographic algorithms commonly used for private keys
     - contains the words **private** 
     - contains the word **key**
@@ -60,73 +61,75 @@ Fiddler Jam considers the following as a sensetive data:
 
 2. POST data where the **property value** is tested against regex expressions for known credentials, keys or credit cards including:
 
-* Slack Token* RSA private key* SSH (DSA) private key
-* SSH (EC) private key
-* PGP private key block
-* AWS Access Key ID
-* Amazon MWS Auth Token
-* AWS AppSync GraphQL Key 
-* Facebook Access Token
-* Facebook OAuth
-* GitHubToken
-* Generic API Key 
-* Generic Secret
-* Google API Key* Google Cloud Platform API Key
-* Google Cloud Platform OAuth
-* Google Drive API Key 
-* Google Drive OAuth
-* Google Gmail API Key
-* Google YouTube API Key
-* Google YouTube OAuth
-* Heroku API Key
-* MailChimp API Key 
-* Mailgun API Key* Password in URL
-* PayPal Braintree Access Token 
-* Picatic API Key
-* Slack Webhook
-* Stripe API Key
-* Stripe Restricted API Key* Square Access Token
-* Square OAuth Secret
-* Telegram Bot API Key
-* Twilio API Key
-* Twitter Access Token
-* Twitter OAuth
-* Master Card
-* American Express 
-* Visa Credit card
-* Discover Credit Card  
-* Maestro Credit Card 
-* JCB Credit Card
-* Diner's Club Credit Card 
-* Amex card  
-* BCGlobal card 
-* Carte Blanche Card 
-* Insta Payment Card  
-* Korean Local Card 
-* Laser card 
-* Solo card 
-* Switch card 
-* Union pay card
-* Vista master card 
-* Rupay Debit Card 
+    - Slack Token* RSA private key* SSH (DSA) private key
+    - SSH (EC) private key
+    - PGP private key block
+    - AWS Access Key ID
+    - Amazon MWS Auth Token
+    - AWS AppSync GraphQL Key 
+    - Facebook Access Token
+    - Facebook OAuth
+    - GitHubToken
+    - Generic API Key 
+    - Generic Secret
+    - Google API Key* Google Cloud Platform API Key
+    - Google Cloud Platform OAuth
+    - Google Drive API Key 
+    - Google Drive OAuth
+    - Google Gmail API Key
+    - Google YouTube API Key
+    - Google YouTube OAuth
+    - Heroku API Key
+    - MailChimp API Key 
+    - Mailgun API Key* Password in URL
+    - PayPal Braintree Access Token 
+    - Picatic API Key
+    - Slack Webhook
+    - Stripe API Key
+    - Stripe Restricted API Key* Square Access Token
+    - Square OAuth Secret
+    - Telegram Bot API Key
+    - Twilio API Key
+    - Twitter Access Token
+    - Twitter OAuth
+    - Master Card
+    - American Express 
+    - Visa Credit card
+    - Discover Credit Card  
+    - Maestro Credit Card 
+    - JCB Credit Card
+    - Diner's Club Credit Card 
+    - Amex card  
+    - BCGlobal card 
+    - Carte Blanche Card 
+    - Insta Payment Card  
+    - Korean Local Card 
+    - Laser card 
+    - Solo card 
+    - Switch card 
+    - Union pay card
+    - Vista master card 
+    - Rupay Debit Card 
 
 
+3. The following HTTP headers also get masked:
 
-3. Following headers also get masked:* Authorization* WWW-Authenticate* Proxy-Authorization - not able to check* Proxy-Authenticate - not able to check
+    - Authorization
+    - WWW-Authenticate
+    - Proxy-Authorization
+    - Proxy-Authenticate
 
 ## Capture Options
 
-The **Capture Options** menu provides some useful functionalities to will be applied during the capturing. Before you record a log, consider the following security concerns.
+The **Capture Options** menu provides some valuable options that can be applied during the capturing. Before you record a log, consider the following security concerns:
 
 - **Take screenshots while capturing** - This option will add a screenshot of your initial action from the active Chrome tab. Before you record a log, consider disabling the screenshot option if your screen shows sensitive data. **Turned ON by default**.
-
-- **Capture console** - This option will include any developers console outputs in the recorded log. Before you record a log, consider disabling this functionality if your console logs contain sensitive information. **Turned ON by default**.
-
+- **Capture console** - When active, this option includes any developer's console outputs in the recorded log. Before you record a log, consider disabling this functionality if your console logs contain sensitive information. **Turned ON by default**.
 - **Mask cookies** - When active, this option masks all cookies values (cookie key names are still readable!) so that they won't be visible to the portal users receiving the log. **Turned ON by default**.
-
-- **Mask post data** - This option captures the user's information in text inputs and forms. That might include sensitive information like usernames, personal information, etc. **Turned ON by default**.
-
+- **Mask all post data** - When active, this option masks all the POST data (for example, user's information in text inputs and forms). **Turned OFF by default** - learn more about [the default masking of sensitive data](masking-sensitive-data) when this option is turned off.
 - **Disable cache** - This option sets the `Cache-Control` and `Pragma` headers to **no-cache** value on each network request. **Turned ON by default**.
+- **Capture storage info** - When active, this option captures local/session storage data from each inspected tab. **Turned OFF by default**.
+- **Disable video** - When active, this option creates a screencast of the user interactions from each inspected tab. **Turned OFF by default**.
 
 ## Sharing Links
 
