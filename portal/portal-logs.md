@@ -16,9 +16,9 @@ After a Fiddler Jam user submits a log, the log is uploaded to the Fiddler Jam c
 
  Fiddler Jam protects the content of any submitted log through the following rules:
 
-1. All JAM logs are captured with applied masking for any data considered sensitive.
-1. The submitted log can only be opened by [**a portal user**]({%slug fj-users%}#user-role) who meets the access rights requirements set by the extension user via [the link generation options]({%slug fj-link-options%})).
-1. (_Optional_) The submitted log can be added to a workspace. Jam logs that are not added to a workspace are automatically deleted after **30 days**. 
+- All JAM logs are captured with applied **masking for [any data considered sensitive]({%slug fj-security%}#masking-sensitive-data)**.
+- The submitted log can be opened only by [a portal user]({%slug fj-users%}#user-role) who meets **the access rights requirements set by the extension user** via [the link generation options]({%slug fj-link-options%})).
+- The submitted log can be added to a workspace. Jam logs that are not added to a workspace are **automatically deleted after 30 days**. 
 
 For [**a portal viewer**]({%slug fj-users%}#viewer-role) role to be able to open the submitted log, the log must be added to a workspace (by a portal user), and the extension user should have set an appropriate access level during the link generation.
 
@@ -62,7 +62,7 @@ Each Fiddler Jam log contains a list of entries containing different recorded in
 
     - In the **Screen Recording**, you will find a screen recording from the browser (taken during the Jam recording). This tab will contain data only when the extension user explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
 
-    - In the **Inspectors** tab, you will see an inspector that loads the information for the selected line from the **Captured Logs** list. The inspectors are changed depending on whether you are select an HTTP session, console log, browser event, or screenshot. For example, Fiddler Jam loads the **Request** and **Response** inspectors when an HTTP session is selected, the screenshot preview screen when a screenshot entry is selected, and then a browser event information inspector when a browser event entry is selected.
+    - In the **Inspectors** tab, you will see an inspector that loads the information for the selected line from the **Captured Logs** list. The inspectors are changed depending on whether you are select an HTTP session, console log, browser event, or screenshot. For example, Fiddler Jam loads the **Request** and **Response** inspectors when an HTTP session is selected, the screenshot details screen when a screenshot entry is selected, and then a browser event information inspector when a browser event entry is selected.
 
 ### Traffic Inspection
 
@@ -70,10 +70,11 @@ To investigate a specific HTTP/HTTPS session:
 
 1. Open the submitted log.
 1. (Optional) Filter by search term (while using the Search text field) or Filter by log type (while using the Filter button)
-1. Select a session line. 
-    - If the selected line is an HTTP session, then the **Request** and **Response** inspectors load the session content (headers, body, cookies, etc.). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked. 
-    - If the selected line is a screenshot, a **Preview** inspector will load the taken screenshot depicting the moment of the user interaction.
-    - If the selected line is a console log, a **Console Log** inspector will load the log details and stack trace.
+1. Select a session line from the **Captured Logs** tab. 
+    - When the selected line is an HTTP session, then the **Request** and **Response** inspectors load the session content (headers, body, cookies, etc.). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked. 
+    - When the selected line is a user interaction, the inspector will load technical details about the action (for example, the HTML tag, the text value, and the name of the4 specific action).
+    - When the selected line is a screenshot of a user interaction, a preview inspector will load the taken screenshot depicting the moment of the user interaction alongside technical data about the action.
+    - When the selected line is a console log, a details inspector will load the log details and caputered stack trace.
 
     >tip Each captured HTTP(S) session has a unique line ID that can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
 
@@ -98,7 +99,7 @@ If the extension user has explicitly enabled the developer's console logs captur
 
 Suppose the extension user has explicitly enabled the screenshot capturing. In that case, a Fiddler Jam log will also contain screenshot lines for each user interaction made from the extension user (while the recording is on). 
 
-- Select a screenshot line in the Captured Logs list - the screenshot loads in a screenshot preview inspector.
+- Select a screenshot line in the Captured Logs list - the screenshot loads in a screenshot preview inspector alongside technical data about the action that triggered the screenshot.
 - Use the **Save** icon to download the screenshot locally as a PNG file.
 
 >tip Fiddler Jam extension will take screenshots on user interactions like following a link, pressing a button, etc.
@@ -107,11 +108,11 @@ Suppose the extension user has explicitly enabled the screenshot capturing. In t
 
 ### Screen Recording
 
-When the extension user explicitly enables the video recording, all of the actions in the browser tabs are output in a video recording.
+When the extension user explicitly enables the video recording, the whole recording alongside all of the actions in the browser tabs are output in a video recording. Load the video in the **Screen recording** tab to the right.
 
 ### Storage Details
 
-The **Storage Details** tab is specialized in displaying the data recorded from the Local Storage and Session Storage.
+The **Storage Details** tab (to the left) is specialized in displaying the data recorded from the Local Storage and Session Storage.
 
 
 
@@ -155,6 +156,8 @@ The **Search** field is available in the **Captured Logs** tab. Use it to filter
 
 A Fiddler Jam log could contain an excessive number of recorded HTTP requests, browser events (mouse interactions and navigation events), screenshots, console logs, etc.  Use the **Filters** (the icon next to the search text input) to filter out the different log entries (requests, screenshots, browser events, and console logs).
 
+![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-filtering.png)
+
 ### HAR Options
 
 A submitted log can be exported as a HAR file (The HTTP Archive format, or HAR, is a JSON-formatted archive file format for logging of a web browser's interaction with a site) and consequentially used with any 3rd-party software that supports HAR. Use the **Download HAR File** button (the icon to the right of the **FIlters** icon) to download the JAM log as a HAR file.
@@ -168,8 +171,4 @@ Any JAM log can be loaded in the standalone Fiddler Everywhere application for f
 ### Copy URL Link
 
 A submitted log can be re-shared via the **Copy URL** button (top-right corner next to the **Submitted by**).
-
-### Workspace Options
-
-![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-filtering.png)
 
