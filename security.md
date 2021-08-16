@@ -15,13 +15,104 @@ Fiddler Jam extension is a Chrome extension tool that can capture the ongoing ta
 
 - Fiddler Jam captures the Chrome tab's content where Fiddler Jam capturing is initialized plus all tabs and windows opened from that tab (and all tabs and windows opened from them). All tabs and windows with active capturing will have the red dot indication in the Fiddler Jam extension.
 
-- The default settings (see the [**Capture Options**](#capture-options) below) will mask cookies values and won't record any post data (input from text fields, forms, etc.)
+- By default (**Mask all post data** swithed off), Fiddler Jam will try to automatically mask sensitive POST data (when the data is in known formats). Data received in unknown format will be considered sensetive by default and will be masked at 100%. Switching  **Mask all post data** on will explicitly turn on masking of all POST data. Learn more about [the sensetive data masking and the known formats](#masking-sensetive-data). 
+
+- The default settings (see the [**Capture Options**](#capture-options) below) will mask cookies values.
 
 - The password-protected logs are encrypted with AES-CTR.
 
 - The Fiddler Jam logs are stored in cloud storage based in the US, North Virginia. The Fiddle Jam team doesn't have access to and can't recover password-protected log content. See more about the password protecting option in the [**Sharing Links**](#sharing-links) option.
 
 - By default, The FiddlerJam portal site is collecting usage statistics data. Learn more about how to enable and disable the collection of usage data via the [Privacy settings]({%slug fj-portal%}#privacy-settings) 
+
+
+## Masking Sensetive Data
+
+By default, the Fiddler Jam extension will start capturing with the advanced option **Mask all post data** switched **off**. In that state, the Fiddler Jam extension will try to automatically mask all sensetive data that is contained in one of the following known formats (MIME types):
+
+- **application/json**
+- **application/xml**
+- **application/x-www-form-urlencoded**
+- **multipart/form-data**
+- any that match application/* and have either the word **json** or **xml** on the right side
+
+Data in other unsupported MIME types or unknown formats is fully masked. 
+
+When the advanced option **Mask all post data** is switched **on**, all POST data (including the known formats listed above) is fully masked.
+
+### What is Sensetive Data
+
+Fiddler Jam considers the following as a sensetive data:
+
+1. POST data where the **property name** is tested for keywords that can contain potentially sensitive data such as:
+    - rsa, dsa, ed25519, ecdsa which are cryptographic algorithms commonly used for private keys
+    - contains the words **private** 
+    - contains the word **key**
+    - contains the words **pass** or **pwd**
+    - cointain the word **secret**
+    - contqins the word **credential**
+    - contains the word **token**
+    - contains the word **ssh**
+    - contains the words **api** and **key**
+    - contains the word **auth**
+    - contains any of the following words: **card|credit|debit|mastercard|visa|discover|diners|american.?express|amex|carte|karte|carta|atm|tarjeta**
+    - contains any of the words: **cvv|cvc|verification|security|transaction|sicherheits|sicurezza|seguranca|securite**
+
+2. POST data where the **property value** is tested against regex expressions for known credentials, keys or credit cards including:
+
+* Slack Token* RSA private key* SSH (DSA) private key
+* SSH (EC) private key
+* PGP private key block
+* AWS Access Key ID
+* Amazon MWS Auth Token
+* AWS AppSync GraphQL Key 
+* Facebook Access Token
+* Facebook OAuth
+* GitHubToken
+* Generic API Key 
+* Generic Secret
+* Google API Key* Google Cloud Platform API Key
+* Google Cloud Platform OAuth
+* Google Drive API Key 
+* Google Drive OAuth
+* Google Gmail API Key
+* Google YouTube API Key
+* Google YouTube OAuth
+* Heroku API Key
+* MailChimp API Key 
+* Mailgun API Key* Password in URL
+* PayPal Braintree Access Token 
+* Picatic API Key
+* Slack Webhook
+* Stripe API Key
+* Stripe Restricted API Key* Square Access Token
+* Square OAuth Secret
+* Telegram Bot API Key
+* Twilio API Key
+* Twitter Access Token
+* Twitter OAuth
+* Master Card
+* American Express 
+* Visa Credit card
+* Discover Credit Card  
+* Maestro Credit Card 
+* JCB Credit Card
+* Diner's Club Credit Card 
+* Amex card  
+* BCGlobal card 
+* Carte Blanche Card 
+* Insta Payment Card  
+* Korean Local Card 
+* Laser card 
+* Solo card 
+* Switch card 
+* Union pay card
+* Vista master card 
+* Rupay Debit Card 
+
+
+
+3. Following headers also get masked:* Authorization* WWW-Authenticate* Proxy-Authorization - not able to check* Proxy-Authenticate - not able to check
 
 ## Capture Options
 
