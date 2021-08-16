@@ -28,7 +28,7 @@ Fiddler Jam extension is a Chrome extension tool that can capture the ongoing ta
 
 ## Masking Sensitive Data
 
-By default, the Fiddler Jam extension will start capturing with the advanced option **Mask all post data** switched **off**. In that state, the Fiddler Jam extension will try to automatically mask all sensitive data that is contained in one of the following known formats (MIME types):
+By default, the Fiddler Jam extension will start capturing with the advanced option **Mask all post data** switched **off**. In that state, the Fiddler Jam extension will try to automatically mask all sensitive post data (data from forms, text inputs, data in the request body sent via POST/PUT/PATCH methods, etc.) that is contained in one of the following known formats (MIME types):
 
 - **application/json**
 - **application/xml**
@@ -38,13 +38,13 @@ By default, the Fiddler Jam extension will start capturing with the advanced opt
 
 Data in other unsupported MIME types or unknown formats is fully masked. 
 
-When the advanced option **Mask all post data** is switched **on**, all POST data (including the known formats listed above) is fully masked.
+When the advanced option **Mask all post data** is switched **on**, all post data (including the known formats listed above) is fully masked.
 
 ### What is Sensitive Data
 
 Fiddler Jam considers the following as a sensitive data:
 
-1. POST data where the **property name** is tested for keywords that can contain potentially sensitive data such as:
+1. Post data where the **property name** is tested for keywords that can contain potentially sensitive data such as:
 
     - rsa, dsa, ed25519, ecdsa which are cryptographic algorithms commonly used for private keys
     - contains the words **private** 
@@ -59,7 +59,7 @@ Fiddler Jam considers the following as a sensitive data:
     - contains any of the following words: **card|credit|debit|mastercard|visa|discover|diners|american.?express|amex|carte|karte|carta|atm|tarjeta**
     - contains any of the words: **cvv|cvc|verification|security|transaction|sicherheits|sicurezza|seguranca|securite**
 
-2. POST data where the **property value** is tested against regex expressions for known credentials, keys or credit cards including:
+2. Post data where the **property value** is tested against regex expressions for known credentials, keys or credit cards including:
 
     - Slack Token* RSA private key* SSH (DSA) private key
     - SSH (EC) private key

@@ -7,7 +7,7 @@ position: 40
 ---
 
 
-# Advanced Options
+# Advanced Capture Options
 
 Fiddler Jam provides several advanced capture options. These options allow you to enable or disable certain functionalities in order to modify the recorded output:
 
@@ -21,6 +21,8 @@ Fiddler Jam provides several advanced capture options. These options allow you t
 
 ![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-003.png)
 
+
+## Advanced Options
 
 ### Take screenshots while capturing
 
@@ -43,7 +45,9 @@ When enabled, the Jam extension masks any cookies that are part of the captured 
 
 ### Mask all post data
 
-When enabled, the Jam extension masks any post data (for example, data from forms, input text fields, etc.). Post data is also the request body sent via POST/PUT/PATCH methods. By default, **Mask post data** is **enabled**.  The option is **disabled** by default.
+When enabled, the Jam extension masks any post data (for example, data from forms, input text fields, etc.). Post data is also the request body sent via POST/PUT/PATCH methods. The option is **disabled** by default.
+
+>important By default, when the option **Mask all post data** is disabled all data that is considered sensitive is masked. Enabling the option will explicitly mask all POST data (sensitive or not). Learn more about what does Fiddler Jam considers as sensitive data in our [dedicated security article]({%slug fj-security%}#masking-sensitive-data).
 
 
 ### Disable cache
