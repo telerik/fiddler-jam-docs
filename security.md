@@ -129,7 +129,7 @@ The **Capture Options** menu provides some valuable options that can be applied 
 - **Mask all post data** - When active, this option masks all the POST data (for example, user's information in text inputs and forms). **Turned OFF by default** - learn more about [the default masking of sensitive data](masking-sensitive-data) when this option is turned off.
 - **Disable cache** - This option sets the `Cache-Control` and `Pragma` headers to **no-cache** value on each network request. **Turned ON by default**.
 - **Capture storage info** - When active, this option captures local/session storage data from each inspected tab. **Turned OFF by default**.
-- **Disable video** - When active, this option creates a screencast of the user interactions from each inspected tab. **Turned OFF by default**.
+- **Capture video** - When active, this option creates a screencast of the user interactions from each inspected tab. **Turned OFF by default**.
 
 ## Sharing Links
 
