@@ -26,16 +26,17 @@ Fiddler Jam provides several advanced capture options. These options allow you t
 
 ### Take screenshots while capturing
 
-This option will take a screenshot of each user's activities during the capturing process. Each screenshot will be added to the ongoing recording as a PNG file. The activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, etc. By default, **Take screenshots while capturing** is **enabled**.
+This option will take a screenshot of each user's activities during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, etc. By default, **Take screenshots while capturing** is **enabled**.
 
->important The screenshots are available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain screenshots.
+>tip The screenshots are available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain screenshots.
 
+>important The taken screenshots could contain sensitive input data from the recorded tabs (for example, data entered in forms, fields, etc.) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, etc., and sharing them only with trusted parties.
 
 ### Capture console
 
 When enabled, the capturing includes everything outputted in the developer console, including the log and available stack traces. The option is **enabled** by default.
 
->important The console logs are available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain console logs.
+>tip The console logs are available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain console logs.
 
 
 ### Mask cookies
@@ -47,7 +48,7 @@ When enabled, the Jam extension masks any cookies that are part of the captured 
 
 When enabled, the Jam extension masks any post data (for example, data from forms, input text fields, etc.). Post data is also the request body sent via POST/PUT/PATCH methods. The option is **disabled** by default.
 
->important By default, when the option **Mask all post data** is disabled all data that is considered sensitive is masked. Enabling the option will explicitly mask all POST data (sensitive or not). Learn more about what does Fiddler Jam considers as sensitive data in our [dedicated security article]({%slug fj-security%}#masking-sensitive-data).
+>important By default, when the option **Mask all post data** is disabled, all data that is considered sensitive is masked. Enabling the option will explicitly mask all POST data (sensitive or not). Learn more about what does Fiddler Jam considers as sensitive data in our [dedicated security article]({%slug fj-security%}#masking-sensitive-data).
 
 
 ### Disable cache
@@ -59,14 +60,22 @@ When enabled, the Jam extension sets the value of the `Cache-Control` and `Prasg
 
 When enabled, the Jam extension captures local or session storage data from each inspected Chrome tab. The storage info is then accessible through the **Storage Details** tab from the submitted log screen in the Jam portal. The option is **disabled** by default.
 
+>important The storage data could contain sensitive input data from the recorded tabs (for example, data entered in forms, fields, etc.) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, etc., and sharing them only with trusted parties.
+
 
 ### Capture video
 
-When enabled, the Jam extension captures video recording from the inspected Google Chrome tab. The video is then accessible through the **Screen recording** tab from the submitted log screen in the Jam portal. The option is **disabled** by default.
+When enabled, the Jam extension captures video recording from the inspected Google Chrome tab. The video is then accessible through the **Screen recording** tab from the submitted log screen in the Jam portal. Note that only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequentially opened tabs won't be present in the video recording. The option is **disabled** by default.
+
+>tip The video recording is available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain the video recording.
+
+>important The video recording could contain sensitive input data from the recorded tab (for example, data entered in forms, fields, etc.) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, etc., and sharing them only with trusted parties.
 
 ## Security concerns
 
-Capturing all outgoing and incoming traffic for the current tab might expose sensitive or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}).
+Capturing all outgoing and incoming traffic for the current tab might expose sensitive or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}). Note that when the Fiddler Jam extension is set to take screenshots or record video an explcit warning will appear prior to the log recording start.
+
+![Fiddler Jam screenshot and video warning](../images/ext/ext-images/extension-start-capturing-warning.png)
 
 ## Next Steps
 

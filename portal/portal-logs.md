@@ -6,9 +6,9 @@ publish: true
 position: 40
 ---
 
-# Submitted JAM Logs
+# Submitted Jam Logs
 
-Once [an extension user]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam cloud space, also known as the [Jam portal](https://jam.getfiddler.com). The Jam cloud space keeps any submitted logs in the storage for 30 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted. With the help of the Fiddler Jam portal, any [portal user]({%slug fj-users%}#user-role) with access rights could save, organize, analyze and work with the provided records. 
+Once [an extension user]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam cloud space, also known as the [Jam portal](https://Jam.getfiddler.com). The Jam cloud space keeps any submitted logs in the storage for 30 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted. With the help of the Fiddler Jam portal, any [portal user]({%slug fj-users%}#user-role) with access rights could save, organize, analyze and work with the provided records. 
 
 ## Open Submitted Logs
 
@@ -16,7 +16,7 @@ After a Fiddler Jam user submits a log, the log uploads to the Fiddler Jam cloud
 
  Fiddler Jam protects the content of any submitted log through the following rules:
 
-- All JAM logs are captured with applied **masking for [any data considered sensitive]({%slug fj-security%}#masking-sensitive-data)**.
+- All Jam logs are captured with applied **masking for [any data considered sensitive]({%slug fj-security%}#masking-sensitive-data)**.
 - The submitted log can be opened only by [a portal user]({%slug fj-users%}#user-role) who meets **the access rights requirements set by the extension user** via [the link generation options]({%slug fj-link-options%})).
 - The submitted log can be added to a workspace. Any Jam log that is not added to a workspace will be **automatically deleted after 30 days**. 
 
@@ -80,44 +80,49 @@ To investigate a specific HTTP/HTTPS session:
 Each Fiddler Jam log contains browser events that are triggered by user interaction. Each event stores additional information about the exact moment it happened (date and time) and the specific technical data (associated with the event). Additionally, the click events contain a screenshot with an action pointer.
 
 The tracked events are as follows:
-     - **click**
-     - **double-click**
-     - **navigated to** 
-     - **tab opened**
-     - **tab closed**
-     - **pressed "Enter"** key
-     - **pressed "Tab"** key
-     - **scroll** events
-     - **text-input** (just the event without the actual inputted data).
+- **click**
+- **double-click**
+- **navigated to** 
+- **tab opened**
+- **tab closed**
+- **pressed "Enter"** key
+- **pressed "Tab"** key
+- **scroll** events
+- **text-input** (just the event without the actual inputted data).
 
-### Console Log Inspection
-
-A Fiddler Jam log will also contain console log lines if the extension user has explicitly enabled the developer's console logs capturing. Select a console logline from the **Captured Logs** list, and the chosen console log loads in the **Inspectors** tab. The inspector shows the time the log was outputted and the log stack trace content.
-
-![Fiddler Jam Console Logs](../images/portal/logs/fj-portal-log-consolelogs.png)
-
-
-### Screenshot Inspection
-
-A Fiddler Jam log will also contain screenshots for each click event when the extension user has explicitly enabled the screenshot capturing. 
+When the option **Take screenshots while capturing** is explicitly enabled, the Fiddler Jam log will also contain screenshots for user interactions. 
 
 _Steps needed to examine a screenshot:_
 - Select [a **Click** event line](#browser-events) from the **Captured Logs** list, and the associated screenshot loads in the **Inspectors** tab as the last property of the event data.
 - Use the **Save** icon to download the screenshot locally as a PNG file.
 
->tip The Fiddler Jam extension will take screenshots on user interactions like following a link, pressing a button, and other clickable events.
+>tip The Fiddler Jam extension will take screenshots on user interactions like following a link, pressing a button, and other clickable events recognized as such by FIddler Jam.
 
-![Fiddler Jam Log Screenshots](../images/portal/logs/fj-portal-log-screenshots.png)
+_Example of captured click action_
+![Inspecting browser event](../images/portal/logs/fj-portal-log-browser-event.png)
 
-### Screen Recording
 
-When the extension user explicitly enables the video recording, the whole recording, alongside all of the browser tabs actions, is output in a video recording. Load the video in the **Screen recording** tab to the right.
+### Console Log Inspection
+
+A Fiddler Jam log will also contain console log lines if the extension user has explicitly enabled the developer's console logs capturing. Select a console logline from the **Captured Logs** list, and the chosen console log loads in the **Inspectors** tab. The inspector shows the time the log was outputted and the log stack trace content.
+
+_Example of captured console log_
+![Inspecting browser event](../images/portal/logs/fj-portal-log-console-log.png)
+
+
+### Video Recording
+
+When the extension user explicitly enables the video recording, the whole capturing in the initial tab is output in a video recording. Load the video in the **Screen recording** tab to the right.
+
+_Example of captured screen recording_
+![Inspecting video recording](../images/portal/logs/fj-portal-log-screen-recording.png)
 
 ### Storage Details
 
 The **Storage Details** tab (to the left) displays the Local Storage and Session Storage data.
 
-
+_Example of captured storage data_
+![Inspecting storage data](../images/portal/logs/fj-portal-log-storage-data.png)
 
 ## Dashboard Log User Interface
 
@@ -149,7 +154,7 @@ The **Capture Info** expandable window (to the right of the Jam log title) shows
 
 ### Tabs and Inspectors
 
-Each Jam log loads on a screen with different tabs, and each tab has its conceptual inspectors. Learn more about using the log tabs and inspectors in the [Jam Log Tabs and Inspectors](#jam-log-tabs-and-inspectors) section.
+Each Jam log loads on a screen with different tabs, and each tab has its conceptual inspectors. Learn more about using the log tabs and inspectors in the [Jam Log Tabs and Inspectors](#Jam-log-tabs-and-inspectors) section.
 
 ### Search
 
@@ -163,13 +168,13 @@ A Fiddler Jam log could contain an excessive number of recorded HTTP requests, b
 
 ### HAR Options
 
-A submitted log can be exported as a HAR file (The HTTP Archive format, or HAR, is a JSON-formatted archive file format for logging a web browser's interaction with a site) and consequentially used with any 3rd-party software that supports HAR. Use the **Download HAR File** button (the icon to the **Filters** icon) to download the JAM log as a HAR file.
+A submitted log can be exported as a HAR file (The HTTP Archive format, or HAR, is a JSON-formatted archive file format for logging a web browser's interaction with a site) and consequentially used with any 3rd-party software that supports HAR. Use the **Download HAR File** button (the icon to the **Filters** icon) to download the Jam log as a HAR file.
 
 Any submitted log can also be re-loaded in the Fiddler Jam extension for a mock replay. Use the **Load HAR for mocking** button to load the log in the Fiddler Jam extension.
 
 ### Open in Fiddler Everywhere
 
-Any JAM log can be loaded in the standalone Fiddler Everywhere application for further deep-dive investigation. Learn more about Fiddler Everywhere and its cross-platform functionalities from [the official documentation](https://docs.telerik.com/fiddler-everywhere/introduction).
+Any Jam log can be loaded in the standalone Fiddler Everywhere application for further deep-dive investigation. Learn more about Fiddler Everywhere and its cross-platform functionalities from [the official documentation](https://docs.telerik.com/fiddler-everywhere/introduction).
 
 ### Copy URL Link
 
