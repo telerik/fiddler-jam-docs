@@ -66,7 +66,7 @@ Fiddler Jam considers the following as a sensitive data:
     - GitHubToken
     - Generic API Key 
     - Generic Secret
-    - Google API Key* Google Cloud Platform API Key
+    - Google API Key
     - Google Cloud Platform OAuth
     - Google Drive API Key 
     - Google Drive OAuth
@@ -77,7 +77,6 @@ Fiddler Jam considers the following as a sensitive data:
     - MailChimp API Key 
     - Mailgun API Key* Password in URL
     - PayPal Braintree Access Token 
-    - Picatic API Key
     - Slack Webhook
     - Stripe API Key
     - Stripe Restricted API Key* Square Access Token
