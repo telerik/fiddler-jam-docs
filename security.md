@@ -73,7 +73,6 @@ Fiddler Jam considers the following as a sensitive data:
     - Google Gmail API Key
     - Google YouTube API Key
     - Google YouTube OAuth
-    - Heroku API Key
     - MailChimp API Key 
     - Mailgun API Key* Password in URL
     - PayPal Braintree Access Token 
