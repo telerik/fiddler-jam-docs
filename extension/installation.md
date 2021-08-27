@@ -21,12 +21,9 @@ Add it to your browser by using the Chrome Web Store as described below.
 ## Install Fiddler Jam
 
 1. Open the **Google Chrome** browser on your computer.
-
-2. Open the [Chrome Web Store page for Fiddler Jam](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
-
-3. Click **_Add to Chrome_**.
-
-4. On the confirmation popup, click **_Add extension_**.
+1. Open the [Chrome Web Store page for Fiddler Jam](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
+1. Click **Add to Chrome**.
+1. On the confirmation popup, click **Add extension**.
 
 >important You can't add Chrome extensions when you browse in Incognito mode or as a guest.
 
@@ -39,10 +36,9 @@ To use the extension, click the Fiddler Jam icon to the right of Chrome's addres
 A pinned extension appears in the Chrome toolbar next to your profile avatar and allows for faster access. To pin the Fiddler Jam extension:
 
 1. Click the **Extensions** button on the Google Chrome toolbar (next to your profile avatar).
+1. Click the pin next to **Fiddler Jam** extension.
 
-2. Click the pin next to **Fiddler Jam** extension.
-
-![Fiddler Jam Chrome Extension](../images/ext/ext-images/extension-capture-options.png)
+![Fiddler Jam Chrome Extension](../images/ext/ext-images/extension-pin.png)
 
 ## Initial Jam Extension Screen
 
@@ -56,11 +52,8 @@ After а successful installation of the Fiddler Jam extension, the Welcome scree
 Some specific information and settings are accessible via the extension's management page:
 
 - Click the **Extensions** button on the Google Chrome toolbar (next to your profile avatar).
-
 - In the expanded menu, click **Manage Extensions**.
-
 - Type **Fiddler Jam** in the search bar or directly select the **Fiddler Jam** extension.
-
 - Click on the **Details** button.
 
 On this management page, you could set Fiddler Jam [site access](#site-access) and the option to [work in incognito mode](#allow-in-incognito).
@@ -82,7 +75,6 @@ https://fiddler-backend-production.s3-accelerate.amazonaws.com/
 By default, most Chrome extensions are disabled in incognito mode. To explicitly enable Fiddler Jam and debug your sites in incognito mode, follow these steps:
 
 1. Open the [management page](#manage-extensions-in-chrome).
-
 1. Scroll down to **Allow in Incognito** and use the switch to enable the feature.
 
 
