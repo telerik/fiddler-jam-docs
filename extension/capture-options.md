@@ -7,7 +7,7 @@ position: 40
 ---
 
 
-# Advanced Capture Options
+# Advanced Options
 
 Fiddler Jam provides several advanced capture options. These options allow you to enable or disable certain functionalities in order to modify the recorded output:
 
@@ -19,9 +19,7 @@ Fiddler Jam provides several advanced capture options. These options allow you t
 - [Mask all post data](#mask-all-post-data)
 - [Disable Cache](#disable-cache)
 
-
 ![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-003.png)
-
 
 ### Capture video
 
