@@ -33,9 +33,9 @@ Log recording is the core functionality provided by Fiddler Jam. A **Log** in Fi
 
 During recording, Fiddler Jam monitors the HTTP/HTTPS traffic, but it can also capture:
 
-- **Screenshots**: If the **_Take screenshots while capturing_** switch is enabled, a screenshot will be recorded every time you click on the loaded page.
+- **Screenshots**: If the **Capture screenshots** switch is enabled, a screenshot will be recorded every time you click on the loaded page.
 
-- **Console logs**: If the **_Capture console_** switch is enabled, the log will contain all console logs executed from the source code.
+- **Console logs**: If the **Capture console** switch is enabled, the log will contain all console logs executed from the source code.
 
 >tip To reset the Fiddler Jam extension and start a new capturing session, use the **Capture Again** button.
 

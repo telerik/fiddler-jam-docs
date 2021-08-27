@@ -90,7 +90,7 @@ The tracked events are as follows:
 - **scroll** events
 - **text-input** (just the event without the actual inputted data).
 
-When the option **Take screenshots while capturing** is explicitly enabled, the Fiddler Jam log will also contain screenshots for user interactions. 
+When the option **Capture screenshots** is explicitly enabled, the Fiddler Jam log will also contain screenshots for user interactions. 
 
 _Steps needed to examine a screenshot:_
 - Select [a **Click** event line](#browser-events) from the **Captured Logs** list, and the associated screenshot loads in the **Inspectors** tab as the last property of the event data.
