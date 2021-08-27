@@ -32,7 +32,7 @@ Submitted logs are compatible with Fiddler Everywhere for in-depth investigation
 
 **Protecting the Sensitive Data**
 
-The Fiddler Jam capturing comes with powerful default masking of information considered as sensitive. Additional masking of all POST data is also available.
+The Fiddler Jam capturing comes with a powerful, default masking feature for masking of sensitive information.
 
 
 ## Chrome Extension Getting Started
@@ -64,13 +64,13 @@ We believe documentation is best when the content is a product of the collaborat
 
 - Create an Issue
 
-    If you find an issue with our docs that needs addressing, the best way to let us know is by creating an issue in our [Github repository](https://github.com/telerik/fiddler-jam-docs). When creating an issue, please provide a descriptive title, be as specific as possible, and link it to the documentation article. If you can provide a link to the closest anchor to the issue, that is even better.
+    If you find an issue with our documentationthat needs addressing, the best way to let us know is by creating an issue in our [Github repository](https://github.com/telerik/fiddler-jam-docs). When creating an issue, please provide a descriptive title, be as specific as possible, and link it to the documentation article. If you can provide a link to the closest anchor to the issue, that is even better.
 
 - Send a Pull Request
 
-    Creating an issue is excellent, but what we love are pull requests. If you find a problem in the docs or even feel like creating new content, we'd be happy to have your contributions! 
+    CCreating an issue is excellent, but what we love are pull requests. If you find a problem in the docs or even feel like creating new content, we'd be happy to have your contributions! 
 
-    To do this, you must fork our documentation and submit a pull request. That way, you may contribute an update exactly where you found the error. After that, our technical writing team will need to approve your change request. Please use only standard markdown. For more detailed instructions, please follow the [contribution instructions](https://github.com/telerik/fiddler-jam-docs#contributing) published in GitHub. You could directly initiate a pull request by using the __Improve this article__ functionality.
+    To do this, you must fork our documentation and submit a pull request. That way, you may contribute an update exactly where you found the error. After that, our technical writing team will need to approve your change request. Please use only standard markdown. For more detailed instructions, follow the [contribution instructions](https://github.com/telerik/fiddler-jam-docs#contributing) published in GitHub. You could directly initiate a pull request by using the __Improve this article__ functionality.
 
 
 ## License
