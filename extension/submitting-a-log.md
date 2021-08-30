@@ -46,11 +46,16 @@ In case the issue resides elsewhere, proceed with collecting the error data from
 
 - Open [chrome://extensions/?id=fnkjlegmkbicdodlheligomlfbdblpf](chrome://extensions/?id=fnkjlegmkbicdodlheligomlfbdblpf). When the Fiddler Jam extension is installed the link will open the Fiddler Jam extension details page. Scroll down and enable the **Collect errors** toggle.
 
-- Submit a test session, then open chrome://extensions/ and send us a screenshot of the errors
+- Record and submit a test session, then open **chrome://extensions/** and send us a screenshot of the errors
 
    ![Fiddler Jam error details](../images/ext/support/fj-extension-error-logs-details.png)
 
+- If no errors are shown in the **chrome://extensions/** screen, open the **background page** (from the **Manage extensions** page). A Chrome devtools console opens in another window. Go to the **Console** tab and again click the **Start capture** button. Log all errors that appear in the Chrome devtools console in an external file.
+
+   ![Fiddler Jam backgroundpage](../images/ext/ext-images/extension-background-page.png)
+
 - Send the error logs and the screenshot to the [Fiddler Jam support team]({%slug jam-support-page%}).
+
 
 ## Next Steps
 
