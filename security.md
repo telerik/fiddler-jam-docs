@@ -114,12 +114,9 @@ ose sensitive data from the recorded tab (for example, data entered in forms, fi
 - **Mask all post data** - When active, this option masks all the POST data (for example, user's information in text inputs and forms). **Turned OFF by default** - learn more about [the default masking of sensitive data](masking-sensitive-data) when this option is turned off.
 - **Disable cache** - This option sets the `Cache-Control` and `Pragma` headers to **no-cache** value on each network request. **Turned ON by default**.
 
-
-
 As a security rule of thumb, you should always check if **Capture screenshots** and **Capture video** options are enabled/disabled as per requirements. When those options are enabled, sensitive data might be exposed even if masked in the captured HTTP sessions, so take extra care while sharing these logs with third parties. 
 
-![Fiddler Jam screenshot and video warning](./images/ext/ext-images/extension-start-capturing-warning.png)
- 
+
 ## Sharing Links
 
 Once Fiddler Jam Extension [records a log]({%slug fj-recording-logs%}), it generates a unique link and distributes them as HAR files.

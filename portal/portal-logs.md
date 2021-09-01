@@ -128,7 +128,7 @@ _Example of captured storage data_
 
 ### Log Details
 
-Apart from the [recorded data](#log-data), each log also contains user-defined [**log details**](#log-details) such as the log title, description, submitted by field, and the workspace. Every Jam log also contains an immutable [**capture info**](#capture-info) that stores technical and environmental data extracted from the extension.
+Apart from the [recorded data](#log-data), each log also contains user-defined [**log details**](#log-details) such as the log title, description, submitted by field, and the workspace. Every Jam log also contains an immutable [**Details**](#details) that stores technical and environmental data extracted from the extension.
 
 To add or edit the log details of a newly submitted log:
 
@@ -146,23 +146,19 @@ To edit the details of a log that is already added in a workspace:
 ![Edit log details](../images/portal/logs/fj-portal-log-edit-details.png)
 
 
-### Capture Info
+### Details
 
-The **Capture Info** expandable window (to the right of the Jam log title) shows the technical and environmental data extracted from the Jam extension. That includes information about the URL, time, OS, browser, screen resolution, used localization, timestamps, Jam extension version, and the enabled extension [capture options]({%slug fj-capture-options%}).
+The **Details** expandable window (to the right of the Jam log title) shows the technical and environmental data extracted from the Jam extension. That includes information about the URL, time, OS, browser, screen resolution, used localization, timestamps, Jam extension version, and the enabled extension [capture options]({%slug fj-capture-options%}).
 
-![Capture Info](../images/portal/logs/fj-portal-log-capture-info.png)
+![details window](../images/portal/logs/fj-portal-log-capture-info.png)
 
 ### Tabs and Inspectors
 
-Each Jam log loads on a screen with different tabs, and each tab has its conceptual inspectors. Learn more about using the log tabs and inspectors in the [Jam Log Tabs and Inspectors](#Jam-log-tabs-and-inspectors) section.
+Each Jam log loads on a screen with different tabs, and each tab has its conceptual inspectors. Learn more about using the log tabs and inspectors in the [Jam Log Tabs and Inspectors](#jam-log-tabs-and-inspectors) section.
 
-### Search
+### Search and Filters
 
-The **Search** field is available in the **Captured Logs** tab. Use it to filter the captured entries by a search term.
-
-### Filters
-
-A Fiddler Jam log could contain an excessive number of recorded HTTP requests, browser events (mouse interactions and navigation events), screenshots, console logs, etc.  Use the **Filters** (the icon next to the search text input) to filter out the different log entries (requests, screenshots, browser events, and console logs).
+A Fiddler Jam log could contain an excessive number of recorded HTTP requests, browser events (mouse interactions and navigation events), screenshots, console logs, etc. Use the **Search** field in the **Captured Logs** tab to filter the entries based on a custom search term. Use the **Filters** (the icon next to the search text input) to filter out the different log entries (requests, screenshots, browser events, and console logs).
 
 ![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-filtering.png)
 

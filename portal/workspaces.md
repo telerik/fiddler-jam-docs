@@ -12,7 +12,9 @@ The Fiddler Jam portal uses workspaces to save and organize the submitted logs. 
 
 ## Create and Rename Workspace
 
-Each Fiddler Jam subscription automatically creates a workspace for the organization called **Default Workspace**.
+Each Fiddler Jam subscription automatically creates a sample workspace for the organization called **Default Workspace**.
+
+![Default workspace](../images/portal/menu/portal-landing-page.png)
 
 A portal user can rename the default workspace name as follows:
 

@@ -82,5 +82,27 @@ Fiddler Jam portal provides various subscription plans to accommodate the differ
 
 ## Trial Plan
 
-Activate the trial plan through [the Fiddler dashboard](https://dashboard.getfiddler.com) to test the Fiddler Jam portal for 14 days. The trial period applies the quotas for the Business plan.
+Activate the trial plan through the [Fiddler dashboard](https://dashboard.getfiddler.com) to test the Fiddler Jam portal for 14 days. The trial period applies the quotas for the Business plan.
 
+
+## Fiddler Jam Plan Managment
+
+Manage the Fiddler Jam subscription plan through the [Fiddler dashboard](https://dashboard.getfiddler.com) site. The account owner can activate, change, or cancel the subscription plan.  The account owner can add, remove and assign one or multiple **seats** and their **roles**.
+
+### Manage the Subscription Plan
+
+Log in the [Fiddler dashboard](https://dashboard.getfiddler.com) and navigate to the [Plans section](https://dashboard.getfiddler.be/plans). Choose a plan to activate or alternatively, manage the current subscription plan.
+
+### Change Payment Method
+
+Follow the steps [for accessing the managment page](#manage-the-subscription-plan) and use the **Change** link to the right of your payment method. Add new payment method and set is as default.
+
+
+### Add Account Seat
+
+Follow the steps [for accessing the management page](#manage-the-subscription-plan) and use the **ADD** to assign accessible seats. Each Fiddler Jam subscription plan offers a different number of seats. If more seats are needed, the account owner can use the **Buy Seats** button or upgrade the subscription plan. Once the **ADD** seat button is triggered, an entry field will require filling in an email ID and assigning a role.
+
+
+### Manage Existing Seat
+
+The account owner can remove, edit, or cancel a seat (remove the seat from the subscription renewal) through the **More** option (three vertical dots) next to an assigned seat.
