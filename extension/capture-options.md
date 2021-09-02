@@ -2,7 +2,6 @@
 title: Advanced Options 
 description: Fiddler Jam extension advanced capturing and recording options.
 slug: fj-capture-options
-tags: record Fiddler Jam, Fiddler Jam options, Fiddler Jam capturing options, Fiddler Jam recording
 publish: true
 position: 40
 ---
@@ -12,41 +11,66 @@ position: 40
 
 Fiddler Jam provides several advanced capture options. These options allow you to enable or disable certain functionalities in order to modify the recorded output:
 
-- [Take screenshots while capturing](#take-screenshots-while-capturing)
+- [Capture video](#capture-video)
+- [Capture screenshots](#capture-screenshots)
 - [Capture console](#capture-console)
+- [Capture storage info](#capture-storage-info)
 - [Mask cookies](#mask-cookies)
-- [Mask post data](#mask-post-data)
+- [Mask all post data](#mask-all-post-data)
 - [Disable Cache](#disable-cache)
 
-![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended.png)
+![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-003.png)
 
-## Take screenshots while capturing
+### Capture video
 
-This option will take a screenshot of each user action during the capturing process. Each screenshot will be added to the ongoing recording as a PNG file. The activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, etc. By default, **Take screenshots while capturing** is **enabled**.
+This option will allow you to capture video recording from the inspected Google Chrome tab. The video is then accessible through the **Screen recording** tab from the submitted log screen in the Jam portal. Note that only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequentially opened tabs won't be present in the video recording. The option is disabled by default.
 
->important The screenshots are available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain screenshots.
+>tip The video recording is available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain the video recording.
 
-## Capture console
+>important The video recording could contain sensitive input data from the recorded tab (for example, data entered in forms, fields, and so on) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, and so on, and sharing them only with trusted parties.
 
-This option will capture everything outputted in the developer console, including the log and available stack traces. By default, **Capture console** is **enabled**.
+### Capture screenshots
 
->important The console logs are available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain console logs.
+This option will allow you to take a screenshot of each user's activities during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, and so on. By default, **Capture screenshots** is enabled.
 
-## Mask cookies
+>tip The screenshots are available only when you access the recorded log through [Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as an HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain screenshots.
 
-This option will mask any cookies that are part of the captured requests and responses. Masking hides all cookie values while the cookie key names remain visible. By default, **Mask cookies** is **enabled**.
+>important The taken screenshots could contain sensitive input data from the recorded tabs (for example, data entered in forms, fields, and so on) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, and so on, and sharing them only with trusted parties.
 
-## Mask post data
+### Capture console
 
-This option will mask any post data (for example, data from forms, input text fields, etc.). Post data is also the request body sent via POST/PUT/PATCH methods. By default, **Mask post data** is **enabled**.
+When enabled, the capturing includes everything outputted in the developer console, including the log and available stack traces. The option is enabled by default.
 
-## Disable cache
+>tip The console logs are available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain console logs.
 
-This option will set the value of the `Cache-Control` and `Prasgma` headers to `no-cache` on each network request. By default, **Disable cache** is **enabled**.
+### Capture storage info
+
+This option will allow you to capture local or session storage data from each inspected Chrome tab. The storage info is then accessible through the **Storage Details** tab from the submitted log screen in the Jam portal. The option is disabled by default.
+
+>important The storage data could contain sensitive input data from the recorded tabs (for example, data entered in forms, fields, and so on) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, and so on, and sharing them only with trusted parties.
+
+### Mask cookies
+
+This option masks any cookies that are part of the captured requests and responses. Masking hides all cookie values while the cookie key names remain visible. The option is enabled by default.
+
+
+### Mask all post data
+
+This option masks any post data (for example, data from forms, input text fields, and so on). Post data is also the request body sent via POST/PUT/PATCH methods. The option is disabled by default.
+
+>important By default, when the option **Mask all post data** is disabled, all data that is considered sensitive is masked. Enabling the option will explicitly mask all POST data (sensitive or not). Learn more about what does Fiddler Jam considers as sensitive data in our [dedicated security article]({%slug fj-security%}#masking-sensitive-data).
+
+
+### Disable cache
+
+When enabled, the Jam extension sets the value of the `Cache-Control` and `Prasgma` headers to `no-cache` on each network request.  The option is enabled by default.
+
 
 ## Security concerns
 
-Capturing all outgoing and incoming traffic for the current tab might expose sensitive or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}).
+Capturing all outgoing and incoming traffic for the current tab might expose sensitive or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}). Note that when the Fiddler Jam extension is set to take screenshots or record video an explcit warning will appear prior to the log recording start.
+
+![Fiddler Jam screenshot and video warning](../images/ext/ext-images/extension-start-capturing-warning.png)
 
 ## Next Steps
 
@@ -57,4 +81,3 @@ Learn more about:
 - How to [work with submitted logs in the Fiddler Jam portal]({%slug fj-portal-logs%}).
 - How to [organize received logs into portal workspaces]({%slug fj-workspaces%})
 - How to [use the Fiddler Everywhere desktop application for deep-dive investigation of Jam logs]({%slug fj-advanced-analysis%}).
-
