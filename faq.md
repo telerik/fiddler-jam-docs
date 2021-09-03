@@ -81,8 +81,9 @@ Only registered users with active seats have access to the Jam portal. Licenses 
 |  Fiddler Jam portal user    | Account created for your organization to access the web portal. This includes both support and development. By default the Fiddler Jam portal users are having read and write rights and they can  |
 |  viewer role  |  A Fiddler Jam portal user explicitly assigned with [the viewer role]({%slug fj-users%}#viewer-role). The viewer role has rescricted read rights. |
 |  session |   A network activity that Fiddler captures. it contains HTTP(S) request and response information together   |
-|  log |   A collection of captured HTTP(S) sessions, screenshots, console logs, and other information recorded by an extension user. The maximum size of Fiddler Jam log is 50MB.  |
+|  log |   A collection of captured HTTP(S) sessions, screenshots, video recordting, console logs, and other information recorded by an extension user. The maximum size of Fiddler Jam log is 50MB.  |
+|  capture options |  A set of [advanced capture options]({%slug fj-capture-options%}) available in the Fiddler Jam extension. The options allows you to control what information is to be captured.|
 |  workspace   |   A workspace is an organizational placeholder for logs. The workspace provides means to organize and share logs with your collaborators (within the organizational account)   |
 |  password-protected log  |   Log created with a password |
-|  log URL |  Direct URL for accessing the submitted log of any space on the web portal  |
+|  log URL or log link |  Direct URL for accessing the submitted log of any space on the web portal. The link is generated after the log recording is stopped.  |
 |  Fiddler dashboard   |   A central website for managing the Fiddler Jam and Fiddler Everywhere subscription plans and seats. Hosted at [https://dashboard.getfiddler.com](https://dashboard.getfiddler.com)  |

@@ -4,6 +4,7 @@ description: Sharing and security options for recorded Fiddler Jam logs. Share w
 slug: fj-link-options
 publish: true
 position: 50
+previous_url: /extension/link-options
 ---
 
 # Sharing Options
