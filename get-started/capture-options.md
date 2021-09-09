@@ -4,6 +4,7 @@ description: Fiddler Jam extension advanced capturing and recording options.
 slug: fj-capture-options
 publish: true
 position: 40
+previous_url: /extension/capture-options
 ---
 
 
@@ -19,11 +20,11 @@ Fiddler Jam provides several advanced capture options. These options allow you t
 - [Mask all post data](#mask-all-post-data)
 - [Disable Cache](#disable-cache)
 
-![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-003.png)
+![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-002.png)
 
 ### Capture video
 
-This option will allow you to capture video recording from the inspected Google Chrome tab. The video is then accessible through the **Screen recording** tab from the submitted log screen in the Jam portal. Note that only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequentially opened tabs won't be present in the video recording. The option is disabled by default.
+This option will allow you to capture video recording from the inspected Google Chrome tab. The video is then accessible through the **Screen recording** tab from the submitted log screen in the Jam portal. Note that only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequentially opened tabs won't be present in the video recording. The option is enabled by default.
 
 >tip The video recording is available only when accessing the recorded log through [the Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain the video recording.
 
@@ -31,7 +32,7 @@ This option will allow you to capture video recording from the inspected Google 
 
 ### Capture screenshots
 
-This option will allow you to take a screenshot of each user's activities during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, and so on. By default, **Capture screenshots** is enabled.
+This option will allow you to take a screenshot of each user's activities during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, and so on. The option is enabled by default.
 
 >tip The screenshots are available only when you access the recorded log through [Fiddler Jam portal]({%slug fj-portal%}). A recorded log exported as an HAR or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) won't contain screenshots.
 
@@ -45,7 +46,7 @@ When enabled, the capturing includes everything outputted in the developer conso
 
 ### Capture storage info
 
-This option will allow you to capture local or session storage data from each inspected Chrome tab. The storage info is then accessible through the **Storage Details** tab from the submitted log screen in the Jam portal. The option is disabled by default.
+This option will allow you to capture local or session storage data from each inspected Chrome tab. The storage info is then accessible through the **Storage Details** tab from the submitted log screen in the Jam portal. The option is enabled by default.
 
 >important The storage data could contain sensitive input data from the recorded tabs (for example, data entered in forms, fields, and so on) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, and so on, and sharing them only with trusted parties.
 
@@ -66,13 +67,7 @@ This option masks any post data (for example, data from forms, input text fields
 When enabled, the Jam extension sets the value of the `Cache-Control` and `Prasgma` headers to `no-cache` on each network request.  The option is enabled by default.
 
 
-## Security concerns
-
-Capturing all outgoing and incoming traffic for the current tab might expose sensitive or confidential data. Always consider the security aspect before sharing a recorded log. Learn more about [the security details when working with Fiddler Jam]({%slug fj-security%}). Note that when the Fiddler Jam extension is set to take screenshots or record video an explcit warning will appear prior to the log recording start.
-
-![Fiddler Jam screenshot and video warning](../images/ext/ext-images/extension-start-capturing-warning.png)
-
-## Next Steps
+### Next Steps
 
 Learn more about:
 

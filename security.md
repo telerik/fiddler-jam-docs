@@ -9,11 +9,13 @@ position: 90
 
 ## Fiddler Jam Security
 
-Fiddler Jam Extension is a Chrome extension tool that can capture the ongoing tab activity and generate links with the captured activity logs. With such functionality, a particular set of security features is added to Fiddler Jam to protect users' privacy and allow them to share logs with sensitive information entirely stripped. Here are the must-know highlights when capturing and sharing Fiddler Jam logs.
+Fiddler Jam Extension is a Chrome extension tool that can capture the ongoing tab activity and generate links with the captured activity logs. With such functionality, a particular set of security features is added to Fiddler Jam to protect users' privacy and allow them to share logs with sensitive information entirely stripped.  Here are the must-know highlights when capturing and sharing Fiddler Jam logs.
 
 - When Fiddler Jam Extension starts capturing, a red dot will indicate the ongoing recording.
 - When Fiddler Jam Extension is [explicitly set to capture a video]({%slug fj-capture-options%}#capture-video), a screen capturing icon in the recorded tab will indicate the ongoing recording.
 - If either [**Capture screenshots**]({%slug fj-capture-options%}#take-screenshots-while-capturing) or [**Capture Video**]({%slug fj-capture-options%}#capture-video) options are enabled, a privacy warning appears in Fiddler Jam Extension before the recording starts.
+
+    ![Fiddler Jam screenshot and video warning](./images/ext/ext-images/extension-start-capturing-warning.png)
 - Fiddler Jam Extension captures the Chrome tab's content where capturing is initialized plus all tabs and windows opened from that particular tab (and all tabs and windows opened from them). All tabs and windows with active capturing will have the red dot indication in Fiddler Jam Extension, as well as a strip at the top of the page with the text "Fiddler Jam, started debugging this browser". If the red dot in Fiddler Jam Extension and the top page strip the top of the page with the text "Fiddler Jam started debugging this browser" is not visible, Fiddler Jam Extension is not capturing this browser tab.
 - By default (**Mask all post data** switched off), Fiddler Jam Extension will try to mask all sensitive data (when the information is in known formats) send to the server or received from the server to the browser. Data sent or received in an unknown format will be considered sensitive by default and masked at 100%. Fiddler Jam Extension will remove masked data from the captured logs, and no one will be able to read it. Switching  **Mask all post data** will explicitly turn on masking all data sent to the server. Learn more about [the sensitive data masking and the known formats](#masking-sensitive-data). 
 - By default Fiddler Jam Extension will mask cookies values (see the [**Advanced Options**](#advanced-options) below). This means that this data will be removed from the captured log, and no one will be able to read it.
@@ -99,23 +101,20 @@ Fiddler Jam considers the following as sensitive data:
     - Proxy-Authorization
     - Proxy-Authenticate
 
-## Capture Options
+## Advanced Options
 
-The **Capture Options** menu provides some valuable options that Fiddler Jam Extension applies during the capturing. Before you record a log, consider the following security concerns:
+The [**Advanced Options**]({%slug fj-capture-options%}) menu provides some valuable options that Fiddler Jam Extension applies during the capturing. Before you record a log, consider the following security concerns:
 
-- **Capture video** - When active, this option creates a screencast of the user interactions from the **initial** browser tab (no video recording from tabs opened additionally). **Turned OFF by default**.
-    >important The video recording might exp
-- **Capture screenshots** - This option will add a screenshot of your actions from the active Chrome tab. Before you record a log, consider disabling the screenshot option if your screen shows sensitive data. **Turned ON by default**.
-    >important The taken screenshots might expose sensitive data from the recorded tab. Please be careful while sharing sensitive logs, including credit card information, passwords, or other confidential information, and share them only with trusted parties. You can turn the option off under [**Advanced Options**]({%slug fj-capture-options%}#advanced-options).
+- **Capture video** - When active, this option creates a screencast of the user interactions from the **initial** browser tab (no video recording from tabs opened additionally). This option is turned on by default.
+- **Capture screenshots** - This option will add a screenshot of your actions from the active Chrome tab. Before you record a log, consider disabling the screenshot option if your screen shows sensitive data. This option is turned on by default.
 - **Capture console** - When active, this option includes any developer's console outputs in the recorded log. **Turned ON by default**.
-- **Capture storage info** - This option captures local/session storage data from each inspected tab. **Turned OFF by default**.
-ose sensitive data from the recorded tab (for example, data entered in forms, fields, etc.) visible in the recorded video. Please be careful while sharing sensitive logs, including credit card information, passwords, etc., and sharing them only with trusted parties. You can turn the option off under [**Advanced Options**]({%slug fj-capture-options%}#advanced-options).
-- **Mask cookies** - When active, this option masks all cookies' values (cookie key names are still readable!) so that they won't be visible to the portal users receiving the log. **Turned ON by default**.
-- **Mask all post data** - When active, this option masks all the POST data (for example, user's information in text inputs and forms). **Turned OFF by default** - learn more about [the default masking of sensitive data](masking-sensitive-data) when this option is turned off.
-- **Disable cache** - This option sets the `Cache-Control` and `Pragma` headers to **no-cache** value on each network request. **Turned ON by default**.
+- **Capture storage info** - This option captures local/session storage data from each inspected tab. This option is turned on by default.
+- **Mask cookies** - When active, this option masks all cookies' values (cookie key names are still readable!) so that they won't be visible to the portal users receiving the log. This option is turned on by default.
+- **Mask all post data** - When active, this option masks all the POST data (for example, user's information in text inputs and forms). Even when this option is turned off, a default [masking of sensitive data](#masking-sensitive-data) will apply.
+- **Disable cache** - This option sets the `Cache-Control` and `Pragma` headers to **no-cache** value on each network request. This option is turned on by default.
+
 
 As a security rule of thumb, you should always check if **Capture screenshots** and **Capture video** options are enabled/disabled as per requirements. When those options are enabled, sensitive data might be exposed even if masked in the captured HTTP sessions, so take extra care while sharing these logs with third parties. 
-
 
 ## Sharing Links
 
