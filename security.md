@@ -33,11 +33,11 @@ By default, the Fiddler Jam Extension will start capturing with the advanced opt
 - **application/xml**
 - **application/x-www-form-urlencoded**
 - **multipart/form-data**
+- any that match __text/*__ 
 - any that match __application/*__ and have either the word **json**, **xml** or **x-www-form-urlencoded** on the right side
-- any that match __text/*__ and have either the word **json**, **xml** or **x-www-form-urlencoded** on the right side
-
-For XHR request that returns data in other unsupported MIME types, the content is fully masked (removed). 
-For all non-XHR request that returns data in other unsupported MIME types, the content is not modified and left as is. 
+- for all XHR request (except ones containing the __text/*__ pattern) that returns data in other unsupported MIME types, the content is fully masked (removed). 
+- for all non-XHR request that returns data in other unsupported MIME types, the content is not modified and left as is. 
+- for data containing the __text/*__ pattern when it can't be parsed to **json**, **xml** or **x-www-form-urlencoded**, the content is not modified and left as is.
 
 When the advanced option [**Mask all post data**]({%slug fj-capture-options%}#mask-all-post-data) is switched **on**, all post data (including the known formats listed above) is fully masked (removed).
 
