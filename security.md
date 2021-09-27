@@ -71,7 +71,7 @@ Fiddler Jam considers the following as sensitive data:
     - Stripe API Key
     - Stripe Restricted API Key* Square Access Token
     - Square OAuth Secret
-    - Teleниgram Bot API Key
+    - Telegram Bot API Key
     - Twilio API Key
     - Twitter Access Token
     - Twitter OAuth
