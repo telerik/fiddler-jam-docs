@@ -17,7 +17,7 @@ Fiddler Jam Extension is a Chrome extension tool that can capture the ongoing ta
 
     ![Fiddler Jam screenshot and video warning](./images/ext/ext-images/extension-start-capturing-warning.png)
 - Fiddler Jam Extension captures the Chrome tab's content where capturing is initialized plus all tabs and windows opened from that particular tab (and all tabs and windows opened from them). All tabs and windows with active capturing will have the red dot indication in Fiddler Jam Extension, as well as a strip at the top of the page with the text "Fiddler Jam, started debugging this browser". If the red dot in Fiddler Jam Extension and the top page strip the top of the page with the text "Fiddler Jam started debugging this browser" is not visible, Fiddler Jam Extension is not capturing this browser tab.
-- By default (**Mask all post data** switched off), Fiddler Jam Extension will try to mask all sensitive data (when the information is in known formats) send to the server or received from the server to the browser. Data sent or received in an unknown format will be considered sensitive by default and masked at 100%. Fiddler Jam Extension will remove masked data from the captured logs, and no one will be able to read it. Switching  **Mask all post data** will explicitly turn on masking all data sent to the server. Learn more about [the sensitive data masking and the known formats](#masking-sensitive-data). 
+- By default (**Mask all post data** switched off), Fiddler Jam Extension will try to mask all sensitive data (when the information is in known formats) sent to the server or received from the server to the browser. Data sent or received in an unknown format will be considered sensitive by default and masked at 100%. Fiddler Jam Extension will remove masked data from the captured logs, and no one will be able to read it. Switching  **Mask all post data** will explicitly turn on masking all data sent to the server. Learn more about [the sensitive data masking and the known formats](#masking-sensitive-data). 
 - By default Fiddler Jam Extension will mask cookies values (see the [**Advanced Options**](#advanced-options) below). This means that this data will be removed from the captured log, and no one will be able to read it.
 - The password-protected logs are client-side encrypted with AES-CTR, and the password is not stored on Fiddler Jam servers.
 - The Fiddler Jam team doesn't have access to and can't recover password-protected log content. Learn more about the password-protecting option in the [Sharing Links options]({%slug fj-link-options%}). 
@@ -27,17 +27,19 @@ Fiddler Jam Extension is a Chrome extension tool that can capture the ongoing ta
 
 ## Masking Sensitive Data
 
-By default, the Fiddler Jam Extension will start capturing with the advanced option **Mask all post data** switched **off**. Fiddler Jam Extension will try to automatically mask (remove) all sensitive data sent to or received from the server contained in one of the following known formats (MIME types):
+By default, the Fiddler Jam Extension will start capturing with the advanced option [**Mask all post data**]({%slug fj-capture-options%}#mask-all-post-data) switched **off**. Fiddler Jam Extension will try to automatically mask (remove) all sensitive data sent to or received from the server contained in one of the following known formats (MIME types):
 
 - **application/json**
 - **application/xml**
 - **application/x-www-form-urlencoded**
 - **multipart/form-data**
-- any that match __application/*__ and have either the word **json** or **xml** on the right side
+- any that match __text/*__ 
+- any that match __application/*__ and have either the word **json**, **xml** or **x-www-form-urlencoded** on the right side
+- for all XHR request (except ones containing the __text/*__ pattern) that returns data in other unsupported MIME types, the content is fully masked (removed). 
+- for all non-XHR request that returns data in other unsupported MIME types, the content is not modified and left as is. 
+- for data containing the __text/*__ pattern when it can't be parsed to **json**, **xml** or **x-www-form-urlencoded**, the content is not modified and left as is.
 
-Data in other unsupported MIME types is fully masked (removed). 
-
-When the advanced option **Mask all post data** is switched **on**, all post data (including the known formats listed above) is fully masked (removed).
+When the advanced option [**Mask all post data**]({%slug fj-capture-options%}#mask-all-post-data) is switched **on**, all post data (including the known formats listed above) is fully masked (removed).
 
 ### What is Sensitive Data
 
