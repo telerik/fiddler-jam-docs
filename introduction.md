@@ -1,12 +1,28 @@
 ---
-title: Introduction 
-description: Fiddler Jam is a network troubleshooting solution for capturing, recording, and collaboration on HTTP/HTTPS browser issues.
+title: Introduction
+description: Try now the Fiddler Jam cross-platform, web-debugging, HTTP-request proxy and use it for any browser, system or platform to ensure high performance of your processes.
+
+Fiddler Jam is a network troubleshooting solution for capturing, recording, and collaboration on HTTP/HTTPS browser issues.
 slug: introduction
 publish: true
 position: 0
 ---
 
-# Welcome to Fiddler Jam
+# Welcome to Fiddler Everywhere!
+
+Progress® Telerik® Fiddler Jam is a troubleshooting solution for support and development teams, designed to help them easily and securely communicate between each other and quickly resolve issues.
+
+Fiddler Jam
+
+a troubleshooting solution for support & developers teams. The **Fiddler Jam Chrome extension** and the **Fiddler Jam portal** are the interconnected components that are the core of Fiddler Jam.
+
+## What is the purpose of Fiddler Jam?  
+
+Fiddler Jam helps end users to isolate issues by capturing HTTP or HTTPS network logs in customer environment and enables the secure sharing of these logs between the customers and the support teams with the help of the [**Fiddler Jam portal**](https://jam.getfiddler.com). Finally, with full [**Fiddler Everywhere**](https://docs.telerik.com/fiddler-everywhere/introduction) integration, the development team can load the logs and replicate the issue locally, using tooling they are already comfortable with.  
+
+web-debugging tool that monitors, inspects, edits, and logs all HTTP(S) traffic, and issue requests between your computer and the Internet, and fiddles with incoming and outgoing data. It is a high performance, cross-platform proxy for any browser, system, or platform.
+
+
 
 **Fiddler Jam** is a troubleshooting solution for support and development teams designed to help them troubleshoot issues quickly, easily, and securely. How does it work? Customers share network logs via a Chrome extension instead of manually attaching them to an email or a support ticket. The support team analyzes the logs for troubleshooting in a safe cloud space. Developers debug further by inspecting the logs in the [Fiddler Jam portal](https://jam.getfiddler.com) or with the help of the Fiddler Everywhere application.
 
@@ -68,7 +84,7 @@ We believe documentation is best when the content is a product of the collaborat
 
 - Send a Pull Request
 
-    CCreating an issue is excellent, but what we love are pull requests. If you find a problem in the docs or even feel like creating new content, we'd be happy to have your contributions! 
+    CCreating an issue is excellent, but what we love are pull requests. If you find a problem in the docs or even feel like creating new content, we'd be happy to have your contributions!
 
     To do this, you must fork our documentation and submit a pull request. That way, you may contribute an update exactly where you found the error. After that, our technical writing team will need to approve your change request. Please use only standard markdown. For more detailed instructions, follow the [contribution instructions](https://github.com/telerik/fiddler-jam-docs#contributing) published in GitHub. You could directly initiate a pull request by using the __Improve this article__ functionality.
 
@@ -78,4 +94,3 @@ We believe documentation is best when the content is a product of the collaborat
 Licensing agreement and detailed information about the different licenses you should acquire are available in the [Licensing](https://www.telerik.com/purchase/license-agreement/fiddler-everywhere) section.
 
 ![Welcome to Fiddler Jam](images/ext/ext-icons/welcome.png)
-
