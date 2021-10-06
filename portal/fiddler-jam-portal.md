@@ -61,7 +61,7 @@ The Fiddler Jam portal menu is accessible from the top-right corner from the acc
 Your information and usage statistics help us understand product usage better and continue building the product you love. To subscribe/unsubscribe from participating in the usage statistics sharing:
 
 1. Open __Settings > Privacy__ menu (accessible from the top-right corner from the account icon).
-2. Check/uncheck the __Automatically send data to help us improve the product__ option depending on whether you want to send usage statistics. 
+2. Check/uncheck the __Automatically send data to help us improve the product__ option depending on whether you want to send usage statistics.
 3. Click on __Save__ to apply the change.
 
 ### My Resources
@@ -106,3 +106,12 @@ Follow the steps [for accessing the management page](#manage-the-subscription-pl
 ### Manage Existing Seat
 
 The account owner can remove, edit, or cancel a seat (remove the seat from the subscription renewal) through the **More** option (three vertical dots) next to an assigned seat.
+
+## Trial Version and Commercial License
+
+Fiddler Everywhere offers a 30-day trial with a full-featured version of the tool&mdash;no restrictions! What’s more, you are eligible for complete technical support during your trial period in case you have any questions. To sign up for a free 30 day trial, go [here](https://www.telerik.com/download/fiddler-everywhere). In addition, [the Fiddler Everywhere dashboard panel]({%slug fiddler-dashboard%}) provides information and options for managing your subscription plans.
+
+To use Fiddler Everywhere commercially, you need to purchase a license. The terms of use are fully described in the [Fiddler Everywhere License Agreement](https://www.telerik.com/purchase/license-agreement/fiddler-everywhere).
+
+* For more information about the available subscription plans, go to the [Fiddler Everywhere purchase page](https://www.telerik.com/purchase/fiddler).
+* For more information on the available commercial and free support channels, refer to the article on the [available Fiddler Everywhere support options]({%slug support%}).

@@ -1,19 +1,18 @@
 ---
-title: Users & Roles 
+title: Users & Roles
 description: Fiddler Jam extensions users, portal users and portal viewers
 slug: fj-users
 publish: true
 position: 20
 ---
 
-
 # Fiddler Jam Users and Roles
 
 The Chrome extension users are referred to as an **extension users**. The Fiddler Jam portal provides different subscription plans with limited seats for the [**user** role](#user-role) and unlimited seats for the [**viewer** role](#viewer-role). The [account owner](#account-owner) is the user that purchased the Fiddler Jam license and the one who manages the seats.
 
-## Extension Users 
+## Extension Users
 
-Everyone who uses the Fiddler Jam Chrome extension can be described as an extension user. All extension users can capture and record logs and generate Fiddler Jam portal links where the logs will be stored. 
+Everyone who uses the Fiddler Jam Chrome extension can be described as an extension user. All extension users can capture and record logs and generate Fiddler Jam portal links where the logs will be stored.
 - There is no limitation on the number of recorded logs.
 - There is no limitation for the number of generated links to recorded logs.
 - A recorded log with a generated link will be stored in the Fiddler Jam portal for **30 days.** After that period, the log is automatically deleted.
@@ -25,7 +24,7 @@ The account owner is the user who purchased the Fiddler Jam license from [the Fi
 
 ## User Role
 
-Depending on the chosen Fiddler Jam [subscription plan]({%slug fj-portal%}#subscriptions), the account owner can assign a different number of seats with the **user** role. A portal user can view and maintain **submitted logs** and **workspaces logs** based on the Fiddler Jam account quota. A portal user has full access to the Fiddler Jam dashboard functionalities as opposed to the portal viewer, which has limited rights and can only open **submitted logs** added to a workspace. 
+Depending on the chosen Fiddler Jam [subscription plan]({%slug fj-portal%}#subscriptions), the account owner can assign a different number of seats with the **user** role. A portal user can view and maintain **submitted logs** and **workspaces logs** based on the Fiddler Jam account quota. A portal user has full access to the Fiddler Jam dashboard functionalities as opposed to the portal viewer, which has limited rights and can only open **submitted logs** added to a workspace.
 
 The portal users' seat comes with the following advantages and limitations:
 
