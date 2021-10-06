@@ -8,21 +8,6 @@ position: 100
 
 # FAQ
 
-## So how does Fiddler Jam work... really?  
-
-**_A:_**  
-
-**Your customers (also referred to as [extension users](#fiddler-jam-terminology))) will...**  
-- Install the lightweight Chrome extension.
-- Start recording network requests/responses.
-- Reproduce the issue at hand.
-- Save their recordings and share them via the generated link (upload Fiddler Jam logs to cloud space).  
-
-**Your support team (also referred to as [portal users](#fiddler-jam-terminology))) will then...**  
-- Open the customer-provided generated link in the **Fiddler Jam portal** via a browser.
-- Access the protected private workspace where logs are stored.
-- Triage the issue, add context and share with the development team.
-
 ## What is the definition of a Fiddler Jam log?
 
 **_A:_** A Fiddler Jam log is an information recorded by [the extension users](#what-is-an-extension-user?) via the Fiddler Jam Chrome extension. A log contains the captured network traffic and (optionally) the generated console logs and screenshots from the user interaction. The maximum size for Fiddler Jam log (requests and screenshots) is 50MB.

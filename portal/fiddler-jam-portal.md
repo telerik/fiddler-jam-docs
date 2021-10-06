@@ -3,7 +3,7 @@ title: Overview
 description: "....essentials about using the Fiddler Jam cloud portal.."
 slug: fj-portal
 publish: true
-position: 10
+position: 1
 ---
 
 # Fiddler Jam Portal Overview
