@@ -1,72 +1,94 @@
 ---
 title: Introduction
-description: Try now the Fiddler Jam cross-platform, web-debugging, HTTP-request proxy and use it for any browser, system or platform to ensure high performance of your processes.
-
-Fiddler Jam is a network troubleshooting solution for capturing, recording, and collaboration on HTTP/HTTPS browser issues.
+description: Try now the Fiddler Jam Chrome Extension and Portal troubleshooting solutions for capturing, recording, and collaboration on HTTP and HTTPS browser issues.
 slug: introduction
 publish: true
 position: 0
 ---
 
-# Welcome to Fiddler Everywhere!
+# Welcome to Fiddler Jam!
 
-Progress® Telerik® Fiddler Jam is a troubleshooting solution for support and development teams, designed to help them easily and securely communicate between each other and quickly resolve issues.
+Progress® Telerik® Fiddler Jam is a troubleshooting solution for end users and for support and development teams, which is designed to help them easily and securely communicate between each other and quickly resolve issues.
 
-Fiddler Jam
+The core components of Fiddler Jam are the Fiddler Jam Chrome Extension, which enables end users to capture HTTP or HTTPS network issues and submit logs in a secure environment, and the Fiddler Jam Portal, which stores these logs in the cloud for support and developer teams to locally replicate and further analyze those issues.
 
-a troubleshooting solution for support & developers teams. The **Fiddler Jam Chrome extension** and the **Fiddler Jam portal** are the interconnected components that are the core of Fiddler Jam.
+What's more, both Fiddler Jam components are fully integrated with the [Fiddler Everywhere web-debugging tool](https://docs.telerik.com/fiddler-everywhere/introduction), which monitors, inspects, edits, and logs all HTTP and HTTPS traffic and provides a number of additional troubleshooting features.
 
-## What is the purpose of Fiddler Jam?  
+## Fiddler Jam Chrome Extension
 
-Fiddler Jam helps end users to isolate issues by capturing HTTP or HTTPS network logs in customer environment and enables the secure sharing of these logs between the customers and the support teams with the help of the [**Fiddler Jam portal**](https://jam.getfiddler.com). Finally, with full [**Fiddler Everywhere**](https://docs.telerik.com/fiddler-everywhere/introduction) integration, the development team can load the logs and replicate the issue locally, using tooling they are already comfortable with.  
+The Chrome Extension is aimed at end users and helps them troubleshoot website issues&mdash;instead of manually attaching network logs to an email or a support ticket, they can directly share these logs through the Chrome extension. The submitted logs are automatically and safely stored in the Fiddler Jam Portal cloud and are available for the Fiddler Jam Portal users to inspect and help resolve those issues.
 
-web-debugging tool that monitors, inspects, edits, and logs all HTTP(S) traffic, and issue requests between your computer and the Internet, and fiddles with incoming and outgoing data. It is a high performance, cross-platform proxy for any browser, system, or platform.
+The Chrome Extension solution can be installed, pinned, and used by everyone.
 
+Fiddler Jam Chrome Extension delivers a range of handy and end-user friendly features whose number and further development are not limited by the list in this section&mdash;the Fiddler team constantly invests efforts to improve the performance and add more value to the existing troubleshooting solution, and build on top of its available features.
 
+### Traffic Inspection and Analysis
 
-**Fiddler Jam** is a troubleshooting solution for support and development teams designed to help them troubleshoot issues quickly, easily, and securely. How does it work? Customers share network logs via a Chrome extension instead of manually attaching them to an email or a support ticket. The support team analyzes the logs for troubleshooting in a safe cloud space. Developers debug further by inspecting the logs in the [Fiddler Jam portal](https://jam.getfiddler.com) or with the help of the Fiddler Everywhere application.
+The Fiddler Jam Chrome extension logs all HTTP and HTTPS traffic between the Chrome browser and the Internet, and enables users to capture network traffic from any application. [Read more about the capturing options of with Fiddler Jam Chrome Extension...]({% slug  %})
 
-**HTTP(S) Traffic Inspection & Analysis**
-
-The Fiddler Jam Chrome extension logs all HTTP(S) traffic between your Chrome browser and the Internet.
-
-**Video and Screenshots on User Interactions**
+### Video and Screenshot Capturing
 
 The extended log information can include a video recording of the expected browser page and screenshots for each user interaction with the page (clicks) during the HTTP(S) traffic recording. Empower your recording with visual information related to specific reproduction workflows.
 
-**Record Developer Logs**
-
-Record the developer's console logs for additional debug information and investigate complex issues on the fly.
-
-**Cloud Space Submissions**
+### Safe Online Log Submission in the Cloud
 
 Recorded logs can be quickly submitted to the Fiddler Jam portal, where they can be saved, organized, analyzed, and shared with other collaborators. The Fiddler Jam cloud portal provides means to control accessibility by providing access rights.
 
-**Fiddler Everywhere Integration**
-
-Submitted logs are compatible with Fiddler Everywhere for in-depth investigation.
-
-**Protecting the Sensitive Data**
+### Sensitive Data Protection
 
 The Fiddler Jam capturing comes with a powerful, default masking feature for masking of sensitive information.
 
 
-## Chrome Extension Getting Started
-
-Enable and configure the Fiddler Jam extension by following [the installation steps]({%slug fj-installation%}).
-
-If you are familiar with how a Chrome extension works, you could skip the above tutorial and directly install the [Chrome extension](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj) from the Google Chrome Web Store.
 
 
 ## Fiddler Jam Portal
 
-[The Fiddler Jam portal]({%slug fj-portal%}) is a cloud space that allows you to safely store, organize and analyze submitted logs coming from your customers. Some of the portal's key features include:
+The Portal is a cloud space that safely stores the network logs submitted by end users and enables support and developer teams to organize, inspect, and analyze them in a safe space. The further monitoring of the logs is enabled through the additional Fiddler Jam Portal debugging options, and can also be inspected with the Fiddler Everywhere web-debugging HTTP-proxy client due to the seamless integration between the two.
 
-- User roles with different access rights.
+The Fiddler Jam Portal option are available for commercial users only&mdash;for more information, refer to the article on [trial version and commercial license]({% slug   %}).
 
-- Safe online storage.
+Fiddler Jam Portal delivers a range of handy and developer-friendly features whose number and further development are not limited by the list in this section&mdash;the Fiddler team constantly invests efforts to improve the performance and add more value to the existing troubleshooting solution, and build on top of its available features.
 
-- One-click integration with Fiddler Everywhere.
+
+
+
+### User Roles and Access Rights
+
+### Safe Online Log Storage in the Cloud
+
+### One-Click Integration with Fiddler Everywhere
+
+### Developer Logs Recording
+
+Record the developer's console logs for additional debug information and investigate complex issues on the fly.
+
+
+
+
+
+## Trial Version and Commercial License
+
+Fiddler Everywhere offers a 30-day trial with a full-featured version of the tool&mdash;no restrictions! What’s more, you are eligible for complete technical support during your trial period in case you have any questions. To sign up for a free 30 day trial, go [here](https://www.telerik.com/download/fiddler-everywhere). In addition, [the Fiddler Everywhere dashboard panel]({%slug fiddler-dashboard%}) provides information and options for managing your subscription plans.
+
+To use Fiddler Everywhere commercially, you need to purchase a license. The terms of use are fully described in the [Fiddler Everywhere License Agreement](https://www.telerik.com/purchase/license-agreement/fiddler-everywhere).
+
+* For more information about the available subscription plans, go to the [Fiddler Everywhere purchase page](https://www.telerik.com/purchase/fiddler).
+* For more information on the available commercial and free support channels, refer to the article on the [available Fiddler Everywhere support options]({%slug support%}).
+
+## Suggested Links
+
+* [Before You Start: All Things Fiddler (Telerik Blog Post)](https://www.telerik.com/blogs/fiddler)
+* [Getting Started with Fiddler Everywhere (Video Tutorials)](https://www.telerik.com/videos/fiddler/tag/fiddler-everywhere)
+* [Getting Started with Fiddler Everywhere (Webinars on Demand)](https://www.telerik.com/webinars/fiddler-everywhere)
+* [Quickstart on Windows (Step-by-Step Guide)]({% slug first_steps_windows %})
+* [Quickstart on macOS (Step-by-Step Guide)]({% slug first_steps_macos %})
+* [Quickstart on Linux (Step-by-Step Guide)]({% slug first_steps_linux %})
+
+
+
+
+
+
 
 ## Documentation
 
