@@ -23,14 +23,6 @@ position: 100
 - Access the protected private workspace where logs are stored.
 - Triage the issue, add context and share with the development team.
 
-## What is an extension user?
-
-**_A:_** An extension user is everyone who uses the Fiddler Jam Chrome extension.
-
-## What is a portal user?
-
-**_A:_** A portal users are accounts created for your organization to access the [Fiddler Jam portal](https://jam.getfiddler.com/). Learn more about [portal users and roles]({%slug fj-users%}#portal-users).
-
 ## What is the definition of a Fiddler Jam log?
 
 **_A:_** A Fiddler Jam log is an information recorded by [the extension users](#what-is-an-extension-user?) via the Fiddler Jam Chrome extension. A log contains the captured network traffic and (optionally) the generated console logs and screenshots from the user interaction. The maximum size for Fiddler Jam log (requests and screenshots) is 50MB.
@@ -53,17 +45,9 @@ position: 100
 
 ## Fiddler Jam Terminology
 
-| Term      |   Description |
-|---    |---    |
-|  Fiddler Jam extension   |  The Chrome extension is used for recording network traffic, console logs, screenshots, etc. The Fiddler Jam extension is available from the Google Web Store |
-|  Fiddler Jam extension user  |   End-user who have encountered an issue on your web application and are using the Fiddler Jam extension |
-|  Fiddler Jam portal   |   A central website for accessing call logs stored on the cloud. Hosted at [https://jam.getfiddler.com](https://jam.getfiddler.com)  |
-|  Fiddler Jam portal user    | Account created for your organization to access the web portal. This includes both support and development. By default the Fiddler Jam portal users are having read and write rights and they can  |
-|  viewer role  |  A Fiddler Jam portal user explicitly assigned with [the viewer role]({%slug fj-users%}#viewer-role). The viewer role has rescricted read rights. |
 |  session |   A network activity that Fiddler captures. it contains HTTP(S) request and response information together   |
 |  log |   A collection of captured HTTP(S) sessions, screenshots, video recordting, console logs, and other information recorded by an extension user. The maximum size of Fiddler Jam log is 50MB.  |
 |  capture options |  A set of [advanced capture options]({%slug fj-capture-options%}) available in the Fiddler Jam extension. The options allows you to control what information is to be captured.|
 |  workspace   |   A workspace is an organizational placeholder for logs. The workspace provides means to organize and share logs with your collaborators (within the organizational account)   |
 |  password-protected log  |   Log created with a password |
 |  log URL or log link |  Direct URL for accessing the submitted log of any space on the web portal. The link is generated after the log recording is stopped.  |
-|  Fiddler dashboard   |   A central website for managing the Fiddler Jam and Fiddler Everywhere subscription plans and seats. Hosted at [https://dashboard.getfiddler.com](https://dashboard.getfiddler.com)  |

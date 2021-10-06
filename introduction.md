@@ -8,11 +8,11 @@ position: 0
 
 # Welcome to Fiddler Jam!
 
-Progress® Telerik® Fiddler Jam is a troubleshooting solution for end users and for support and development engineering teams, which is designed to help them easily and securely communicate between each other and quickly resolve issues.
+Progress® Telerik® Fiddler Jam is a troubleshooting solution for end users, and for support and development engineering teams, which is designed to help them easily and securely communicate between each other, and quickly analyze and resolve issues.
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/l0x1eGW2AUY" title="Fiddler Jam Intro on YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The core components of Fiddler Jam are the Fiddler Jam Chrome Extension, which enables end users to capture HTTP or HTTPS network issues and submit logs in a secure environment, and the Fiddler Jam Portal, which stores these logs in the cloud for support and developer teams to locally replicate and further analyze those issues.
+The core components of Fiddler Jam are the Fiddler Jam Chrome Extension, which enables end users (or extension users) to capture HTTP or HTTPS network issues and submit logs in a secure environment, and the Fiddler Jam Portal, which stores these logs in the cloud for support and developer teams (or portal users) to locally replicate and further analyze those issues.
 
 What's more, both Fiddler Jam components are fully integrated with the [Fiddler Everywhere web-debugging tool](https://docs.telerik.com/fiddler-everywhere/introduction), which monitors, inspects, edits, and logs all HTTP and HTTPS traffic and provides a number of additional troubleshooting features.
 
@@ -22,7 +22,7 @@ The Chrome Extension is aimed at end users and helps them troubleshoot website i
 
 The Fiddler Jam Chrome Extension delivers a range of handy and end-user friendly features whose number and further development are not limited by the list in this section&mdash;the Fiddler team constantly invests efforts to improve the performance and add more value to the existing troubleshooting solution, and build on top of its available features.
 
-The Chrome Extension solution can be installed, pinned, and used by everyone with Google Chrome. It does not require you to log in or register, nor does it call for any advanced knowledge in technology or previous debugging experience.
+The Chrome Extension solution can be installed, pinned, and used by everyone with Google Chrome and is also available in the Google Web Store. It does not require you to log in or register, nor does it call for any advanced knowledge in technology or previous debugging experience. 
 
 ### Traffic Recording
 

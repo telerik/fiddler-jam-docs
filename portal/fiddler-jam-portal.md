@@ -1,12 +1,12 @@
 ---
-title: Fiddler Jam Portal
-description: Essentials about using the Fiddler Jam cloud portal
+title: Overview
+description: "....essentials about using the Fiddler Jam cloud portal.."
 slug: fj-portal
 publish: true
 position: 10
 ---
 
-# Fiddler Jam Portal
+# Fiddler Jam Portal Overview
 
 The [Fiddler Jam portal](https://jam.getfiddler.com) is the cloud space where logs submitted from you or other users can be viewed, organized, and analyzed. The Fiddler Jam portal is accessible only for users with active [Fiddler Jam portal subscriptions](#subscriptions). The Fiddler Jam portal provides various means to organize, access, and work with submitted logs. The portal allows [account owners]({%slug fj-users%}#portal-users) to set up different roles for the portal users with different access rights.
 
@@ -74,21 +74,13 @@ The **My Resources** option will popup a window that contains basic Fiddler Jam 
 
 Use the **Sign Out** option to log out the currently active user.
 
-
-## Subscriptions
-
-Fiddler Jam portal provides various subscription plans to accommodate the different user needs. Visit [https://www.telerik.com/fiddler-jam](https://www.telerik.com/fiddler-jam) for more information about the subscription plans.
-
-
-## Trial Plan
-
-Activate the trial plan through the [Fiddler dashboard](https://dashboard.getfiddler.com) to test the Fiddler Jam portal for 14 days. The trial period applies the quotas for the Business plan.
-
 ## Trial Version and Commercial License
 
-Fiddler Everywhere offers a 30-day trial with a full-featured version of the tool&mdash;no restrictions! What’s more, you are eligible for complete technical support during your trial period in case you have any questions. To sign up for a free 30 day trial, go [here](https://www.telerik.com/download/fiddler-everywhere). In addition, [the Fiddler Everywhere dashboard panel]({%slug fiddler-dashboard%}) provides information and options for managing your subscription plans.
+Fiddler Jam offers a 14-day trial with a full-featured version of the tool&mdash;no restrictions! What’s more, you are eligible for complete technical support during your trial period in case you have any questions. To sign up for a free 14-day trial, go [here](https://jam.getfiddler.com/login). In addition, [the Fiddler Jam dashboard site](https://dashboard.getfiddler.com) provides information and options for managing your subscription plans.
 
-To use Fiddler Everywhere commercially, you need to purchase a license. The terms of use are fully described in the [Fiddler Everywhere License Agreement](https://www.telerik.com/purchase/license-agreement/fiddler-everywhere).
+To use Fiddler Jam commercially, you need to purchase a license. The terms of use are fully described in the [Fiddler Jam License Agreement](https://www.telerik.com/purchase/license-agreement/fiddler-jam).
 
-* For more information about the available subscription plans, go to the [Fiddler Everywhere purchase page](https://www.telerik.com/purchase/fiddler).
-* For more information on the available commercial and free support channels, refer to the article on the [available Fiddler Everywhere support options]({%slug support%}).
+* For more information on managing your subscription plan, refer to the [**Frequently Asked Questions** page](https://www.telerik.com/fiddler-jam/faq).  
+* To subscribe to Fiddler Jam, refer to the [Fiddler Jam purchase page](https://www.telerik.com/purchase/fiddler-jam).
+* To activate licenses and seats, refer to the [Fiddler Jam dashboard site](https://dashboard.getfiddler.com).
+* For more information on the available commercial and free support channels, refer to the article on the [available Fiddler Jam support options]({% slug jam-support-page %}).
