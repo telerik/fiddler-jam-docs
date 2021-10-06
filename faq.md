@@ -1,5 +1,5 @@
 ---
-title: FAQ 
+title: FAQ
 description: Frequently asked questions about Fiddler Jam
 slug: faq
 publish: true
@@ -7,26 +7,6 @@ position: 100
 ---
 
 # FAQ
-
-## What is Fiddler Jam?  
-
-**_A:_** Fiddler Jam is a troubleshooting solution for support & developers teams. The **Fiddler Jam Chrome extension** and the **Fiddler Jam portal** are the interconnected components that are the core of Fiddler Jam.
-
-## What is the purpose of Fiddler Jam?  
-
-**_A:_** Fiddler Jam helps **end-users** (also referred to as [**extension users**](#fiddler-jam-terminology)) to isolate issues by capturing HTTP(S) network logs in the customer's environment. It then enables the secure sharing of these logs between the customers and your support teams with the help of the [**Fiddler Jam portal**](https://jam.getfiddler.com). Finally, with full [**Fiddler Everywhere**](https://docs.telerik.com/fiddler-everywhere/introduction) integration, the development team can load the logs and replicate the issue locally, using tooling they are already comfortable with.  
-
-## Who can use the Fiddler Jam Chrome extension?
-
-**_A:_** Anyone with Google Chrome can install and use [**the Chrome extension**](#). There is no login or registration required. The Chrome extension is easy to use and doesn't require advanced knowledge or any previous debugging experience.
-
-## What is the Fiddler Jam portal?
-
-The [**Fiddler Jam portal**](https://jam.getfiddler.com) is an online space where the captured logs can be accessed and maintained. The Fiddler Jam portal is where the support engineers and developers could analyze, share and sustain logs submitted by the extension users.
-
-## Who can use the Fiddler Jam portal?
-
-Only registered users with active seats have access to the Jam portal. Licenses and seats can be activated from t[he dashboard site](https://dashboard.getfiddler.com).
 
 ## So how does Fiddler Jam work... really?  
 

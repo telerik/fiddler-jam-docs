@@ -22,7 +22,7 @@ The Chrome Extension is aimed at end users and helps them troubleshoot website i
 
 The Fiddler Jam Chrome Extension delivers a range of handy and end-user friendly features whose number and further development are not limited by the list in this section&mdash;the Fiddler team constantly invests efforts to improve the performance and add more value to the existing troubleshooting solution, and build on top of its available features.
 
-The Chrome Extension solution can be installed, pinned, and used by everyone.
+The Chrome Extension solution can be installed, pinned, and used by everyone with Google Chrome. It does not require you to log in or register, nor does it call for any advanced knowledge in technology or previous debugging experience.
 
 ### Traffic Recording
 
@@ -46,9 +46,11 @@ The Fiddler Jam Portal is a cloud space that safely stores the network logs subm
 
 Fiddler Jam Portal delivers a range of handy and developer-friendly features whose number and further development are not limited by the list in this section&mdash;the Fiddler team constantly invests efforts to improve the performance and add more value to the existing troubleshooting solution, and build on top of its available features.
 
-The Fiddler Jam Portal options are available for commercial users only.
-* For more information about trials and subscriptions, refer to the section on the [Fiddler Jam Portal trial version and commercial license]({% slug fj-portal %}#trial-version-and-commercial-license).
-* For more information about managing your subscription plan, refer to the [Fiddler Jam purchase page](https://www.telerik.com/purchase/fiddler-jam) and the [**Frequently Asked Questions** page](https://www.telerik.com/fiddler-jam/faq).  
+The Fiddler Jam Portal options are available for registered users with active seats only.
+* For more information about Fiddler Jam Portal trials and licenses, refer to the section on [trial version and commercial license]({% slug fj-portal %}#trial-version-and-commercial-license).
+* For more information on managing your subscription plan, refer to the [**Frequently Asked Questions** page](https://www.telerik.com/fiddler-jam/faq).  
+* To subscribe to Fiddler Jam, refer to the [Fiddler Jam purchase page](https://www.telerik.com/purchase/fiddler-jam).
+* To activate licenses and seats, refer to the [Fiddler Jam dashboard site](https://dashboard.getfiddler.com).
 
 ### User Roles and Access Rights
 
