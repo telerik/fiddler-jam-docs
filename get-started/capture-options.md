@@ -1,6 +1,6 @@
 ---
 title: Advanced Capturing Options
-description: "Learn hoe to set Fiddler Jam extension advanced capturing and recording options."
+description: "Learn how to set the Fiddler Jam Chrome Extension advanced capturing and recording options."
 slug: fj-capture-options
 publish: true
 position: 40

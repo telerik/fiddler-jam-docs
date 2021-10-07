@@ -1,6 +1,6 @@
 ---
 title: First Steps
-description: "Install the Fiddler Jam Chrome Extension and learn how to record and preview network logs, and save and share the recording with the engineering teams."
+description: "Get started with the Fiddler Jam Chrome Extension and learn how install, to record, and preview network logs, and save and share the recording with the engineering teams."
 slug: first_steps_extension
 previous_url: /extension/installation, /extension/recording-a-log, /extension/submitting-a-log
 publish: true
@@ -94,5 +94,5 @@ That was it! Now you are ready to dive more deeply into Fiddler Jam Chrome Exten
 
 * [Managing the Chrome Extension after Its Installation]({% slug fj-installation %})
 * [Advanced Capturing Options]({% slug fj-capture-options %})
-* [Link Sharing Options]({% slug fj-link-options %})
+* [Log Sharing Options]({% slug fj-link-options %})
 * [Error Handling]({% slug fj-error-handling %})
