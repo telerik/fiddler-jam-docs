@@ -1,6 +1,6 @@
 ---
-title: Sharing Options 
-description: Sharing and security options for recorded Fiddler Jam logs. Share with a link or with specific people, and use an optional password. 
+title: Sharing Options
+description: Sharing and security options for recorded Fiddler Jam logs. Share with a link or with specific people, and use an optional password.
 slug: fj-link-options
 publish: true
 position: 50
@@ -9,7 +9,7 @@ previous_url: /extension/link-options
 
 # Sharing Options
 
-The Fiddler Jam extension provides two options for sharing [recorded logs]({%slug fj-recording-logs%}). Both alternatives allow additional security via [password protection](#password-protection-for-recorded-logs).
+The Fiddler Jam extension provides two options for sharing [recorded logs]({%slug first_steps_extension%}#recording-a-log). Both alternatives allow additional security via [password protection](#password-protection-for-recorded-logs).
 
 - [Share with a link](#share-with-a-link)
 - [Share with specific people](#share-with-specific-people)

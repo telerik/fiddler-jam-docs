@@ -22,11 +22,11 @@ The Chrome Extension is aimed at end users and helps them troubleshoot website i
 
 The Fiddler Jam Chrome Extension delivers a range of handy and end-user friendly features whose number and further development are not limited by the list in this section&mdash;the Fiddler team constantly invests efforts to improve the performance and add more value to the existing troubleshooting solution, and build on top of its available features.
 
-The Chrome Extension solution can be installed, pinned, and used by everyone with Google Chrome and is also available in the Google Web Store. It does not require you to log in or register, nor does it call for any advanced knowledge in technology or previous debugging experience. 
+The Chrome Extension solution can be installed, pinned, and used by everyone with Google Chrome and is also available in the Google Web Store. It does not require you to log in or register, nor does it call for any advanced knowledge in technology or previous debugging experience.
 
 ### Traffic Recording
 
-The Fiddler Jam Chrome extension logs all HTTP and HTTPS traffic between the Chrome browser and the Internet, and enables users to capture network traffic from any application. [Read more about the recording logs with the Fiddler Jam Chrome Extension...]({% slug fj-recording-logs %})
+The Fiddler Jam Chrome extension logs all HTTP and HTTPS traffic between the Chrome browser and the Internet, and enables users to capture network traffic from any application. [Read more about the recording logs with the Fiddler Jam Chrome Extension...]({% slug first_steps_extension %}#recording-a-log)
 
 ### Video and Screenshot Capturing
 
@@ -34,7 +34,7 @@ With the Chrome Extension, you can extend the log information by including a vid
 
 ### Safe Online Log Submission in the Cloud
 
-You can also quickly submit logs, recorded with the Chrome Extension, to the Fiddler Jam Portal cloud, where they can be saved, organized, analyzed, and shared with other collaborators. [Read more about submitting logs with the Fiddler Jam Chrome Extension...]({% slug fj-submitting-logs %})
+You can also quickly submit logs, recorded with the Chrome Extension, to the Fiddler Jam Portal cloud, where they can be saved, organized, analyzed, and shared with other collaborators. [Read more about submitting logs with the Fiddler Jam Chrome Extension...]({% slug first_steps_extension %}#submitting-the-log)
 
 ### Sensitive Data Protection
 

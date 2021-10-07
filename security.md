@@ -17,12 +17,12 @@ Fiddler Jam Extension is a Chrome extension tool that can capture the ongoing ta
 
     ![Fiddler Jam screenshot and video warning](./images/ext/ext-images/extension-start-capturing-warning.png)
 - Fiddler Jam Extension captures the Chrome tab's content where capturing is initialized plus all tabs and windows opened from that particular tab (and all tabs and windows opened from them). All tabs and windows with active capturing will have the red dot indication in Fiddler Jam Extension, as well as a strip at the top of the page with the text "Fiddler Jam, started debugging this browser". If the red dot in Fiddler Jam Extension and the top page strip the top of the page with the text "Fiddler Jam started debugging this browser" is not visible, Fiddler Jam Extension is not capturing this browser tab.
-- By default (**Mask all post data** switched off), Fiddler Jam Extension will try to mask all sensitive data (when the information is in known formats) sent to the server or received from the server to the browser. Data sent or received in an unknown format will be considered sensitive by default and masked at 100%. Fiddler Jam Extension will remove masked data from the captured logs, and no one will be able to read it. Switching  **Mask all post data** will explicitly turn on masking all data sent to the server. Learn more about [the sensitive data masking and the known formats](#masking-sensitive-data). 
+- By default (**Mask all post data** switched off), Fiddler Jam Extension will try to mask all sensitive data (when the information is in known formats) sent to the server or received from the server to the browser. Data sent or received in an unknown format will be considered sensitive by default and masked at 100%. Fiddler Jam Extension will remove masked data from the captured logs, and no one will be able to read it. Switching  **Mask all post data** will explicitly turn on masking all data sent to the server. Learn more about [the sensitive data masking and the known formats](#masking-sensitive-data).
 - By default Fiddler Jam Extension will mask cookies values (see the [**Advanced Options**](#advanced-options) below). This means that this data will be removed from the captured log, and no one will be able to read it.
 - The password-protected logs are client-side encrypted with AES-CTR, and the password is not stored on Fiddler Jam servers.
-- The Fiddler Jam team doesn't have access to and can't recover password-protected log content. Learn more about the password-protecting option in the [Sharing Links options]({%slug fj-link-options%}). 
+- The Fiddler Jam team doesn't have access to and can't recover password-protected log content. Learn more about the password-protecting option in the [Sharing Links options]({%slug fj-link-options%}).
 - The Fiddler Jam logs are stored in cloud storage based in the US, North Virginia.
-- By default, the Fiddler Jam portal is collecting usage statistics data. Learn more about how to enable and disable the collection of usage data via the [Privacy settings]({%slug fj-portal%}#privacy-settings) 
+- By default, the Fiddler Jam portal is collecting usage statistics data. Learn more about how to enable and disable the collection of usage data via the [Privacy settings]({%slug fj-portal%}#privacy-settings)
 
 
 ## Masking Sensitive Data
@@ -33,10 +33,10 @@ By default, the Fiddler Jam Extension will start capturing with the advanced opt
 - **application/xml**
 - **application/x-www-form-urlencoded**
 - **multipart/form-data**
-- any that match __text/*__ 
+- any that match __text/*__
 - any that match __application/*__ and have either the word **json**, **xml** or **x-www-form-urlencoded** on the right side
-- for all XHR request (except ones containing the __text/*__ pattern) that returns data in other unsupported MIME types, the content is fully masked (removed). 
-- for all non-XHR request that returns data in other unsupported MIME types, the content is not modified and left as is. 
+- for all XHR request (except ones containing the __text/*__ pattern) that returns data in other unsupported MIME types, the content is fully masked (removed).
+- for all non-XHR request that returns data in other unsupported MIME types, the content is not modified and left as is.
 - for data containing the __text/*__ pattern when it can't be parsed to **json**, **xml** or **x-www-form-urlencoded**, the content is not modified and left as is.
 
 When the advanced option [**Mask all post data**]({%slug fj-capture-options%}#mask-all-post-data) is switched **on**, all post data (including the known formats listed above) is fully masked (removed).
@@ -53,22 +53,22 @@ Fiddler Jam considers the following as sensitive data:
     - PGP private key block
     - AWS Access Key ID
     - Amazon MWS Auth Token
-    - AWS AppSync GraphQL Key 
+    - AWS AppSync GraphQL Key
     - Facebook Access Token
     - Facebook OAuth
     - GitHubToken
-    - Generic API Key 
+    - Generic API Key
     - Generic Secret
     - Google API Key
     - Google Cloud Platform OAuth
-    - Google Drive API Key 
+    - Google Drive API Key
     - Google Drive OAuth
     - Google Gmail API Key
     - Google YouTube API Key
     - Google YouTube OAuth
-    - MailChimp API Key 
+    - MailChimp API Key
     - Mailgun API Key* Password in URL
-    - PayPal Braintree Access Token 
+    - PayPal Braintree Access Token
     - Slack Webhook
     - Stripe API Key
     - Stripe Restricted API Key* Square Access Token
@@ -78,23 +78,23 @@ Fiddler Jam considers the following as sensitive data:
     - Twitter Access Token
     - Twitter OAuth
     - Master Card
-    - American Express 
+    - American Express
     - Visa Credit card
     - Discover Credit Card  
-    - Maestro Credit Card 
+    - Maestro Credit Card
     - JCB Credit Card
-    - Diner's Club Credit Card 
+    - Diner's Club Credit Card
     - Amex card  
-    - BCGlobal card 
-    - Carte Blanche Card 
+    - BCGlobal card
+    - Carte Blanche Card
     - Insta Payment Card  
-    - Korean Local Card 
-    - Laser card 
-    - Solo card 
-    - Switch card 
+    - Korean Local Card
+    - Laser card
+    - Solo card
+    - Switch card
     - Union pay card
-    - Vista master card 
-    - Rupay Debit Card 
+    - Vista master card
+    - Rupay Debit Card
 
 
 3. The following HTTP headers also get masked:
@@ -116,11 +116,11 @@ The [**Advanced Options**]({%slug fj-capture-options%}) menu provides some valua
 - **Disable cache** - This option sets the `Cache-Control` and `Pragma` headers to **no-cache** value on each network request. This option is turned on by default.
 
 
-As a security rule of thumb, you should always check if **Capture screenshots** and **Capture video** options are enabled/disabled as per requirements. When those options are enabled, sensitive data might be exposed even if masked in the captured HTTP sessions, so take extra care while sharing these logs with third parties. 
+As a security rule of thumb, you should always check if **Capture screenshots** and **Capture video** options are enabled/disabled as per requirements. When those options are enabled, sensitive data might be exposed even if masked in the captured HTTP sessions, so take extra care while sharing these logs with third parties.
 
 ## Sharing Links
 
-Once Fiddler Jam Extension [records a log]({%slug fj-recording-logs%}), it generates a unique link and distributes them as HAR files.
+Once Fiddler Jam Extension [records a log]({%slug first_steps_extension%}#recording-a-log), it generates a unique link and distributes them as HAR files.
 
 - For logs generated with **Share as link** option:  Any [Fiddler Jam portal users]({%slug fj-portal%}) could open the link.
 - For logs generated with **Share with specific people** options:  Only [Fiddler Jam portal users]({%slug fj-portal%}) included explicitly in the share list will be able to open the link.

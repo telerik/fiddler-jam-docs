@@ -8,10 +8,15 @@ position: 60
 
 # Error Handling
 
+## Error Handling
+
+In some cases, your Fiddler Jam extension might experience issues while capturing or trying to submit a log. To resolve such issues, follow [the error handling instructions]
+
+
 Submitting a Fiddler Jam log is an operation that requires access to specific API endpoints and specific access levels for the user that accesses the Internet through the browser. Some users might experience an issue while starting the extension, capturing traffic, or submitting a generated Fiddler Jam log. In case you are facing a similar scenario, follow the following steps:
 
 - Verify that you have active Internet access
-- Verify that you have access to the following test endpoint: 
+- Verify that you have access to the following test endpoint:
 
     [https://fiddler-backend-production.s3.amazonaws.com/connectivity-test/check.html](https://fiddler-backend-production.s3.amazonaws.com/connectivity-test/check.html)
 
