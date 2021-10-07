@@ -1,8 +1,8 @@
 ---
 title: First Steps
-description: "Install the Fiddler Jam Chrome Extension and learn how to record network logs, reproduce an issue at hand, and save and share the recording with the engineering teams."
+description: "Install the Fiddler Jam Chrome Extension and learn how to record and preview network logs, and save and share the recording with the engineering teams."
 slug: first_steps_extension
-previous_url: /extension/recording-a-log, /extension/submitting-a-log
+previous_url: /extension/installation, /extension/recording-a-log, /extension/submitting-a-log
 publish: true
 position: 1
 ---
@@ -28,12 +28,14 @@ The following video demonstrates the basic steps from this guide by showing how 
 
 ## Installing the Extension
 
-You'll first have to add the Fiddler Jam Chrome Extension. Before you start, make sure you are not browsing as a guest nor you're in the Incognito mode.
+You'll first add the Fiddler Jam Chrome Extension. Before you start, make sure you are not browsing as a guest nor you're in the Incognito mode.
 
 1. Open the Google Chrome browser on your computer.
 1. Open the [**Chrome Web Store** page for Fiddler Jam](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
 1. Click **Add to Chrome**.
 1. In the confirmation popup, click **Add extension**.
+
+After successfully installing the Extension, you can [change the site access and enable the Extension to work in the Incognito mode]({% slug fj-installation %}).
 
 ## Pinning the Extension
 
@@ -42,8 +44,6 @@ For quicker and easier access, now pin the Extension:
 1. Click the **Extensions** button on the Google Chrome toolbar next to your profile avatar.
 1. Click the pin next to the **Fiddler Jam** extension.
 1. In the **Welcome** screen prompt, follow the [Terms of Service](https://www.telerik.com/purchase/license-agreement/fiddler-jam-beta) and the [Privacy Policy](https://www.progress.com/legal/privacy-policy) information and read and accept them.
-
-After successfully installing the Extension and if you prefer, you can change the site access and enable the Extension to work in the Incognito mode.
 
 ## Recording a Log
 
@@ -92,7 +92,7 @@ That was it! Now you are ready to dive more deeply into Fiddler Jam Chrome Exten
 
 ## Next Steps
 
-* [Managing the Chrome Browser Settings during Installation]({% slug fj-installation %})
+* [Managing the Chrome Extension after Its Installation]({% slug fj-installation %})
 * [Advanced Capturing Options]({% slug fj-capture-options %})
 * [Link Sharing Options]({% slug fj-link-options %})
 * [Error Handling]({% slug fj-error-handling %})
