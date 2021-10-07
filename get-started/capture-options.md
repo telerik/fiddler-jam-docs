@@ -37,11 +37,11 @@ By default, the **Capture video** option is enabled.
 
 ## Capturing Screenshots
 
-The **Capture screenshot** option allows you to take a screenshot of a user activity that occurred during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The user activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, and so on.
+The **Capture screenshots** option allows you to take a screenshot of a user activity that occurred during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The user activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, and so on.
 
 The submitted screenshots are accessible for Fiddler Jam Portal users only. A recorded log, exported as an HAR file or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere), won't contain the screenshots.
 
-By default, the **Capture screenshot** option is enabled.
+By default, the **Capture screenshots** option is enabled.
 
 >important The screenshots may contain and display sensitive input data, for example, data entered in forms, fields, and so on. Be careful when submitting sensitive data such as credit card information and passwords, and make sure you share them with trusted parties only.
 
@@ -51,7 +51,7 @@ The **Capture console** option enables you to capture the output in the develope
 
 The submitted console logs are accessible for Fiddler Jam Portal users only. A recorded log, exported as an HAR file or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere), won't contain the console logs.
 
-By default, **Capture console** is enabled.
+By default, the **Capture console** option is enabled.
 
 ## Capturing Storage Information
 
@@ -59,7 +59,7 @@ The **Capture storage info** option enables you to capture local or session stor
 
 The submitted storage information is accessible for Fiddler Jam Portal users only.
 
-By default, **Capture storage info** is enabled.
+By default, the **Capture storage info** option is enabled.
 
 >important The storage information may contain and display sensitive input data, for example, data entered in forms, fields, and so on. Be careful when submitting sensitive data such as credit card information and passwords, and make sure you share them with trusted parties only.
 
@@ -67,13 +67,13 @@ By default, **Capture storage info** is enabled.
 
 The **Mask cookies** option masks any cookies that are part of the captured requests and responses. The masking option hides all cookie values while the cookie key names remain visible.
 
-By default, **Mask cookies** is enabled.
+By default, the **Mask cookies** option is enabled.
 
 ## Masking All Post Data
 
 The **Mask all post data** option masks any post data such as data from forms, input text fields, and so on. Post data is also the request body sent through the POST, PUT, and PATCH methods.
 
-By default, **Mask all post data** is disabled.
+By default, the **Mask all post data** option is disabled.
 
 >important By design, when **Mask all post data** is disabled, all data that is considered sensitive is masked. Enabling the option will explicitly mask all POST data (sensitive or not). For more information about what kind of data Fiddler Jam considers as sensitive, refer to the article on [Security]({%slug fj-security%}#masking-sensitive-data).
 
@@ -81,4 +81,4 @@ By default, **Mask all post data** is disabled.
 
 The **Disable cache** option enables the Fiddler Jam Chrome Extension to set the value of the `Cache-Control` and `Prasgma` headers to `no-cache` on each network request.
 
-By default, **Disable cache** is enabled.
+By default, the **Disable cache** option is enabled.
