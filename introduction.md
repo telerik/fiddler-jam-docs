@@ -38,7 +38,7 @@ You can also quickly submit logs, recorded with the Chrome Extension, to the Fid
 
 ### Sensitive Data Protection
 
-The Fiddler Jam Chrome Extension comes with a default feature for masking sensitive information. [Read more about the available Chrome Extension masking options...]({% slu fj-capture-options %}#masking-cookies)
+The Fiddler Jam Chrome Extension comes with a default feature for masking sensitive information. [Read more about the available Chrome Extension masking options...]({% slug fj-capture-options %}#masking-cookies)
 
 ## Fiddler Jam Portal
 
