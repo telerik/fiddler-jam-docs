@@ -6,9 +6,17 @@ publish: true
 position: 20
 ---
 
-# Fiddler Jam Users and Roles
+# Fiddler Jam Portal Users and Roles
 
 The Chrome extension users are referred to as an **extension users**. The Fiddler Jam portal provides different subscription plans with limited seats for the [**user** role](#user-role) and unlimited seats for the [**viewer** role](#viewer-role). The [account owner](#account-owner) is the user that purchased the Fiddler Jam license and the one who manages the seats.
+
+## Portal Users
+
+The Fiddler Jam login accepts using custom credentials or Google authentication, but the portal will be accessible only for usernames/emails that are part of an active subscription. Depending on the user assigned role, the Fiddler Jam portal will provide a different level of accessibility and features as follows:
+
+- Unregistered users won't be able to open the Fiddler Jam portal or load generated Fiddler Jam links. Note that no registration is needed to use the Fiddler Jam Chrome extension.
+- Fiddler Jam portal seats with the **viewer** role can see only logs [added to a workspace]({%slug fj-workspaces%}#add-submitted-log-to-workspace). If a viewer opens a public link, a page will inform the user that the links need to be added to the account workspace.
+- Fiddler Jam portal seats with the **user** role can open public logs, create and manage workspaces, manage existing logs (manage, add and remove from workspaces).
 
 ## Extension Users
 
