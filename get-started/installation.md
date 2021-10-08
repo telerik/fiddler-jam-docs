@@ -14,8 +14,11 @@ After the successful installation of the Fiddler Jam Chrome Extension, you can s
 To access the specific settings on the management page of the Fiddler Jam Chrome Extension:
 
 1. Click the **Extensions** button on the Google Chrome toolbar next to your profile avatar.
+
 1. In the expanded menu, click **Manage Extensions**.
+
 1. Type **Fiddler Jam** in the search bar or directly select the Fiddler Jam Chrome Extension.
+
 1. Click the **Details** button.
 
 ## Setting the Site Access
@@ -35,4 +38,5 @@ https://fiddler-backend-production.s3-accelerate.amazonaws.com/
 By default, most Chrome extensions are disabled in the Incognito mode. To explicitly enable Fiddler Jam and debug your sites in Incognito:
 
 1. Open the management page of the Fiddler Jam Chrome Extension.
+
 1. Scroll down to **Allow in Incognito** and use the switch to enable the feature.

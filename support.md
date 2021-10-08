@@ -20,7 +20,9 @@ The subscription plan includes unlimited access to the Fiddler's dedicated suppo
 Support for paid subscription or trial users provides the following services:
 
 * Guidance on handling existing features&mdash;You will receive references to existing resources, which demonstrate the intended use of the product, and also information on the proper configuration of the product.
+
 * Confirmation of bug reports&mdash;You can count on our support for diagnosing and confirming reported product bugs. However, during the report investigation we may ask you to isolate the issue and provide additional information or steps to reproduce it.
+
 * Sharing available workarounds&mdash;If available, you will get suggested workarounds for confirmed product bugs or for performing scenarios that are not implemented as built-in functionalities. You will also receive information on releases containing a bug fix or an implemented feature request.
 
 ## Free Support Channels
@@ -28,8 +30,11 @@ Support for paid subscription or trial users provides the following services:
 If you are not a license holder or a trial user, you can use [a number of available support options](https://www.telerik.com/support/fiddler-jam):
 
 * The [official Fiddler Jam documentation](https://docs.telerik.com/fiddler-jam/introduction) is public and available for all users. If you want to share your feedback on a specific article, fill in the **Was this article helpful?** form at the end and tell us more about whether the content was useful for you to successfully achieve what you wanted. For detailed information about how to create an issue or a Pull Request on the Fiddler Jam documentation, go to the [contribution instructions](https://github.com/telerik/fiddler-jam-docs#contributing).
+
 * For any features that have already been released, visit the [Fiddler Jam **Release History** page](https://www.telerik.com/support/whats-new/fiddler-jam/release-history).
+
 * If you still have a question unanswered, check out the [Fiddler Jam frequently asked questions section](https://www.telerik.com/fiddler-jam/faq).
+
 * Need something unique that is tailor-made for your project? Progress offers its [Progress Services](https://www.progress.com/services) group that can work with you to create any customized solution that you might need.
 
 ## Suggested Links

@@ -35,7 +35,7 @@ Recorded logs can be protected with a password, no matter if they are shared wit
 
 To create a password for your recorded log, use the **Password protection** switch. The password requires you to consider that it has to:
 
-* Be at least 8 characters long.
+* Be at least eight characters long.
 * Contain both lowercase and uppercase letters.
 * Contain at least a single number.
 

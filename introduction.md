@@ -10,11 +10,11 @@ position: 0
 
 Progress® Telerik® Fiddler Jam is a troubleshooting solution for end users, and for support and development engineering teams, which is designed to help them easily and securely communicate between each other, and quickly analyze and resolve issues.
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/l0x1eGW2AUY" title="Fiddler Jam Intro on YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 The core components of Fiddler Jam are the Fiddler Jam Chrome Extension, which enables end users (or extension users) to capture HTTP or HTTPS network issues and submit logs in a secure environment, and the Fiddler Jam Portal, which stores these logs in the cloud for support and developer teams (or portal users) to locally replicate and further analyze those issues.
 
 What's more, both Fiddler Jam components are fully integrated with the [Fiddler Everywhere web-debugging tool](https://docs.telerik.com/fiddler-everywhere/introduction), which monitors, inspects, edits, and logs all HTTP and HTTPS traffic and provides a number of additional troubleshooting features.
+
+<iframe width="853" height="480" text-align="center" src="https://www.youtube.com/embed/l0x1eGW2AUY" title="Fiddler Jam Intro on YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Fiddler Jam Chrome Extension
 
@@ -47,9 +47,13 @@ The Fiddler Jam Portal is a cloud space that safely stores the network logs subm
 Fiddler Jam Portal delivers a range of handy and developer-friendly features whose number and further development are not limited by the list in this section&mdash;the Fiddler team constantly invests efforts to improve the performance and add more value to the existing troubleshooting solution, and build on top of its available features.
 
 The Fiddler Jam Portal options are available for registered users with active seats only.
+
 * For more information about Fiddler Jam Portal trials and licenses, refer to the section on [trial version and commercial license]({% slug fj-portal %}#trial-version-and-commercial-license).
+
 * For more information on managing your subscription plan, refer to the [**Frequently Asked Questions** page](https://www.telerik.com/fiddler-jam/faq).  
+
 * To subscribe to Fiddler Jam, refer to the [Fiddler Jam purchase page](https://www.telerik.com/purchase/fiddler-jam).
+
 * To activate licenses and seats, refer to the [Fiddler Jam dashboard site](https://dashboard.getfiddler.com).
 
 ### User Roles and Access Rights

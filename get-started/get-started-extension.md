@@ -20,19 +20,24 @@ The following video demonstrates the basic steps from this guide by showing how 
 ## Prerequisites
 
 * Install the Chrome browser on your machine.
+
 * Provide an active Internet connection with access to the following URLs:
-```curl
-  https://*.getfiddler.com/
-  https://*.amazonaws.com/
-```
+
+    ```curl
+      https://*.getfiddler.com/
+      https://*.amazonaws.com/
+    ```
 
 ## Installing the Extension
 
 You'll first add the Fiddler Jam Chrome Extension. Before you start, make sure you are not browsing as a guest nor you're in the Incognito mode.
 
 1. Open the Google Chrome browser on your computer.
+
 1. Open the [**Chrome Web Store** page for Fiddler Jam](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
+
 1. Click **Add to Chrome**.
+
 1. In the confirmation popup, click **Add extension**.
 
 After successfully installing the Extension, you can [change the site access and enable the Extension to work in the Incognito mode]({% slug fj-installation %}).
@@ -42,7 +47,9 @@ After successfully installing the Extension, you can [change the site access and
 For quicker and easier access, now pin the Extension:
 
 1. Click the **Extensions** button on the Google Chrome toolbar next to your profile avatar.
+
 1. Click the pin next to the **Fiddler Jam** extension.
+
 1. In the **Welcome** screen prompt, follow the [Terms of Service](https://www.telerik.com/purchase/license-agreement/fiddler-jam-beta) and the [Privacy Policy](https://www.progress.com/legal/privacy-policy) information and read and accept them.
 
 ## Recording a Log
@@ -62,6 +69,7 @@ In this step you'll record a captured traffic session so that you can isolate a 
     ![Chrome warning banner](../images/ext/ext-images/extension-chrome-notification.png)
 
 1. When the issue has been captured, click **Stop Capture** to end the recording.
+
 1. Let's now preview the recorded log&mdash;click the **Capture Successful** line. The **Capture Details** screen will load and display the captured session.
 
    ![Stop capturing screen](../images/ext/ext-images/extension-link-options-show-sessions.png)
