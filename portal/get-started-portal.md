@@ -1,12 +1,12 @@
 ---
-title: First Steps  
+title: First Steps with the Portal
 description: "Open the customer link in the Fiddler Jam Portal cloud and learn how to access protected workspaces with stored logs, add context, and share submitted logs with the team."
 slug: first_steps_portal
 publish: true
-position: 2
+position: 1
 ---
 
-# First Steps with Fiddler Jam Portal
+# First Steps with the Fiddler Jam Portal
 
 This tutorial describes how to install and start using the Fiddler Jam Portal if you have access rights corresponding to the Portal user role.
 
@@ -34,3 +34,12 @@ This tutorial describes how to install and start using the Fiddler Jam Portal if
 
 
 ## Sharing the Log
+
+
+
+## Next Steps
+
+* [Portal Users and Roles]({% slug fj-users %})
+* [Managing Portal Workspaces]({% slug fj-workspaces %})
+* [Working with Submitted Logs]({% slug fj-portal-logs %})
+* [Performing Advanced Log Analyses]({% slug fj-advanced-analysis %})
