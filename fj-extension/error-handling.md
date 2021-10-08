@@ -4,6 +4,7 @@ description: "Resolve issues related to the usage and configuration of the Fiddl
 slug: fj-error-handling
 publish: true
 position: 60
+previous_url: /get-started/error-handling
 ---
 
 # Error Handling

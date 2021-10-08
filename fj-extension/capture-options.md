@@ -4,7 +4,7 @@ description: "Learn how to set the Fiddler Jam Chrome Extension advanced capturi
 slug: fj-capture-options
 publish: true
 position: 40
-previous_url: /extension/capture-options
+previous_url: /extension/capture-options, /get-started/capture-options
 ---
 
 # Advanced Capturing Options

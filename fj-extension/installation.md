@@ -5,6 +5,7 @@ slug: fj-installation
 tags: Fiddler Jam installation, Fiddler Jam Extension, Fiddler chrome extension, Jam Chrome extension
 publish: true
 position: 10
+previous_url: /get-started/installation
 ---
 
 # Managing the Chrome Extension after Installation

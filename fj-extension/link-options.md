@@ -4,7 +4,7 @@ description: "Learn how to share the Chrome Extension recorded logs with a gener
 slug: fj-link-options
 publish: true
 position: 50
-previous_url: /extension/link-options
+previous_url: /extension/link-options, /get-started/link-options
 ---
 
 # Log Sharing Options
