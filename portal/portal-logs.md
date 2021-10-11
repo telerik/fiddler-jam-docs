@@ -8,9 +8,17 @@ position: 40
 
 # Submitted Logs
 
-Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space.
+A Fiddler Jam log is a piece of information recorded by Extension users with the Fiddler Jam Chrome Extension. A log contains the captured network traffic and (optionally) the generated console logs and screenshots from the user interaction. The maximum size for a Fiddler Jam log, including requests and screenshots, is 50MB.
 
-The Fiddler Jam Portal keeps any submitted logs in the storage for 30 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted. In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}#user-role) with access rights can save, organize, analyze, and work with the provided records.
+The access to the log details depends on the link generation options selected by the Extension User.
+
+* Public links are accessible for any Fiddler Jam Portal user.
+* Links generated through the **Share with specific people** option are accessible only for the specified Fiddler Jam Portal users.
+* Links generated with the **password-protection** option are be accessible for those Fiddler Jam Portal users who are aware of the password.
+
+Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space. The Fiddler Jam Portal keeps any submitted logs in the storage for 30 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted.
+
+In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}#user-role) with access rights can save, organize, analyze, and work with the provided records.
 
 ## Opening Submitted Logs
 
