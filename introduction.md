@@ -62,7 +62,7 @@ The Fiddler Jam Portal provides a set of user roles, each with specific access r
 
 ### One-Click Integration with Fiddler Everywhere
 
-For more complex scenarios where engineers need to run an in-depth investigation in a safe environment where the issue can be reproduced, tested, and shared, the Fiddler Jam Portal supports a seamless integration with the Fiddler Everywhere cross-platform web-debugging application. In this way, developers can save and download the captured traffic as an HAR file, or open a Fiddler Jam Portal log directly in Fiddler Everywhere. [Read more about the integration support for Fiddler Everywhere...]({% slug fj-advanced-analysis %})
+For more complex scenarios where engineers need to run an in-depth investigation in a safe environment where the issue can be reproduced, tested, and shared, the Fiddler Jam Portal supports a seamless integration with the Fiddler Everywhere cross-platform web-debugging application. In this way, developers can save and download the captured traffic as an HTTP Archive format (HAR) file, or open a Fiddler Jam Portal log directly in Fiddler Everywhere. [Read more about the integration support for Fiddler Everywhere...]({% slug fj-advanced-analysis %})
 
 ## Suggested Links
 
