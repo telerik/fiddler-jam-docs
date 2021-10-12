@@ -31,6 +31,12 @@ To subscribe or unsubscribe from participating in the sharing of usage statistic
 
 ![My Resources screen](../images/portal/menu/my-resources.png)
 
+## Feedback
+
+**Feedback** displays options for collecting information from the users regarding the Fiddler Jam Portal experience such as its features, documentation, and so on. The requirement to leave a comment with more details is optional if your feedback is positive, and mandatory if your feedback if neutral or straightforward negative.
+
+To submit your feedback, click **Send Feedback**.  
+
 ## Sign Out
 
 **Sign Out** allows you to log out of the currently logged user and navigate to an introduction page that provides options for creating a new user, or using another existing account.

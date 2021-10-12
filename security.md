@@ -26,10 +26,6 @@ When capturing and sharing Fiddler Jam logs, consider the availability of the fo
 
     All tabs and windows with active capturing will have the red dot indication in the Fiddler Jam Chrome Extension as well as a notification banner at the top of the page reading "Fiddler Jam started debugging this browser". If the red dot and the warning banner are not visible, the Fiddler Jam Chrome Extension is not capturing this browser tab.
 
-- By default, the **Mask all post data** option is disabled and the Extension will mask all sensitive data in known formats that is sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive and all of it masked by default. The Extension will remove masked data from the captured logs so that it will not be possible to read.
-
-    Enabling the **Mask all post data** option will explicitly turn on the masking of all the data that is sent to the server. For more information about masking, refer to the section on [known formats and sensitive data](#masking-sensitive-data).
-
 - By default, the **Mask cookies** option is enabled. As a result, the Extension will mask cookies values, the masked data will be removed from the captured log, and it will not be possible to read.
 
 - The password-protected logs are client-side encrypted with AES-CTR, and the password is not stored on Fiddler Jam servers.
@@ -107,7 +103,11 @@ Fiddler Jam regards the following data as sensitive:
 
 ## Masking Sensitive Data
 
-By default, the Fiddler Jam Chrome Extension will start capturing with the [**Mask all post data**]({%slug fj-capture-options%}#mask-all-post-data) advanced option disabled. As a result, the Extension will try to automatically mask (remove) all sensitive data sent to or received from the server, contained in one of the following known MIME-type formats:
+By default, the **Mask all post data** option is disabled and the Extension will mask all known-format sensitive data that is sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive and all of it masked by default. The Extension will remove masked data from the captured logs so that it will not be possible to read.
+
+Enabling the **Mask all post data** option will explicitly turn on the masking of all the data that is sent to the server. For more information about masking, refer to the section on [known formats and sensitive data](#masking-sensitive-data).
+
+Whether enabled or disabled **Mask all post data**, the Extension will automatically mask (remove) all sensitive data sent to or received from the server, contained in one of the following known MIME-type formats:
 
 - `application/json`
 

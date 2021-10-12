@@ -12,6 +12,8 @@ The Fiddler Jam portal uses workspaces to save and organize the submitted logs.
 
 Through the workspaces, you can manage teams and permissions based on your organization or requirements. Only Portal [Users]({%slug fj-users%}#user-role) can create, edit, and delete a workspace, and add newly submitted logs to an existing workspace. Portal [Viewers]({%slug fj-users%}#viewer-role) can only access and review logs added to the account workspace.
 
+Currently, Fiddler Jam doesn't provide options for Portal Users to create additional workspaces. To create multiple workspaces, [directly contact the Fiddler team](mailto:support@getfiddler.com).
+
 ## Creating and Renaming Workspaces
 
 Each Fiddler Jam subscription automatically creates a sample workspace for the organization called **Default Workspace**.
@@ -25,8 +27,6 @@ To rename the default workspace, a Portal User has to:
 1. Click the **Rename workspace** button at the top-right corner.
 
 1. Enter the new workspace name and click **Rename**.
-
-Currently, Fiddler Jam doesn't provide options for Portal Users to create additional workspaces. To create multiple workspaces, [directly contact the Fiddler team](mailto:support@getfiddler.com).
 
 ## Adding Submitted Logs to a Workspace
 

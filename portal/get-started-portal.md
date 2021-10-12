@@ -8,11 +8,10 @@ position: 1
 
 # First Steps with the Fiddler Jam Portal
 
-This tutorial describes how to start using the Fiddler Jam Portal if you have access rights corresponding to the [Portal User role]({% slug fj-users %}#portal-users).
+This tutorial describes how to start using the Fiddler Jam Portal if you have access rights corresponding to the [Portal User role]({% slug fj-users %}#portal-users), and the Extension user has shared the log containing a video recording with you through a link.
 
 - First, you will open the customer-provided generated link with a browser.
-- Next, you'll access the protected private workspace with the stored logs.
-- Finally, you will prioritize the issue, add context, and share it with the development team.
+- Next, you'll access the default private workspace with stored logs and add the submitted log to it thus sharing the recording with other Portal Users on your team.
 
 ## Prerequisites
 
@@ -27,39 +26,25 @@ This tutorial describes how to start using the Fiddler Jam Portal if you have ac
 
 ## Opening the Submitted Log
 
-Now, let's open a log that was submitted by an Extension user and shared with you through a generated link. Then, you'll edit its title and description, and investigate the header and body of the captured data.  
+Now, let's open a log that was submitted by an Extension user and shared with you through a generated link.
 
-1. Open the Fiddler Jam Portal.
+1. Open the link in the browser. As a result, the **Captured Logs** with the **Video recording** tabs are displayed.
 
-1. In the **Captured Logs** tab, click the submitted log entry.
+    Note that depending on the type and content of the recorded log, the Fiddler Jam Portal will load other respective **Captured Logs** tabs.
 
-1. In the **Request** inspector tab, check the header and body of the submitted log.
+1. Click the submitted log entry to inspect its details, for example, check the **Navigated to** event information.
 
-1. Storage/details? smth else?......
+## Adding and Sharing the Log in the Workspace
 
-## Managing the Workspace
+In this step, you'll add the submitted log to your default organization workspace. Note that to add new workspaces to your organization, you [need to contact the Fiddler Jam Support team]({% slug fj-workspaces %}#creating-and-renaming-workspaces).
 
-In this step, you'll rename the default workspace of your organization, add the submitted log to it, and then share the submitted log with the other engineers on your team for further analysis.
+1. Go to the **Add to Workspace** button in the top-right corner of the dashboard.
 
-To rename the workspace:
+1. Enter the required information in the **Title**, **Submitted by**, and **Workspace** fields. Optionally, add some content in the **Description** field.
 
-1. Select the workspace you want to edit and click the **Rename workspace** button.
+1. Click **Done**. Now that the submitted log is added to the organization default workspace, it is visible to all Portal Users who have access to that workspace.
 
-1. Enter the new workspace name and click **Rename**.
-
-Now, let's add the submitted log to the renamed workspace:  
-
-1. Go to the **Add To Workspace** button in the top-right corner of the dashboard.
-
-1. Enter the required information in the **Title**, **Submitted by**, and **Workspace** fields.
-
-1. Click **Done**.
-
-Then, you'll share the log with the others:
-
-1. Click the **Copy URL** button in the top-right corner next to the **Submitted by**.
-
-1. Share the link.....
+That was it! Now you are ready to dive more deeply into Fiddler Jam Portal cloud space and take full advantage of its slick functionalities!
 
 ## Next Steps
 

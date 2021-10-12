@@ -68,5 +68,5 @@ For more complex scenarios where engineers need to run an in-depth investigation
 
 * [Before You Start: All Things Fiddler (Telerik Blog Posts)](https://www.telerik.com/blogs/fiddler)
 * [Introducing Fiddler Jam (Video)](https://www.youtube.com/watch?v=l0x1eGW2AUY)
-* [Quickstart with the Fiddler Jam Chrome Extension (Step-by-Step Guide)]({% slug  %})
-* [Quickstart with the Fiddler Jam Portal (Step-by-Step Guide)]({% slug  %})
+* [Quickstart with the Fiddler Jam Chrome Extension (Step-by-Step Guide)]({% slug first_steps_extension %})
+* [Quickstart with the Fiddler Jam Portal (Step-by-Step Guide)]({% slug first_steps_portal %})
