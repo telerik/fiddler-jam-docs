@@ -34,7 +34,7 @@ With the Chrome Extension, you can extend the log information by including a vid
 
 ### Browser Events and Data Capturing
 
-The Chrome extension captures browser events and, on-demand can record the local & session storage data and the developer's console logs. [Read more about the advanced capturing options of the Chrome extension...]({% slug fj-portal-logs %}#options-for-working-with-logs)
+The Chrome Extension captures browser events and, on demand, can record the local and session storage data as well as the developer console logs. [Read more about the advanced capturing options of the Chrome Extension...]({% slug fj-portal-logs %}#options-for-working-with-logs)
 
 ### Safe Online Log Submission in the Cloud
 
