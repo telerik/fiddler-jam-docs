@@ -50,7 +50,6 @@ For quicker and easier access, now pin the Extension:
 
 1. Click the pin next to the **Fiddler Jam** extension.
 
-1. In the **Welcome** screen prompt, follow the [Terms of Service](https://www.telerik.com/purchase/license-agreement/fiddler-jam-beta) and the [Privacy Policy](https://www.progress.com/legal/privacy-policy) information and read and accept them.
 
 ## Recording a Log
 
@@ -90,7 +89,7 @@ At this point, the captured traffic is recorded as a log but is not yet submitte
 
     Similar to the previous step options, here you have the **Share with specific people** option, which will create a link only for the Fiddler Portal users who are explicitly added to the Portal with their account emails. Again, for the purposes of this guide, ignore that option now as you'll submit a public link.  
 
-    ![Generate Link](../images/ext/ext-images/extension-link-options-password.png)
+    ![Generate Link](../images/ext/ext-images/extension-link-options.png)
 
 1. Click **Copy Link** to store the unique URL to the clipboard and paste this link to share the recorded logs with the Fiddler Jam Portal users.
 

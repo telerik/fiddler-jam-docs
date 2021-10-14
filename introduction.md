@@ -32,6 +32,10 @@ The Fiddler Jam Chrome extension logs all HTTP and HTTPS traffic between the Chr
 
 With the Chrome Extension, you can extend the log information by including a video recording of the expected browser page as well as screenshots for each user interaction with that page during the HTTP or HTTPS traffic recording. [Read more about empowering your Chrome Extension recording with visual information...]({% slug fj-capture-options %}#capturing-videos)
 
+### Browser Events and Data Capturing
+
+The Chrome extension captures browser events and, on-demand can record the local & session storage data and the developer's console logs. [Read more about the advanced capturing options of the Chrome extension...]({% slug fj-portal-logs %}#options-for-working-with-logs)
+
 ### Safe Online Log Submission in the Cloud
 
 You can also quickly submit logs, recorded with the Chrome Extension, to the Fiddler Jam Portal cloud, where they can be saved, organized, analyzed, and shared with other collaborators. [Read more about submitting logs with the Fiddler Jam Chrome Extension...]({% slug first_steps_extension %}#submitting-the-log)

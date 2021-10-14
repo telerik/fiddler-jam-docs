@@ -13,13 +13,13 @@ The Fiddler Jam Chrome Extension enables you to submit the recorded logs either 
 
 Both alternatives allow you to provide additional security through setting a password.
 
-![Link generation options](../images/ext/ext-images/extension-link-options.png)
-
 ## Sharing the Generated Link
 
 Link sharing allows [registered Fiddler Jam Portal users]({%slug fj-users%}#portal-users) with that link to open the recorded log.
 
 Additionally, you can protect the log with a password. Only Fiddler Jam Portal users who know the password will have access to the recorded information.
+
+![Link generation options](../images/ext/ext-images/extension-link-options.png)
 
 ## Sharing the Log with Specific People
 
@@ -39,4 +39,3 @@ To create a password for your recorded log, use the **Password protection** swit
 * Contain both lowercase and uppercase letters.
 * Contain at least a single number.
 
-![Share with link](../images/ext/ext-images/extension-link-options-password.png)
