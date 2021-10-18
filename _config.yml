@@ -50,8 +50,8 @@ gcs_engine: '752200f3728b3d92f'
 gcs_api_key: 'AIzaSyDb6GdIgfIVlHubf-i0CpahRjtkCz9o6cE'
 
 hide_contact_support: true
-edit_repo_url: https://github.com/telerik/docs-content-seed/edit/master
-download: https://www.telerik.com/download/fiddler-jam
+edit_repo_url: https://github.com/telerik/fiddler-jam-docs/edit/master
+download: https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj
 nav:
   "What's New": https://www.telerik.com/support/whats-new/fiddler-jam
   "Release History": https://www.telerik.com/support/whats-new/fiddler-jam/release-history
@@ -61,19 +61,36 @@ footer:
 -
   title: "Getting Started"
   links:
-    "Try Now": https://www.telerik.com/fiddler-jam
+    "First Steps with Fiddler Jam Chrome Extension": https://docs.telerik.com/fiddler-jam/fj-extension/get-started-extension.html
+    "First Steps with Fiddler Jam Portal": https://docs.telerik.com/fiddler-jam/portal/get-started-portal.html
+    "Download Fiddler Jam Extension Now": https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj
+    "License": https://www.telerik.com/purchase/license-agreement/fiddler-jam
+-
+  title: "Support Resources"
+  links:
+    "Fiddler Webinars": https://www.telerik.com/webinars/fiddler-jam
+    "What's New": https://www.telerik.com/support/whats-new/fiddler-jam
+    "Roadmap": https://www.telerik.com/support/whats-new/fiddler-jam/roadmap
+    "Release History": https://www.telerik.com/support/whats-new/fiddler-jam/release-history
+
 -
   title: "Community"
   links:
-    "Forums": https://community.getfiddler.com/support/discussions
-    "Blogs": https://www.telerik.com/blogs/tag/fiddler
-    "Feedback Portal": https://community.getfiddler.com/support/discussions/forums/12000000868
+    "All Things Fiddler": https://www.telerik.com/blogs/fiddler
+    "Fiddler Videos": https://www.telerik.com/videos/fiddler/tag/fiddler-jam
+    "Fiddler Forums": https://community.getfiddler.com/support/discussions
+    "Fiddler Blogs": https://www.telerik.com/blogs/tag/fiddler-jam
+
 
 footer_social:
     facebook: https://www.facebook.com/Telerik/
     youtube: https://www.youtube.com/user/TelerikInc
     linkedin: https://www.linkedin.com/showcase/telerik/
     twitter: https://twitter.com/TelerikFiddler/
+
+
+# TEMP
+
 
 # Assets pipeline configuration
 assets:
