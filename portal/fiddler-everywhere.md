@@ -1,6 +1,6 @@
 ---
 title: Advanced Log Analysis
-description: Using Fiddler Jam logs alongside Fiddler Everywhere desktop application for in-depth analysis
+description: "Learn how to manage, inspect, and further analyze Fiddler Jam logs by opening them or by exporting them as HAR files in the Fiddler Everywhere desktop application."
 slug: fj-advanced-analysis
 publish: true
 position: 50
@@ -8,39 +8,42 @@ position: 50
 
 # Advanced Log Analysis
 
-Fiddler Jam is suitable for fast and easy built-in recording of traffic, sharing, and analyzing data on the fly. Still, there are some cases where your support team will need an in-depth investigation, an environment where the issue could be reproduced, tested, and shared with even more collaborators. Fiddler Jam logs are compatible with [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) and other network tools to address the above scenarios. The integration is possible by providing means to save and download the captured traffic as a HAR file or open a Fiddler Jam portal log directly in Fiddler Everywhere.
+Fiddler Jam is suitable for fast and easy built-in recording of traffic, sharing, and analyzing data on the fly. Yet, the engineering teams may need an environment where the issue can be reproduced, tested, and shared with even more collaborators for an in-depth analysis.
 
->tip A log created by Fiddler Jam contains additional information like screenshots and developers console logs (see [capture options]({%slug fj-capture-options%})). However, notice that those are not part of the HAR file specification, so when saving Fiddler Jam log as a file or opening one in Fiddler Everywhere, those extras won't be present.
+To address such scenarios, Fiddler Jam logs are fully compatible with [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere) and other network tools. The integration is made possible through the options for saving and downloading the captured traffic as an HAR file, or by opening a Fiddler Jam Portal log directly in Fiddler Everywhere.
 
-## Fiddler Everywhere Integration
+A log created by Fiddler Jam contains [additional information like screenshots and developer console logs]({%slug fj-capture-options%})). However, these options are not part of the HAR file specification, so when you save a log as a file or open a log in Fiddler Everywhere, these options won't be available.
 
-Traffic captured by the Fiddler Jam extensions could be investigated thoroughly while using the Fiddler Everywhere desktop application for Windows, macOS, or Linux distributions. Fiddler Jam provides options to open the HAR file for both the extension and portal users.
+## Opening Logs in the Portal
 
+Engineers can directly open any log submitted to the Fiddler Jam Portal in Fiddler Everywhere. Each captured HTTP or HTTPS session has a unique **ID** line that can be used as a reference in both the Fiddler Jam Portal and the Fiddler Everywhere desktop application.
 
-## Open in Fiddler (Fiddler Jam Portal)
+1. Install Fiddler Everywhere and make it the default tool for opening HAR files.
 
-Any log submitted to the Fiddler Jam portal could be directly opened in Fiddler Everywhere.
+1. [Open a log submitted in the Fiddler Jam Portal]({%slug fj-portal-logs%}).
 
-- Install Fiddler Everywhere and make it the default tool for opening HAR files.
-- [Open a log submitted in the FIddler Jam portal]({%slug fj-portal-logs%}).
-- Click on the **Open in Fiddler** button.
-- The captured session is opened as a HAR file in Fiddler Everywhere. You can use the full capabilities of the desktop tool to proceed with the debugging process.
+1. Click **Open in Fiddler**. As a result, the captured session is opened as an HAR file in Fiddler Everywhere. To proceed with the debugging process, you can use the features of the desktop tool.
 
->tip Each captured HTTP(S) session has a unique line ID which can be used as a reference in both the Fiddler Jam portal and the Fiddler Everywhere desktop application.
+## Exporting HAR Files
 
-## HAR Files (Fiddler Jam Portal)
+Any log submitted to the Fiddler Jam portal can be exported as HAR files while using the UI of the Portal.
 
-Any log submitted to the Fiddler Jam portal could be exported as HAR files while using the portal UI.
+To export a log from the Fiddler Jam Portal as an HAR file without exporting the screenshots and console logs:
 
-### Export HAR
+1. Make sure you have installed the [Fiddler Everywhere](https://docs.telerik.com/fiddler-everywhere) desktop application.
 
-To **export** a log (from the Fiddler Jam portal) as HAR file (note screenshots and console logs will be omitted):
+1. [Open a log submitted in the Fiddler Jam Portal]({%slug fj-portal-logs%}).
 
-- [Open a log submitted in the FIddler Jam portal]({%slug fj-portal-logs%}).
-- Click on the **Download HAR file** button (downwards arrow next to **Open in FIddler** button).
-- Use the HAR file with other network tools or share it with other collaborators.
-- (Optional) Open the HAR file with the [Fiddler Everywhere](https://docs.telerik.com/fiddler-everywhere) desktop application. You have several options to open a HAR file with Fiddler Everywhere: 
-    - Right-click on the HAR file and choose "Open With... " and choose Fiddler Everywhere (note that you need to have FIddler Everywhere installed beforehand). Alternatively, you could make Fiddler Everywhere the default tool for opening HAR files.
-    - Open Fiddler Everywhere, and from the **Sessions** list, click on the  **Import Sessions** button. The in the prompted windows, select and open the downloaded Fiddler Jam HAR file.
+1. Click the **Download HAR file** button represented by a downward arrow next to the **Open in Fiddler** button.
 
-As a result of the above, the HAR file opens in Fiddler Everywhere, from where you could use the desktop tool's full capabilities like modifying request/responses, re-issuing sessions, mocking server behavior, composing requests, etc.
+1. Use the HAR file with other network tools or share it with other collaborators.
+
+1. (Optional) Open the HAR file with Fiddler Everywhere.
+
+    To open the HAR file, use any of the following Fiddler Everywhere options:
+
+    - Right-click the HAR file and choose **Open With...**. Select Fiddler Everywhere. Alternatively, you can make Fiddler Everywhere the default tool for opening HAR files.
+
+    - Open Fiddler Everywhere. From the **Sessions** list, click the  **Import Sessions** button. In the prompted windows, select and open the downloaded Fiddler Jam HAR file.
+
+After the HAR file opens in Fiddler Everywhere, you can now use the full capabilities of Fiddler Everywhere including the modification of requests and responses, consecutive issuing of sessions, mocking of server behavior, and so on.

@@ -1,45 +1,42 @@
 ---
-title: Support 
+title: Support
 page_title: Support
-description: Fiddler Jam support options and service-level agreements
+description: "Check out the commercial, trial, and free support channels maintained by the Fiddler Jam troubleshooting solution tool."
 slug: jam-support-page
 published: true
 position: 900
 ---
 
-# Fiddler Jam Support
+# Support Options
 
-## Who has access to support?
+Fiddler Jam provides a full-scale support for its paid subscription and trial users, and also maintains additional support channels where you can ask questions, submit feature requests, report bugs, and more.
 
-Users who have purchased a paid subscription can reach out to the Fiddler Jam team for help. The table below shows a comparison between the different plans and their respective level of support. All support options are subject to a fair usage policy.
+## Paid Subscription and Trial Users Support  
 
-|   | **Starter**   |**Growth**   | **Business**  | 
-|---|---|---|---|
-| Email support |  __Standard Support__ |  __Standard Support__ | __Priority Support__* | 
+Fiddler license holders and anyone in an active trial can take advantage of the Fiddler Jam outstanding customer support delivered by the actual developers who built the tool. To submit a support ticket, use the [Fiddler support system](https://www.telerik.com/account/support-tickets).
 
+The subscription plan includes unlimited access to the Fiddler's dedicated support services. However, to keep providing an industry-leading support experience, we have instituted a fair usage policy for support services. Practically, this means that if customer activity exceeds at least ten times the average, it may be reviewed by a Fiddler support manager at any time to assess whether the number of support requests is excessive and the user is in violation of the fair usage policy.
 
-*With __Priority support__, your cases are escalated to the top of our queue.
+Support for paid subscription or trial users provides the following services:
 
+* Guidance on handling existing features&mdash;You will receive references to existing resources, which demonstrate the intended use of the product, and also information on the proper configuration of the product.
 
-## What is the Fair Usage Policy?
+* Confirmation of bug reports&mdash;You can count on our support for diagnosing and confirming reported product bugs. However, during the report investigation we may ask you to isolate the issue and provide additional information or steps to reproduce it.
 
-Our product subscription includes **unlimited** access to the support service. In order to keep providing our industry-leading level of support, we have instituted a fair usage policy for our support services:
-A support manager will review customer activities that exceed at least ten times the average amount of support requests to determine if such activities are deemed excessive.
+* Sharing available workarounds&mdash;If available, you will get suggested workarounds for confirmed product bugs or for performing scenarios that are not implemented as built-in functionalities. You will also receive information on releases containing a bug fix or an implemented feature request.
 
-## How to contact support?
+## Free Support Channels
 
-To reach out to the support team, please send an email to support@getfiddler.com (available for accounts with activated Starter, Growth, or Business plan).
+If you are not a license holder or a trial user, you can use [a number of available support options](https://www.telerik.com/support/fiddler-jam):
 
-## What's included in Support?
+* The [official Fiddler Jam documentation](https://docs.telerik.com/fiddler-jam/introduction) is public and available for all users. If you want to share your feedback on a specific article, fill in the **Was this article helpful?** form at the end and tell us more about whether the content was useful for you to successfully achieve what you wanted. For detailed information about how to create an issue or a Pull Request on the Fiddler Jam documentation, go to the [contribution instructions](https://github.com/telerik/fiddler-jam-docs#contributing).
 
-### Guidance for built-in features
+* For any features that have already been released, visit the [Fiddler Jam **Release History** page](https://www.telerik.com/support/whats-new/fiddler-jam/release-history).
 
-We provide guidance and explanation for the built-in features of the products. We provide clients with references to existing resources to demonstrate the intended use of the product. We also provide information on the proper configuration of the product.
+* If you still have a question unanswered, check out the [Fiddler Jam frequently asked questions section](https://www.telerik.com/fiddler-jam/faq).
 
-### Bug Confirmation
+* Need something unique that is tailor-made for your project? Progress offers its [Progress Services](https://www.progress.com/services) group that can work with you to create any customized solution that you might need.
 
-We provide support to diagnose and confirm reported product bugs. In the process of investigating reports, we may request that clients isolate the issue and provide us with additional information, such as steps to reproduce it.
+## Suggested Links
 
-### Workarounds
-
-We are committed to suggesting workarounds, when available, for confirmed product bugs. Where possible, we also provide information on releases containing a fix for a bug or an implemented feature request.
+* [Trial Version and Commercial License (Fiddler Jam Portal)]({% slug fj-portal %}#trial-version-and-commercial-license)
