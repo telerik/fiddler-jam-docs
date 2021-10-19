@@ -15,7 +15,9 @@ This tutorial describes how to install and start using the Fiddler Jam Chrome Ex
 - Next, you'll record a network request and then save it.
 - Finally, you will share the issue through the link, which will be automatically generated when you upload the log to the Fiddler Jam Portal cloud space.  
 
-The following video demonstrates the basic steps from this guide by showing how to [install the Fiddler Jam Chrome Extension](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj) from the Google Chrome Web Store.
+The following video demonstrates the basic steps from this guide by showing how to install the Fiddler Jam Chrome Extension from the [Google Chrome Web Store](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/AegKWavRSv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Prerequisites
 
