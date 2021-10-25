@@ -14,7 +14,7 @@ The access to the log details depends on the link generation options selected by
 
 * Public links are accessible for any Fiddler Jam Portal user.
 * Links generated through the **Share with specific people** option are accessible only for the specified Fiddler Jam Portal users.
-* Links generated with the **password-protection** option are be accessible for those Fiddler Jam Portal users who are aware of the password.
+* Links generated with the **password-protection** option are accessible for Fiddler Jam Portal users aware of the password.
 
 Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space. The Fiddler Jam Portal keeps any submitted logs in the storage for 30 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted.
 
@@ -22,15 +22,15 @@ In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}#user-role) with a
 
 ## Opening Submitted Logs
 
-When the log is submitted by the Extension User, it is automatically uploaded to the Fiddler Jam Portal cloud space. The Extension User is the only one at this point to know the exact address of the log and has to share the generated link for the logged recording with the engineering teams who are Portal Users with the respective Portal access rights.
+When the Extension User submits the log, it is automatically uploaded to the Fiddler Jam Portal cloud space. The Extension User is the only one to know the exact address of the log and has to share the generated link for the logged recording with the engineering teams who are Portal Users with the respective Portal access rights.
 
 Fiddler Jam protects the content of the submitted logs through the following rules:
 
 - All logs are captured with applied masking for [any data Fiddler considers is sensitive]({%slug fj-security%}#masking-sensitive-data).
-- The submitted log can be opened only by Portal Users who meet the access rights requirements that were set by the Extension User through [the link generation options]({%slug fj-link-options%})).
+- The submitted log can be opened only by Portal Users who meet the access rights requirements that the Extension User set through [the link generation options]({%slug fj-link-options%})).
 - The submitted log can be added to a workspace by Portal Users with the respective access rights. Any log that is not added to a workspace will be automatically deleted after 30 days.
 
-To enable a [Portal Viewer]({%slug fj-users%}#viewer-role) to open the submitted log, first the Extension User has to set appropriate access rights during the link generation, and then a Portal User has to add the log to a workspace.
+To enable a [Portal Viewer]({%slug fj-users%}#viewer-role) to open the submitted log, first, the Extension User has to set appropriate access rights during the link generation. Then a Portal User has to add the log to a workspace.
 
 ## Options for Working with Logs
 
@@ -43,7 +43,7 @@ Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provide
 - [Inspecting the screen recording](#screen-recording)&mdash;When the Extension User explicitly enables the **Capture video** option, the whole capturing process is output in the **Screen Recording** tab.
 - [Analyzing the developer console logs](#console-log-inspection), which is available when the Extension User has selected the **Capture console** option.
 - [Running an advanced investigation through the Fiddler Everywhere web-debugging tool]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
-- [Exporting the captured data as an HAR file]({%slug fj-advanced-analysis%}#export-har).
+- [Exporting the captured data as a HAR file]({%slug fj-advanced-analysis%}#export-har).
 - [Adding submitted logs to desired organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
 
 The capture options of the Fiddler Jam Chrome Extension also provide features for you to mask sensitive data, such as cookies and post-data, and disable the browser cache.
@@ -52,7 +52,7 @@ The capture options of the Fiddler Jam Chrome Extension also provide features fo
 
 To debug and investigate in detail any reported issue, you can use the Fiddler Jam Portal tabs and inspectors.
 
-Each log contains a list of entries containing different recorded information such as HTTP and HTTPS sessions, console logs, screenshots, browser events, and so on.
+Each log contains a list of entries containing different recorded information such as HTTP and HTTPS sessions, console logs, screenshots, browser events, etc.
 
 The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and **Captured Logs** primary tabs on the left, and **Screen Recording** and **Inspectors** primary tabs on the right.
 
@@ -60,7 +60,7 @@ The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and 
 
 - **Captured Logs** contains a numerated list of the captured HTTP and HTTPS sessions, screenshots, browser events, and console logs.
 
-- **Screen Recording** contains a screen recording from the browser, which was taken during the Fiddler Jam Chrome Extension recording. The tab renders data only when the Extension User has explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
+- **Screen Recording** contains a screen recording from the browser, which the Fiddler Jam Chrome Extension took during the recording. The tab renders data only when the Extension User has explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
 
 - **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. The inspectors change depending on whether you choose an HTTP session, a console log, or a browser event. For example, Fiddler Jam loads the **Request** and **Response** inspectors when an HTTP session is selected, displays the **Console Log Details** screen when a console log entry is selected, and a **Browser Event Information** inspector when a browser event entry is selected.
 
@@ -89,7 +89,7 @@ To investigate a specific HTTP or HTTPS session:
 
 ### Inspecting Browser Events
 
-Each log contains browser events that are triggered by user interaction. Each event stores additional information about the date and time it occurred, and the specific technical data associated with the event. Additionally, the `click` events contain a screenshot with an action pointer.
+Each log contains browser events that are triggered by user interaction. Each event stores additional information about the date and time it occurred and the specific technical data associated with the event. Additionally, the `click` events contain a screenshot with an action pointer.
 
 Fiddler tracks the following events:
 - **click**
@@ -112,7 +112,7 @@ Fiddler tracks the following events:
 - **scroll**
 - **text-input** (only the event without the actual inputted data)
 
-When **Capture screenshots** is explicitly enabled, the log will also contain screenshots for user interactions.
+When **Capture screenshots** is explicitly enabled, the log will also contain screenshots for the **click** and **double-click** events.
 
 To examine a screenshot:
 
@@ -194,15 +194,15 @@ To filter the entries based on a custom search term, use the **Search** field in
 
 ### Download HAR
 
-A submitted log can be exported as an HTTP Archive format (HAR) file. An HAR file is a JSON-formatted archive file format for logging a web browser interaction with a site, and is subsequently used with any third-party software that supports the HAR format.
+A submitted log can be exported as an HTTP Archive format (HAR) file. A HAR file is a JSON-formatted archive file format for logging a web browser interaction with a site and is subsequently used with any third-party software that supports the HAR format.
 
-To download the log as an HAR file, use the **Download HAR File** button icon next to the **Filters** icon.
+To download the log as a HAR file, use the **Download HAR File** button icon next to the **Filters** icon.
 
 Any submitted log can also be reloaded in the Fiddler Jam Chrome Extension for a mock replay. To load the log in the Chrome Extension, use the **Load HAR for mocking** button.
 
 ### Fiddler Everywhere Integration
 
-Any log can be loaded in the standalone Fiddler Everywhere application for further deep-dive investigation. For more information, refer to the [official Fiddler Everywhere and its cross-platform functionalities](https://docs.telerik.com/fiddler-everywhere/introduction).
+The standalone Fiddler Everywhere application can load Fiddler Jam logs for further deep-dive investigation. Refer to the [official Fiddler Everywhere and its cross-platform functionalities](https://docs.telerik.com/fiddler-everywhere/introduction).
 
 ### Copy URL
 
