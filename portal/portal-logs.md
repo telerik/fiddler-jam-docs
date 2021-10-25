@@ -97,10 +97,20 @@ Fiddler tracks the following events:
 - **navigated to**
 - **tab opened**
 - **tab closed**
-- **pressed `Enter`** key
-- **pressed `Tab`** key
+- pressed **`Enter`** key
+- pressed **`Tab`** key
+- pressed **`Esc`** key
+- pressed any of **the arrows keys** (up,down,left, and right)
+- pressed **page up** or **page down** keys (`Fn` + `UP` arrow, and `Fn` + `Down` arrow on Mac)
+- pressed **`End`** key
+- pressed **`Home`** key
+- pressed **`Space`** key
+- pressed **`Insert`** key
+- pressed **`Delete`** key
+- pressed **`Backspace`** key
+- pressed any of **Function** keys (F1 - F15) 
 - **scroll**
-- **text-input** (only the event without the actual inputted data).
+- **text-input** (only the event without the actual inputted data)
 
 When **Capture screenshots** is explicitly enabled, the log will also contain screenshots for user interactions.
 
