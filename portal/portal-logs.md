@@ -22,7 +22,7 @@ In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}#user-role) with a
 
 ## Opening Submitted Logs
 
-When the Extension User submits the log, it is automatically uploaded to the Fiddler Jam Portal cloud space. The Extension User is the only one to know the exact address of the log and has to share the generated link for the logged recording with the engineering teams who are Portal Users with the respective Portal access rights.
+When the Extension User submits the log, it is automatically uploaded to the Fiddler Jam Portal cloud space. The Extension User is the only one to know the exact address of the log and shares the generated link for the logged recording with the engineering teams who are Portal Users with the respective Portal access rights.
 
 Fiddler Jam protects the content of the submitted logs through the following rules:
 
@@ -62,7 +62,7 @@ The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and 
 
 - **Screen Recording** contains a screen recording from the browser, which the Fiddler Jam Chrome Extension took during the recording. The tab renders data only when the Extension User has explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
 
-- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. The inspectors change depending on whether you choose an HTTP session, a console log, or a browser event. For example, Fiddler Jam loads the **Request** and **Response** inspectors when an HTTP session is selected, displays the **Console Log Details** screen when a console log entry is selected, and a **Browser Event Information** inspector when a browser event entry is selected.
+- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. Depending on whether you choose an HTTP session, a console log, or a browser event, the inspectors change. For example, Fiddler Jam loads the **Request** and **Response** inspectors when an HTTP session is selected, displays the **Console Log Details** screen when a console log entry is selected, and a **Browser Event Information** inspector when a browser event entry is selected.
 
 ### Inspecting Traffic
 
@@ -77,11 +77,8 @@ To investigate a specific HTTP or HTTPS session:
 1. Select a session line from the **Captured Logs** tab.
 
     - When the selected line is an HTTP session, the **Request** and **Response** inspectors load the session content (headers, body, cookies, and so on). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked.
-
     - When the selected line is user interaction, the inspector will load technical details about the action&mdash;for example, the HTML tag, the text value, and the name of the specific action.
-
     - When the selected line is a screenshot of user interaction, a preview inspector will load the taken screenshot depicting the moment of the user interaction alongside the technical data about that action.
-
     - When the selected line is a console log, a details inspector will load the log details and the captured stack trace.
 
 
@@ -117,8 +114,7 @@ When **Capture screenshots** is explicitly enabled, the log will also contain sc
 To examine a screenshot:
 
 1. From the **Captured Logs** list, select [a **Click** event line](#browser-events). The associated screenshot loads in the **Inspectors** tab as the last property of the event data.
-
-1. Use the **Save** icon to locally download the screenshot as a PNG file.
+1. Use the **Save** icon to download the screenshot as a PNG file locally.
 
 The following figure demonstrates a captured click action.
 
@@ -150,7 +146,7 @@ The following example demonstrates captured storage data.
 
 ## User Interface of the Log Dashboard
 
-Apart from the recorded data, each log also contains user-defined log details such as the log title, description, field submission, and the workspace. Every log also contains an immutable [**Details**](#details) tab, which stores technical and environmental data extracted from the Extension.
+Apart from the recorded data, each log also contains user-defined log details such as the log title, description, field submission, and the workspace. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension.
 
 ### Log Details
 
@@ -188,7 +184,7 @@ Each log loads to a screen with different tabs, and [each tab has its conceptual
 
 A log can contain an excessive number of recorded HTTP requests, browser events, such as mouse interactions and navigation events, screenshots, console logs, and so on.
 
-To filter the entries based on a custom search term, use the **Search** field in the **Captured Logs** tab. To filter the log entries, such as requests, screenshots, browser events, and console logs, use the **Filters** icon next to the **Search** text input.
+Use the **Search** field in the **Captured Logs** tab to filter the entries based on a custom search term. To filter the log entries, such as requests, screenshots, browser events, and console logs, use the **Filters** icon next to the **Search** text input.
 
 ![Fiddler Jam Screenshots](../images/portal/logs/fj-portal-log-filtering.png)
 
@@ -196,7 +192,7 @@ To filter the entries based on a custom search term, use the **Search** field in
 
 A submitted log can be exported as an HTTP Archive format (HAR) file. A HAR file is a JSON-formatted archive file format for logging a web browser interaction with a site and is subsequently used with any third-party software that supports the HAR format.
 
-To download the log as a HAR file, use the **Download HAR File** button icon next to the **Filters** icon.
+To download the log as a HAR file, use the **Download HAR File** button next to the **Filters** icon.
 
 Any submitted log can also be reloaded in the Fiddler Jam Chrome Extension for a mock replay. To load the log in the Chrome Extension, use the **Load HAR for mocking** button.
 
