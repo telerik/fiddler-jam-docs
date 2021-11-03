@@ -62,7 +62,7 @@ The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and 
 
 - **Screen Recording** contains a screen recording from the browser, which the Fiddler Jam Chrome Extension took during the recording. The tab renders data only when the Extension User has explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
 
-- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. Depending on whether you choose an HTTP session, a console log, or a browser event, the inspectors change. For example, Fiddler Jam loads the **Request** and **Response** inspectors when an HTTP session is selected, displays the **Console Log Details** screen when a console log entry is selected, and a **Browser Event Information** inspector when a browser event entry is selected.
+- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. Depending on whether you choose an HTTP session, a console log, or a browser event, the inspectors change. For example, Fiddler Jam loads the **Request** and **Response** inspectors when you select an HTTP session, displays the **Console Log Details** screen when you select a console log entry, and a **Browser Event Information** inspector when you select a browser event entry.
 
 ### Inspecting Traffic
 
