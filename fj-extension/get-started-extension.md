@@ -73,11 +73,11 @@ In this step you'll record a captured traffic session so that you can isolate a 
 
 1. When the issue has been captured, click **Stop Capture** to end the recording.
 
-1. Let's now preview the recorded log&mdash;click the **Capture Successful** line. The **Capture Details** screen will load and display the captured session.
+1. Let's now preview the recorded log&mdash;click the **Preview** button. The captured session loads as a local preview in a new browser tab. This preview can't be shared.
 
-   ![Stop capturing screen](../images/ext/ext-images/extension-link-options-show-sessions.png)
+   ![Stop capturing screen](../images/ext/ext-images/extension-local-preview.png)
 
-1. After previewing the record, go back to the previous screen.
+1. After previewing the record, go back to the extension.
 
 ## Submitting the Log
 
