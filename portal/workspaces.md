@@ -32,7 +32,7 @@ To rename the default workspace, a Portal User has to:
 
 Any log submitted by an [Extension User]({%slug fj-users%}##extension-users) is initially accessible based on [the predefined link generation options]({%slug fj-link-options%}).
 
-When a Portal User with access rights first opens the submitted link, it won't be part of any workspace. Submitted logs that are not added to a workspace will expire within 30 days. Logs added to an organizational workspace won't expire and can only be removed by the organization users.
+When a Portal User with access rights first opens the submitted link, it won't be part of any workspace. Submitted logs that are not added to a workspace will expire within 31 days. Logs added to an organizational workspace won't expire and can only be removed by the organization users.
 
 A Portal User can add the submitted log to the workspace in the following way:
 
