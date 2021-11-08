@@ -16,7 +16,7 @@ The access to the log details depends on the link generation options selected by
 * Links generated through the **Share with specific people** option are accessible only for the specified Fiddler Jam Portal users.
 * Links generated with the **password-protection** option are accessible for Fiddler Jam Portal users aware of the password.
 
-Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space. The Fiddler Jam Portal keeps any submitted logs in the storage for 30 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted.
+Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space. The Fiddler Jam Portal keeps any submitted logs in the storage for 31 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted.
 
 In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}#user-role) with access rights can save, organize, analyze, and work with the provided records.
 
@@ -27,26 +27,37 @@ When the Extension User submits the log, it is automatically uploaded to the Fid
 Fiddler Jam protects the content of the submitted logs through the following rules:
 
 - All logs are captured with applied masking for [any data Fiddler considers is sensitive]({%slug fj-security%}#masking-sensitive-data).
+
 - The submitted log can be opened only by Portal Users who meet the access rights requirements that the Extension User set through [the link generation options]({%slug fj-link-options%})).
-- The submitted log can be added to a workspace by Portal Users with the respective access rights. Any log that is not added to a workspace will be automatically deleted after 30 days.
+
+- The submitted log can be added to a workspace by Portal Users with the respective access rights. Any log that is not added to a workspace will be automatically deleted after 31 days.
 
 To enable a [Portal Viewer]({%slug fj-users%}#viewer-role) to open the submitted log:
 
 1. The Extension User must set the appropriate access rights during the link generation.
-2. The Portal User must add the log to a workspace.
+
+1. The Portal User must add the log to a workspace.
 
 ## Options for Working with Logs
 
 Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provides the following options for managing that log:
 
 - [Using and editing the log details](#log-details) such as its title, description, and so on.
+
 - [Investigating the captured data of the requests and responses](#traffic-inspection)&mdash;The session data includes the headers and bodies of each HTTP or HTTPS request and response.
+
 - [Inspecting the browser events](#browser-events)&mdash;Each log contains the browser events triggered from user interactions with the page during the recording.
+
 - [Inspecting the taken screenshots](#screenshot-inspection)&mdash;When the Extension User explicitly enables the screenshot option, a new screenshot is added for each user interaction on a clickable element.
+
 - [Inspecting the screen recording](#screen-recording)&mdash;When the Extension User explicitly enables the **Capture video** option, the whole capturing process is output in the **Screen Recording** tab.
+
 - [Analyzing the developer console logs](#console-log-inspection), which is available when the Extension User has selected the **Capture console** option.
+
 - [Running an advanced investigation through the Fiddler Everywhere web-debugging tool]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
+
 - [Exporting the captured data as a HAR file]({%slug fj-advanced-analysis%}#export-har).
+
 - [Adding submitted logs to desired organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
 
 The capture options of the Fiddler Jam Chrome Extension also provide features for you to mask sensitive data, such as cookies and post-data, and disable the browser cache.
@@ -117,6 +128,7 @@ When **Capture screenshots** is explicitly enabled, the log will also contain sc
 To examine a screenshot:
 
 1. From the **Captured Logs** list, select [a **Click** event line](#browser-events). The associated screenshot loads in the **Inspectors** tab as the last property of the event data.
+
 1. Use the **Save** icon to download the screenshot as a PNG file locally.
 
 The following figure demonstrates a captured click action.

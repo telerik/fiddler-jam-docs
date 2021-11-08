@@ -11,6 +11,7 @@ position: 1
 This tutorial describes how to start using the Fiddler Jam Portal if you have access rights corresponding to the [Portal User role]({% slug fj-users %}#portal-users), and the Extension user has shared the log containing a video recording with you through a link.
 
 - First, you will open the customer-provided generated link with a browser.
+
 - Next, you'll access the default private workspace with stored logs and add the submitted log to it thus sharing the recording with other Portal Users on your team.
 
 ## Prerequisites

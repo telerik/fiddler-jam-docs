@@ -22,8 +22,10 @@ Your information and usage statistics enable the Fiddler team to better understa
 To subscribe or unsubscribe from participating in the sharing of usage statistics:
 
 1. Open **Settings** > **Privacy** (accessible from the account icon in the top-right corner).
-2. Check or uncheck the __Automatically send data to help us improve the product__ option depending on whether you want to send usage statistics.
-3. Click __Save__ to apply the changes.
+
+1. Check or uncheck the __Automatically send data to help us improve the product__ option depending on whether you want to send usage statistics.
+
+1. Click __Save__ to apply the changes.
 
 ## My Resources
 

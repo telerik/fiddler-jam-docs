@@ -23,8 +23,11 @@ Fiddler Jam refers to the end users, who have recorded and submitted logs throug
 All extension users can capture and record logs, and generate Fiddler Jam Portal links where the logs will be stored.
 
 - Extension users are not limited on the number of recorded logs.
+
 - Extension users are not limited on the number of generated links to recorded logs.
-- A recorded log with a generated link will be stored in the Fiddler Jam Portal for 30 days. After that period, the log is automatically deleted.
+
+- A recorded log with a generated link will be stored in the Fiddler Jam Portal for 31 days. After that period, the log is automatically deleted.
+
 - A recorded log with a generated link that is added to a workspace by a [Portal User](#user-role) will be stored in the Fiddler Jam Portal until a Portal user explicitly removes it.
 
 ## Portal Users
@@ -34,7 +37,9 @@ Even though the Fiddler Jam login accepts custom credentials or Google authentic
 Depending on the user assigned role, the Fiddler Jam portal provides different access levels:
 
 - Unregistered users won't be able to open the Fiddler Jam Portal or load generated Fiddler Jam links.
+
 - Fiddler Jam Portal seats with the Viewer role can only watch logs that are [added to a workspace]({%slug fj-workspaces%}#add-submitted-log-to-workspace). If a Viewer opens a public link, the page that will open will inform the user that the links need to be added to the account workspace.
+
 - Fiddler Jam Portal seats with the User role can open public logs, create and manage workspaces, and manage, add, and remove logs from workspaces.
 
 ### User Role
@@ -46,9 +51,13 @@ A User can view and maintain submitted logs and workspace logs based on the Fidd
 The User seat comes with the following advantages and limitations:
 
 - Users can access all logs that are added to the account workspace. Password-protected logs can only be accessed from users who know the password.
+
 - Users can access logs that are not added to a workspace.
+
 - Users can edit and remove logs that are added to the workspace.
+
 - Users can add shared logs to a workspace. Logs added to a workspace will be accessible to all Viewers.
+
 - Logs [shared with specific people (based on the registered email)]({%slug fj-link-options%}#share-with-specific-people) can be accessed from all Portal users with access to the workspace.
 
 ### Viewer Role
@@ -58,5 +67,7 @@ All subscription plans provide unlimited seats for the Viewer role.
 The Viewer seat comes with the following advantages and limitations:
 
 - Viewers can access all logs that are added to the workspace of the organization. Password-protected logs can only be accessed from a Viewer who knows the password.
+
 - Viewers can't access logs that are not added to a workspace.
+
 - Viewers can't edit and remove logs that are added to the workspace.
