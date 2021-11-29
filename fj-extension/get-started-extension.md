@@ -1,6 +1,6 @@
 ---
 title: First Steps with the Chrome Extension
-description: "Get started with the Fiddler Jam Chrome Extension and learn how install, to record, and preview network logs, and save and share the recording with the engineering teams."
+description: "Get started with the Fiddler Jam Chrome Extension and learn how to install, record, and preview network logs, and save and share the recording with the engineering teams."
 slug: first_steps_extension
 previous_url: /extension/installation, /extension/recording-a-log, /extension/submitting-a-log
 publish: true
@@ -15,7 +15,7 @@ This tutorial describes how to install and start using the Fiddler Jam Chrome Ex
 
 - Next, you'll record a network request and then save it.
 
-- Finally, you will share the issue through the link, which will be automatically generated when you upload the log to the Fiddler Jam Portal cloud space.  
+- Finally, you will share the issue through the link, which will automatically generate when you upload the log to the Fiddler Jam Portal cloud space.  
 
 The following video demonstrates the basic steps from this guide by showing how to install the Fiddler Jam Chrome Extension from the [Google Chrome Web Store](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
 
@@ -34,7 +34,7 @@ The following video demonstrates the basic steps from this guide by showing how 
 
 ## Installing the Extension
 
-You'll first add the Fiddler Jam Chrome Extension. Before you start, make sure you are not browsing as a guest nor you're in the Incognito mode.
+You'll first add the Fiddler Jam Chrome Extension. Before you start, make sure you are not browsing as a guest, nor you're in the Incognito mode.
 
 1. Open the Google Chrome browser on your computer.
 
@@ -59,11 +59,11 @@ For quicker and easier access, now pin the Extension:
 
 ## Recording a Log
 
-In this step you'll record a captured traffic session so that you can isolate a network issue and then be able to share it with the engineering teams for further analysis.  
+In this step, you'll record a captured traffic session so that you can isolate a network issue and then be able to share it with the engineering teams for further analysis.  
 
 1. Launch Fiddler Jam by clicking the ![Extension main icon](../images/ext/ext-icons/small-logo.png) extension icon.
 
-    If you expand [**Advanced Options**]({%slug fj-capture-options%}), you'll see that some of the settings are enabled or disabled by default. For the purposes of this guide, let's not change any of them and work with the default ones.
+    If you expand [**Advanced Options**]({%slug fj-capture-options%}), you'll see that some of the settings are enabled or disabled by default. For this guide, let's not change any of them and work with the default ones.
 
 1. Open a new browser tab where the capturing will take place.
 
@@ -81,7 +81,7 @@ In this step you'll record a captured traffic session so that you can isolate a 
 
    ![Stop capturing screen](../images/ext/ext-images/extension-local-preview.png)
 
-1. After previewing the record, go back to the extension.
+1. After reviewing the record, go back to the extension.
 
 ## Submitting the Log
 
@@ -89,17 +89,17 @@ At this point, the captured traffic is recorded as a log but is not yet submitte
 
 1. Go to [**Sharing options**]({%slug fj-link-options%}) and set the access level for the recorded log.
 
-    Here you have an option to make the log public or to share it with specific people, an also you can protect the log with a password. However, for demonstration purposes, let's make the log public and not use a password.
+    Here you have an option to make the log public or share it with specific people, and also, you can protect the log with a password. However, for demonstration purposes, let's make the log public and not use a password.
 
 1. Create the public link by selecting **Share with link** and clicking **Get Link**. The generated link points to the Fiddler Jam Portal cloud space, which contains the submitted log. This URL is accessible only for Fiddler Jam Portal users.
 
-    Similar to the previous step options, here you have the **Share with specific people** option, which will create a link only for the Fiddler Portal users who are explicitly added to the Portal with their account emails. Again, for the purposes of this guide, ignore that option now as you'll submit a public link.  
+    Like the previous step options, here you have the **Share with specific people** option, which will create a link only for the Fiddler Portal users who are explicitly added to the Portal with their account emails. Again, for this guide, ignore that option now, as you'll submit a public link.  
 
     ![Generate Link](../images/ext/ext-images/extension-link-options.png)
 
 1. Click **Copy Link** to store the unique URL to the clipboard and paste this link to share the recorded logs with the Fiddler Jam Portal users.
 
-    All submitted logs are private and are accessible for Fiddler Jam Portal users with the proper access rights only.
+    All submitted logs are private and accessible for Fiddler Jam Portal users with the proper access rights.
 
    ![Copy link screen](../images/ext/ext-images/extension-link-options-copy-link.png)
 
