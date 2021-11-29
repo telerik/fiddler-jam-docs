@@ -12,7 +12,9 @@ position: 1
 This tutorial describes how to install and start using the Fiddler Jam Chrome Extension.
 
 - First, you will install the lightweight Fiddler Jam Chrome Extension.
+
 - Next, you'll record a network request and then save it.
+
 - Finally, you will share the issue through the link, which will be automatically generated when you upload the log to the Fiddler Jam Portal cloud space.  
 
 The following video demonstrates the basic steps from this guide by showing how to install the Fiddler Jam Chrome Extension from the [Google Chrome Web Store](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
@@ -43,6 +45,8 @@ You'll first add the Fiddler Jam Chrome Extension. Before you start, make sure y
 1. In the confirmation popup, click **Add extension**.
 
 After successfully installing the Extension, you can [change the site access and enable the Extension to work in the Incognito mode]({% slug fj-installation %}).
+
+>tip Microsoft Edge users can pull the Fiddler Jam extension from either [Microsoft's own Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/fiddler-jam/fpolpgbhhhbioobffnkcfhmdafkgcmbh), or from the [Google Chrome Web Store](https://chrome.google.com/webstore/detail/fiddler-jam/fnkjlegmkbicdodlheligomlfbdblpfj).
 
 ## Pinning the Extension
 
