@@ -1,29 +1,29 @@
 ---
-title: Using Prerecorded Link
-description: "Learn how to use a prerecorded link to reproduce and capture logs with the Fiddler Jam extension easily."
-slug: fj-prerecorded-link
+title: Using Predefined Link
+description: "Learn how to use a predefined link to reproduce and capture logs with the Fiddler Jam extension easily."
+slug: fj-predefined-link
 publish: true
 position: 70
 ---
 
-# Using Prerecorded Link
+# Using Predefined Link
 
-This tutorial describes how to use Fiddler Jam prerecorded link.
+This tutorial describes how to use Fiddler Jam predefined link.
 
 - First, you will install the lightweight Fiddler Jam Chrome Extension.
 
-- Next, you'll use the received Jam prerecorded link to record a network request.
+- Next, you'll use the received Jam predefined link to record a network request.
 
-- Finally, you will submit the issue to the Fiddler Jam Portal cloud space, where the prerecorded link creator can further investigate your case.  
+- Finally, you will submit the issue to the Fiddler Jam Portal cloud space, where the predefined link creator can further investigate your case.  
 
 
 ## Recording a Log
 
 In this step, you'll record a captured traffic session so that you can isolate a network issue and then be able to share it with the engineering teams for further analysis.  
 
-1. Open the prerecorded Jam link shared with you by your collaborator (support agent, developer, etc.).
+1. Open the predefined Jam link shared with you by your collaborator (support agent, developer, etc.).
 
-    ![Prerecorded link initial screen](../images/ext/prerecorded/prerecorded-000.png)
+    ![predefined link initial screen](../images/ext/prerecorded/prerecorded-000.png)
 
 
 1. Open the Fiddler Jam extension 
@@ -36,7 +36,7 @@ In this step, you'll record a captured traffic session so that you can isolate a
 
     ![Start capture](../images/ext/prerecorded/prerecorded-001.png)
 
-1. Enter the URL in the browser address bar. If the creator of the prerecorded link has set a default URL, it will be loaded
+1. Enter the URL in the browser address bar. If the creator of the predefined link has set a default URL, it will be loaded
 
 1. When the issue has been captured, click **Stop Capture** to end the recording.
 
@@ -46,7 +46,7 @@ In this step, you'll record a captured traffic session so that you can isolate a
 
 1. After reviewing the record, go back to the extension.
 
-1. Click **Submit Logs** to immediately share the recorded logs with the Fiddler Jam Portal user that created the4 prerecorded link.
+1. Click **Submit Logs** to immediately share the recorded logs with the Fiddler Jam Portal user that created the4 predefined link.
 
     All submitted logs are private and accessible for Fiddler Jam Portal users with the proper access rights. Additionally, each record can use password-protection before its submission.
 
