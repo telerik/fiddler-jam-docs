@@ -50,4 +50,6 @@ In this step, you'll record a captured traffic session so that you can isolate a
 
     All submitted logs are private and accessible for Fiddler Jam Portal users with the proper access rights. Additionally, each record can use password-protection before its submission.
 
+    ![Suubmit logs](../images/ext/prerecorded/prerecorded-003.png)
+
 That was it! Now your logs are submitted in the Jam cloud space, and your Fiddler Jam portal agent can start deep-diving into its details.
