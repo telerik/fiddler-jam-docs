@@ -10,7 +10,7 @@ position: 70
 
 This tutorial describes how to use Fiddler Jam predefined link.
 
-- First, you will install the lightweight Fiddler Jam Chrome Extension.
+- First, you will install the lightweight Fiddler Jam Extension.
 
 - Next, you'll use the received Jam predefined link to record a network request.
 
@@ -46,7 +46,7 @@ In this step, you'll record a captured traffic session so that you can isolate a
 
 1. After reviewing the record, go back to the extension.
 
-1. Click **Submit Logs** to immediately share the recorded logs with the Fiddler Jam Portal user that created the4 predefined link.
+1. Click **Submit Logs** to immediately share the recorded logs with the Fiddler Jam Portal user that created the predefined link.
 
     All submitted logs are private and accessible for Fiddler Jam Portal users with the proper access rights. Additionally, each record can use password-protection before its submission.
 
