@@ -19,7 +19,7 @@ This three-step tutorial describes how to use a Fiddler Jam predefined link to r
 
 ## Recording a Log
 
-In this step, you'll record a captured traffic session so that you can isolate a network issue and then be able to share it with the engineering teams for further analysis.  
+The following steps demonstrate how to record a captured traffic session so that you can isolate a network issue and then be able to share it with the engineering teams for further analysis.  
 
 1. Open the predefined Jam link shared with you by your collaborator (support agent, developer, etc.).
 
