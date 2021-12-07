@@ -8,7 +8,7 @@ position: 70
 
 # Using Predefined Link
 
-This tutorial describes how to use Fiddler Jam predefined link.
+This three-step tutorial describes how to use a Fiddler Jam predefined link to record a captured traffic session:
 
 - First, you will install the lightweight Fiddler Jam Extension.
 
