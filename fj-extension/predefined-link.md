@@ -26,7 +26,7 @@ The following steps demonstrate how to record a captured traffic session so that
     ![predefined link initial screen](../images/ext/prerecorded/prerecorded-000.png)
 
 
-1. Open the Fiddler Jam extension 
+1. Open the Fiddler Jam extension.
 
     At this point, if you expand [**Advanced Options**]({%slug fj-capture-options%}), you'll see that some of the settings are enabled or disabled by default. Let's not change any of them for this guide and work with the default ones.
 
