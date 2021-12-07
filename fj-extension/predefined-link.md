@@ -10,7 +10,7 @@ position: 70
 
 This three-step tutorial describes how to use a Fiddler Jam predefined link to record a captured traffic session:
 
-- First, you will install the lightweight Fiddler Jam Extension.
+1. You will install the lightweight Fiddler Jam Extension.
 
 - Next, you'll use the received Jam predefined link to record a network request.
 
