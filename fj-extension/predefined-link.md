@@ -36,7 +36,7 @@ The following steps demonstrate how to record a captured traffic session so that
 
     ![Start capture](../images/ext/prerecorded/prerecorded-001.png)
 
-1. Enter the URL in the browser address bar. If the creator of the predefined link has set a default URL, it will be loaded
+1. Enter the URL in the browser address bar. If the creator of the predefined link has set a default URL, it will be loaded automatically.
 
 1. When the issue has been captured, click **Stop Capture** to end the recording.
 
