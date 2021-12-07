@@ -20,8 +20,8 @@ The **Advanced Options** menu includes the following settings:
 - [Capture console](#capturing-console-logs)
 - [Capture storage info](#capturing-storage-information)
 - [Mask cookies](#masking-cookies)
-- [Mask all post data](#masking-all-post-data)
 - [Disable cache](#disabling-the-cache)
+- [Clear cookies, cache and storage on start](#clear-cookies-cache-and-storage-on-start)
 
 ![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-002.png)
 
@@ -69,16 +69,14 @@ The **Mask cookies** option masks any cookies that are part of the captured requ
 
 By default, the **Mask cookies** option is enabled.
 
-## Masking All Post Data
-
-The **Mask all post data** option masks any post data such as data from forms, input text fields, and so on. Post data is also the request body sent through the POST, PUT, and PATCH methods.
-
-By default, the **Mask all post data** option is disabled.
-
->important By design, when **Mask all post data** is disabled, all data that is considered sensitive is masked. Enabling the option will explicitly mask all POST data (sensitive or not). For more information about what kind of data Fiddler Jam considers as sensitive, refer to the article on [Security]({%slug fj-security%}#masking-sensitive-data).
-
 ## Disabling the Cache
 
 The **Disable cache** option enables the Fiddler Jam Chrome Extension to set the value of the `Cache-Control` and `Prasgma` headers to `no-cache` on each network request.
 
 By default, the **Disable cache** option is enabled.
+
+## Clear cookies, cache and storage on start
+
+The **Clear cookies, cache and storage on start** option will effectively remove cookies, cache, and storage data from the starting page at the moment when the capture starts.
+
+The **Clear cookies, cache and storage on start** option is disabled by default.

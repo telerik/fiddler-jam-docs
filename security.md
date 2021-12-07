@@ -103,11 +103,9 @@ Fiddler Jam regards the following data as sensitive:
 
 ## Masking Sensitive Data
 
-By default, the **Mask all post data** option is disabled and the Extension will mask all known-format sensitive data that is sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive and all of it masked by default. The Extension will remove masked data from the captured logs so that it will not be possible to read.
+By default, the Extension will mask all known-format sensitive data that is sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive and all of it masked by default. The Extension will remove masked data from the captured logs so that it will not be possible to read.
 
-Enabling the **Mask all post data** option will explicitly turn on the masking of all the data that is sent to the server. For more information about masking, refer to the section on [known formats and sensitive data](#masking-sensitive-data).
-
-Whether enabled or disabled **Mask all post data**, the Extension will automatically mask (remove) all sensitive data sent to or received from the server, contained in one of the following known MIME-type formats:
+The Extension will automatically mask (remove) all sensitive data sent to or received from the server, contained in one of the following known MIME-type formats:
 
 - `application/json`
 
@@ -127,8 +125,6 @@ Whether enabled or disabled **Mask all post data**, the Extension will automatic
 
 - For data containing the `text/*` pattern when it can't be parsed to `json`, `xml`, or `x-www-form-urlencoded`, the content is not modified and is left as is.
 
-When the [**Mask all post data**]({%slug fj-capture-options%}#mask-all-post-data) advanced option is enabled, all post data, including the known formats listed above, is fully masked (removed).
-
 ## Secure Usage of the Advanced Options
 
 The [**Advanced Options**]({%slug fj-capture-options%}) menu provides some valuable options that Fiddler Jam Extension applies during the capturing.
@@ -145,9 +141,9 @@ Before you record a log, consider the following security concerns:
 
 - **Mask cookies**&mdash;(Enabled by default) While cookie key names are still readable, the option masks all cookies values so that they won't be visible to the portal users who receive the log.
 
-- **Mask all post data**&mdash;(Disabled by default) When disabled, the option will apply a default [masking of sensitive data](#masking-sensitive-data). When enabled, the option masks all POST data such as user information in text inputs and forms.
-
 - **Disable cache**&mdash;(Enabled by default) The option sets the `Cache-Control` and `Pragma` headers to a `no-cache` value on each network request.
+
+- **Clear cookies, cache and storage on start**&mdash;(Disabled by default) Clear cookies, cache and storage of the starting page, when the capturing is started.
 
 >tip As per your requirements, always check if the **Capture screenshots** and **Capture video** options are enabled or disabled. When enabled, the options may expose sensitive data (if any) even if that data is masked in the captured HTTP sessions.
 
