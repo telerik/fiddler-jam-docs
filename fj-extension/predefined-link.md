@@ -32,7 +32,7 @@ The following steps demonstrate how to record a captured traffic session so that
 
 1. Click **Start Capture** to start recording.
 
-    As a result, Fiddler Jam initiates the recording of all network activity in the current browser tab, and a notification appears informing you that Fiddler Jam has started debugging. Close the notification or click **Cancel** safely as these won't stop the capturing. Hide the Fiddler Jam window by clicking anywhere in the browser tab, and continue recording. Try not to exceed the maximum size of a recorded of 100MB.
+    As a result, Fiddler Jam initiates the recording of all network activity in the current browser tab, and a notification appears informing you that Fiddler Jam has started debugging. Close the notification or click **Cancel**&mdash;this won't stop the capturing. Hide the Fiddler Jam window by clicking anywhere in the browser tab, and continue recording. Try not to exceed the 100MB maximum size of a recorded session.
 
     ![Start capture](../images/ext/prerecorded/prerecorded-001.png)
 
