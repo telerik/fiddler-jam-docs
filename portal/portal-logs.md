@@ -8,7 +8,7 @@ position: 40
 
 # Submitted Logs
 
-A Fiddler Jam log is a piece of information recorded by Extension users with the Fiddler Jam Chrome Extension. A log contains the captured network traffic and (optionally) the generated console logs and screenshots from the user interaction. The maximum size for a Fiddler Jam log, including requests and screenshots, is 50MB.
+A Fiddler Jam log is a piece of information recorded by Extension users with the Fiddler Jam Chrome Extension. A log contains the captured network traffic and (optionally) the generated console logs and screenshots from the user interaction. The maximum size for a Fiddler Jam log, including requests and screenshots, is 100MB.
 
 The access to the log details depends on the link generation options selected by the Extension User.
 
