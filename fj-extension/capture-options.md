@@ -21,7 +21,7 @@ The **Advanced Options** menu includes the following settings:
 - [Capture storage info](#capturing-storage-information)
 - [Mask cookies](#masking-cookies)
 - [Disable cache](#disabling-the-cache)
-- [Clear cookies, cache and storage on start](#clear-cookies-cache-and-storage-on-start)
+- [Clear cookies, cache and storage on start](#clear-cookies,-cache,-and-storage-on-start)
 
 ![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-002.png)
 
@@ -75,8 +75,8 @@ The **Disable cache** option enables the Fiddler Jam Chrome Extension to set the
 
 By default, the **Disable cache** option is enabled.
 
-## Clear cookies, cache and storage on start
+## Clear cookies, cache, and storage on start
 
-The **Clear cookies, cache and storage on start** option will effectively remove cookies, cache, and storage data from the starting page at the moment when the capture starts.
+The **Clear cookies, cache, and storage on start** option will effectively remove cookies, cache, and storage data from the starting page at the moment when the capture starts.
 
-The **Clear cookies, cache and storage on start** option is disabled by default.
+The **Clear cookies, cache, and storage on start** option is disabled by default.

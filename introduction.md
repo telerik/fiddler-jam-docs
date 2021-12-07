@@ -26,11 +26,11 @@ The Chrome Extension solution can be installed, pinned, and used by everyone wit
 
 ### Traffic Recording
 
-The Fiddler Jam Chrome extension logs all HTTP and HTTPS traffic between the Chrome browser and the Internet, and enables users to capture network traffic from any application. [Read more about the recording logs with the Fiddler Jam Chrome Extension...]({% slug first_steps_extension %}#recording-a-log)
+The Fiddler Jam Chrome extension logs all HTTP, HTTPS and WebSocket traffic between the Chrome browser and the Internet, and enables users to capture network traffic from any application. [Read more about the recording logs with the Fiddler Jam Chrome Extension...]({% slug first_steps_extension %}#recording-a-log)
 
 ### Video and Screenshot Capturing
 
-With the Chrome Extension, you can extend the log information by including a video recording of the expected browser page as well as screenshots for each user interaction with that page during the HTTP or HTTPS traffic recording. [Read more about empowering your Chrome Extension recording with visual information...]({% slug fj-capture-options %}#capturing-videos)
+With the Chrome Extension, you can extend the log information by including a video recording of the expected browser page as well as screenshots for each user interaction with that page during the HTTP or WebSocket traffic recording. [Read more about empowering your Chrome Extension recording with visual information...]({% slug fj-capture-options %}#capturing-videos)
 
 ### Browser Events and Data Capturing
 
