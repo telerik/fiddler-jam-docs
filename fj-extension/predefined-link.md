@@ -14,7 +14,7 @@ This three-step tutorial describes how to use a Fiddler Jam predefined link to r
 
 1. You'll use the received Jam predefined link to record a network request.
 
-- Finally, you will submit the issue to the Fiddler Jam Portal cloud space, where the predefined link creator can further investigate your case.  
+1. You will submit the issue to the Fiddler Jam Portal cloud space, where the predefined link creator can further investigate your case.  
 
 
 ## Recording a Log
