@@ -188,7 +188,7 @@ To edit the details of a log that is already added to a workspace:
 
 ### Details
 
-The expandable **Details** window, located to the right of the log title, shows the technical and environmental data extracted from the Extension. That data includes information about the URL, time, OS, browser, screen resolution, used localization, timestamps, Extension version, and the enabled Extension [capture options]({%slug fj-capture-options%}).
+The expandable **Details** window, located to the right of the log title, shows the technical and environmental data extracted from the Extension. That data includes information about the URL, time, OS, browser, screen resolution, used localization, timestamps, extension version, and the [capture options]({%slug fj-capture-options%}) enabled from the Fiddler Jam extension.
 
 ![details window](../images/portal/logs/fj-portal-log-capture-info.png)
 
