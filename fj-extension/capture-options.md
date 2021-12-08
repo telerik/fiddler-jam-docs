@@ -21,7 +21,7 @@ The **Advanced Options** menu includes the following settings:
 - [Capture storage info](#capturing-storage-information)
 - [Mask cookies](#masking-cookies)
 - [Disable cache](#disabling-the-cache)
-- [Clear cookies, cache and storage on start](#clear-cookies,-cache,-and-storage-on-start)
+- [Clear cookies, cache, and storage on start](#clear-cookies-cache-and-storage-on-start)
 
 ![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-002.png)
 
