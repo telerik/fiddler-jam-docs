@@ -44,7 +44,7 @@ Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provide
 
 - [Using and editing the log details](#log-details) such as its title, description, and so on.
 
-- [Investigating the captured data of the requests and responses](#traffic-inspection)&mdash;The session data includes the headers and bodies of each HTTP or HTTPS request and response.
+- [Investigating the captured data of the requests and responses](#inspecting-traffic)&mdash;The session data includes the headers and bodies of each HTTP or HTTPS request and response. With Fiddler Jam version 1.4.0 and above, you can also inspect WebSocket handshake and messages.
 
 - [Inspecting the browser events](#browser-events)&mdash;Each log contains the browser events triggered from user interactions with the page during the recording.
 
@@ -66,13 +66,13 @@ The capture options of the Fiddler Jam Chrome Extension also provide features fo
 
 To debug and investigate in detail any reported issue, you can use the Fiddler Jam Portal tabs and inspectors.
 
-Each log contains a list of entries containing different recorded information such as HTTP and HTTPS sessions, console logs, screenshots, browser events, etc.
+Each log contains a list of entries containing different recorded information such as HTTP or HTTPS sessions, WebSocket sessions, console logs, screenshots, browser events, etc.
 
 The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and **Captured Logs** primary tabs on the left, and **Screen Recording** and **Inspectors** primary tabs on the right.
 
 - **Storage Details** contains lists of the entries stored in the **Local Storage** and the **Session Storage**. The tab renders data only when the Extension User has explicitly used the **Capture storage info** from the [**Advanced options**]({%slug fj-capture-options%}).
 
-- **Captured Logs** contains a numerated list of the captured HTTP and HTTPS sessions, screenshots, browser events, and console logs.
+- **Captured Logs** contains a numerated list of the captured HTTP and HTTPS sessions, WebSocket sessions, screenshots, browser events, and console logs.
 
 - **Screen Recording** contains a screen recording from the browser, which the Fiddler Jam Chrome Extension took during the recording. The tab renders data only when the Extension User has explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
 
@@ -80,17 +80,18 @@ The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and 
 
 ### Inspecting Traffic
 
-To investigate a specific HTTP or HTTPS session:
+To investigate a specific HTTP or WebSocket session:
 
 1. Open the submitted log.
 
 1. (Optional) Filter by a search term if using the **Search** text field, or filter by the log type if using the **Filter** button.
 
-    Each captured HTTP or HTTPS session has a unique **ID** line that can be used as a reference in both the Fiddler Jam Portal and the Fiddler Everywhere desktop application.
+    Each captured session has a unique **ID** line that can be used as a reference in both the Fiddler Jam Portal and the Fiddler Everywhere desktop application.
 
 1. Select a session line from the **Captured Logs** tab.
 
     - When the selected line is an HTTP session, the **Request** and **Response** inspectors load the session content (headers, body, cookies, and so on). Note that depending on [the capture options]({%slug fj-capture-options%}), some of the submitted information might be masked.
+    - When the selected line is a WebSocket session, the **Handshake** and **Messages** inspectors load the session content.
     - When the selected line is user interaction, the inspector will load technical details about the action&mdash;for example, the HTML tag, the text value, and the name of the specific action.
     - When the selected line is a screenshot of user interaction, a preview inspector will load the taken screenshot depicting the moment of the user interaction alongside the technical data about that action.
     - When the selected line is a console log, a details inspector will load the log details and the captured stack trace.
@@ -187,7 +188,7 @@ To edit the details of a log that is already added to a workspace:
 
 ### Details
 
-The expandable **Details** window, located to the right of the log title, shows the technical and environmental data extracted from the Extension. That data includes information about the URL, time, OS, browser, screen resolution, used localization, timestamps, Extension version, and the enabled Extension [capture options]({%slug fj-capture-options%}).
+The expandable **Details** window, located to the right of the log title, shows the technical and environmental data extracted from the Extension. That data includes information about the URL, time, OS, browser, screen resolution, used localization, timestamps, extension version, and the [capture options]({%slug fj-capture-options%}) enabled from the Fiddler Jam extension.
 
 ![details window](../images/portal/logs/fj-portal-log-capture-info.png)
 
