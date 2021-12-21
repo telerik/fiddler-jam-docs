@@ -53,6 +53,8 @@ The following steps demonstrate how to record a captured traffic session so that
 
 1. Let's now preview the recorded log&mdash;click the **Preview** button. The captured session loads as a local preview in a new browser tab. This preview can't be shared.
 
+    >tip The local preview page gives you an insight into some of the functionalities that the Fiddler Jam portal can offer. [Learn more on how to work with the preview log, how to use the inspectors, and more about the logs functionalities here...]({%slug fj-portal-logs%})
+
 1. After reviewing the record, go back to the extension.
 
 1. Click **Submit Logs** to immediately share the recorded logs with the Fiddler Jam Portal user that created the predefined link.
