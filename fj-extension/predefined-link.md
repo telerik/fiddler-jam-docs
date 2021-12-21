@@ -20,8 +20,8 @@ This three-step tutorial describes how to use a Fiddler Jam predefined link to r
 ## Prerequisites
 
 * Install compatible browser.
-    - Full support: Google Chrome, Microsoft Edge
-    - Beta support: All Chromium-based browsers like Brave, Vivaldi, Opera, etc.
+    - Full support: [Google Chrome](https://www.google.com/chrome/), [Microsoft Edge](https://www.microsoft.com/en-us/edge)
+    - Beta support: All Chromium-based browsers like [Brave](https://brave.com/download/), [Vivaldi](https://vivaldi.com/download/), [Opera](https://www.opera.com/), etc.
     - Not supported: Firefox and all non-Chromium browsers.
 * Install the Fiddler Jam extension. You can follow the installation steps given in the predefined link.
 
