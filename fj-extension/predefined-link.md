@@ -17,6 +17,15 @@ This three-step tutorial describes how to use a Fiddler Jam predefined link to r
 1. You will submit the issue to the Fiddler Jam Portal cloud space, where the predefined link creator can further investigate your case.  
 
 
+## Prerequisites
+
+* Install compatible browser.
+    - Full support: [Google Chrome](https://www.google.com/chrome/), [Microsoft Edge](https://www.microsoft.com/en-us/edge)
+    - Beta support: All Chromium-based browsers like [Brave](https://brave.com/download/), [Vivaldi](https://vivaldi.com/download/), [Opera](https://www.opera.com/), etc.
+    - Not supported: Firefox and all non-Chromium browsers.
+* Install the Fiddler Jam extension. You can follow the installation steps given in the predefined link.
+
+
 ## Recording a Log
 
 The following steps demonstrate how to record a captured traffic session so that you can isolate a network issue and then be able to share it with the engineering teams for further analysis.  
@@ -43,6 +52,8 @@ The following steps demonstrate how to record a captured traffic session so that
     ![Stop capture](../images/ext/prerecorded/prerecorded-002.png)
 
 1. Let's now preview the recorded log&mdash;click the **Preview** button. The captured session loads as a local preview in a new browser tab. This preview can't be shared.
+
+    >tip The local preview page gives you an insight into some of the functionalities that the Fiddler Jam portal can offer. [Learn more on how to work with the preview log, how to use the inspectors, and more about the logs functionalities here...]({%slug fj-portal-logs%})
 
 1. After reviewing the record, go back to the extension.
 
