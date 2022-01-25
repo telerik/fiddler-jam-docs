@@ -37,7 +37,6 @@ Now, let's open a log that was submitted by an Extension user and shared with yo
 
 Submitted logs will automatically expire after 31 days unless added to a workspace. A warning note with the expiration counter appears on the top-right corner of each submitted log. [Learn how to preserve the submitted log for a longer period by adding it to a workspace...](#adding-and-sharing-the-log-in-the-workspace)
 
-![Submitted log expiry date note](../images/portal/logs/fj-portal-log-expiry-date.png)
 
 ## Adding and Sharing the Log in the Workspace
 
