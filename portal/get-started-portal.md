@@ -47,6 +47,10 @@ In this step, you'll add the submitted log to your default organization workspac
 
 That was it! Now you are ready to dive more deeply into Fiddler Jam Portal cloud space and take full advantage of its slick functionalities!
 
+>tip Submitted logs will expire after 31 days unless added to a workspace. A note with the expiration counter appears on the top-right corner of each submitted log.
+>  ![Submitted log expiry date note](../images/portal/logs/fj-portal-log-expiry-date.png)
+
+
 ## Next Steps
 
 * [Portal Users and Roles]({% slug fj-users %})
