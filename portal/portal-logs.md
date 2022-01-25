@@ -30,7 +30,8 @@ Fiddler Jam protects the content of the submitted logs through the following rul
 
 - The submitted log can be opened only by Portal Users who meet the access rights requirements that the Extension User set through [the link generation options]({%slug fj-link-options%})).
 
-- The submitted log can be added to a workspace by Portal Users with the respective access rights. Any log that is not added to a workspace will be automatically deleted after 31 days.
+- The submitted log can be added to a workspace by Portal Users with the respective access rights. Any log that is not added to a workspace will be automatically deleted after 31 days. A warning note with the expiration counter appears on the top-right corner of each submitted log. [Learn how to preserve the submitted log for a longer period by adding it to a workspace...](#adding-and-sharing-the-log-in-the-workspace)
+
 
 To enable a [Portal Viewer]({%slug fj-users%}#viewer-role) to open the submitted log:
 
