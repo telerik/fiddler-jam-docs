@@ -35,6 +35,10 @@ Now, let's open a log that was submitted by an Extension user and shared with yo
 
 1. Click the submitted log entry to inspect its details, for example, check the **Navigated to** event information.
 
+Submitted logs will automatically expire after 31 days unless added to a workspace. A warning note with the expiration counter appears on the top-right corner of each submitted log. [Learn how to preserve the submitted log for a longer period by adding it to a workspace...](#adding-and-sharing-the-log-in-the-workspace)
+
+![Submitted log expiry date note](../images/portal/logs/fj-portal-log-expiry-date.png)
+
 ## Adding and Sharing the Log in the Workspace
 
 In this step, you'll add the submitted log to your default organization workspace. Note that to add new workspaces to your organization, you [need to contact the Fiddler Jam Support team]({% slug fj-workspaces %}#creating-and-renaming-workspaces).
@@ -47,8 +51,7 @@ In this step, you'll add the submitted log to your default organization workspac
 
 That was it! Now you are ready to dive more deeply into Fiddler Jam Portal cloud space and take full advantage of its slick functionalities!
 
->tip Submitted logs will expire after 31 days unless added to a workspace. A note with the expiration counter appears on the top-right corner of each submitted log.
->  ![Submitted log expiry date note](../images/portal/logs/fj-portal-log-expiry-date.png)
+
 
 
 ## Next Steps
