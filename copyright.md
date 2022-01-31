@@ -1,11 +1,3 @@
----
-title: Copyright 
-description: Fiddler Jam copyright details
-slug: license-copyright
-published: True
-position: 1000
----
-
 # Copyright
  
 __© {{ site.time | date: '%Y' }} Progress Software Corporation and/or one of its subsidiaries or affiliates. All rights reserved.__
