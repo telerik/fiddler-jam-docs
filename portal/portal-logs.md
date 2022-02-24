@@ -45,7 +45,7 @@ Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provide
 
 - [Using and editing the log details](#log-details) such as its title, description, and so on.
 
-- [Investigating the captured data of the requests and responses](#inspecting-traffic)&mdash;The session data includes the headers and bodies of each HTTP or HTTPS request and response. With Fiddler Jam version 1.4.0 and above, you can also inspect WebSocket handshake and messages.
+- [Investigating the captured data of the requests and responses](#inspecting-traffic)&mdash;The session data includes the headers and bodies of each HTTP or HTTPS Request and response. With Fiddler Jam version 1.4.0 and above, you can also inspect WebSocket handshake and messages.
 
 - [Inspecting the browser events](#browser-events)&mdash;Each log contains the browser events triggered from user interactions with the page during the recording.
 
@@ -77,7 +77,7 @@ The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and 
 
 - **Screen Recording** contains a screen recording from the browser, which the Fiddler Jam Chrome Extension took during the recording. The tab renders data only when the Extension User has explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
 
-- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. Depending on whether you choose an HTTP session, a console log, or a browser event, the inspectors change. For example, Fiddler Jam loads the **Request** and **Response** inspectors when you select an HTTP session, display the **Console Log Details** screen when you select a console log entry, and a **Browser Event Information** inspector when you select a browser event entry.
+- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. The inspectors change depending on whether you choose an HTTP session, a console log, or a browser event. For example, Fiddler Jam loads the **Request** and **Response** inspectors when you select an HTTP session, displays the **Console Log Details** screen when selecting a console log entry, and a **Browser Event Information** inspector when you choose a browser event entry.
 
 ### Inspecting Traffic
 
@@ -102,7 +102,7 @@ To investigate a specific HTTP or WebSocket session:
 
 ### Inspecting Browser Events
 
-Each log contains browser events that are triggered by user interaction. Each event stores additional information about the date and time it occurred and the specific technical data associated with the event. Additionally, the `click` events contain a screenshot with an action pointer.
+Each log contains browser events triggered by user interaction. Each event stores additional information about the date and time it occurred and the specific technical data associated with the event. The `click` events contain a screenshot with an action pointer.
 
 Fiddler tracks the following events:
 - **click** mouse event
@@ -143,7 +143,7 @@ The following figure demonstrates a captured click action.
 
 ### Inspecting Console Logs
 
-A log will also contain console log lines if the Extension User has explicitly enabled the capturing of developer console logs. To load the desired console log in the **Inspectors** tab, select a console log line from the **Captured Logs** list. The inspector displays the time the log was output and the log stack trace content.
+A log will also contain console log lines if the Extension User has explicitly enabled the capturing of developer console logs. To load the desired console log in the **Inspectors** tab, select a console logline from the **Captured Logs** list. The inspector displays the log's output time and the log stack trace content.
 
 The following example demonstrates a captured console log.
 
@@ -151,7 +151,7 @@ The following example demonstrates a captured console log.
 
 ### Inspecting Video Recordings
 
-When the Extension User explicitly enables video recording, the whole capturing in the initial tab is output in a video recording. To load the video, use the **Screen recording** tab to the right.
+When the Extension User explicitly enables video recording, the whole capturing in the initial tab is output in a video recording. Use the **Screen recording** tab to the right to load the video.
 
 The following example demonstrates a captured screen recording.
 
@@ -159,7 +159,7 @@ The following example demonstrates a captured screen recording.
 
 ### Inspecting Storage Details
 
-The **Storage Details** tab to the left displays the **Local Storage** and **Session Storage** data.
+The **Storage Details** tab displays the **Local Storage** and **Session Storage** data.
 
 The following example demonstrates captured storage data.
 
@@ -167,29 +167,8 @@ The following example demonstrates captured storage data.
 
 ## User Interface of the Log Dashboard
 
-Apart from the recorded data, each log also contains user-defined log details such as title, description, field submission, and the workspace. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension.
+The Fiddler Jam portal user interface provides options to observe the recorded data the user-defined log details such as log title and description. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension. Through the user interface, you can optimize your inspection and debug processes (through filters, conceptual inspectors, a video tab, export options, mocking options) and optimize your support story (through the GitHub and Jira integrations, workspaces, feedback).
 
-### Log Details
-
-To add or edit the log details of a newly submitted log:
-
-1. Open the submitted log and click **Add to Workspace**.
-
-1. In the prompted window, edit the desired log details (**title**, **description**, **submitted by**, **workspace**).
-
-1. When ready to add the log with the updated details to the selected workspace, click **Done**.
-
-To edit the details of a log that is already added to a workspace:
-
-1. Open the submitted log from the workspace.
-
-1. Click the **Edit Log Details** icon in the top-right corner next to **Open Workspace**.
-
-1. Edit the **title**, **description**, and **submitted by** fields.
-
-1. Click **Done**.
-
-![Edit log details](../images/portal/logs/fj-portal-log-edit-details.png)
 
 ### Details
 
@@ -215,12 +194,38 @@ A submitted log can be exported as an HTTP Archive format (HAR) file. A HAR file
 
 To download the log as a HAR file, use the **Download HAR File** button next to the **Filters** icon.
 
-Any submitted log can also be reloaded in the Fiddler Jam Chrome Extension for a mock replay. To load the log in the Chrome Extension, use the **Load HAR for mocking** button.
+### Mocking
+
+Any submitted log can be reloaded in the Fiddler Jam Chrome Extension for a mock replay. To load the log in the Chrome Extension, use the **Load HAR for mocking** button.
 
 ### Fiddler Everywhere Integration
 
 The standalone Fiddler Everywhere application can load Fiddler Jam logs for further deep-dive investigation. Refer to the [official Fiddler Everywhere and its cross-platform functionalities](https://docs.telerik.com/fiddler-everywhere/introduction).
 
-### Copy URL
 
-A submitted log can be shared again through the **Copy URL** button, located in the top-right corner next to the **Submitted by**.
+### Log Main Menu
+
+- **Copy URL**&mdash;Share a submitted log through the **Copy URL** button.
+
+- **Edit Log Details**&mdash;Modify the **Title**, **Description** and the **Subbmitted by** fields of a Jam log.
+
+    To add or edit the log details of a newly submitted log:
+
+    1. Open the submitted log and click **Add to Workspace**.
+    1. In the prompted window, edit the desired log details (**title**, **description**, **submitted by**, **workspace**).
+    1. When ready to add the log with the updated details to the selected workspace, click **Done**.
+
+    To edit the details of a log that is already added to a workspace:
+
+    1. Open the submitted log from the workspace.
+    1. Click the **Edit Log Details** icon in the top-right corner next to **Open Workspace**.
+    1. Edit the **title**, **description**, and **submitted by** fields.
+    1. Click **Done**.
+
+    ![Edit log details](../images/portal/logs/fj-portal-log-edit-details.png)
+
+- Third-Pary Intergrations&mdash;Provides support and source control integrations with services like GitHub and Jira.
+
+- **Delete**&mdash;Permanently deletes a log from the current workspace.
+
+- **View Workspace**&mdash;Fast link to the current workspace. When the opened logs are not yet added to the workspace, the option will be replaced by **Add to Workspace** button.
