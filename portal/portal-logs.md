@@ -27,33 +27,33 @@ When the Extension User submits the log, it is automatically uploaded to the Fid
 Fiddler Jam protects the content of the submitted logs through the following rules:
 
 - All logs are captured with applied masking for [any data Fiddler considers is sensitive]({%slug fj-security%}#masking-sensitive-data).
-
 - The submitted log can be opened only by Portal Users who meet the access rights requirements that the Extension User set through [the link generation options]({%slug fj-link-options%})).
-
 - The submitted log can be added to a workspace by Portal Users with the respective access rights. Any log that is not added to a workspace will be automatically deleted after 31 days. A warning note with the expiration counter appears on the top-right corner of each submitted log. [Learn how to preserve the submitted log for a longer period by adding it to a workspace...](#adding-and-sharing-the-log-in-the-workspace)
-
 
 To enable a [Portal Viewer]({%slug fj-users%}#viewer-role) to open the submitted log:
 
 1. The Extension User must set the appropriate access rights during the link generation.
-
 1. The Portal User must add the log to a workspace.
 
 ## Options for Working with Logs
 
-Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provides the following options for managing that log:
-
-- [Using and editing the log details](#log-details) such as its title, description, and so on.
+Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provides the multiple possibilities for managing and using the log:
 
 - [Investigating the captured data of the requests and responses](#inspecting-traffic)&mdash;The session data includes the headers and bodies of each HTTP or HTTPS Request and response. With Fiddler Jam version 1.4.0 and above, you can also inspect WebSocket handshake and messages.
 
-- [Inspecting the browser events](#browser-events)&mdash;Each log contains the browser events triggered from user interactions with the page during the recording.
+- [Inspecting the browser events](#inspecting-browser-events)&mdash;Each log contains the browser events triggered from user interactions with the page during the recording.
 
-- [Inspecting the taken screenshots](#screenshot-inspection)&mdash;When the Extension User explicitly enables the screenshot option, a new screenshot is added for each user interaction on a clickable element.
+- [Inspecting the taken screenshots](#inspecting-browser-events)&mdash;When the Extension User explicitly enables the **Capture Screenshots** option, a new screenshot is added for each user interaction on a clickable element (applicable for **click** and **double-click** events only).
 
-- [Inspecting the screen recording](#screen-recording)&mdash;When the Extension User explicitly enables the **Capture video** option, the whole capturing process is output in the **Screen Recording** tab.
+- [Inspecting the screen recording](#inspecting-video-recordings)&mdash;When the Extension User explicitly enables the **Capture video** option, the whole capturing process is output in the **Screen Recording** tab.
 
-- [Analyzing the developer console logs](#console-log-inspection), which is available when the Extension User has selected the **Capture console** option.
+- [Analyzing the developer console logs](#inspecting-console-logs), which is available when the Extension User has selected the **Capture console** option.
+
+- [Analyzing the developer console logs](#inspecting-console-logs), which is available when the Extension User has selected the **Capture console** option.
+
+- [Integration with GitHub issues](#log-main-menu) to easily create and link GitHub issues for further investigation and collaboration within the GitHub source control.
+
+- [Using and editing the log details](#log-main-menu) such as its title, description, and so on.
 
 - [Running an advanced investigation through the Fiddler Everywhere web-debugging tool]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
 
@@ -132,9 +132,7 @@ Fiddler tracks the following events:
 When **Capture screenshots** is explicitly enabled, the log will also contain screenshots for the **click** and **double-click** events.
 
 To examine a screenshot:
-
 1. From the **Captured Logs** list, select [a **Click** event line](#browser-events). The associated screenshot loads in the **Inspectors** tab as the last property of the event data.
-
 1. Use the **Save** icon to download the screenshot as a PNG file locally.
 
 The following figure demonstrates a captured click action.
@@ -190,9 +188,7 @@ Use the **Search** field in the **Captured Logs** tab to filter the entries base
 
 ### Download HAR
 
-A submitted log can be exported as an HTTP Archive format (HAR) file. A HAR file is a JSON-formatted archive file format for logging a web browser interaction with a site and is subsequently used with any third-party software that supports the HAR format.
-
-To download the log as a HAR file, use the **Download HAR File** button next to the **Filters** icon.
+A submitted log can be exported as an HTTP Archive format (HAR) file. A HAR file is a JSON-formatted archive file format for logging a web browser interaction with a site and is subsequently used with any third-party software that supports the HAR format. To download the log as a HAR file, use the **Download HAR File** button next to the **Filters** icon.
 
 ### Mocking
 
@@ -205,6 +201,8 @@ The standalone Fiddler Everywhere application can load Fiddler Jam logs for furt
 
 ### Log Main Menu
 
+- **Submitted by**&mdash;Contains the username of the log creator and timestamp from the log creation.
+
 - **Copy URL**&mdash;Share a submitted log through the **Copy URL** button.
 
 - **Edit Log Details**&mdash;Modify the **Title**, **Description** and the **Subbmitted by** fields of a Jam log.
@@ -212,19 +210,19 @@ The standalone Fiddler Everywhere application can load Fiddler Jam logs for furt
     To add or edit the log details of a newly submitted log:
 
     1. Open the submitted log and click **Add to Workspace**.
-    1. In the prompted window, edit the desired log details (**title**, **description**, **submitted by**, **workspace**).
+    1. In the prompted window, edit the desired log details (**Title**, **Description**, **Submitted by**, **Workspace**).
     1. When ready to add the log with the updated details to the selected workspace, click **Done**.
 
     To edit the details of a log that is already added to a workspace:
 
     1. Open the submitted log from the workspace.
     1. Click the **Edit Log Details** icon in the top-right corner next to **Open Workspace**.
-    1. Edit the **title**, **description**, and **submitted by** fields.
+    1. Edit the **Title**, **Description**, and **Submitted by** fields.
     1. Click **Done**.
 
     ![Edit log details](../images/portal/logs/fj-portal-log-edit-details.png)
 
-- Third-Pary Intergrations&mdash;Provides support and source control integrations with services like GitHub and Jira.
+- **Third-Pary Intergrations**&mdash;Provides support and source control integrations with services like [GitHub](https://github.com/) and [Jira](https://www.atlassian.com/). You can create directly open GitHub issues, and Jira tasks linked to the currently opened Fiddler Jam log through the Fiddler Jam third-party integration options.
 
 - **Delete**&mdash;Permanently deletes a log from the current workspace.
 
