@@ -77,7 +77,7 @@ The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and 
 
 - **Screen Recording** contains a screen recording from the browser, which the Fiddler Jam Chrome Extension took during the recording. The tab renders data only when the Extension User has explicitly used the **Capture video** from the [**Advanced options**]({%slug fj-capture-options%}).
 
-- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. Depending on whether you choose an HTTP session, a console log, or a browser event, the inspectors change. For example, Fiddler Jam loads the **Request** and **Response** inspectors when you select an HTTP session, displays the **Console Log Details** screen when you select a console log entry, and a **Browser Event Information** inspector when you select a browser event entry.
+- **Inspectors** shows an inspector that loads the information for the selected line from the **Captured Logs** list. Depending on whether you choose an HTTP session, a console log, or a browser event, the inspectors change. For example, Fiddler Jam loads the **Request** and **Response** inspectors when you select an HTTP session, display the **Console Log Details** screen when you select a console log entry, and a **Browser Event Information** inspector when you select a browser event entry.
 
 ### Inspecting Traffic
 
@@ -105,15 +105,19 @@ To investigate a specific HTTP or WebSocket session:
 Each log contains browser events that are triggered by user interaction. Each event stores additional information about the date and time it occurred and the specific technical data associated with the event. Additionally, the `click` events contain a screenshot with an action pointer.
 
 Fiddler tracks the following events:
-- **click**
-- **double-click**
-- **navigated to**
-- **tab opened**
-- **tab closed**
+- **click** mouse event
+- **double-click** mouse event
+- **navigated to** browser event
+- **tab opened** browser event
+- **tab closed** browser event
+- clipboard event **Copy** triggered through the browser UI or key shortcut
+- clipboard event **Cut** triggered through the browser UI or key shortcut
+- clipboard event **Paste** triggered through the browser UI or key shortcut
 - pressed **`Enter`** key
 - pressed **`Tab`** key
 - pressed **`Esc`** key
-- pressed any of **the arrows keys** (up,down,left, and right)
+- pressed any of **the arrows keys** (up, down,
+ left, and right)
 - pressed **page up** or **page down** keys (`Fn` + `UP` arrow, and `Fn` + `Down` arrow on Mac)
 - pressed **`End`** key
 - pressed **`Home`** key
@@ -122,8 +126,8 @@ Fiddler tracks the following events:
 - pressed **`Delete`** key
 - pressed **`Backspace`** key
 - pressed any of **Function** keys (F1 - F15) 
-- **scroll**
-- **text-input** (only the event without the actual inputted data)
+- **scroll** browser event
+- **text-input** (detects only the event without the inputted data)
 
 When **Capture screenshots** is explicitly enabled, the log will also contain screenshots for the **click** and **double-click** events.
 
@@ -163,7 +167,7 @@ The following example demonstrates captured storage data.
 
 ## User Interface of the Log Dashboard
 
-Apart from the recorded data, each log also contains user-defined log details such as the log title, description, field submission, and the workspace. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension.
+Apart from the recorded data, each log also contains user-defined log details such as title, description, field submission, and the workspace. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension.
 
 ### Log Details
 
