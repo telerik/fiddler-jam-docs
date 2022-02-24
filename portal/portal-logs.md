@@ -224,6 +224,6 @@ The standalone Fiddler Everywhere application can load Fiddler Jam logs for furt
 
 - **Third-Pary Intergrations**&mdash;Provides support and source control integrations with services like [GitHub](https://github.com/) and [Jira](https://www.atlassian.com/). You can create directly open GitHub issues, and Jira tasks linked to the currently opened Fiddler Jam log through the Fiddler Jam third-party integration options.
 
-- **Delete**&mdash;Permanently deletes a log from the current workspace.
+- **Delete**&mdash;Permanently deletes the opened log from all workspaces.
 
 - **View Workspace**&mdash;Fast link to the current workspace. When the opened logs are not yet added to the workspace, the option will be replaced by **Add to Workspace** button.
