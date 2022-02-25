@@ -51,8 +51,6 @@ Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provide
 
 - [Analyzing the developer console logs](#inspecting-console-logs), which is available when the Extension User has selected the **Capture console** option.
 
-- [Integration with GitHub issues](#log-main-menu) to easily create and link GitHub issues for further investigation and collaboration within the GitHub source control.
-
 - [Using and editing the log details](#log-main-menu) such as its title, description, and so on.
 
 - [Running an advanced investigation through the Fiddler Everywhere web-debugging tool]({%slug fj-advanced-analysis%}#fiddler-everywhere-integration).
@@ -165,7 +163,7 @@ The following example demonstrates captured storage data.
 
 ## User Interface of the Log Dashboard
 
-The Fiddler Jam portal user interface provides options to observe the recorded data the user-defined log details such as log title and description. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension. Through the user interface, you can optimize your inspection and debug processes (through filters, conceptual inspectors, a video tab, export options, mocking options) and optimize your support story (through the GitHub and Jira integrations, workspaces, feedback).
+The Fiddler Jam portal user interface provides options to observe the recorded data the user-defined log details such as log title and description. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension. Through the user interface, you can optimize your inspection and debug processes (through filters, conceptual inspectors, a video tab, export options, mocking options) and optimize your support story.
 
 
 ### Details
