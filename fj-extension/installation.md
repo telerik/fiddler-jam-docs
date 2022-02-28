@@ -13,21 +13,30 @@ previous_url: /get-started/installation
 
 ## Extension Login
 
-The Fiddler Jam extension can be used entirely anonymously without the explicit need for a user account and authentication. However, using an individual account with the Fiddler Jam extension comes with the advantage of tracking and managing your previously captured logs through the [**My Captures** section](#my-captures). Login into the Fiddler Jam extension as follows:
+The Fiddler Jam extension can be used entirely anonymously without the explicit need for a user account and authentication. However, using a single account for the Fiddler Jam extension and Fiddler Jam portal provides the advantage of efficiently managing your previously captured logs through the [**My Captures** section](#my-captures). Login into the Fiddler Jam extension as follows:
 
 - Install and start the Fiddler Jam extension.
 - Click on the account icon on the top-right corner of the extension.
-- Create and login with your Fiddler account. Alternatively, you can use Google Authentication as a login method.
+- Login with your Fiddler Jam account.
 
-### My Captures
+Note that some of the functionalities like a quick link to the log to the Fiddler Jam portal are available only for [active portal users]({%slug fj-users%}#portal-users).
 
-The **My Captures** section provides easy access to previously recorded logs. The logs are listed in order by time of appearance, and each entry can be edited or **permanently** deleted. It is important to note that the deletion will remove the log for the extensions's **My Captures** section and **any** Fiddler Jam portal workspace where the log was added. The deletion is permanent and irreversible.
+## My Captures
+
+The **My Captures** section provides easy access to previously recorded logs. The Fiddler Jam logs are listed in order by time of appearance, and each entry has the following options:
+
+- A log entry can be viewed in the Fiddler Jam portal through the link button. Applicable only for [active portal users]({%slug fj-users%}#portal-users).
+- A log entry can be **permanently** deleted through the delete button and an explicit deletion confirmation. 
+    >important The deletion will remove the log for the extensions **My Captures** section and **any** Fiddler Jam portal workspace where the log was added. The deletion is permanent and irreversible.
 
 ![My Captures section in Fiddler Jam extension](../images/ext/ext-images/extension-my-captures.png)
 
+
+The section is available for both authenticated and unauthenticated users.
+
 ## Jam Extension Browser Settings
 
-After the successful installation of the Fiddler Jam Chrome Extension, you can set its site access and allow it to work in the Incognito mode. To access the specific settings on the management page of the Fiddler Jam Chrome Extension:
+After successfully installing the Fiddler Jam Chrome Extension, you can set its site access and allow it to work in the Incognito mode. To access the specific settings on the management page of the Fiddler Jam Chrome Extension:
 
 1. Click the **Extensions** button on the Google Chrome toolbar next to your profile avatar.
 1. In the expanded menu, click **Manage Extensions**.
@@ -36,7 +45,7 @@ After the successful installation of the Fiddler Jam Chrome Extension, you can s
 
 ### Setting the Site Access
 
-The **Site Access** Extension settings enable you to limit the Extension for a specific site. The **on click** option is not applicable for the Fiddler Jam Chrome Extension as it does not allow you to permit access to the mandatory backend endpoints. Most Chrome exceptions are available on all sites and you can manage them through the **On all sites** option.
+The **Site Access** Extension settings enable you to limit the extension for a specific site. The **on click** option is not applicable for the Fiddler Jam Chrome Extension as it does not allow you to permit access to the mandatory backend endpoints. Most Chrome exceptions are available on all sites, and you can manage them through the **On all sites** option.
 
 To use Fiddler Jam on specific sites only, scroll down to **Site access**, select the **On specific site** option, and add the required endpoints:
 
