@@ -9,9 +9,9 @@ previous_url: /extension/link-options, /get-started/link-options
 
 # Log Sharing Options
 
-The Fiddler Jam Chrome Extension enables you to submit the recorded logs either by sharing the generated link for that log or by sharing the log with specific people.
+The Fiddler Jam Chrome Extension enables you to submit the recorded logs either by sharing the generated link for that log, by sharing the log with specific people. or by directly uploading the recorded log to a workspace (available only for authenticated users).
 
-Both alternatives allow you to provide additional security through setting a password.
+All alternatives allow you to provide additional security through setting a password.
 
 ## Sharing the Generated Link
 
@@ -29,9 +29,18 @@ Additionally, you can protect the log with a password. Only the specified Fiddle
 
 ![Share with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails-popu.png)
 
+
+
+## Upload to Jam Portal Workspace
+
+The option **Upload to a workspace** is available for authenticated users that have associated [portal user]({%slug fj-users%}#portal-users) accounts. The recorded log uploads to a selected organizational workspace.
+
+![Upload to a workspace](../images/ext//ext-images/extension-link-options-workspace.png)
+
+
 ## Password Protection for Recorded Logs
 
-Recorded logs can be protected with a password, no matter if they are shared with a link or with specific users.
+All recorded logs can be protected with a password, no matter if they are shared with a link , with specific users, or if they are directly uploaded to an organizational workspace.
 
 To create a password for your recorded log, use the **Password protection** switch. The password requires you to consider that it has to:
 

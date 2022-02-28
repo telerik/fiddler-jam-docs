@@ -13,7 +13,9 @@ previous_url: /get-started/installation
 
 ## Extension Login
 
-The Fiddler Jam extension can be used entirely anonymously without the explicit need for a user account and authentication. However, using a single account for the Fiddler Jam extension and Fiddler Jam portal provides the advantage of efficiently managing your previously captured logs through the [**My Captures** section](#my-captures). Login into the Fiddler Jam extension as follows:
+The Fiddler Jam extension can be used entirely anonymously without the explicit need for a user account and authentication. However, using a single account for the Fiddler Jam extension and Fiddler Jam portal provides the advantage of efficiently managing your previously captured logs through the [**My Captures** section](#my-captures). Authenticated users that have associated Jam portal accounts can directly [upload recorded logs to a Jam workspace]({%slug fj-link-options%}#upload-to-jam-portal-workspace).
+
+Login into the Fiddler Jam extension as follows:
 
 - Install and start the Fiddler Jam extension.
 - Click on the account icon on the top-right corner of the extension.

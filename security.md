@@ -155,4 +155,6 @@ Once the Fiddler Jam Chrome Extension records a log, it generates a unique link 
 
 - Logs generated with the **Share with specific people** option can be opened through the generated and shared link only by Fiddler Jam Portal users who are explicitly included in the share list.
 
+- Logs generated with the **Upload to a workspace** option can be opened through the generated and shared link only by Fiddler Jam Portal users who are part of the specified workspace.
+
 - Logs generated with the **Password protection** option can be opened through the generated and shared link only by Fiddler Jam Portal users who know the password. The Fiddler Jam Chrome Extension distributes the logs as HAR files encrypted with the AES-CTR encryption algorithm.
