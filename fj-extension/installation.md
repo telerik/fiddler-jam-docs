@@ -19,7 +19,6 @@ The Fiddler Jam extension can be used entirely anonymously without the explicit 
 - Click on the account icon on the top-right corner of the extension.
 - Login with your Fiddler Jam account.
 
-Note that some of the functionalities like a quick link to the log to the Fiddler Jam portal are available only for [active portal users]({%slug fj-users%}#portal-users).
 
 ## My Captures
 
@@ -32,7 +31,7 @@ The **My Captures** section provides easy access to previously recorded logs. Th
 ![My Captures section in Fiddler Jam extension](../images/ext/ext-images/extension-my-captures.png)
 
 
-The section is available for both authenticated and unauthenticated users.
+Note that some of the functionalities like a quick link to the log to the Fiddler Jam portal are available only for [active portal users]({%slug fj-users%}#portal-users). However, the captured logs will be availalbe in the **My Captures** section for authenticated and unauthenticated users, and will remain on the machine unless deleted or explicitly removed from the machine storage.
 
 ## Jam Extension Browser Settings
 
