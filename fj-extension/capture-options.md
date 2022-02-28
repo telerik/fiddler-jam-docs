@@ -22,6 +22,8 @@ The **Advanced Options** menu includes the following settings:
 - [Mask cookies](#masking-cookies)
 - [Disable cache](#disabling-the-cache)
 - [Clear cookies, cache, and storage on start](#clear-cookies-cache-and-storage-on-start)
+- [Reload page on start](#reload-page-on-start)
+
 
 ![Fiddler Jam Advanced Options](../images/ext/ext-images/extension-start-capturing-extended-002.png)
 
@@ -80,3 +82,9 @@ By default, the **Disable cache** option is enabled.
 The **Clear cookies, cache, and storage on start** option will effectively remove cookies, cache, and storage data from the starting page at the moment when the capture starts.
 
 The **Clear cookies, cache, and storage on start** option is disabled by default.
+
+## Reload page on start
+
+The **Reload page on start** option will force reload the entry point URL when the capture starts.
+
+By default, the **Reload page on start** option is enabled.
