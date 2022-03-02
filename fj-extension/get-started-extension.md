@@ -61,9 +61,11 @@ For quicker and easier access, now pin the Extension:
 
 In this step, you'll record a captured traffic session so that you can isolate a network issue and then be able to share it with the engineering teams for further analysis.  
 
-1. Launch Fiddler Jam by clicking the ![Extension main icon](../images/ext/ext-icons/small-logo.png) extension icon.
+1. Click the ![Extension main icon](../images/ext/ext-icons/small-logo.png) extension icon to launch the Fiddler Jam extension. Keyboard shortcuts **Ctrl** + **Shift** + **H** (Windows) or **Cmd** + **Shift** + **H** (macOS).
 
     If you expand [**Advanced Options**]({%slug fj-capture-options%}), you'll see that some of the settings are enabled or disabled by default. For this guide, let's not change any of them and work with the default ones.
+
+1. (**Optional**) Click the user icon at the top-right corner of the extension to log in with your account. Alternatively, you can directly use the extension anonymously, but [you will miss some of the management options]({%slug fj-installation%}#extension-login).       
 
 1. Open a new browser tab where the capturing will take place.
 
