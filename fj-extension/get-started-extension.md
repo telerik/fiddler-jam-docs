@@ -85,6 +85,10 @@ In this step, you'll record a captured traffic session so that you can isolate a
 
 1. After reviewing the record, go back to the extension.
 
+>important Fiddler Jam captures the traffic only from the tab which initially started the recording. The extension provides an informational warning if you open a new browser tab during a continuous recording. 
+> ![extension wrong tab warning](../images/ext/ext-images/extension-wrong-tab.png)
+
+
 ## Submitting the Log
 
 At this point, the captured traffic is recorded as a log but is not yet submitted and saved in the Fiddler Jam Portal cloud space. Now let's use the generated link to share the issue with the engineering teams for troubleshooting and analysis.
