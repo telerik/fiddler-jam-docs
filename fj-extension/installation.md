@@ -13,7 +13,7 @@ previous_url: /get-started/installation
 
 ## Extension Login
 
-The Fiddler Jam extension can be used entirely anonymously without the explicit need for a user account and authentication. However, using a single account for the Fiddler Jam extension and Fiddler Jam portal provides the advantage of efficiently managing your previously captured logs through the [**My Captures** section](#my-captures). Authenticated users that have associated Jam portal accounts can directly [upload recorded logs to a Jam workspace]({%slug fj-link-options%}#upload-to-jam-portal-workspace).
+The Fiddler Jam extension can be used entirely anonymously without the explicit need for a user account and authentication. However, using a single account for the Fiddler Jam extension and Fiddler Jam portal provides the advantage of efficiently managing your previously captured logs through the [**My Captures** section](#my-captures). Authenticated users that also have associated Jam portal accounts can directly [upload recorded logs to a Jam workspace]({%slug fj-link-options%}#upload-to-jam-portal-workspace).
 
 Login into the Fiddler Jam extension as follows:
 
@@ -26,7 +26,7 @@ Login into the Fiddler Jam extension as follows:
 
 The **My Captures** section provides easy access to previously recorded logs. The Fiddler Jam logs are listed in order by time of appearance, and each entry has the following options:
 
-- A log entry can be viewed in the Fiddler Jam portal through the link button. Applicable only for [active portal users]({%slug fj-users%}#portal-users).
+- A log entry can be viewed and managed in the Fiddler Jam portal through the link button. Applicable only for [active portal users]({%slug fj-users%}#portal-users).
 - A log entry can be **permanently** deleted through the delete button and an explicit deletion confirmation. 
     >important The deletion will remove the log for the extensions **My Captures** section and **any** Fiddler Jam portal workspace where the log was added. The deletion is permanent and irreversible.
 

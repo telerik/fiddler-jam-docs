@@ -96,9 +96,9 @@ At this point, the captured traffic is recorded as a log but is not yet submitte
 
     Here you have an option to make the log public or share it with specific people, and also, you can protect the log with a password. However, for demonstration purposes, let's make the log public and not use a password.
 
-1. Create a public link by selecting **Share with link** and clicking **Get Link**. The generated link points to the Fiddler Jam Portal cloud space, containing the submitted log. This URL is accessible only for Fiddler Jam Portal users.
+1. Create a public link by selecting [**Share with link**]({%slug fj-link-options%}#sharing-the-generated-link) and clicking **Get Link**. The generated link points to the Fiddler Jam Portal cloud space, containing the submitted log. This URL is accessible only for Fiddler Jam Portal users.
 
-    Like the previous step options, here you have the **Share with specific people** option, which will create a link only for the Fiddler Portal users who are explicitly added to the Portal with their account emails.
+    Like the previous step options, here you have the [**Share with specific people**]({%slug fj-link-options%}#sharing-the-log-with-specific-people) option, which will create a link only for the Fiddler Portal users who are explicitly added to the Portal with their account emails.
 
     The option [**Upload to a workspace**]({%slug fj-link-options%}#upload-to-jam-portal-workspace)  is available only for authenticated Fiddler Jam [**portal** users]({%slug fj-users%}#portal-users). This functionality allows a portal user to add the captured log in an existing workspace directly.
 
@@ -106,7 +106,7 @@ At this point, the captured traffic is recorded as a log but is not yet submitte
 
 1. Click **Copy Link** to store the unique URL to the clipboard and paste this link to share the recorded logs with the Fiddler Jam Portal users.
 
-    All submitted logs are private and accessible for Fiddler Jam Portal users with the proper access rights.
+    All submitted logs are private and accessible for Fiddler Jam Portal users with the proper access rights. Authenticated Fiddler Jam users can manage their recorded logs through the [**My Captures**]({%slug fj-installation%}#my-captures) section.
 
    ![Copy link screen](../images/ext/ext-images/extension-link-options-copy-link.png)
 
