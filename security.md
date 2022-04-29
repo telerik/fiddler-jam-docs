@@ -38,11 +38,11 @@ When capturing and sharing Fiddler Jam logs, consider the availability of the fo
 
 ## Recognized Sensitive Data
 
-By design, Fiddler Jam comes with a logic for recognizing sets and types of data that might be sensitive.
+By design, Fiddler Jam comes with logic for recognizing sets and types of data that might be sensitive and masks them out of the box.
 
 Fiddler Jam regards the following data as sensitive:
 
-1. Data where the `property name` is tested for keywords, which can contain potentially sensitive data, such as: `RSA`, `dsa`, `ed25519`, `ecdsa`, `private`, `key`, `pass`, `pwd`, `secret`, `credential`, `token`, `ssh`, `api`, `key`, `auth`, `card`, `credit`, `debit`, `MasterCard`, `visa`, `discover`, `diners`, `American.?express`, `Amex`, `carte`, `karte`, `Carta`, `atm`, `Tarjeta`, `CVV`, `cc`, `verification`, `security`, `transaction`, `Sicherheit`, `Sicurezza`, `seguranca`, and `securite`.
+1. Data where the `property name` is tested for keywords, which can contain potentially sensitive data, such as: `RSA`, `dsa`, `ed25519`, `ecdsa`, `private`, `key`, `pass`, `pwd`, `secret`, `credential`, `token`, `ssh`, `api-key`, `apikey `, `auth`, `card`, `credit`, `debit`, `MasterCard`, `visa`, `discover`, `diners`, `American.?express` (regular expression that matches any symbol between `American` and `Express`), `Amex`, `carte`, `karte`, `Carta`, `atm`, `Tarjeta`, `CVV`, `verification`, `security`, `transaction`, `Sicherheit`, `Sicurezza`, `seguranca`, and `securite`. The keyword check is case-insensitive.
 
 2. Post data where the `property value` is tested against regex expressions for known credentials, keys, or credit cards, including:
 
