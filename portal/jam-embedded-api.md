@@ -126,7 +126,8 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
             let captureInfo = '';
 
             // Setting default capture options
-            let captureOptions = {
+            // used as argument in the start method
+            let startOptions = {
                 captureVideo: true,
                 captureScreenshots: true,
                 captureStorage: true,
@@ -158,26 +159,26 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
                 captureInfo = getCaptureInfo(jam.state);
                 document.getElementById('capture-info').innerHTML = captureInfo;
                 if (jam.options) {
-                    captureOptions = jam.options;
+                    startOptions = jam.options;
                 }
-                document.getElementById('captureVideo').checked = captureOptions.captureVideo;
-                document.getElementById('captureScreenshots').checked = captureOptions.captureScreenshots;
-                document.getElementById('captureStorage').checked = captureOptions.captureStorage;
-                document.getElementById('captureLogs').checked = captureOptions.captureConsole;
+                document.getElementById('captureVideo').checked = startOptions.captureVideo;
+                document.getElementById('captureScreenshots').checked = startOptions.captureScreenshots;
+                document.getElementById('captureStorage').checked = startOptions.captureStorage;
+                document.getElementById('captureLogs').checked = startOptions.captureConsole;
             }
 
             function initSettingsEvents() {
                 document.getElementById('captureVideo').addEventListener('change', (e) => {
-                    captureOptions.captureVideo = e.target.checked;
+                    startOptions.captureVideo = e.target.checked;
                 });
                 document.getElementById('captureScreenshots').addEventListener('change', (e) => {
-                    captureOptions.captureScreenshots = e.target.checked;
+                    startOptions.captureScreenshots = e.target.checked;
                 });
                 document.getElementById('captureStorage').addEventListener('change', (e) => {
-                    captureOptions.captureStorage = e.target.checked;
+                    startOptions.captureStorage = e.target.checked;
                 });
                 document.getElementById('captureLogs').addEventListener('change', (e) => {
-                    captureOptions.captureConsole = e.target.checked;
+                    startOptions.captureConsole = e.target.checked;
                 });
             }
 
@@ -191,7 +192,7 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
 
             // Start capturing (async method)
             async function start() {
-                await jam.start(captureOptions);
+                await jam.start(startOptions);
             }
 
             // Stop capturing (async method)
