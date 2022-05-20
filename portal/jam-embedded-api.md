@@ -76,6 +76,7 @@ Fiddler Jam provides an API to integrate the capturing and sharing functionaliti
 | `stop()` | async | n/a | Asynchonious method that stops the capturing and sets the state property to "stopped". |
 | `share(options: ShareOptions)` | async | `ShareOptions` is an object of type { description:string, workspaceId:string, submittedBy:string } | Asynchonious method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted the log will be automatically uploaded to the default organizational workspace. |
 | `reset()` | sync | n/a | Stops and completely resets the capturing, its state, and its properties. |
+| `addErrorEventListener` | sync | n/a | An event listener to detect erros during the capturing processes. |
 | `addStateChangedEventListener()` | sync | n/a | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
 
 
@@ -108,7 +109,7 @@ self.importScripts(`https://downloads.getfiddler.be/jam-embedded/fiddler-jam-emb
 
 The below snippet creates a basic HTML page that utilizes most of the Fiddler Jam Embedded functionalities. There is a behavioral difference between different browsers like Edge, Chrome, Brave, and other non-Chromium browsers like Firefox and Safari.
 
->tip One of the crucial differences is the user interaction needed to record a video in Chromium browsers vs. non-Chromium browsers when the page is reloaded. With Chromium browsers, we can call the `start()` method, and in case the `captureVideo` option is set to `true` then the video recording will start immediately after the page is refreshed. However, if a page is explicitly reloaded (through `reloadPage` set to `true`), then browsers like Firefox and Safari require user interaction to re-confirm the start of any video recording. This is where the method `startVideoCapturing` comes in place - with this method the developers can explicitly provide the needed user interaction once the page is reloaded (in the snippet below, we are demonstrating that through the button with id `btn-start-video` ).
+>tip One of the crucial differences is the user interaction needed to record a video in Chromium browsers vs. non-Chromium browsers when the page is reloaded. With Chromium browsers, we can call the `start()` method, and in case the `captureVideo` option is set to `true` then the video recording will start immediately after the page is reloaded (through `reloadPage` set to `true`). However, browsers like Firefox and Safari require user interaction to re-confirm the start of any video recording. This is where the method `startVideoCapturing` comes in place - with this method the developers can explicitly provide the needed user interaction once the page is reloaded (in the snippet below, we are demonstrating that through the button with id `btn-start-video` ).
 
 
 Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddler-jam-api-key-here>` with your actual Fiddler Jam Embedded API key.
@@ -276,3 +277,13 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
 </html>
 
 ```
+
+### Limitations and Browser Specifics
+
+While incorporating your own Fiddler Jam Embedded tool into your website, note that there are some specifics related to different browsers and to the core functionalities.
+
+- To capture a video recording without reloading a page, you can call the `start()` method (with `captureVideo` option set to `true`) on all browsers.
+- For all non-chromium browsers (like Firefox, Safari, etc.) - To capture a video recording with reload of a page (through `reloadPage` set to `true`), you need an explicit user interaction that calls the `startVideoRecording()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
+- All Chromium-based browsers (like Chrome, Edge, Brave, Vivaldi, etc.) will popup a native window once the `start()` method is called. The window will provide multiple recording options to record the current tab, new tab, a whole OS window, or the entire screen. Fiddler Jam should be used within the current browser instance, so we recommend always guiding users to select the **This Tab** option.
+    ![Choosing the "This Tab" option](../images/portal/embedded/fj-embed-this-tab.png)
+
