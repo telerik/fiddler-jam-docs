@@ -18,7 +18,7 @@ The Jam portal menu is located in the top-right corner of the page.
 
 ## Feedback
 
-**Feedback** displays options for collecting information from the users regarding the Fiddler Jam Portal experience such as its features, documentation, and so on. The requirement to leave a comment with more details is optional if your feedback is positive, and mandatory if your feedback if neutral or straightforward negative.
+**Feedback** displays options for collecting information from the users regarding the Fiddler Jam Portal experience, such as its features, documentation, etc. Leaving a comment with additional details is optional if your feedback is positive and mandatory if your feedback is neutral or straightforward negative.
 
 ![Feedback option](../images/portal/menu/menu-feedback.png)
 
@@ -28,16 +28,16 @@ All Fiddler Jam portal users can submit a support ticket through the **Contact S
 
 ## Report Issue
 
-The **Report Issue** functionality allows you to send a detailed Fiddler Jam log with HTTPS capturing, screenshots of the user interactions and video recording from a selected page within the Fiddler Jam portal. Use this option to report any issues, leave feedback, or to suggest improvments related to the Fiddler Jam portal. The submited logs are reviewed directly by the core team developers and support engineers.
+The **Report Issue** functionality allows you to send a detailed Fiddler Jam log with HTTPS capturing, screenshots of the user interactions, and video recording from a selected page within the Fiddler Jam portal. Use this option to report any issues, leave feedback, or suggest improvements related to the Fiddler Jam portal. The core team developers and support engineers review the submitted logs regularly.
 
-Behind the scenes, the used techonoly is called **Fiddler Jam Embedded** and demonstrates how you could integrate Fiddler Jam logs directly into your own website. [Learn more about how to submit an issue here...]({%slug fj-report-issue%})
+Behind the scenes, the used technology is called **Fiddler Jam Embedded** and demonstrates how you could integrate Fiddler Jam logs directly into your website. [Learn more about how to submit an issue here...]({%slug fj-report-issue%})
 
 ![Report Issue](../images/portal/menu/menu-report-issue.png)
 
 
 ## My Account
 
-The **My Account** is a menu option available after successfull login. It provides several submenu options like the **Settings**, **My Resources**, and **Sign Out**.
+The **My Account** is a menu option available after successful login. It provides several submenu options like the **Settings**, **My Resources**, and **Sign Out**.
 
 ![My Account submenu](../images/portal/menu/menu-my-acc-all.png)
 
@@ -45,7 +45,7 @@ The **My Account** is a menu option available after successfull login. It provid
 
 #### Privacy Settings
 
-Your information and usage statistics enable the Fiddler team to better understand how Fiddler Jam is used and to continue building an awesome product.
+Your information and usage statistics enable the Fiddler team to understand better how Fiddler Jam is used and continue building an awesome product.
 
 To subscribe or unsubscribe from participating in the sharing of usage statistics:
 
@@ -55,14 +55,25 @@ To subscribe or unsubscribe from participating in the sharing of usage statistic
 
 1. Click __Save__ to apply the changes.
 
+![Privacy settings](../images/portal/menu/menu-privacy.png)
+
 #### Legal
+
+The options provide quick links to the following legal documents:
+
+- [Terms of Services (also known as end-user license agreement)](https://www.telerik.com/purchase/license-agreement/fiddler-jam)
+- [Privacy Policy](https://www.progress.com/legal/privacy-policy)
+- Third-Party services - opens a list of the third-party services used by Fiddler Jam.
+
+![Legal links](../images/portal/menu/menu-legal.png)
+
 
 ### My Resources
 
-**My Resources** displays a window that contains basic Fiddler Jam usage instructions and fast resource links to the documentation site and to the YouTube videos. The layout automatically appears the first time you load the Fiddler Jam Portal page.
+**My Resources** displays a window containing basic Fiddler Jam usage instructions and fast resource links to the documentation site and the YouTube videos. The layout automatically appears the first time you load the Fiddler Jam Portal page.
 
 ![My Resources screen](../images/portal/menu/my-resources.png)
 
 ### Sign Out
 
-**Sign Out** allows you to log out of the currently logged user and navigate to an introduction page that provides options for creating a new user, or using another existing account.
+**Sign Out** allows you to log out of the currently logged user and navigate to an introduction page that provides options for creating a new user or using another account.
