@@ -28,9 +28,9 @@ All Fiddler Jam portal users can submit a support ticket through the **Contact S
 
 ## Report Issue
 
-The **Report Issue** functionality allows you to send a detailed Fiddler Jam log with HTTPS capturing, screenshots of the user interactions, and video recording from a selected page within the Fiddler Jam portal. Use this option to report any issues, leave feedback, or suggest improvements related to the Fiddler Jam portal. The core team developers and support engineers review the submitted logs regularly.
+The **Report Issue** functionality allows you to send a detailed Fiddler Jam log with HTTPS capturing, screenshots of the user interactions, and video recording from a selected page within the Fiddler Jam portal. Use this option to report any issues, leave feedback, or suggest improvements related to the Fiddler Jam portal. The core team developers and support engineers review the submitted logs regularly.[Learn more about how to submit an issue here...]({%slug fj-report-issue%})
 
-Behind the scenes, the used technology is called **Fiddler Jam Embedded** and demonstrates how you could integrate Fiddler Jam logs directly into your website. [Learn more about how to submit an issue here...]({%slug fj-report-issue%})
+>tip Behind the scenes, the used technology is called **Fiddler Jam Embedded** and this option demonstrates how you can integrate Fiddler Jam logs directly into your website. 
 
 ![Report Issue](../images/portal/menu/menu-report-issue.png)
 
