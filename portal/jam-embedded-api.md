@@ -17,7 +17,7 @@ Fiddler Jam provides an API to integrate the capturing and sharing functionaliti
     getfiddler.com, telerik.com, *.example.com
     ```
 
-1. Obtain and store your unique Fiddler Jam Embedded API key. The API key will be received shortly after the allowlist of domains is sent (see the previous step).
+1. Obtain and store your unique Fiddler Jam Embedded API key. You will receive the API key shortly after sending the allowlist of domains (see the previous step).
 
 1. Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js
 
@@ -42,7 +42,7 @@ Fiddler Jam provides an API to integrate the capturing and sharing functionaliti
     </html>        
     ```
 
-    >important The Fiddler Jam API key is unique per each organization and grants access to your workspaces.
+    >important The Fiddler Jam API key is unique per organization and grants access to your workspaces.
 
 1. Create a file called _service-worker.js_ and import the service worker script from the following CDN link: https://downloads.getfiddler.be/jam-embedded/fje-service-worker.js
 
@@ -70,10 +70,11 @@ Fiddler Jam provides an API to integrate the capturing and sharing functionaliti
 
 | Method Name       |  Execution Type | Accepted Arguments   | Description    |
 | ---------------     |  ---------- | ------------  | -----------                                       |
-| `init(options:InitOptions)`| sync | `InitOptions` is an object of type { apiKey: string, serviceWorkerPath?:string; } | Initialize the Fiddler Jam Embedded process with an unique API key throught the `apiKey` argument. The `serviceWorkerPath` is not mandatory argument and if omitted will default to _./service-worker.js_  |
-| `start(options:StartOptions)` | async | `StartOptions` is an object of type { captureVideo: boolean, captureScreenshots: boolean, captureStorage: boolean, captureConsole: boolean, reloadPage: boolean } | Asynchonious method that starts the capturing with the explicitly actived start options. |
+| `init(options: InitOptions)`| sync | `InitOptions` is an object of type { apiKey: string, serviceWorkerPath?:string; } | Initialize the Fiddler Jam Embedded process with an unique API key throught the `apiKey` argument. The `serviceWorkerPath` is not mandatory argument and if omitted will default to _./service-worker.js_  |
+| `start(options: StartOptions)` | async | `StartOptions` is an object of type { captureVideo: boolean, captureScreenshots: boolean, captureStorage: boolean, captureConsole: boolean, reloadPage: boolean } | Asynchonious method that starts the capturing with the explicitly actived start options. |
+| `startVideoCapturing()` | async | Explicitly starts the video recording on non-Chromium browsers like Firefox and Safari. |
 | `stop()` | async | n/a | Asynchonious method that stops the capturing and sets the state property to "stopped". |
-| `share(options:ShareOptions)` | async | `ShareOptions` is an object of type { description:string, workspaceId:string, submittedBy:string } | Asynchonious method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted the log will be automatically uploaded to the default organizational workspace. |
+| `share(options: ShareOptions)` | async | `ShareOptions` is an object of type { description:string, workspaceId:string, submittedBy:string } | Asynchonious method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted the log will be automatically uploaded to the default organizational workspace. |
 | `reset()` | sync | n/a | Stops and completely resets the capturing, its state, and its properties. |
 | `addStateChangedEventListener()` | sync | n/a | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
 
@@ -105,6 +106,11 @@ If no file path is provided through the `serviceWorkerPath` argument, then the _
 self.importScripts(`https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js`);
 ```
 
+The below snippet creates a basic HTML page that utilizes most of the Fiddler Jam Embedded functionalities. There is a behavioral difference between different browsers like Edge, Chrome, Brave, and other non-Chromium browsers like Firefox and Safari.
+
+>tip One of the crucial differences is the user interaction needed to record a video in Chromium browsers vs. non-Chromium browsers when the page is reloaded. With Chromium browsers, we can call the `start()` method, and in case the `captureVideo` option is set to `true` then the video recording will start immediately after the page is refreshed. However, if a page is explicitly reloaded (through `reloadPage` set to `true`), then browsers like Firefox and Safari require user interaction to re-confirm the start of any video recording. This is where the method `startVideoCapturing` comes in place - with this method the developers can explicitly provide the needed user interaction once the page is reloaded (in the snippet below, we are demonstrating that through the button with id `btn-start-video` ).
+
+
 Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddler-jam-api-key-here>` with your actual Fiddler Jam Embedded API key.
 ```HTML
 <html lang="en">
@@ -113,26 +119,38 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
         <meta name='viewport' content='width=device-width,initial-scale=1'>
     
         <title>Fiddler Jam Embedded</title>
-        <script src="https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js"></script>
+
+        <script src="/fiddler-jam-embedded.js"></script>
         <script>
             // the Fiddler Jam Embedded object attached to the DOM window object through _fiddlerJamEmbedded
             const jam = window._fiddlerJamEmbedded;
 
+            // Use the error event listener to catch possible issues
+            // example: Firefox and Safari users needs to explcitly allow video recording through user interaction.
+            // The error listener is used to load custom UI that calls the startVideo() method
+            jam.addErrorEventListener(e => {
+                document.getElementById('last-error').innerHTML = e;
+                if (e.name === 'CaptureDisplayError') {
+                    document.getElementById('capture-info').innerHTML = 'Started without video. You need to start video recording manually.';
+                    document.getElementById('btn-start-video').hidden = false;
+                }
+            });
+
             // Initialization of the Jam Embedded process. 
             // Additionally the serviceWorkerPath can be passed with an alternative worker path.
             jam.init({
-                apiKey: '<your-unique-fiddler-jam-api-key-here>'
+                apiKey: '6227c60c287b37dc22da3af584e472c699e448b8e177f45e08e56978ff2feff80a8c363b6915344b898721919bc16440'
             });
             let captureInfo = '';
 
             // Setting default capture options
             // used as argument in the start method
-            let startOptions = {
+            let captureOptions = {
                 captureVideo: true,
                 captureScreenshots: true,
                 captureStorage: true,
                 captureConsole: true,
-                reloadPage: true
+                reloadPage: false
             };
 
             function getCaptureInfo(jamState) {
@@ -159,26 +177,26 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
                 captureInfo = getCaptureInfo(jam.state);
                 document.getElementById('capture-info').innerHTML = captureInfo;
                 if (jam.options) {
-                    startOptions = jam.options;
+                    captureOptions = jam.options;
                 }
-                document.getElementById('captureVideo').checked = startOptions.captureVideo;
-                document.getElementById('captureScreenshots').checked = startOptions.captureScreenshots;
-                document.getElementById('captureStorage').checked = startOptions.captureStorage;
-                document.getElementById('captureLogs').checked = startOptions.captureConsole;
+                document.getElementById('captureVideo').checked = captureOptions.captureVideo;
+                document.getElementById('captureScreenshots').checked = captureOptions.captureScreenshots;
+                document.getElementById('captureStorage').checked = captureOptions.captureStorage;
+                document.getElementById('captureLogs').checked = captureOptions.captureConsole;
             }
 
             function initSettingsEvents() {
                 document.getElementById('captureVideo').addEventListener('change', (e) => {
-                    startOptions.captureVideo = e.target.checked;
+                    captureOptions.captureVideo = e.target.checked;
                 });
                 document.getElementById('captureScreenshots').addEventListener('change', (e) => {
-                    startOptions.captureScreenshots = e.target.checked;
+                    captureOptions.captureScreenshots = e.target.checked;
                 });
                 document.getElementById('captureStorage').addEventListener('change', (e) => {
-                    startOptions.captureStorage = e.target.checked;
+                    captureOptions.captureStorage = e.target.checked;
                 });
                 document.getElementById('captureLogs').addEventListener('change', (e) => {
-                    startOptions.captureConsole = e.target.checked;
+                    captureOptions.captureConsole = e.target.checked;
                 });
             }
 
@@ -190,35 +208,34 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
                 initSettingsEvents();
             });
 
-            // Start capturing (async method)
+            // Start capture (async method)
             async function start() {
-                await jam.start(startOptions);
+                await jam.start(captureOptions);
             }
 
-            // Stop capturing (async method)
+            // Start video recording (async method)
+            // This method needs to be explcitly called with user interaction for non-Chromium browser
+            async function startVideo() {
+                await jam.startVideoCapturing();
+                document.getElementById('btn-start-video').hidden = true;
+                document.getElementById('capture-info').innerHTML = 'Started successfully!';
+            }
+
+            // Stop capture(async method)
             async function stop() {
                 await jam.stop();
             }
 
-            // Generating a Fiddler Jam log share URL (async method). 
+            // Generates and uploads a Fiddler Jam log share URL (async method). 
             // The logs are automatically added to the default organizational workspace in the Fiddler Jam portal.
             async function share() {
-
-                // optional share options
-                // if omitted, the log will be uploaded to the default organizational workspace
-                // without description and from an anonimious user
-                let shareOptions = {
-                    description: "...your custom description of the share case",
-                    workspaceId: "<the-unique-workspace-id>", // Note place your workspace ID here
-                    submittedBy: "niliev-page-admin"
-                };
-
-                const jamShareUrl = await jam.share(shareOptions);
+                const jamShareUrl = await jam.share();
                 document.getElementById('jam-share-url').innerHTML = jamShareUrl;
                 await navigator.clipboard.writeText(jamShareUrl);
             }
         </script>
     </head>
+    
     <body>
         <h1>Fiddler Jam Embedded</h1>
         <div>
@@ -239,14 +256,21 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
                     <input type="checkbox" id="captureLogs" name="captureLogs" />
                     <label for="captureLogs">Capture Logs</label>
                 </div>
-            </div><br/>
+            </div>
+
+            <br />
+            
             <div>
-                <button onclick="start()">Start Capture</button>
-                <button onclick="stop()">Stop Capture</button>
-                <button onclick="share()">Share</button>
-            </div> 
+                <button id="btn-start" onclick="start()">Start Capture</button>
+                <button id="btn-start-video" onclick="startVideo()" hidden>Start Video</button>
+                <button id="btn-stop" onclick="stop()">Stop Capture</button>
+                <button id="btn-share" onclick="share()">Share</button>
+            </div>
+
             <div id="capture-info"></div>
             <div id="jam-share-url"></div>
+            <label>Last Error:</label>
+            <div id="last-error"></div>
         </div>
     </body>
 </html>
