@@ -72,12 +72,12 @@ Fiddler Jam provides an API to integrate the capturing and sharing functionaliti
 | ---------------     |  ---------- | ------------  | -----------                                       |
 | `init(options: InitOptions)`| sync | `InitOptions` is an object of type { apiKey: string, serviceWorkerPath?:string; } | Initialize the Fiddler Jam Embedded process with an unique API key throught the `apiKey` argument. The `serviceWorkerPath` is not mandatory argument and if omitted will default to _./service-worker.js_  |
 | `start(options: StartOptions)` | async | `StartOptions` is an object of type { captureVideo: boolean, captureScreenshots: boolean, captureStorage: boolean, captureConsole: boolean, reloadPage: boolean } | Asynchonious method that starts the capturing with the explicitly actived start options. |
-| `startVideoCapturing()` | async | Explicitly starts the video recording on non-Chromium browsers like Firefox and Safari. |
+| `startVideoCapturing()` | async | n/a |  Asynchronous method that starts the video recording on non-Chromium browsers like Firefox and Safari. |
 | `stop()` | async | n/a | Asynchonious method that stops the capturing and sets the state property to "stopped". |
 | `share(options: ShareOptions)` | async | `ShareOptions` is an object of type { description:string, workspaceId:string, submittedBy:string } | Asynchonious method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted the log will be automatically uploaded to the default organizational workspace. |
 | `reset()` | sync | n/a | Stops and completely resets the capturing, its state, and its properties. |
-| `addErrorEventListener` | sync | n/a | An event listener to detect erros during the capturing processes. |
-| `addStateChangedEventListener()` | sync | n/a | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
+| `addErrorEventListener(handler:ErrorEventHandler)` | sync | `ErrorEventHandler` of type `(error => void)` | An event listener to detect errors during the capturing processes. |
+| `addStateChangedEventListener(handler:StateChangedEventHandler)` | sync | `StateChangedEventHandler` of type `(state) => void)` | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
 
 
 ### ShareOptions Specifics
