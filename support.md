@@ -39,4 +39,4 @@ If you are not a license holder or a trial user, you can use [a number of availa
 
 ## Suggested Links
 
-* [Trial Version and Commercial License (Fiddler Jam Portal)]({% slug fj-portal %}#trial-version-and-commercial-license)
+* [Trial Version and Commercial License (Fiddler Jam Portal)]({% slug fj-portal-license %}#fiddler-jam-portal-trial-version-and-commercial-license)

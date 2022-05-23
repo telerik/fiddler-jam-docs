@@ -1,7 +1,7 @@
 ---
 title: Portal Menu
 description: "Learn how to subscribe or unsubscribe from sharing your user statistics, find fast resource links, and sign out of your current Fiddler Jam Portal account."
-slug: fj-portal
+slug: fj-portal-menu
 publish: true
 position: 90
 previous_url: portal/fiddler-jam-portal

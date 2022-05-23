@@ -34,7 +34,7 @@ When capturing and sharing Fiddler Jam logs, consider the availability of the fo
 
 - The Fiddler Jam logs are stored in a cloud storage based in the US, North Virginia.
 
-- By default, the Fiddler Jam Portal collects usage statistics data. For more information on enabling and disabling the data collection, refer to the article on the [Fiddler Jam Portal privacy settings]({%slug fj-portal%}#privacy-settings).
+- By default, the Fiddler Jam Portal collects usage statistics data. For more information on enabling and disabling the data collection, refer to the article on the [Fiddler Jam Portal privacy settings]({%slug fj-portal-menu%}#privacy-settings).
 
 ## Recognized Sensitive Data
 
