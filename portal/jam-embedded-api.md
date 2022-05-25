@@ -280,11 +280,23 @@ Sample _index.html_ page. Note that you will have to replace `<your-unique-fiddl
 
 ### Limitations and Browser Specifics
 
-While incorporating your own Fiddler Jam Embedded tool into your website, note that there are some specifics related to different browsers and to the core functionalities.
+While incorporating your own Fiddler Jam Embedded tool into your website, note that there are some specifics related to different browsers and the core functionalities.
 
-- To capture a video recording without reloading a page, you can call the `start()` method (with `captureVideo` option set to `true`) on all browsers.
-- For all non-chromium browsers (like Firefox, Safari, etc.) - To capture a video recording with reload of a page (through `reloadPage` set to `true`), you need an explicit user interaction that calls the `startVideoRecording()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
-- All Chromium-based browsers (like Chrome, Edge, Brave, Vivaldi, etc.) will popup a native window once the `start()` method is called. The window will provide multiple recording options to record the current tab, new tab, a whole OS window, or the entire screen. Fiddler Jam should be used within the current browser instance, so we recommend always guiding users to select the **This Tab** option.
+- To capture a video recording without reloading a page, you can call the `start()` method (through `reloadPage: false` and `captureVideo: true`) on all browsers.
 
-    ![Choosing the "This Tab" option](../images/portal/embedded/fj-embed-this-tab.png)
+- (**Firefox** only) To capture a video recording with reload of a page (through `reloadPage: true` and `captureVideo: true`), you need an explicit user interaction that calls the `startVideoRecording()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
+
+- Video recording is **not** currently supported on **Safari** (macOS).
+
+- Chromium-based browser (like Chrome, Edge, Brave, Vivaldi, etc.) pops a native window once the `start()` method is called. The window provides multiple recording options to record the current tab, new tab, a whole OS window, or the entire screen. Fiddler Jam reporting should be used within the current browser instance, so we strongly recommend always guiding users to select the **This Tab** option.
+
+    ![Use "This Tab" to record the Fiddler Jam portal](../images/portal/report/fj-report-share.png)
+
+- The **Firefox** browser pops a native window once the `start()` method is called, where the user is explicitly asked to allow _<your-page-url-here>_ to see the selected screen. The window provides multiple recording options (from all active OS windows plus the opportunity to record the entire OS window). Fiddler Jam reporting should be used within the current browser instance, so we strongly recommend always guiding users to select the **_<your-page-name-here> - Mozzila Firefox_** window.
+
+    ![Choosing the Fiddler Jam Portal window in Firefox as a recording option](../images/portal/report/fj-report-firefox-allow.png)
+
+- Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
+
+
 
