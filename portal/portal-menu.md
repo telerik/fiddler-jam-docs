@@ -9,7 +9,7 @@ previous_url: portal/fiddler-jam-portal
 
 # Fiddler Jam Portal Menu
 
-The Fiddler Jam Portal menu contains the **Feedback**, **Contact Support**, **Report Issue** options and the **My Acccount** section with the **Settings**, **My Resources**, and **Sign Out** options.
+The Fiddler Jam Portal menu contains the **Feedback**, **Contact Support**, and **Report Issue** options, and the **My Account** section with the **Settings**, **My Resources**, and **Sign Out** options.
 
 The Jam portal menu is located in the top-right corner of the page.
 
@@ -18,7 +18,7 @@ The Jam portal menu is located in the top-right corner of the page.
 
 ## Feedback
 
-**Feedback** displays options for collecting information from the users regarding the Fiddler Jam Portal experience, such as its features, documentation, etc. Leaving a comment with additional details is optional if your feedback is positive and mandatory if your feedback is neutral or straightforward negative.
+**Feedback** displays options for collecting information from the users regarding the Fiddler Jam Portal experience such as its features, documentation, and so on. Leaving a comment with additional details is optional if your feedback is positive, and mandatory if your feedback is neutral or straightforward negative.
 
 ![Feedback option](../images/portal/menu/menu-feedback.png)
 
@@ -28,7 +28,7 @@ All Fiddler Jam portal users can submit a support ticket through the **Contact S
 
 ## Report Issue
 
-The **Report Issue** functionality allows you to send a detailed Fiddler Jam log with HTTPS capturing, screenshots of the user interactions, and video recording from a selected page within the Fiddler Jam portal. Use this option to report any issues, leave feedback, or suggest improvements related to the Fiddler Jam portal. The core team developers and support engineers review the submitted logs regularly.[Learn more about how to submit an issue here...]({%slug fj-report-issue%})
+The **Report Issue** functionality allows you to send a detailed Fiddler Jam log with HTTPS capturing, screenshots of the user interactions, and video recording from a selected page within the Fiddler Jam portal. Use this option to report any issues, leave feedback, or suggest improvements related to the Fiddler Jam portal. The core team developers and support engineers review the submitted logs regularly. [Learn more about how to submit an issue here...]({%slug fj-report-issue%})
 
 >tip Behind the scenes, the used technology is called **Fiddler Jam Embedded** and this option demonstrates how you can integrate Fiddler Jam logs directly into your website. 
 
@@ -37,15 +37,17 @@ The **Report Issue** functionality allows you to send a detailed Fiddler Jam log
 
 ## My Account
 
-The **My Account** is a menu option available after successful login. It provides several submenu options like the **Settings**, **My Resources**, and **Sign Out**.
+**My Account** is a menu option available after a successful login. It provides several submenu options like the **Settings**, **My Resources**, and **Sign Out**.
 
 ![My Account submenu](../images/portal/menu/menu-my-acc-all.png)
 
-### Settings
+### Settings 
+
+**Settings** contains the **Privacy Settings** options and provides quick links to legal resources.     
 
 #### Privacy Settings
 
-Your information and usage statistics enable the Fiddler team to understand better how Fiddler Jam is used and continue building an awesome product.
+Your information and usage statistics enable the Fiddler team to understand better how Fiddler Jam is used and to continue building an awesome product.
 
 To subscribe or unsubscribe from participating in the sharing of usage statistics:
 
@@ -63,7 +65,7 @@ The options provide quick links to the following legal documents:
 
 - [Terms of Services (also known as end-user license agreement)](https://www.telerik.com/purchase/license-agreement/fiddler-jam)
 - [Privacy Policy](https://www.progress.com/legal/privacy-policy)
-- Third-Party services - opens a list of the third-party services used by Fiddler Jam.
+- **Third-Party services** opens a list of the third-party services used by Fiddler Jam.
 
 ![Legal links](../images/portal/menu/menu-legal.png)
 
@@ -76,4 +78,4 @@ The options provide quick links to the following legal documents:
 
 ### Sign Out
 
-**Sign Out** allows you to log out of the currently logged user and navigate to an introduction page that provides options for creating a new user or using another account.
+**Sign Out** allows you to log out of the currently logged user and navigate to an introduction page that provides options for creating a new user or for using another account.
