@@ -307,7 +307,4 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
 
 - Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
 
-- The network traffic caught by Fiddler Jam Embedded will contain only the default whitelisted CORS headers as desxribed here https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_response_header. If you want to capture additional headers, then you will need to explicitly modify your server by using the `Access-Control-Expose-Headers` option in your server API and whitelisting the additional headers.
-
-
-
+- The network traffic caught by Fiddler Jam Embedded will contain only the default allowlisted CORS headers described here https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_response_header. If you want to capture additional headers, you will need to explicitly modify your server by using the `Access-Control-Expose-Headers` option in your server API and allowlisting the different headers.
