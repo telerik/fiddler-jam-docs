@@ -45,7 +45,7 @@ To utilize the Fiddler Jam API:
 
     >important The Fiddler Jam API key is unique per organization and grants access to your workspaces.
 
-1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.be/jam-embedded/fje-service-worker.js.
+1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js.
 
     By default, the `service-worker.js` file is expected to be on the same level as the HTML page that contains the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below you can find an example for importing the service worker from the Fiddler CDN.
     
