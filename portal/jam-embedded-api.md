@@ -65,7 +65,6 @@ The Fiddler Jam Embedded object provides the following properties:
 | Property Name       | Type               | Description                 |
 | ---------------     | ------------       | ------------                |
 | `state`             | `CaptureState`       | Indicates the current process state (enumeration with the following string values : `"ready"`, `"initialized"`, `"starting"`, `"started"`, `"sharing"`, `"shared"`).    |
-| `serviceWorkerPath` | string             | Indicates the path to the `service-worker.js` file. When omitted, the default file location is `./service-worker.js`.                                                      |
 | `options`           | `StartOptions`       | An object used during the Fiddler Jam Embedded startup. Indicates which capturing options will be turned on. The default values are `captureScreenshots = true`, `captureConsole = true`, `captureStorage = true`, `captureVideo = true`, `openNewTab = true`, `reloadPage = false`.                          |
 
 
@@ -75,7 +74,7 @@ The Fiddler Jam Embedded object provides the following methods:
 
 | Method Name       |  Execution Type | Accepted Arguments   | Description    |
 | ---------------     |  ---------- | ------------  | -----------                                       |
-| `init(options: InitOptions)`| sync | `InitOptions` is an object of type `{ apiKey: string, serviceWorkerPath:string; }` | Initialize the Fiddler Jam Embedded process with an unique API key through the `apiKey` argument. The `serviceWorkerPath` is not a mandatory argument and if omitted will default to `./service-worker.js`. |
+| `init(options: InitOptions)`| sync | `InitOptions` is an object of type `{ apiKey: string, serviceWorkerPath:string }` | Initialize the Fiddler Jam Embedded process with an unique API key through the `apiKey` argument. The `serviceWorkerPath` is not a mandatory argument and if omitted will default to `./service-worker.js`. |
 | `start(options: StartOptions)` | async | `StartOptions` is an object of type `{ captureVideo: boolean, captureScreenshots: boolean, captureStorage: boolean, captureConsole: boolean, maskSensitiveData: boolean, reloadPage: boolean }` | An asynchronous method that starts the capturing with the explicitly activated start options. |
 | `startVideoCapturing()` | async | n/a |  An asynchronous method that starts the video recording on non-Chromium browsers like Firefox and Safari. |
 | `stop()` | async | n/a | An asynchronous method that stops the capturing and sets the state property to `"stopped"`. |
