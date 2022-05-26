@@ -76,7 +76,7 @@ The Fiddler Jam Embedded object provides the following methods:
 | Method Name       |  Execution Type | Accepted Arguments   | Description    |
 | ---------------     |  ---------- | ------------  | -----------                                       |
 | `init(options: InitOptions)`| sync | `InitOptions` is an object of type `{ apiKey: string, serviceWorkerPath?:string; }`. | Initialize the Fiddler Jam Embedded process with an unique API key through the `apiKey` argument. The `serviceWorkerPath` is not a mandatory argument and if omitted will default to `./service-worker.js`. |
-| `start(options: StartOptions)` | async | `StartOptions` is an object of type `{ captureVideo: boolean, captureScreenshots: boolean, captureStorage: boolean, captureConsole: boolean, reloadPage: boolean }`. | An asynchronous method that starts the capturing with the explicitly activated start options. |
+| `start(options: StartOptions)` | async | `StartOptions` is an object of type `{ captureVideo: boolean, captureScreenshots: boolean, captureStorage: boolean, captureConsole: boolean, maskSensitiveData: boolean, reloadPage: boolean }`. | An asynchronous method that starts the capturing with the explicitly activated start options. |
 | `startVideoCapturing()` | async | n/a |  An asynchronous method that starts the video recording on non-Chromium browsers like Firefox and Safari. |
 | `stop()` | async | n/a | An asynchronous method that stops the capturing and sets the state property to `"stopped"`. |
 | `share(options: ShareOptions)` | async | `ShareOptions` is an object of type `{ description:string, workspaceId:string, submittedBy:string }`. | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted, the log will be automatically uploaded to the default organizational workspace. |
@@ -160,6 +160,7 @@ The snippet uses a sample `index.html` page. Note that you will have to replace 
                 captureScreenshots: true,
                 captureStorage: true,
                 captureConsole: true,
+                maskSensitiveData: true
                 reloadPage: false
             };
 
