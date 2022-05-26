@@ -20,7 +20,7 @@ To utilize the Fiddler Jam API:
 
 1. Obtain and store your unique Fiddler Jam Embedded API key. You will receive the API key shortly after sending the list of allowed domains.
 
-1. Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js.
+1. Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js.
 
 1. Initialize the Fiddler Jam Embedded object with your Fiddler Jam API key. The Fiddler Jam Embedded object is attached to the [`window`](https://www.w3schools.com/jsref/obj_window.asp) object of the page as a property called `_fiddlerJamEmbedded`.
 
@@ -31,7 +31,7 @@ To utilize the Fiddler Jam API:
             <meta name='viewport' content='width=device-width,initial-scale=1'>
         
             <title>Fiddler Jam Embedded</title>
-            <script src="https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js"></script>
+            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js"></script>
             <script>
                 const jam = window._fiddlerJamEmbedded;
                 jam.init({
@@ -50,7 +50,7 @@ To utilize the Fiddler Jam API:
     By default, the `service-worker.js` file is expected to be on the same level as the HTML page that contains the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below you can find an example for importing the service worker from the Fiddler CDN.
     
     ```JavaScript
-    self.importScripts(`https://downloads.getfiddler.be/jam-embedded/fje-service-worker.js`);
+    self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`);
     ```
 
 ## Fiddler Jam API
@@ -109,7 +109,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
 If no file path is provided through the `serviceWorkerPath` argument, then the `service-worker.js` file must be on the same level as the `index.html` file below.
 
 ```JavaScript
-self.importScripts(`https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js`);
+self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js`);
 ```
 
 The following snippet creates a basic HTML page that utilizes most of the Fiddler Jam Embedded functionalities. Different browsers, like Edge, Chrome, Brave, and other non-Chromium browsers such as Firefox and Safari, may show behavioral differences.
@@ -306,6 +306,8 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
     ![Choosing the Fiddler Jam Portal window in Firefox as a recording option](../images/portal/report/fj-report-firefox-allow.png)
 
 - Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
+
+- The network traffic caught by Fiddler Jam Embedded will contain only the default whitelisted CORS headers as desxribed here https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_response_header. If you want to capture additional headers, then you will need to explicitly modify your server by using the `Access-Control-Expose-Headers` option in your server API and whitelisting the additional headers.
 
 
 
