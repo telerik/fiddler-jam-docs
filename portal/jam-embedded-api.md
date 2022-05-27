@@ -12,7 +12,7 @@ Fiddler Jam Embedded is a JavaScript library that provides an API to integrate t
 
 ## Integrate Fiddler Jam into Your App
 
-Follow the steps below to include and use Fiddler Jam Embedded library in your webpage:
+Follow the steps below to include and use the Fiddler Jam Embedded library in your webpage:
 
 1. Provide the list of domains that will integrate it (you can use Fiddler Jam Embedded only with a pre-set list of domains)
 
