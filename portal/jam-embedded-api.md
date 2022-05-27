@@ -8,11 +8,13 @@ position: 56
 
 # Fiddler Jam Embedded
 
-Fiddler Jam provides an API to integrate the capturing and sharing functionalities into your page while using your UI. 
+Fiddler Jam Embedded is a JavaScript library that provides an API to integrate the capture and share functionalities into your page while using your UI. 
 
-Integrate Fiddler Jam into your app:
+## Integrate Fiddler Jam into Your App
 
-1. You can use Fiddler Jam Embedded only with a pre-set list of domains. Provide the list of domains that will integrate it to support@getfiddler.com.
+Follow the steps below to include and use Fiddler Jam Embedded library in your webpage:
+
+1. Provide the list of domains that will integrate it (you can use Fiddler Jam Embedded only with a pre-set list of domains)
 
     ```CSV
     getfiddler.com, telerik.com, *.example.com
