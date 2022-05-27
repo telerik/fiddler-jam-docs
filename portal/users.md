@@ -44,7 +44,7 @@ Depending on the user assigned role, the Fiddler Jam portal provides different a
 
 ### User Role
 
-Depending on the active Fiddler Jam [subscription plan]({%slug fj-portal%}#subscriptions), the Account Owner assigns a different number of seats to the User role.
+Depending on the active Fiddler Jam [subscription plan]({%slug fj-portal-license%}), the Account Owner assigns a different number of seats to the User role.
 
 A User can view and maintain submitted logs and workspace logs based on the Fiddler Jam account quota. Users have full access to the Fiddler Jam dashboard functionalities as opposed to Viewers who have limited rights and can only open submitted logs added to a workspace.
 

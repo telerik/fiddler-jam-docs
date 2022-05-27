@@ -14,9 +14,9 @@ To address such scenarios, Fiddler Jam logs are fully compatible with [Fiddler E
 
 A log created by Fiddler Jam contains [additional information like screenshots and developer console logs]({%slug fj-capture-options%})). However, these options are not part of the HAR file specification, so when you save a log as a file or open a log in Fiddler Everywhere, these options won't be available.
 
-## Opening Logs in the Portal
+## Opening Jam Logs in Fiddler Everywhere
 
-Engineers can directly open any log submitted to the Fiddler Jam Portal in Fiddler Everywhere. Each captured HTTP or HTTPS session has a unique **ID** line that can be used as a reference in both the Fiddler Jam Portal and the Fiddler Everywhere desktop application.
+Engineers can directly open any log submitted to the Fiddler Jam Portal in the Fiddler Everywhere standalone application. Each captured HTTP or HTTPS session has a unique **ID** line that can be used as a reference in both the Fiddler Jam Portal and the Fiddler Everywhere desktop application.
 
 1. Install Fiddler Everywhere and make it the default tool for opening HAR files.
 

@@ -1,7 +1,7 @@
 ---
 title: Trial and License
 description: "Learn more about the trial period, subscription plan, and license of the Fiddler Jam cloud portal."
-slug: portal_license
+slug: fj-portal-license
 publish: true
 position: 100
 ---

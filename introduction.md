@@ -52,7 +52,7 @@ Fiddler Jam Portal delivers a range of handy and developer-friendly features who
 
 The Fiddler Jam Portal options are available for registered users with active seats only.
 
-* For more information about Fiddler Jam Portal trials and licenses, refer to the section on [trial version and commercial license]({% slug fj-portal %}#trial-version-and-commercial-license).
+* For more information about Fiddler Jam Portal trials and licenses, refer to the section on [trial version and commercial license]({% slug fj-portal-license %}#fiddler-jam-portal-trial-version-and-commercial-license).
 
 * For more information on managing your subscription plan, refer to the [**Frequently Asked Questions** page](https://www.telerik.com/fiddler-jam/faq).  
 

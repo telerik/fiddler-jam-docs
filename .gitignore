@@ -1,10 +1,11 @@
 .DS_Store
 .asset-cache/
+.bundle/
 .dockerignore
 .editorconfig
 .jekyll-metadata
 .ruby-version
-.vs
+.vscode/
 /_assets/
 /_build/
 /_buildApi/
@@ -13,9 +14,7 @@
 /_includes/
 /_layouts/
 /_plugins/
-/_site
 /_templates/
-/api/
 /docs-watcher/
 /favicon.ico
 /fonts/
@@ -23,6 +22,7 @@
 Dockerfile
 Gemfile
 Gemfile.lock
+_site
 _tempconfig.yml
 bs-config.js
 build-docs.sh
@@ -34,4 +34,5 @@ modify-config.sh
 robots.txt
 search.html
 start-docs.sh
+to_delete.md
 watch.sh
