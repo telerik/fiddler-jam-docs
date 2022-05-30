@@ -14,13 +14,11 @@ Fiddler Jam Embedded is a JavaScript library that provides an API to integrate t
 
 Follow the steps below to include and use the Fiddler Jam Embedded library in your webpage:
 
-1. Provide the list of domains that will integrate it (you can use Fiddler Jam Embedded only with a pre-set list of domains)
+1. Provide the list of endpoints that will integrate it (you can use Fiddler Jam Embedded only with a pre-set list of URLs)
 
     ```CSV
     https://getfiddler.com, https://docs.telerik.com
     ```
-
-    >important The [`Allow-Control-Allow-Origin`] header (which behind-the-scenes we use for the domain allowlist) is not supporting wildcarded subdomains. You can only use a global wildcard with `*` to explicitly allowlist all domains.
 
 1. Obtain and store your unique Fiddler Jam Embedded API key.
 
