@@ -17,8 +17,10 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
 1. Provide the list of domains that will integrate it (you can use Fiddler Jam Embedded only with a pre-set list of domains)
 
     ```CSV
-    getfiddler.com, telerik.com, *.example.com
+    https://getfiddler.com, https://docs.telerik.com
     ```
+
+    >important The [`Allow-Control-Allow-Origin`] header (which behind-the-scenes we use for the domain allowlist) is not supporting wildcarded subdomains. You can only use a global wildcard with `*` to explicitly allowlist all domains.
 
 1. Obtain and store your unique Fiddler Jam Embedded API key.
 
