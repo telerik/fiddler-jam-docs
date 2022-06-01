@@ -2,7 +2,7 @@
 title: Third-Party Integrations
 description: "Learn seamlessly integrate your Jam portal logs into third-party systems like Jira, GitHub, and Trello."
 slug: fj-integrations
-publish: false
+publish: true
 position: 55
 ---
 
