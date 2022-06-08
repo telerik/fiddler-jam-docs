@@ -110,7 +110,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
 If no file path is provided through the `serviceWorkerPath` argument, then the `service-worker.js` file must be on the same level as the `index.html` file below.
 
 ```JavaScript
-self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js`);
+self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`);
 ```
 
 The following snippet creates a basic HTML page that utilizes most of the Fiddler Jam Embedded functionalities. Different browsers, like Edge, Chrome, Brave, and other non-Chromium browsers such as Firefox and Safari, may show behavioral differences.
