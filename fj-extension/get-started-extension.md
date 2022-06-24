@@ -118,3 +118,4 @@ That was it! Now you are ready to dive more deeply into Fiddler Jam Chrome Exten
 * [Advanced Capturing Options]({% slug fj-capture-options %})
 * [Log Sharing Options]({% slug fj-link-options %})
 * [Error Handling]({% slug fj-error-handling %})
+* [Security Aspects]({% slug fj-security %})

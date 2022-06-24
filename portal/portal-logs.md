@@ -153,6 +153,11 @@ The following example demonstrates a captured screen recording.
 
 ![Inspecting video recording](../images/portal/logs/fj-portal-log-screen-recording.png)
 
+Note that the Jam extension will try to detect and mask any sensitive data related to payments automatically. Fields that might contain credit card numbers, PIN codes, cardholder names, CVC numbers, and other payment details are automatically masked when recognized as such (refer to the sample image below).
+
+![Example for masked video output](../images/portal/masking/video-mask-example.png)
+
+
 ### Inspecting Storage Details
 
 The **Storage Details** tab displays the **Local Storage** and **Session Storage** data.
