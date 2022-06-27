@@ -134,7 +134,6 @@ The Jam extension will automatically mask (remove) all sensitive data sent to or
 
 When the **Capture Video** option is enabled from the capturing options, the Jam extension will record a video that contains all interactions made by the extension user. By default, the Jam extension will try to recognize any sensitive data related to payments and mask it. As a result, most payment-related forms are explicitly hidden in the produced video recording. Note that the Jam video masking does not cover 100% of all real-life cases, so always verify that the recording does not contain sensitive data that you wouldn't want to share.
 
->tip The Jam extension detects common identification that many payment providers use. If you are recording a video that is not automatically masking payment or other sensitive data, please contact us through the support option and provide as many details as possible.
 
 ## Secure Usage of the Advanced Options
 
