@@ -107,7 +107,7 @@ Fiddler Jam regards the following data as sensitive:
 
 ## Masking Sensitive Data
 
-By default, the Jam extension will mask all known-format sensitive data sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive, all masked by default. The Extension will remove masked data from the captured logs so that it will not be possible to read. By design, the Jam extension will also mask the recorded video by trying to hide any sensitive data related to payments (for example, credit card numbers, CVC codes, security pings, etc.). [Learn more about masking the video here ...](#masking-video)
+By default, the Jam extension will mask all known-format sensitive data sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive and masked by default. The Extension will remove masked data from the captured logs, and such data will not be readable. By design, the Jam extension will also mask the recorded video by trying to hide any sensitive data related to payments (for example, credit card numbers, CVC codes, security pings, etc.). [Learn more about masking the video here ...](#masking-video)
 
 The Jam extension will automatically mask (remove) all sensitive data sent to or received from the server contained in one of the following known MIME-type formats:
 
