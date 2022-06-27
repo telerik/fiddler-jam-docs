@@ -37,7 +37,9 @@ The **Capture video** option allows you to capture video recordings from the ins
 
 The submitted videos are accessible for Fiddler Jam Portal users only. A recorded log, exported as a HAR file or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere), won't contain the video recording. By default, the **Capture video** option is enabled.
 
->important The video recordings may contain and display sensitive input data, for example, data entered in forms, fields, and so on. Be careful when submitting sensitive data such as credit card information and passwords, and make sure you share them with trusted parties only. By design, the Jam extension will try to recognize and automatically mask sensetive data in the output video recording. [Learn more about the video masking here...]({%slug fj-security%}#masking-video)
+The video recordings may contain and display sensitive input data, for example, data entered in forms, fields, and so on. Be careful when submitting sensitive data such as credit card information and passwords, and make sure you share them with trusted parties only. 
+
+By design, the Jam extension will try to recognize and **mask sensitive data** in the output video recording. If your sensitive payment data is not automatically hidden in the output video, please use the [**Report Issue** portal functionality]({%slug fj-report-issue%}) to report the case to the core Fiddler team.
 
 ## Capturing Screenshots
 
