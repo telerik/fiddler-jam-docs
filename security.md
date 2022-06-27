@@ -14,7 +14,7 @@ As the Fiddler Jam Chrome Extension captures ongoing tab activities and generate
 
 When capturing and sharing Fiddler Jam logs, consider the availability of the following security indicators and highlights:
 
-- A red dot will indicate the ongoing recording when the Fiddler Jam Chrome Extension starts capturing.
+- A red dot indicates an ongoing recording.
 
 - When the Fiddler Jam Chrome Extension starts capturing, any [recognizible sensetive data](#recognized-sensitive-data) will be [automatically masked](#masking-sensitive-data).
 
