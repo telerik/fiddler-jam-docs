@@ -14,9 +14,13 @@ As the Fiddler Jam Chrome Extension captures ongoing tab activities and generate
 
 When capturing and sharing Fiddler Jam logs, consider the availability of the following security indicators and highlights:
 
-- When the Fiddler Jam Chrome Extension starts capturing, a red dot will indicate the ongoing recording.
+- A red dot indicates an ongoing recording.
+
+- When the Fiddler Jam Chrome Extension starts capturing, any [recognizible sensetive data](#recognized-sensitive-data) will be [automatically masked](#masking-sensitive-data).
 
 - When the Fiddler Jam Chrome Extension is [explicitly set to capture a video]({%slug fj-capture-options%}#capturing-videos), a screen capturing icon in the recorded tab will indicate the ongoing recording.
+
+- When the Fiddler Jam Chrome Extension is [explicitly set to capture a video]({%slug fj-capture-options%}#capturing-videos), any recognizable payment fields (for example, credit card forms) will be automatically [masked in the output video recording](#masking-video).
 
 - If either the [**Capture screenshots**]({%slug fj-capture-options%}#take-screenshots-while-capturing) or [**Capture video**]({%slug fj-capture-options%}#capture-video) option is enabled, a privacy warning appears before the recording starts.
 
@@ -24,7 +28,7 @@ When capturing and sharing Fiddler Jam logs, consider the availability of the fo
 
 - The Fiddler Jam Chrome Extension captures the content of the Chrome tab in which the capturing was initialized, of all the tabs and windows opened from that particular tab, and all tabs and windows opened from them.
 
-    All tabs and windows with active capturing will have the red dot indication in the Fiddler Jam Chrome Extension as well as a notification banner at the top of the page reading "Fiddler Jam started debugging this browser". If the red dot and the warning banner are not visible, the Fiddler Jam Chrome Extension is not capturing this browser tab.
+    All tabs and windows with active capturing will have the red dot indication in the Fiddler Jam Chrome Extension and a notification banner at the top of the page reading "Fiddler Jam started debugging this browser". If the red dot and the warning banner are not visible, the Fiddler Jam Chrome Extension is not capturing this browser tab.
 
 - By default, the **Mask cookies** option is enabled. As a result, the Extension will mask cookies values, the masked data will be removed from the captured log, and it will not be possible to read.
 
@@ -32,7 +36,7 @@ When capturing and sharing Fiddler Jam logs, consider the availability of the fo
 
 - The Fiddler Jam team doesn't have access to and can't recover password-protected log content. For more information on password protection in Fiddler Jam, refer to the article on [log sharing options]({%slug fj-link-options%}).
 
-- The Fiddler Jam logs are stored in a cloud storage based in the US, North Virginia.
+- The Fiddler Jam logs are stored in cloud storage based in the US, North Virginia.
 
 - By default, the Fiddler Jam Portal collects usage statistics data. For more information on enabling and disabling the data collection, refer to the article on the [Fiddler Jam Portal privacy settings]({%slug fj-portal-menu%}#privacy-settings).
 
@@ -103,9 +107,9 @@ Fiddler Jam regards the following data as sensitive:
 
 ## Masking Sensitive Data
 
-By default, the Extension will mask all known-format sensitive data that is sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive and all of it masked by default. The Extension will remove masked data from the captured logs so that it will not be possible to read.
+By default, the Jam extension will mask all known-format sensitive data sent to the server or received by the browser. Sent or received data in unknown formats will be considered sensitive and masked by default. The Extension will remove masked data from the captured logs, and such data will not be readable. By design, the Jam extension will also mask the recorded video by trying to hide any sensitive data related to payments (for example, credit card numbers, CVC codes, security pings, etc.). [Learn more about masking the video here ...](#masking-video)
 
-The Extension will automatically mask (remove) all sensitive data sent to or received from the server, contained in one of the following known MIME-type formats:
+The Jam extension will automatically mask (remove) all sensitive data sent to or received from the server contained in one of the following known MIME-type formats:
 
 - `application/json`
 
@@ -119,11 +123,18 @@ The Extension will automatically mask (remove) all sensitive data sent to or rec
 
 - Any that match `application/*` and have either the text `json`, `xml`, or `x-www-form-urlencoded` on the right side.
 
-- For all XHR request that returns data in other unsupported MIME types, except the ones containing the `text/*` pattern, the content is fully masked (removed).
+- For all XHR requests that return data in other unsupported MIME types, except those containing the `text/*` pattern, the content is fully masked (removed).
 
 - For all non-XHR request that returns data in other unsupported MIME types, the content is not modified and is left as is.
 
 - For data containing the `text/*` pattern when it can't be parsed to `json`, `xml`, or `x-www-form-urlencoded`, the content is not modified and is left as is.
+
+
+## Masking Video
+
+When the **Capture Video** option is enabled from the capturing options, the Jam extension will record a video that contains all interactions made by the extension user. By default, the Jam extension will try to recognize any sensitive data related to payments and mask it. As a result, most payment-related forms are explicitly hidden in the produced video recording. Note that the Jam video masking does not cover 100% of all real-life cases, so always verify that the recording does not contain sensitive data that you wouldn't want to share.
+
+>tip The Jam extension detects common identification that many payment providers use. If you are recording a video that is not automatically masking payment or other sensitive data, please contact us through the support option and provide as many details as possible.
 
 ## Secure Usage of the Advanced Options
 
@@ -131,25 +142,25 @@ The [**Advanced Options**]({%slug fj-capture-options%}) menu provides some valua
 
 Before you record a log, consider the following security concerns:
 
-- **Capture video**&mdash;(Enabled by default) The option creates a screencast of the user interactions from the initial browser tab and not from the tabs that were additionally opened.
+- **Capture video**&mdash;(Enabled by default) The option creates a screencast of the user interactions from the initial browser tab and not from the tabs that were additionally opened. Before recording a log, consider disabling the video recording option if your screen displays sensitive data.
 
-- **Capture screenshots**&mdash;(Enabled by default) The option will add a screenshot of your actions from the active Chrome tab. Before you record a log, consider disabling the screenshot option if your screen shows sensitive data.
+- **Capture screenshots**&mdash;(Enabled by default) The option will add a screenshot of your actions from the active Chrome tab. Before recording a log, consider disabling the screenshot option if your screen displays sensitive data.
 
 - **Capture console**&mdash;(Enabled by default) The option includes all developer console outputs in the recorded log.
 
 - **Capture storage info**&mdash;(Enabled by default) The option captures local (session) storage data from each inspected tab.
 
-- **Mask cookies**&mdash;(Enabled by default) While cookie key names are still readable, the option masks all cookies values so that they won't be visible to the portal users who receive the log.
+- **Mask cookies**&mdash;(Enabled by default) While cookie key names are still readable, the option masks all cookie values so they won't be visible to the portal users who receive the log.
 
 - **Disable cache**&mdash;(Enabled by default) The option sets the `Cache-Control` and `Pragma` headers to a `no-cache` value on each network request.
 
-- **Clear cookies, cache and storage on start**&mdash;(Disabled by default) Clear cookies, cache and storage of the starting page, when the capturing is started.
+- **Clear cookies, cache, and storage on start**&mdash;(Disabled by default) Clear cookies, cache, and storage of the starting page when the capturing is started.
 
 >tip As per your requirements, always check if the **Capture screenshots** and **Capture video** options are enabled or disabled. When enabled, the options may expose sensitive data (if any) even if that data is masked in the captured HTTP sessions.
 
 ## Sharing Links Securely
 
-Once the Fiddler Jam Chrome Extension records a log, it generates a unique link and distributes it as an HAR files.
+Once the Fiddler Jam Chrome Extension records a log, it generates a unique link and distributes it as HAR files.
 
 - Logs generated with the **Share as link** option can be opened through the generated and shared link by any Fiddler Jam Portal user.
 
