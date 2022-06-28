@@ -27,13 +27,12 @@ To share the recorded log with specific Fiddler Jam Portal users, you need to ex
 
 Additionally, you can protect the log with a password. Only the specified Fiddler Jam Portal users who know the password will have access to the recorded information.
 
-![Share with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails-popu.png)
-
+![Share with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails.png)
 
 
 ## Upload to Jam Portal Workspace
 
-The option **Upload to a workspace** is available for authenticated users that have associated [portal user]({%slug fj-users%}#portal-users) accounts. The recorded log uploads to a selected organizational workspace.
+The option **Upload to a workspace** is available only for authenticated users that have associated [portal user]({%slug fj-users%}#portal-users) accounts. The recorded log uploads to a selected organizational workspace.
 
 ![Upload to a workspace](../images/ext//ext-images/extension-link-options-workspace.png)
 
