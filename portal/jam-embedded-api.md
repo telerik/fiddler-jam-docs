@@ -14,12 +14,6 @@ Fiddler Jam Embedded is a JavaScript library that provides an API to integrate t
 
 Follow the steps below to include and use the Fiddler Jam Embedded library in your webpage:
 
-1. Provide the list of endpoints that will integrate it (you can use Fiddler Jam Embedded only with a pre-set list of URLs)
-
-    ```CSV
-    https://getfiddler.com, https://docs.telerik.com
-    ```
-
 1. Obtain and store your unique Fiddler Jam Embedded API key.
 
 1. Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js.
@@ -368,5 +362,3 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
     ![Choosing the Fiddler Jam Portal window in Firefox as a recording option](../images/portal/report/fj-report-firefox-allow.png)
 
 - Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
-
-- The network traffic caught by Fiddler Jam Embedded will contain only the default allowlisted CORS headers described here https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_response_header. If you want to capture additional headers, you will need to explicitly modify your server by using the `Access-Control-Expose-Headers` option in your server API and allowlisting the different headers.
