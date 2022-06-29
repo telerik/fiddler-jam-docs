@@ -27,11 +27,20 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
             <meta name='viewport' content='width=device-width,initial-scale=1'>
         
             <title>Fiddler Jam Embedded</title>
-            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js"></script>
             <script>
-                const jam = window._fiddlerJamEmbedded;
-                jam.init({
-                    apiKey: '<your-unique-Fiddler-Jam-API-key-here>'
+                // example for loading the jam-embedded script asynchronously
+                const jamEmbeddedScript = window.document.createElement('script');
+                jamEmbeddedScript.async = true;
+                jamEmbeddedScript.crossOrigin = 'anonymous';
+                jamEmbeddedScript.src = 'https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js';
+                const s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jamEmbeddedScript, s);
+
+                window.addEventListener('load', () => {
+                    const jam = window['_fiddlerJamEmbedded'];
+                    jam.init({
+                        apiKey: 'API_KEY'
+                    });
                 });
                 // .. custom implementation follows here
             </script>
@@ -135,7 +144,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
                 const jamEmbeddedScript = window.document.createElement('script');
                 jamEmbeddedScript.async = true;
                 // jamEmbeddedScript.crossOrigin = 'anonymous';
-                jamEmbeddedScript.src = 'https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js';
+                jamEmbeddedScript.src = 'https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js';
                 const s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(jamEmbeddedScript, s);
 
@@ -219,7 +228,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
     // Initialization of the Jam Embedded process. 
     // Additionally, the serviceWorkerPath can be passed with an alternative worker path.
     jam.init({
-        apiKey: '6f8755689fed37d944b8aea62d4e78d6a16515126b8433244a6145187603c930d857ea4c14e01b46b08ff2fb1add8895',
+        apiKey: '<your-unique-fiddler-jam-api-key-here>',
         serviceWorkerPath: 'service-worker.js',
     });
 
