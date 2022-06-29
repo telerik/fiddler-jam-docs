@@ -122,19 +122,27 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         
             <title>Fiddler Jam Embedded</title>
 
-            <!-- Loading the JAM Embedded code from the Jam CDNs-->
-            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js"></script>
-
-            <!-- Dynamically loading the local Jam Embedded implementation-->
+            <!-- Loading  the main Fiddler Jam Embedded source file (asynchroniosly) and adding the local Jam Embedded implementation -->
             <script>
-                function dynamicallyLoadScript(url) {
-                    var script = document.createElement("script");
-                    script.src = url;
+                function dynamicallyLoadImplementationScript(url) {
+                    const implementationScript = window.document.createElement('script');
+                    implementationScript.async = true;
+                    implementationScript.src = url;
                 
-                    document.head.appendChild(script);
+                    document.head.appendChild(implementationScript);
                 }
 
-                dynamicallyLoadScript("./jam-embedded-implementation.js");
+                const jamEmbeddedScript = window.document.createElement('script');
+                jamEmbeddedScript.async = true;
+                // jamEmbeddedScript.crossOrigin = 'anonymous';
+                jamEmbeddedScript.src = 'https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js';
+                const s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jamEmbeddedScript, s);
+
+
+                window.addEventListener('load', () => {
+                    dynamicallyLoadImplementationScript('./jam-embedded-implementation.js');
+                });
             </script>
         </head>
         
@@ -182,8 +190,20 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
     Note that you must replace `<your-unique-fiddler-jam-api-key-here>` with your actual Fiddler Jam Embedded API key.
 
     ```JavaScript
-    // The Fiddler Jam Embedded object is attached to the DOM window object through _fiddlerJamEmbedded.
-    const jam = window._fiddlerJamEmbedded;
+    // The Fiddler Jam Embedded object attached to the DOM window object through _fiddlerJamEmbedded.
+    const jam = window['_fiddlerJamEmbedded'];
+
+    let captureInfo = '';
+
+    // Setting the default capture options
+    let captureOptions = {
+        captureScreenshots: false,
+        captureConsole: true,
+        captureStorage: true,
+        captureVideo: true,
+        openNewTab: false,
+        reloadPage: false
+    };
 
     // Use the error event listener to catch possible issues.
     // For example: Firefox and Safari users needs to explicitly allow video recording through user interaction.
@@ -199,27 +219,26 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
     // Initialization of the Jam Embedded process. 
     // Additionally, the serviceWorkerPath can be passed with an alternative worker path.
     jam.init({
-        apiKey: '<your-unique-fiddler-jam-api-key-here>',
+        apiKey: '6f8755689fed37d944b8aea62d4e78d6a16515126b8433244a6145187603c930d857ea4c14e01b46b08ff2fb1add8895',
         serviceWorkerPath: 'service-worker.js',
     });
 
-    let captureInfo = '';
+    updateCaptureInfo();
 
-    // Setting the default capture options
-    // used as argument in the start method.
-    let captureOptions = {
-        captureVideo: true,
-        captureScreenshots: true,
-        captureStorage: true,
-        captureConsole: true,
-        reloadPage: false
-    };
+    jam.addStateChangedEventListener(newState => {
+        updateCaptureInfo();
+    });
+
+    initSettingsEvents();
+
 
     function getCaptureInfo(jamState) {
         switch (jamState) {
             case 'ready':
             case 'initialized':
                 return 'Ready to capture..';
+            case 'registered':
+                return 'Registered..';
             case 'starting':
                 return 'Starting..';
             case 'started':
@@ -271,28 +290,19 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         });
     }
 
-    window.addEventListener('load', () => {
-        updateCaptureInfo();
-
-        jam.addStateChangedEventListener(newState => {
-            updateCaptureInfo();
-        });
-
-        initSettingsEvents();
-    });
-
     // Start capture (async method)
     async function start() {
         document.getElementById('btn-start').disabled = true;
         document.getElementById('btn-start-video').hidden = true;
         document.getElementById('btn-stop').disabled = false;
         document.getElementById('btn-share').disabled = false;
+        document.getElementById('capture-info').innerHTML = 'Started successfully!';
 
         await jam.start(captureOptions);
     }
 
     // Start video recording (async method).
-    // This method needs to be explicitly called with the user interaction for a non-Chromium browser.
+    // This method needs to be explicitly called with the user interaction for a non-Chromium browserthat restricts the automatic video recording.
     async function startVideo() {
         document.getElementById('btn-start').disabled = true;
         document.getElementById('btn-stop').disabled = false;
@@ -305,6 +315,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
     // Stop capture (async method).
     async function stop() {
         document.getElementById('btn-stop').disabled = true;
+        document.getElementById('capture-info').innerHTML = 'Capturing Stopped!';
 
         await jam.stop();
     }
@@ -312,8 +323,14 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
     // Generates and uploads a Fiddler Jam log share URL (async method). 
     // The logs are automatically added to the default organizational workspace in the Fiddler Jam portal.
     async function share() {
+        document.getElementById('capture-info').innerHTML = 'Processing generated log!';
+        document.getElementById('jam-share-url').innerHTML = 'Please wait! Uploading the log and generating share URL ...';
+
+
         const jamShareUrl = await jam.share();
-        document.getElementById('jam-share-url').innerHTML = jamShareUrl;
+        document.getElementById('capture-info').innerHTML = 'Log generation completed!';
+        document.getElementById('jam-share-url').innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '">'+ jamShareUrl +'</a>';
+        document.getElementById('last-error').innerHTML = '';
 
         await navigator.clipboard.writeText(jamShareUrl);
     }
@@ -324,41 +341,24 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         document.getElementById('btn-stop').disabled = true;
         document.getElementById('btn-share').disabled = true;
 
-        // hard reset on any state as jam.reset() currently reset only on "stopped" and "shared" states
-        if (jam.state !== "stopped" && jam.state !== "shared") {
-            jam.updateState("initialized");
-        }
         await jam.reset();
-        
+
+        document.getElementById('capture-info').innerHTML = 'Fiddler Jam Embedded reset and ready for new capture!';
+        document.getElementById('jam-share-url').innerHTML = '';
+        document.getElementById('last-error').innerHTML = '';
     }
 
     ```
 
-The above snippets create a basic HTML page that utilizes most of the Fiddler Jam Embedded functionalities. Different browsers, like Edge, Chrome, Brave, and other non-Chromium browsers such as Firefox and Safari, may show behavioral differences.
-
->tip One of the crucial differences is the user interaction needed to record a video in Chromium browsers vs. non-Chromium browsers when the page is reloaded. 
-> 
-> With Chromium browsers, you can call the `start()` method, and if the `captureVideo` option is set to `true`, the video recording will start immediately after the page is reloaded (`reloadPage` set to `true`). 
-> 
-> However, browsers like Firefox and Safari require user interaction to re-confirm the start of any video recording. This is where developers can use the `startVideoCapturing` method to explicitly provide the needed user interaction once the page is reloaded. The following snippet demonstrates how to achieve the desired behavior through the button with the `btn-start-video` id.
+The above snippets create a basic HTML page that utilizes most Fiddler Jam Embedded functionalities. Different browsers, like Edge, Chrome, Brave, and other non-Chromium browsers such as Firefox and Safari, may show behavioral differences.
 
 
 ## Limitations and Browser Specifics
 
-While incorporating your own Fiddler Jam Embedded tool into your website, note that there are some specifics related to different browsers and the core functionalities.
+While incorporating your own Fiddler Jam Embedded tool into your website, note that some specifics are related to different browsers and the core functionalities.
 
 - To capture a video recording without reloading a page, you can call the `start()` method (through `reloadPage: false` and `captureVideo: true`) on all browsers.
 
-- (For Firefox only) To capture a video recording with reload of a page (through `reloadPage: true` and `captureVideo: true`), you need an explicit user interaction that calls the `startVideoRecording()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
-
-- Video recording is **not** currently supported on Safari (macOS).
-
-- Chromium-based browser (like Chrome, Edge, Brave, Vivaldi, and similar) pops a native window once the `start()` method is called. The window provides multiple recording options to record the current tab, a new tab, a whole OS window, or the entire screen. It would be best if you used the Fiddler Jam reporting within the current browser instance, so it is strongly recommended to continuously guide your users to select the **This Tab** option.
-
-    ![Use "This Tab" to record the Fiddler Jam portal](../images/portal/report/fj-report-share.png)
-
-- The Firefox browser pops a native window once the `start()` method is called, where the user is explicitly asked to allow `<your-page-url-here>` to see the selected screen. The window provides multiple recording options (from all active OS windows plus the opportunity to record the entire OS window). You have to use the Fiddler Jam reporting within the current browser instance, so it is strongly recommended always to guide your users to select the **_<your-page-name-here> - Mozzila Firefox_** window.
-
-    ![Choosing the Fiddler Jam Portal window in Firefox as a recording option](../images/portal/report/fj-report-firefox-allow.png)
-
 - Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
+
+- Recorded video automatically masks any data recognized as sensitive (like payment data).
