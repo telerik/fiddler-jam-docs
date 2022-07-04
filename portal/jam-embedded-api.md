@@ -224,7 +224,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         captureConsole: true,
         captureStorage: true,
         captureVideo: true,
-        captureDom: false,
+        captureDom: true,
         openNewTab: false,
         reloadPage: false
     };
