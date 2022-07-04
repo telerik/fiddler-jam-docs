@@ -24,7 +24,7 @@ Dockerfile
 Gemfile
 Gemfile.lock
 _site
-_tempconfig.yml
+_tempconfig.\`yml
 bs-config.js
 build-docs.sh
 copy_content.sh
