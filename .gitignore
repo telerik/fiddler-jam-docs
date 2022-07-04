@@ -15,12 +15,11 @@
 /_layouts/
 /_plugins/
 /_templates/
-/temp/
 /docs-watcher/
 /favicon.ico
 /fonts/
 /styles/
-Dockerfile
+Dockerfiles
 Gemfile
 Gemfile.lock
 _site

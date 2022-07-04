@@ -1,0 +1,68 @@
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1'>
+    
+        <title>Fiddler Jam Embedded</title>
+
+        <!-- Loading  the main Fiddler Jam Embedded source file (asynchroniosly) and adding the local Jam Embedded implementation -->
+        <script>
+            function dynamicallyLoadImplementationScript(url) {
+                const implementationScript = window.document.createElement('script');
+                implementationScript.async = true;
+                implementationScript.src = url;
+            
+                document.head.appendChild(implementationScript);
+            }
+
+            const jamEmbeddedScript = window.document.createElement('script');
+            jamEmbeddedScript.async = true;
+            // jamEmbeddedScript.crossOrigin = 'anonymous';
+            jamEmbeddedScript.src = 'https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js';
+            const s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jamEmbeddedScript, s);
+
+
+            window.addEventListener('load', () => {
+                dynamicallyLoadImplementationScript('./jam-embedded-implementation.js');
+            });
+        </script>
+    </head>
+    
+    <body>
+        <h1>Fiddler Jam Embedded</h1>
+        <div>
+            <div>
+                <div>
+                    <input type="checkbox" id="captureVideo" name="captureVideo" />
+                    <label for="captureVideo">Capture Video</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="captureScreenshots" name="captureScreenshots" />
+                    <label for="captureScreenshots">Capture Screenshots</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="captureStorage" name="captureStorage" />
+                    <label for="captureStorage">Capture Storage</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="captureLogs" name="captureLogs" />
+                    <label for="captureLogs">Capture Logs</label>
+                </div>
+            </div>
+
+            <br />
+            <div>
+                <button id="btn-start" onclick="start()">Start Capture</button>
+                <button id="btn-start-video" onclick="startVideo()" hidden>Start Video</button>
+                <button id="btn-stop" onclick="stop()" disabled>Stop Capture</button>
+                <button id="btn-share" onclick="share()" disabled>Share</button>
+            </div>
+            <button id="btn-reset" onclick="reset()">Reset Capture</button>
+            <div id="capture-info"></div>
+            <div id="jam-share-url"></div>
+            <div id="last-error"></div>
+            
+        </div>
+    </body>
+</html>
