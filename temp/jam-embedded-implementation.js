@@ -9,6 +9,7 @@ let captureOptions = {
     captureConsole: true,
     captureStorage: true,
     captureVideo: true,
+    captureDom: false,
     openNewTab: false,
     reloadPage: false
 };
@@ -63,7 +64,7 @@ function getCaptureInfo(jamState) {
 }
 
 function updateCaptureInfo() {
-    console.log('updateCaptureInfo');
+    console.log('updateCaptureInfo +++++++++++++++++++++');
 
     captureInfo = getCaptureInfo(jam.state);
     document.getElementById('capture-info').innerHTML = captureInfo;
