@@ -1,6 +1,13 @@
 // The Fiddler Jam Embedded object attached to the DOM window object through _fiddlerJamEmbedded.
 const jam = window['_fiddlerJamEmbedded'];
 
+// Checkbox elements from the UI in index.html
+const captureDomCheckbox = document.getElementById('captureDom');
+const captureVideoCheckbox = document.getElementById('captureVideo');
+const captureScreenshotsCheckbox = document.getElementById('captureScreenshots');
+const captureStorageCheckbox = document.getElementById('captureStorage');
+const captureLogsCheckbox = document.getElementById('captureLogs');
+
 let captureInfo = '';
 
 // Setting the default capture options
@@ -18,9 +25,9 @@ let captureOptions = {
 // For example: Firefox and Safari users needs to explicitly allow video recording through user interaction.
 // The error listener is used to load custom UI that calls the startVideo() method.
 jam.addErrorEventListener(e => {
-    document.getElementById('last-error').innerHTML = e;
+    document.getElementById('last-error').innerHTML = 'Error: ' + e;
     if (e.name === 'CaptureDisplayError') {
-        document.getElementById('capture-info').innerHTML = 'Started without video. You need to start video recording manually.';
+        document.getElementById('last-error-info').innerHTML = 'Started without video (e.g. Permission Denied). You need to start video recording manually (use "Start Video") or continue the capturing without video recording (Use "Stop Recording" when the capturing is complete.)';
         document.getElementById('btn-start-video').hidden = false;
     }
 });
@@ -32,116 +39,99 @@ jam.init({
     serviceWorkerPath: 'service-worker.js',
 });
 
-updateCaptureInfo();
+initSettingsEvents();
+updateUI();
 
 jam.addStateChangedEventListener(newState => {
-    updateCaptureInfo();
+    updateUI();
+
+    console.log(captureOptions);
 });
 
-initSettingsEvents();
 
-
-function getCaptureInfo(jamState) {
-    switch (jamState) {
-        case 'ready':
-        case 'initialized':
-            return 'Ready to capture..';
-        case 'registered':
-            return 'Registered..';
-        case 'starting':
-            return 'Starting..';
-        case 'started':
-            return 'Started..';
-        case 'stopped':
-            return 'Stopped..';
-        case 'sharing':
-            return 'Sharing..';
-        case 'shared':
-            return 'Sharing complete! Jam Session Url copied to clipboard.';
-        default:
-            return '';
-    }
-}
-
-function updateCaptureInfo() {
-    console.log('updateCaptureInfo +++++++++++++++++++++');
-
-    captureInfo = getCaptureInfo(jam.state);
-    document.getElementById('capture-info').innerHTML = captureInfo;
-
+function updateUI() {
     if (jam.options) {
         captureOptions = jam.options;
     }
 
-    document.getElementById('captureVideo').checked = captureOptions.captureVideo;
-    document.getElementById('captureScreenshots').checked = captureOptions.captureScreenshots;
-    document.getElementById('captureStorage').checked = captureOptions.captureStorage;
-    document.getElementById('captureLogs').checked = captureOptions.captureConsole;
+    captureDomCheckbox.checked = captureOptions.captureDom;
+    captureVideoCheckbox.checked = captureOptions.captureVideo;
+    captureScreenshotsCheckbox.checked = captureOptions.captureScreenshots;
+    captureStorageCheckbox.checked = captureOptions.captureStorage;
+    captureLogsCheckbox.checked = captureOptions.captureConsole;
 
-    if (captureInfo === "shared") {
-        reset();
+    if (jam.state === 'started') {
+        document.getElementById('btn-stop').disabled = false;
     }
 }
 
 function initSettingsEvents() {
-    document.getElementById('captureVideo').addEventListener('change', (e) => {
+    captureDomCheckbox.addEventListener('change', (e) => {
+        captureOptions.captureDom = e.target.checked;
+    });
+
+    captureVideoCheckbox.addEventListener('change', (e) => {
         captureOptions.captureVideo = e.target.checked;
     });
 
-    document.getElementById('captureScreenshots').addEventListener('change', (e) => {
+    captureStorageCheckbox.addEventListener('change', (e) => {
         captureOptions.captureScreenshots = e.target.checked;
     });
 
-    document.getElementById('captureStorage').addEventListener('change', (e) => {
+    captureStorageCheckbox.addEventListener('change', (e) => {
         captureOptions.captureStorage = e.target.checked;
     });
 
-    document.getElementById('captureLogs').addEventListener('change', (e) => {
+    captureLogsCheckbox.addEventListener('change', (e) => {
         captureOptions.captureConsole = e.target.checked;
     });
 }
 
 // Start capture (async method)
 async function start() {
+    await jam.start(captureOptions);
+
     document.getElementById('btn-start').disabled = true;
-    document.getElementById('btn-start-video').hidden = true;
     document.getElementById('btn-stop').disabled = false;
     document.getElementById('btn-share').disabled = false;
-    document.getElementById('capture-info').innerHTML = 'Started successfully!';
+    document.getElementById('capture-info').innerHTML = 'Started successfully! (jam.state = ' + jam.state + ')';
 
-    await jam.start(captureOptions);
 }
 
-// Start video recording (async method).
+// Starts pixel-perfect video recording (async method).
 // This method needs to be explicitly called with the user interaction for a non-Chromium browser.
 async function startVideo() {
+    await jam.startVideoCapturing();
+
     document.getElementById('btn-start').disabled = true;
     document.getElementById('btn-stop').disabled = false;
     document.getElementById('btn-share').disabled = false;
-    document.getElementById('capture-info').innerHTML = 'Started successfully!';
-
-    await jam.startVideoCapturing();
+    document.getElementById('capture-info').innerHTML = 'Started successfully! (jam.state = ' + jam.state + ')';
 }
 
 // Stop capture (async method).
 async function stop() {
-    document.getElementById('btn-stop').disabled = true;
-    document.getElementById('capture-info').innerHTML = 'Capturing Stopped!';
-
     await jam.stop();
+
+    document.getElementById('btn-start').disabled = true;
+    document.getElementById('btn-stop').disabled = true;
+    document.getElementById('btn-share').disabled = false;
+    document.getElementById('capture-info').innerHTML = 'Capturing Stopped! (jam.state = ' + jam.state + ')';
+    document.getElementById('last-error').innerHTML = '';
+    document.getElementById('last-error-info').innerHTML = '';
 }
 
 // Generates and uploads a Fiddler Jam log share URL (async method). 
 // The logs are automatically added to the default organizational workspace in the Fiddler Jam portal.
 async function share() {
-    document.getElementById('capture-info').innerHTML = 'Processing generated log!';
+    document.getElementById('capture-info').innerHTML = 'Processing generated log! (jam.state = ' + jam.state + ')';
     document.getElementById('jam-share-url').innerHTML = 'Please wait! Uploading the log and generating share URL ...';
 
-
     const jamShareUrl = await jam.share();
-    document.getElementById('capture-info').innerHTML = 'Log generation completed!';
+    document.getElementById('capture-info').innerHTML = 'Log generation completed! (jam.state = ' + jam.state + ')';
     document.getElementById('jam-share-url').innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '">'+ jamShareUrl +'</a>';
     document.getElementById('last-error').innerHTML = '';
+    document.getElementById('last-error-info').innerHTML = '';
 
     await navigator.clipboard.writeText(jamShareUrl);
 }
@@ -152,13 +142,10 @@ async function reset() {
     document.getElementById('btn-stop').disabled = true;
     document.getElementById('btn-share').disabled = true;
 
-    // hard reset on any state as jam.reset() currently reset only on "stopped" and "shared" states
-    // if (jam.state !== "stopped" && jam.state !== "shared") {
-    //     jam.updateState("initialized");
-    // }
     await jam.reset();
 
-    document.getElementById('capture-info').innerHTML = 'Fiddler Jam Embedded reset and ready for new capture!';
+    document.getElementById('capture-info').innerHTML = 'Fiddler Jam Embedded reset and ready for new capture! (jam.state = ' + jam.state + ')';
     document.getElementById('jam-share-url').innerHTML = '';
     document.getElementById('last-error').innerHTML = '';
+    document.getElementById('last-error-info').innerHTML = '';
 }

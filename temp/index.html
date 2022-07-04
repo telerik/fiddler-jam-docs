@@ -9,7 +9,7 @@
         <script>
             function dynamicallyLoadImplementationScript(url) {
                 const implementationScript = window.document.createElement('script');
-                // implementationScript.async = true;
+                implementationScript.async = true;
                 implementationScript.src = url;
             
                 document.head.appendChild(implementationScript);
@@ -22,7 +22,6 @@
             const s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(jamEmbeddedScript, s);
 
-
             window.addEventListener('load', () => {
                 dynamicallyLoadImplementationScript('./jam-embedded-implementation.js');
             });
@@ -34,9 +33,22 @@
         <div>
             <div>
                 <div>
+                    <input type="checkbox" id="captureDom" name="captureDom" />
+                    <label for="captureDom">Capture DOM</label>
+                    <br />
+                    <label>With <b>captureDom = true</b>, and <b>captureVideo = true</b> (default values), you can start capturing with video recording (iframes are not recorded) without any user interaction (no explicit permission required).</label>
+                    <br />
+                    <label>With <b>captureDom = false</b>, and <b>captureVideo = true</b>, you can start capturing with pixel-percet video recording (captures iframes), but also requires an explcit permission from the user.</label>
+                    
+                </div>
+                <br />
+                <div>
                     <input type="checkbox" id="captureVideo" name="captureVideo" />
                     <label for="captureVideo">Capture Video</label>
+                    <br />
+                    <label>Use this option alongside captureDom to enable different video recording options.</label>
                 </div>
+                <br />
                 <div>
                     <input type="checkbox" id="captureScreenshots" name="captureScreenshots" />
                     <label for="captureScreenshots">Capture Screenshots</label>
@@ -59,8 +71,11 @@
                 <button id="btn-share" onclick="share()" disabled>Share</button>
             </div>
             <button id="btn-reset" onclick="reset()">Reset Capture</button>
+
             <div id="capture-info"></div>
             <div id="jam-share-url"></div>
+            
+            <div id="last-error-info"></div>
             <div id="last-error"></div>
             
         </div>
