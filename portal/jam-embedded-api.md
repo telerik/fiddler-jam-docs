@@ -27,22 +27,19 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
             <meta name='viewport' content='width=device-width,initial-scale=1'>
         
             <title>Fiddler Jam Embedded</title>
-            <script>
-                // example for loading the jam-embedded script asynchronously
-                const jamEmbeddedScript = window.document.createElement('script');
-                jamEmbeddedScript.async = true;
-                jamEmbeddedScript.crossOrigin = 'anonymous';
-                jamEmbeddedScript.src = 'https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js';
-                const s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(jamEmbeddedScript, s);
 
-                window.addEventListener('load', () => {
+            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" async></script>
+            <script>
+                const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
+                jamEmbeddedScript.crossOrigin = 'anonymous'; // set crossOrigin to enable CORS
+                jamEmbeddedScript.addEventListener('load', () => {
                     const jam = window['_fiddlerJamEmbedded'];
                     jam.init({
                         apiKey: 'API_KEY'
                     });
+
+                    // custom implementation follows here
                 });
-                // .. custom implementation follows here
             </script>
         </head>
     </html>        
@@ -110,7 +107,7 @@ Alternatively, you can use the `share` method without the optional `ShareOptions
 
 ## Basic Implementation
 
-The following code snippets demonstrate a basic Fiddler Jam Embedded implementation you can use as a reference and run through a test localhost server.
+The following code snippets demonstrate a basic Fiddler Jam Embedded implementation.
 
 - Service worker file (for example, a file called `./service-worker.js`).
 
@@ -364,7 +361,7 @@ The above snippets create a basic HTML page that utilizes most Fiddler Jam Embed
 
 While incorporating your own Fiddler Jam Embedded tool into your website, note that there are some specifics related to different browsers and the core functionalities.
 
-1. You can **record a DOM video** while setting  `captureDom: true` and `captureVideo: true`. The DOM video recording is not pixel-perfect, and won't contain recordings from iframes. This method for video recording **does not require explicit confirmation** from the user.
+1. You can **record a DOM video** while setting  `captureDom: true` and `captureVideo: true` (default values). The DOM video recording is not pixel-perfect, and won't contain recordings from iframes. This method for video recording **does not require explicit confirmation** from the user.
 
 1. You can **record a pixel-perfect video** through while setting `captureDom: false` and `captureVideo: true`. The video recording is not pixel perfect and won't contain recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points 6 and 7 below).
 
