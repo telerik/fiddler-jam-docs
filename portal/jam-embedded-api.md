@@ -375,7 +375,7 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
 
 1. You can entirely turn off the video recording while setting `captureDom: false` and `captureVideo: false`. The log will still contain the network capture, and other exlicitly enabled data like console logs, screenshots, etc.
 
-1. (Firefox only) To record a pixel-perfect video recording with reload of a page (through `reloadPage: true`, `captureDom: false`, and `captureVideo: true`), you need an explicit user interaction that calls the `startVideo()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
+1. (Firefox only) To record a pixel-perfect video recording with reload of a page (through `reloadPage: true`, `captureDom: false`, and `captureVideo: true`), you need an explicit user interaction that calls the `startVideoCapturing()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
 
 1. (Safari only) Pixel-perfect video recording (`captureDom: false` and `captureVideo: true`) is **not** currently supported on Safari (macOS).
 
