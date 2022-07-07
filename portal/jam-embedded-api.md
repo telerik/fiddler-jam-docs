@@ -130,31 +130,23 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         
             <title>Fiddler Jam Embedded</title>
 
-            <!-- Loading the main Fiddler Jam Embedded source file (asynchroniosly) and adding the local Jam Embedded implementation -->
+            <!-- Loading the main Fiddler Jam Embedded source file asynchronously -->
+            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" async></script>
             <script>
-                function dynamicallyLoadImplementationScript(url) {
+                const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
+                jamEmbeddedScript.crossOrigin = 'anonymous'; // set crossOrigin to enable CORS (and to be able to use the load event below)
+                jamEmbeddedScript.addEventListener('load', () => {
+                    // Adding the custom implmenetaion
                     const implementationScript = window.document.createElement('script');
-                    implementationScript.async = true;
-                    implementationScript.src = url;
+                    implementationScript.src = './local-jam-embedded-implementation.js';
                 
                     document.head.appendChild(implementationScript);
-                }
-
-                const jamEmbeddedScript = window.document.createElement('script');
-                jamEmbeddedScript.async = true;
-                // jamEmbeddedScript.crossOrigin = 'anonymous';
-                jamEmbeddedScript.src = 'https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js';
-                const s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(jamEmbeddedScript, s);
-
-                window.addEventListener('load', () => {
-                    dynamicallyLoadImplementationScript('./your-local-jam-embedded-implementation.js');
                 });
             </script>
         </head>
         
         <body>
-            <h1>Fiddler Jam Embedded</h1>
+            <h1>Fiddler Jam Embedded Demo</h1>
             <div>
                 <div>
                     <div>
@@ -198,9 +190,9 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
     </html>
     ```
 
-- The Jam Embedded local script implementation (for example, a file `./your-local-jam-embedded-implementation.js`).
+- The Jam Embedded local script implementation (for example, a file `./local-jam-embedded-implementation.js`).
 
-    Note that you must replace `<your-unique-fiddler-jam-api-key-here>` with your actual Fiddler Jam Embedded API key.
+    Note that you must replace `<API_KEY>` with your actual Fiddler Jam Embedded API key.
 
     ```JavaScript
     // The Fiddler Jam Embedded object attached to the DOM window object through _fiddlerJamEmbedded.
@@ -226,11 +218,11 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         reloadPage: false
     };
 
-    // Use the error event listener to catch possible issues.
-    // For example: Firefox and Safari users needs to explicitly allow video recording through user interaction.
-    // The error listener is used to load custom UI that calls the startVideo() method.
+    // Use the error event listener to catch possible issues
     jam.addErrorEventListener(e => {
         document.getElementById('last-error').innerHTML = 'Error: ' + e;
+        console.error(e);
+
         if (e.name === 'CaptureDisplayError') {
             document.getElementById('last-error-info').innerHTML = 'Started without video (e.g. Permission Denied). You need to start video recording manually (use "Start Video") or continue the capturing without video recording (Use "Stop Recording" when the capturing is complete.)';
             document.getElementById('btn-start-video').hidden = false;
@@ -240,7 +232,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
     // Initialization of the Jam Embedded process. 
     // Additionally, the serviceWorkerPath can be passed with an alternative worker path.
     jam.init({
-        apiKey: '<your-unique-fiddler-jam-api-key-here>',
+        apiKey: '<API_KEY>',
         serviceWorkerPath: 'service-worker.js',
     });
 
@@ -331,7 +323,7 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         // The jam.share() method accepts argument of type { workspaceId: string, submittedBy: string, password: string }
         const jamShareUrl = await jam.share(); // when the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection.
         document.getElementById('capture-info').innerHTML = 'Log generation completed! (jam.state = ' + jam.state + ')';
-        document.getElementById('jam-share-url').innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '">'+ jamShareUrl +'</a>';
+        document.getElementById('jam-share-url').innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '" target="_blank">'+ jamShareUrl +'</a>';
         document.getElementById('last-error').innerHTML = '';
         document.getElementById('last-error-info').innerHTML = '';
 
