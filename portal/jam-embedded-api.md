@@ -14,11 +14,11 @@ Fiddler Jam Embedded is a JavaScript library that provides an API to integrate t
 
 Follow the steps below to include and use the Fiddler Jam Embedded library in your webpage:
 
-1. Obtain and store your unique Fiddler Jam Embedded API key.
+1. Obtain your unique Fiddler Jam Embedded API key. [Learn more on how to generate your Fiddler Jam API key here...](#generating-api-key)
 
 1. Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js.
 
-1. Initialize the Fiddler Jam Embedded object with your Fiddler Jam API key. The Fiddler Jam Embedded object is attached to the [`window`](https://www.w3schools.com/jsref/obj_window.asp) object of the page as a property called `_fiddlerJamEmbedded`.
+1. Initialize the Fiddler Jam Embedded object with your Fiddler Jam API key. The Fiddler Jam Embedded object is attached to the [`window`](https://www.w3schools.com/jsref/obj_window.asp) object of the page as a property called `_fiddlerJamEmbedded`. Use the `load` event of the Fiddler Jam Embedded object to initialize the Jam API and to add your custom implementation.
 
     ```JavaScript
     <html lang="en">
@@ -31,7 +31,7 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
             <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" async></script>
             <script>
                 const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
-                jamEmbeddedScript.crossOrigin = 'anonymous'; // set crossOrigin to enable CORS
+                jamEmbeddedScript.crossOrigin = 'anonymous';  // set crossOrigin to enable CORS (and to be able to use the load event below)
                 jamEmbeddedScript.addEventListener('load', () => {
                     const jam = window['_fiddlerJamEmbedded'];
                     jam.init({
@@ -45,7 +45,7 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
     </html>        
     ```
 
-    >important The Fiddler Jam API key is unique per organization and grants access to your workspaces.
+    >important The Fiddler Jam API key is unique per organization and grants access to your organizational workspaces.
 
 1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js.
 
@@ -347,21 +347,37 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
 
 The above snippets create a basic HTML page that utilizes most Fiddler Jam Embedded functionalities. Different browsers, like Edge, Chrome, Brave, and other non-Chromium browsers such as Firefox and Safari, may show behavioral differences.
 
+## Generating API Key
 
+You need a unique API key to use the Fiddler Jam Embedded API. The API key will allow you to initialize the Jam Embedded script, upload recorded logs to your organizational workspaces, and generate public or protected share links. Only licensed portal users can request Fiddler Jam quota and thus render their unique organizational API key. Follow these steps to generate your Fiddler Jame Embedded API key:
+
+- Contact us and request your Fiddler Jam Embedded quota. Proceed to the next step only once your organizational quota is set.
+
+- Login into the [Fiddler Jam portal](https://jam.getfiddler.com).
+
+- Navigate to the Fiddler Jam Portal menu (top-right corner) and follow the **Settings > Embedded** (the option is available only after the organizational quota is set).
+
+- Click on **API Key: Generate** link.
+
+- Copy your Fiddler Jam Embedded API key.
+
+If you want to regenerate the key, please contact us at [support@getfiddler.com](mailto:support@getfiddler.com).
 
 ## Limitations and Browser Specifics
 
-While incorporating your own Fiddler Jam Embedded tool into your website, note that there are some specifics related to different browsers and the core functionalities.
+While incorporating your own Fiddler Jam Embedded tool into your website, note that some specifics are related to different browsers and the core functionalities.
 
 1. You can **record a DOM video** while setting  `captureDom: true` and `captureVideo: true` (default values). The DOM video recording is not pixel-perfect, and won't contain recordings from iframes. This method for video recording **does not require explicit confirmation** from the user.
 
-1. You can **record a pixel-perfect video** through while setting `captureDom: false` and `captureVideo: true`. The video recording is not pixel perfect and won't contain recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points 6 and 7 below).
+1. You can **record a pixel-perfect video** through while setting `captureDom: false` and `captureVideo: true`. The video recording is pixel perfect and will contain recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points 6 and 7 below).
 
 1. To capture a pixel-perfect video recording without reloading a page, you can call the `start()` method (through `reloadPage: false`, `captureDom: false` and `captureVideo: true`) on all browsers.
 
-1. (For Firefox only) To capture a pixel-perfect video recording with reload of a page (through `reloadPage: true`, `captureDom: false`, and `captureVideo: true`), you need an explicit user interaction that calls the `startVideoRecording()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
+1. You can entirely turn off the video recording while setting `captureDom: false` and `captureVideo: false`. The log will still contain the network capture, and other exlicitly enabled data like console logs, screenshots, etc.
 
-1. Pixel-perfect video recording (`captureDom: false` and `captureVideo: true`) is **not** currently supported on Safari (macOS).
+1. (Firefox only) To record a pixel-perfect video recording with reload of a page (through `reloadPage: true`, `captureDom: false`, and `captureVideo: true`), you need an explicit user interaction that calls the `startVideo()` once the page is fully reloaded. Chromium browsers are less strict and will allow video recording on a reloaded page without secondary user interaction.
+
+1. (Safari only) Pixel-perfect video recording (`captureDom: false` and `captureVideo: true`) is **not** currently supported on Safari (macOS).
 
 1. When capturing a pixel-perfect video recording, a Chromium-based browser (like Chrome, Edge, Brave, Vivaldi, and similar) pops a native window once the `start()` method is called. The window provides multiple recording options to record the current tab, a new tab, a whole OS window, or the entire screen. It would be best if you used the Fiddler Jam reporting within the current browser instance, so it is strongly recommended to continuously guide your users to select the **This Tab** option.
 
