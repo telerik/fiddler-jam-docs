@@ -406,6 +406,4 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
 
 1. When capturing a pixel-perfect video recording, a Chromium-based browser (like Chrome, Edge, Brave, Vivaldi, and similar) pops a native window once the `start()` method is called. The window provides multiple recording options to record the current tab, a new tab, a whole OS window, or the entire screen. It would be best if you used the Fiddler Jam reporting within the current browser instance, so it is strongly recommended to continuously guide your users to select the **This Tab** option.
 
-    ![Use "This Tab" to record the Fiddler Jam portal](../images/portal/report/fj-report-share.png)s
-
 1. Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
