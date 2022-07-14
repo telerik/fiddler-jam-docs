@@ -38,7 +38,7 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
                             apiKey: 'API_KEY'
                         });
 
-                        // custom implementation follows here
+                        // Custom implementation follows here
                     });
                 </script>
             </head>
@@ -77,13 +77,40 @@ The Fiddler Jam Embedded object provides the following methods:
 | Method Name       |   Accepted Arguments   | Description    |
 | ---------------     |  ---------- | ------------  | -----------                                       |
 | `init(options: InitOptions)`| `InitOptions` is an object of type `{ apiKey: string, serviceWorkerPath:string }` | Initialize the Fiddler Jam Embedded process with an unique API key through the `apiKey` argument. The `serviceWorkerPath` is not a mandatory argument and if omitted will default to `./service-worker.js`. |
-| `start(options: StartOptions)` |  `StartOptions` is an object of type `{ captureScreenshots: boolean,  captureConsole: boolean,  captureStorage: boolean, captureVideo: boolean, videoFormat: string; openNewTab: boolean, reloadPage: boolean }` | An asynchronous method that starts the capturing with the explicitly activated start options. |
+| `start(options: StartOptions)` |  `StartOptions` is an object of type `{ captureScreenshots: boolean,  captureConsole: boolean,  captureStorage: boolean, captureVideo: boolean, videoFormat: string; openNewTab: boolean, reloadPage: boolean, maskSensitiveData: boolean, maskSelector: string }` | An asynchronous method that starts the capturing with the explicitly activated start options. |
 | `startVideoCapturing()` |  n/a |  An asynchronous method that explicitly ask for user permission to start video recording (pixel-peffect video only) |
 | `stop()` | n/a | An asynchronous method that stops the capturing and sets the state property to `"stopped"`. |
 | `share(options: ShareOptions)` |  `ShareOptions` is an object of type `{ workspaceId: string, submittedBy: string, password: string }` | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted, the log will be automatically uploaded to the default organizational workspace. |
 | `reset()` |  n/a | Stops and completely resets the capturing, its state, and its properties. |
 | `addErrorEventListener(handler)` |  `ErrorEventHandler` of type `(error => void)` | An event listener to detect errors during the capturing processes. |
 | `addStateChangedEventListener(handler)` |  `StateChangedEventHandler` of type `(state) => void)` | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
+
+
+### StartOptions Specifics
+
+Fiddler Jam Embedded can capture additional information apart from the HTTP/HTTPS traffic. Use the `StartOptions` to specify the information the recorded Jam log should include.
+
+The `start` method requires a mandatory argument of the `StartOptions` object type:
+
+```JavaScript
+let startOptions =  {
+    captureScreenshots: true, // adds or removes screenshots of user interactions
+    captureConsole: true, // adds or removes developers logs
+    captureStorage: true, // adds or removes local storage information
+    captureVideo: true, // enables or disable video recording
+    videoFormat: "dom", // sets the video recording to "dom" or "pixel-perfect" video formats
+    openNewTab: false, // when set to true will explcitly start the log recording in a new browser tab
+    reloadPage: false, // when set to true will explicitly reload the page prior to the klog recording start
+    maskSensitiveData: true, // enalbes or disables sensitive data masking in video recording (DOM format only)
+    maskSelector: null // accepts comma-separated list of selectors for masking (for example: ".my-class, #custom-id")
+};
+```
+
+All settings are optional, with default values shown in the example above. The following rules apply:
+
+- The `captureVideo` enables or disables video capturing with the default format set as "dom".
+- When `maskSensitiveData` is enabled, but the `maskSelector` is omitted, the masking will use a built-in list of selectors commonly used in payment and transaction forms.
+- When custom selectors are added through the `maskSelector` string property, the built-in list of selectors will be dismissed.
 
 
 ### ShareOptions Specifics
@@ -105,14 +132,23 @@ The shared log will be encrypted if a password is set. The password must be at l
 Alternatively, you can use the `share` method without the optional `ShareOptions` argument. In that case, the log won't be encrypted and will be uploaded to the default organizational workspace.
 
 
-
-### DOM vs Pixel-Perfect Video Recording
+### DOM versus Pixel-Perfect Video Recording
 
 Apart from the HTTPS capturing, a Fiddler Jam log might contain a video recording when the `captureVideo` option is set to `true`. By default, the recorded video will be of DOM type. Still, you can control the type of the video recording by explicitly setting the `videoFormat` option to one of the following string values:
 
-- `dom`: The DOM video recording is supported on all major browsers (Chrome, Edge, Safari, Firefox, Brave, etc.) and produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility and that it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method).
+- **"dom":** The DOM video recording is supported on all major browsers (Chrome, Edge, Safari, Firefox, Brave, etc.) and produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method).
 
-- `pixel-perfect`: The pixel-perfect video uses native recording options but is currently supported only on Chromium-based browsers (Chrome, Edge, Brave, Vivaldi). It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups).
+- **"pixel-perfect"**: The pixel-perfect video uses native recording options but is currently supported only on Chromium-based browsers (Chrome, Edge, Brave, Vivaldi). It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups).
+
+
+### Masking Sensitive Data
+
+The DOM video recording supports automatic masking of sensitive data through the `maskingSensitiveData` boolean property and the `maskSelector` string property. By default, the sensitive data masking is enabled (even if the `maskingSensitiveData` is omitted) and uses a built-in list of selectors commonly used in payment forms. To overwrite the built-in selectors, you can use the `maskSelector` string property and provide a comma-separated list of selectors.
+
+The built-in list of selectors
+```javascript
+[autocomplete="cc-number"],[autocomplete="cc-exp"],[autocomplete="cc-exp-month"],[autocomplete="cc-exp-year"],[autocomplete="cc-csc"],[autocomplete="cc-scs"],iframe[title="paypal_card_form"],iframe[src*="adyen.com"],iframe[src*="www.computop-paygate.com"],iframe[src*="paymentcomponent.booking.com"],iframe[src*="checkout.mypos.eu"],form[action*="apx-security.amazon.com"],form[action*="oppwa.com"],[name="addCreditCardNumber"],[name="credit-card-number"],[name="ccnumber"],[name="ccexpmonth"],[name="ccexpyear"],[name="ccexp"],[name="cvv"],[name="cvv2"],[name^="credit_card"],[name="creditCard"],[name="maskedInput"],[name="payment[cc_number]"],[name="payment[cc_exp_month]"],[name="payment[cc_exp_year]"],[name="payment[cc_cid]"],#creditCardNumber,#cc-number,#cc-exp-month,#cc-exp-year,#credit-card-number,#credit-card-expiration,#credit-card-cvv,#expiry-date,#credit-card-security,#card_number,#card_cvn,#cardentry,#cc-panel--paymentstep,#cardNum,#card-number,#expirationDate,#expiration-date,#expiration-month,#expiration-year,#card-cvv,#cvv,#credit_card_month,#credit_card_year,#addCardForm,#securityCode,#security-code,#addNewPaymentForm,#PaymentMethodForm,#checkout-payment-credit-card-number-text,#checkout-payment-credit-card-cvv-text,#checkout-payment-credit-card-expire-month-dropdown,#checkout-payment-credit-card-expire-month-dropdown div,#checkout-payment-credit-card-expire-year-dropdown,#checkout-payment-credit-card-expire-year-dropdown div,.credit-card-wrapper,.__PrivateStripeElement,.ccnum,.CreditCardNumber,.card-num,.cardno,.card-number,.cardNumber,.expmonth,.expyear,.expiry,.expDate,.expiratioDate,.expiry-date,.expiryDate,.CVC,.ccField,.securityCode,.seccode,.sec-code,.CC,.CVV,.cvc-number,.card-security,.verificationCode,.card-form,.card_form,.checkout_form,.checkout-form,.paymentForm,.payment-form,.pay-form,.get-info-card-container,.payment-container-body,.row-for-credit-card-details
+```
 
 
 ## Basic Implementation
@@ -123,7 +159,9 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
 
     When no file path is provided through the `serviceWorkerPath` argument, then the `service-worker.js` file must be on the same level as the `index.html` file.
 
-Í
+```javascript
+self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`);
+```
 
 - The main HTML page (for example, a file called `./index.html`).
 
@@ -139,18 +177,22 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
         <title>Fiddler Jam Embedded</title>
 
         <!-- Loading the main Fiddler Jam Embedded source file asynchronously -->
-        <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" async></script>
+        <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" 
+                id="jamEmbeddedScript" crossorigin="anonymous" async>
+        </script>
         <script>
             const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
-            jamEmbeddedScript.crossOrigin = 'anonymous'; // set crossOrigin to enable CORS (and to be able to use the load event below)
             jamEmbeddedScript.addEventListener('load', () => {
-                // Adding the custom implmenetaion
+                // Loading the custom implementation from an external file (local-jam-embedded-implementation.js)
+                // Alternatively, you could directly add the implementation code
                 const implementationScript = window.document.createElement('script');
                 implementationScript.src = './local-jam-embedded-implementation.js';
-            
                 document.head.appendChild(implementationScript);
             });
         </script>
+        <style>
+            .my-class {color:green;background-color: lightgray;}
+        </style>
     </head>
     
     <body>
@@ -166,9 +208,20 @@ The following code snippets demonstrate a basic Fiddler Jam Embedded implementat
                         <input type="radio" name="myRadios" id="pixel" value="pixel-perfect" />
                         <label for="pixel" id="pixel-lbl">videoFormat: "pixel-perfect"</label>
                     </form>
-                    <label>Set <b>captureVideo</b> to <b>true</b> and use <b>videoFormat</b> to enable different video recording options.</label><br/>
-                    <label>The <b>videoFormat</b> option accepts <b>"dom"</b> and <b>"pixel-perfect"</b> string values. When ommited, the default recording type will be <b>"dom"</b></label>
-                </div><br/> 
+                    <div class="my-class">
+                        <label>Set <b>captureVideo</b> to <b>true</b> and use <b>videoFormat</b> to enable different video recording options.</label><br/>
+                        <label>The <b>videoFormat</b> option accepts <b>"dom"</b> and <b>"pixel-perfect"</b> string values. When omitted, the default recording type will be <b>"dom"</b></label>
+                    </div>
+                    </div><br/> 
+                <div>
+                    <input type="checkbox" id="maskSensitiveData" name="maskSensitiveData" />
+                    <label for="maskSensitiveData">Mask Sensitive Data</label><br/>
+                    <label for="maskSelector">Selectors to mask (comma-separated):</label>
+                    <input type="text" id="maskSelector" class="test" name="maskSelector" value=".my-class"><br/>
+                    <div class="my-class">
+                        <label id="mask-test-lbl">Use selector .my-class to test masking of data in video recordings</label>
+                    </div>
+                </div><br/>
                 <div>
                     <input type="checkbox" id="captureScreenshots" name="captureScreenshots" />
                     <label for="captureScreenshots">Capture Screenshots</label>
@@ -210,6 +263,8 @@ const jam = window['_fiddlerJamEmbedded'];
 const captureVideoCheckbox = document.getElementById('captureVideo');
 const domRadioInput = document.getElementById('dom');
 const pixelRadioInput = document.getElementById('pixel');
+const maskSensitiveDataCheckbox = document.getElementById('maskSensitiveData');
+const maskSelectorField = document.getElementById('maskSelector');
 const captureScreenshotsCheckbox = document.getElementById('captureScreenshots');
 const captureStorageCheckbox = document.getElementById('captureStorage');
 const captureLogsCheckbox = document.getElementById('captureLogs');
@@ -225,7 +280,9 @@ let captureOptions = {
     captureVideo: true,
     videoFormat: "dom", // "dom" or "pixel-perfect"
     openNewTab: false,
-    reloadPage: false
+    reloadPage: false,
+    maskSensitiveData: true,
+    maskSelector: ".my-class" // Note that adding your own custom selectors overwrites the built-in Jam Embedded masking selectors
 };
 
 // Use the error event listener to catch possible issues
@@ -241,7 +298,7 @@ jam.addErrorEventListener(e => {
 
 // Initialization of the Jam Embedded process. The serviceWorkerPath can be used to set alternative worker path.
 jam.init({
-    apiKey: 'API_KEY>',
+    apiKey: '<API_KEY>',
     serviceWorkerPath: 'service-worker.js',
 });
 
@@ -258,6 +315,7 @@ function updateUI() {
     captureVideoCheckbox.checked = captureOptions.captureVideo;
     captureOptions.videoFormat === "dom" ? domRadioInput.checked = true : domRadioInput.checked = false;
     captureOptions.videoFormat === "dom" ? pixelRadioInput.checked = false : pixelRadioInput.checked = true;
+    maskSensitiveDataCheckbox.checked = captureOptions.maskSensitiveData;
     captureScreenshotsCheckbox.checked = captureOptions.captureScreenshots;
     captureStorageCheckbox.checked = captureOptions.captureStorage;
     captureLogsCheckbox.checked = captureOptions.captureConsole;
@@ -284,8 +342,21 @@ function initSettingsEvents() {
     for (var i = 0; i < rad.length; i++) {
         rad[i].addEventListener('change', function() {
             captureOptions.videoFormat = this.value; // "dom" | "pixel-perfect"
+
+            captureOptions.videoFormat === "pixel-perfect" ? maskSensitiveDataCheckbox.disabled = true : maskSensitiveDataCheckbox.disabled = false;
+            captureOptions.videoFormat === "pixel-perfect" ? maskSelectorField.disabled = true : maskSelectorField.disabled  = false;
+            captureOptions.videoFormat === "pixel-perfect" ? document.getElementById("mask-test-lbl").innerHTML = "Video masking is not currently supported for pixel-perfect videos!" : document.getElementById("mask-test-lbl").innerHTML = "Use selector .my-class to test masking of data in video recordings"
         });
     }
+
+    maskSensitiveDataCheckbox.addEventListener('change', (e) => {
+        captureOptions.maskSensitiveData = e.target.checked;
+    });
+
+    maskSelectorField.addEventListener('input', (e) => {
+        console.log("The video reocrding will mask the following selectors: " + e.target.value);
+        captureOptions.maskSelector = e.target.value;
+    });
 
     captureScreenshotsCheckbox.addEventListener('change', (e) => {
         captureOptions.captureScreenshots = e.target.checked;
@@ -310,8 +381,8 @@ async function start() {
     document.getElementById('capture-info').innerHTML = 'Started successfully!<br/>jam.state = ' + jam.state + ';<br/>captureVideo = ' + captureOptions.captureVideo +';<br/>videoFormat = "'+ captureOptions.videoFormat +'";<br/>captureScreenshots = ' + captureOptions.captureScreenshots +';<br/>captureConsole = ' + captureOptions.captureConsole +';<br/>captureStorage = ' + captureOptions.captureStorage +';';
 }
 
-// Starts pixel-perfect video recording (async method). 
-// Use this method when explicit permissoin is required to start video recording (for example, the uswer denied permission after calling start())
+// Starts pixel-perfect video recording (async method)
+// Use this method when explicit permissoin is required to start video recording (for example, the user denied permission after calling start())
 async function startVideo() {
     await jam.startVideoCapturing();
 
@@ -321,7 +392,7 @@ async function startVideo() {
     document.getElementById('capture-info').innerHTML = 'Started successfully! (jam.state = ' + jam.state + ')';
 }
 
-// Stop capture (async method).
+// Stop capture (async method)
 async function stop() {
     await jam.stop();
 
@@ -333,8 +404,7 @@ async function stop() {
     document.getElementById('last-error-info').innerHTML = '';
 }
 
-// Generates and uploads a Fiddler Jam log share URL (async method). 
-// The logs are automatically added to the default organizational workspace in the Fiddler Jam portal.
+// Generates and uploads a Fiddler Jam log share URL (async method).
 async function share() {
     document.getElementById('capture-info').innerHTML = 'Processing generated log! (jam.state = ' + jam.state + ')';
     document.getElementById('jam-share-url').innerHTML = 'Please wait! Uploading the log and generating share URL ...';
@@ -380,21 +450,23 @@ You need a unique API key to use the Fiddler Jam Embedded API. The API key will 
 
 - Copy your Fiddler Jam Embedded API key.
 
-If you want to regenerate the key, please contact us at [support@getfiddler.com](mailto:support@getfiddler.com).
+If you want to regenerate the key, please get in touch with us at [support@getfiddler.com](mailto:support@getfiddler.com).
 
 ## Limitations and Log Specifics
 
 While incorporating your own Fiddler Jam Embedded tool into your website, note that some specifics are related to different browsers and the core Fiddler Jam Embedded functionalities.
 
-1. A generated Fiddler Jam Log contains captured HTTP/HTTPS traffic, and (depending on the pre-set `StartOptions`) screenshots, storage information, video recording, and development console logs. Consider informing your end-users about the possibility of revealing sensetive data when a log is shared.
+1. A generated Fiddler Jam Log contains captured HTTP/HTTPS traffic, and (depending on the pre-set `StartOptions`) screenshots, storage information, video recording, and development console logs. Consider informing your end-users about the possibility of revealing sensitive data when a log is shared.
 
 1. You can **record a DOM video** while setting  `captureVideo: true` and `videoFormat: 'dom'` (default values). The DOM video recording is not pixel-perfect, and does not contain recordings from iframes. This method for video recording **does not require explicit confirmation** from the user.
 
-1. DOM video recordins are supported on Firefox, Safari and on all Chromiumb-based browsers. 
+1. DOM video recordings are supported on Firefox, Safari, and on all Chromium-based browsers. 
 
-1. The DOM video recording starts without an explicit permission from the end-user so consider warning your users about the possibility of revealing sensetive data.
+1. The DOM video recording starts without explicit permission from the end-user, so consider warning your users about the possibility of revealing sensitive data.
 
-1. You can **record a pixel-perfect video** through while setting `captureVideo: true` and `videoFormat: 'pixel-perfect'` . The video recording is pixel perfect and contains recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points 6 and 7 below).
+1. Masking of sensitive data is supported only for DOM video recording.
+
+1. You can **record a pixel-perfect video** through while setting `captureVideo: true` and `videoFormat: 'pixel-perfect'` . The video recording is pixel perfect and contains recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points below).
 
 1. Pixel-perfect video is currently supported only on Chromium-based browsers (like Chrome, Edge, Brave, etc.). 
 
@@ -402,7 +474,7 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
 
 1. To capture a pixel-perfect video recording without reloading a page, you can call the `start()` method (through `reloadPage: false`, `captureVideo: true`, and `videoFormat: 'pixel-perfect'`).
 
-1. You can entirely turn off the video recording while setting `captureVideo: false`. The log will still contain the network capture, and other exlicitly enabled data like console logs, screenshots, etc.
+1. You can turn off the video recording while setting `captureVideo: false`. The log will still contain the network capture and other explicitly enabled data like console logs, screenshots, etc.
 
 1. When capturing a pixel-perfect video recording, a Chromium-based browser (like Chrome, Edge, Brave, Vivaldi, and similar) pops a native window once the `start()` method is called. The window provides multiple recording options to record the current tab, a new tab, a whole OS window, or the entire screen. It would be best if you used the Fiddler Jam reporting within the current browser instance, so it is strongly recommended to continuously guide your users to select the **This Tab** option.
 
