@@ -28,10 +28,9 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
             
                 <title>Fiddler Jam Embedded</title>
 
-                <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" async></script>
+                <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" crossorigin="anonymous" async></script>
                 <script>
                     const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
-                    jamEmbeddedScript.crossOrigin = 'anonymous';  // set crossOrigin to enable CORS (and to be able to use the load event below)
                     jamEmbeddedScript.addEventListener('load', () => {
                         const jam = window['_fiddlerJamEmbedded'];
                         jam.init({
@@ -49,7 +48,7 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
 
 1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js.
 
-    By default, the `service-worker.js` file is expected to be on the same level as the HTML page that contains the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN.
+    By default, the `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN.
     
 ```JavaScript
 self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`);
@@ -67,7 +66,7 @@ The Fiddler Jam Embedded object provides the following properties:
 | Property Name       | Type               | Description                 |
 | ---------------     | ------------       | ------------                |
 | `state`             | `CaptureState`       | Indicates the current process state (enumeration with the following string values : `"ready"`, `"initialized"`, `"registered"`, `"starting"`, `"started"`, `"stopped"` `"sharing"`, `"shared"`).    |
-| `options`           | `StartOptions`       | An object used during the Fiddler Jam Embedded startup. Indicates which capturing options will be turned on. The default values are  `captureScreenshots = true, captureConsole = true, captureStorage = true, captureVideo = true, videoFormat = "dom" | "pixel-perfect", openNewTab = false, reloadPage = false`  |
+| `options`           | `StartOptions`       | An object used during the Fiddler Jam Embedded startup. Indicates which capturing options will be turned on. The default values are  `captureScreenshots = true, captureConsole = true, captureStorage = true, captureVideo = true, videoFormat = "dom" | "pixel-perfect", openNewTab = false, reloadPage = false, maskSensitiveData = true`  |
 
 
 ### Methods
@@ -108,7 +107,7 @@ let startOptions =  {
 
 All settings are optional, with default values shown in the example above. The following rules apply:
 
-- The `captureVideo` enables or disables video capturing with the default format set as "dom".
+- The `captureVideo` enables or disables video capturing with the default format "dom".
 - When `maskSensitiveData` is enabled, but the `maskSelector` is omitted, the masking will use a built-in list of selectors commonly used in payment and transaction forms.
 - When custom selectors are added through the `maskSelector` string property, the built-in list of selectors will be dismissed.
 
@@ -127,7 +126,11 @@ let shareOptions = {
 
 To obtain the `<the-unique-workspace-id>`, open https://jam.getfiddler.com/ and navigate to the desired workspace. Then, extract the workspace ID from the browser address bar by copying the last API endpoint. For example, the following URL https://jam.getfiddler.com/spaces/0d6694d0-88c5-4112-a5c4-0788f9b25dd0 loads a workspace with ID `0d6694d0-88c5-4112-a5c4-0788f9b25dd0`. 
 
-The shared log will be encrypted if a password is set. The password must be at least eight characters.
+The shared log will be encrypted if a password is set. The password requires you to consider that it has to:
+
+- Be at least eight characters long.
+- Contain both lowercase and uppercase letters.
+- Contain at least a single number.
 
 Alternatively, you can use the `share` method without the optional `ShareOptions` argument. In that case, the log won't be encrypted and will be uploaded to the default organizational workspace.
 
@@ -145,9 +148,11 @@ Apart from the HTTPS capturing, a Fiddler Jam log might contain a video recordin
 
 The DOM video recording supports automatic masking of sensitive data through the `maskingSensitiveData` boolean property and the `maskSelector` string property. By default, the sensitive data masking is enabled (even if the `maskingSensitiveData` is omitted) and uses a built-in list of selectors commonly used in payment forms. To overwrite the built-in selectors, you can use the `maskSelector` string property and provide a comma-separated list of selectors.
 
-The built-in list of selectors
+Example usage of `maskSelector` with custom list of selectors
+
 ```javascript
-[autocomplete="cc-number"],[autocomplete="cc-exp"],[autocomplete="cc-exp-month"],[autocomplete="cc-exp-year"],[autocomplete="cc-csc"],[autocomplete="cc-scs"],iframe[title="paypal_card_form"],iframe[src*="adyen.com"],iframe[src*="www.computop-paygate.com"],iframe[src*="paymentcomponent.booking.com"],iframe[src*="checkout.mypos.eu"],form[action*="apx-security.amazon.com"],form[action*="oppwa.com"],[name="addCreditCardNumber"],[name="credit-card-number"],[name="ccnumber"],[name="ccexpmonth"],[name="ccexpyear"],[name="ccexp"],[name="cvv"],[name="cvv2"],[name^="credit_card"],[name="creditCard"],[name="maskedInput"],[name="payment[cc_number]"],[name="payment[cc_exp_month]"],[name="payment[cc_exp_year]"],[name="payment[cc_cid]"],#creditCardNumber,#cc-number,#cc-exp-month,#cc-exp-year,#credit-card-number,#credit-card-expiration,#credit-card-cvv,#expiry-date,#credit-card-security,#card_number,#card_cvn,#cardentry,#cc-panel--paymentstep,#cardNum,#card-number,#expirationDate,#expiration-date,#expiration-month,#expiration-year,#card-cvv,#cvv,#credit_card_month,#credit_card_year,#addCardForm,#securityCode,#security-code,#addNewPaymentForm,#PaymentMethodForm,#checkout-payment-credit-card-number-text,#checkout-payment-credit-card-cvv-text,#checkout-payment-credit-card-expire-month-dropdown,#checkout-payment-credit-card-expire-month-dropdown div,#checkout-payment-credit-card-expire-year-dropdown,#checkout-payment-credit-card-expire-year-dropdown div,.credit-card-wrapper,.__PrivateStripeElement,.ccnum,.CreditCardNumber,.card-num,.cardno,.card-number,.cardNumber,.expmonth,.expyear,.expiry,.expDate,.expiratioDate,.expiry-date,.expiryDate,.CVC,.ccField,.securityCode,.seccode,.sec-code,.CC,.CVV,.cvc-number,.card-security,.verificationCode,.card-form,.card_form,.checkout_form,.checkout-form,.paymentForm,.payment-form,.pay-form,.get-info-card-container,.payment-container-body,.row-for-credit-card-details
+maskSensitiveData: true,
+masSelector: '[autocomplete="cc-number"],form[action*="oppwa.com"],[name="addCreditCardNumber"],[name^="credit_card"],#checkout,.card-num,.card-number'
 ```
 
 
