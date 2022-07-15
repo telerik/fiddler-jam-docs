@@ -28,7 +28,8 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
             
                 <title>Fiddler Jam Embedded</title>
 
-                <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" crossorigin="anonymous" async></script>
+                <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" 
+                        id="jamEmbeddedScript" crossorigin="anonymous" async></script>
                 <script>
                     const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
                     jamEmbeddedScript.addEventListener('load', () => {
@@ -152,7 +153,7 @@ Example usage of `maskSelector` with custom list of selectors
 
 ```javascript
 maskSensitiveData: true,
-masSelector: '[autocomplete="cc-number"],form[action*="oppwa.com"],[name="addCreditCardNumber"],[name^="credit_card"],#checkout,.card-num,.card-number'
+maskSelector: '[autocomplete="cc-number"],form[action*="oppwa.com"],[name="addCreditCardNumber"],[name^="credit_card"],#checkout,.card-num,.card-number'
 ```
 
 
@@ -383,7 +384,12 @@ async function start() {
     document.getElementById('btn-start').disabled = true;
     document.getElementById('btn-stop').disabled = false;
     document.getElementById('btn-share').disabled = false;
-    document.getElementById('capture-info').innerHTML = 'Started successfully!<br/>jam.state = ' + jam.state + ';<br/>captureVideo = ' + captureOptions.captureVideo +';<br/>videoFormat = "'+ captureOptions.videoFormat +'";<br/>captureScreenshots = ' + captureOptions.captureScreenshots +';<br/>captureConsole = ' + captureOptions.captureConsole +';<br/>captureStorage = ' + captureOptions.captureStorage +';';
+    document.getElementById('capture-info').innerHTML = 'Started successfully!<br/>jam.state = ' + jam.state + 
+                                                        ';<br/>captureVideo = ' + captureOptions.captureVideo +
+                                                        ';<br/>videoFormat = "'+ captureOptions.videoFormat + 
+                                                        '";<br/>captureScreenshots = ' + captureOptions.captureScreenshots +
+                                                        ';<br/>captureConsole = ' + captureOptions.captureConsole +
+                                                        ';<br/>captureStorage = ' + captureOptions.captureStorage +';';
 }
 
 // Starts pixel-perfect video recording (async method)
