@@ -28,8 +28,7 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
             
                 <title>Fiddler Jam Embedded</title>
 
-                <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" 
-                        id="jamEmbeddedScript" crossorigin="anonymous" async></script>
+                <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" crossorigin="anonymous" async></script>
                 <script>
                     const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
                     jamEmbeddedScript.addEventListener('load', () => {
@@ -47,13 +46,12 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
 
     >important The Fiddler Jam API key is unique per organization and grants access to your organizational workspaces.
 
-1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js.
-
-    By default, the `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN.
+1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js. By default, the `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN. 
     
 ```JavaScript
-self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`);
+self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`); // minified script for production
 ```
+
 
 ## Fiddler Jam API
 
@@ -179,13 +177,9 @@ self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-wo
     <head>
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width,initial-scale=1'>
-    
         <title>Fiddler Jam Embedded</title>
 
-        <!-- Loading the main Fiddler Jam Embedded source file asynchronously -->
-        <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" 
-                id="jamEmbeddedScript" crossorigin="anonymous" async>
-        </script>
+        <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" crossorigin="anonymous" async></script>
         <script>
             const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
             jamEmbeddedScript.addEventListener('load', () => {
@@ -197,10 +191,9 @@ self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-wo
             });
         </script>
         <style>
-            .my-class {color:green;background-color: lightgray;}
+            .my-class {color:green;background-color: lightgray;}  /* Test class to demonstrate video masking capabilities */
         </style>
     </head>
-    
     <body>
         <h1>Fiddler Jam Embedded Demo</h1>
         <div>
@@ -216,7 +209,7 @@ self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-wo
                     </form>
                     <div class="my-class">
                         <label>Set <b>captureVideo</b> to <b>true</b> and use <b>videoFormat</b> to enable different video recording options.</label><br/>
-                        <label>The <b>videoFormat</b> option accepts <b>"dom"</b> and <b>"pixel-perfect"</b> string values. When omitted, the default recording type will be <b>"dom"</b></label>
+                        <label>The <b>videoFormat</b> option accepts <b>"dom"</b> and <b>"pixel-perfect"</b> string values. When ommited, the default recording type will be <b>"dom"</b></label>
                     </div>
                     </div><br/> 
                 <div>
@@ -265,19 +258,6 @@ self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-wo
 // The Fiddler Jam Embedded object attached to the DOM window object through _fiddlerJamEmbedded.
 const jam = window['_fiddlerJamEmbedded'];
 
-// Checkbox elements from the UI in index.html
-const captureVideoCheckbox = document.getElementById('captureVideo');
-const domRadioInput = document.getElementById('dom');
-const pixelRadioInput = document.getElementById('pixel');
-const maskSensitiveDataCheckbox = document.getElementById('maskSensitiveData');
-const maskSelectorField = document.getElementById('maskSelector');
-const captureScreenshotsCheckbox = document.getElementById('captureScreenshots');
-const captureStorageCheckbox = document.getElementById('captureStorage');
-const captureLogsCheckbox = document.getElementById('captureLogs');
-const reloadPageCheckbox = document.getElementById('reloadPage');
-
-let captureInfo = '';
-
 // Setting the default capture options
 let captureOptions = {
     captureScreenshots: false,
@@ -291,14 +271,43 @@ let captureOptions = {
     maskSelector: ".my-class" // Note that adding your own custom selectors overwrites the built-in Jam Embedded masking selectors
 };
 
+// inputs (HTML elements from the UI in index.html)
+const captureVideoCheckbox = document.getElementById('captureVideo');
+const domRadioInput = document.getElementById('dom');
+const pixelRadioInput = document.getElementById('pixel');
+const maskSensitiveDataCheckbox = document.getElementById('maskSensitiveData');
+const maskSelectorField = document.getElementById('maskSelector');
+const captureScreenshotsCheckbox = document.getElementById('captureScreenshots');
+const captureStorageCheckbox = document.getElementById('captureStorage');
+const captureLogsCheckbox = document.getElementById('captureLogs');
+const reloadPageCheckbox = document.getElementById('reloadPage');
+// Buttons (HTML elements from the UI in index.html)
+const startButton = document.getElementById('btn-start');
+const startVideoButton = document.getElementById('btn-start-video');
+const stopButton = document.getElementById('btn-stop');
+const shareButton = document.getElementById('btn-share');
+const resetButton = document.getElementById('btn-reset');
+// DIVs and Labels (HTML elements from the UI in index.html)
+const captureInfoDiv = document.getElementById('capture-info');
+const jamShareUrlDiv = document.getElementById('jam-share-url');
+const lastErrorDiv = document.getElementById('last-error');
+const lastErrorInfoDiv = document.getElementById('last-error-info');
+const maskTestLbl = document.getElementById("mask-test-lbl");
+const pixellbl = document.getElementById('pixel-lbl');
+// Ui notifications (index.html)
+let jamShareUrl = "";
+let captureInfo = '';
+
 // Use the error event listener to catch possible issues
-jam.addErrorEventListener(e => {
-    document.getElementById('last-error').innerHTML = 'Error: ' + e;
-    console.error(e);
+jam.addErrorEventListener((e) => {
+    lastErrorDiv.innerHTML = 'Error: ' + e;
 
     if (e.name === 'CaptureDisplayError') {
-        document.getElementById('last-error-info').innerHTML = 'Started without video (e.g. Permission Denied). You need to start video recording manually (use "Start Video") or continue the capturing without video recording (Use "Stop Recording" when the capturing is complete.)';
-        document.getElementById('btn-start-video').hidden = false;
+        lastErrorInfoDiv.innerHTML = 'Capturing started without video (e.g. Permission Denied). '
+                                    +'<br/>You need to start video recording manually (use "Start Video") '
+                                    +'<br/>or continue the capturing without video recording.'
+                                    +'Use "Stop Recording" when the capturing is complete.)';
+        startVideoButton.hidden = false;
     }
 });
 
@@ -309,13 +318,52 @@ jam.init({
 });
 
 initSettingsEvents();
-updateUI();
+updateUI(jam.state);
 
 jam.addStateChangedEventListener(newState => {
-    updateUI();
+    updateUI(newState);
 });
 
-function updateUI() {
+async function start() {
+    await jam.start(captureOptions);
+}
+
+// Starts pixel-perfect video recording (async method)
+// Use this method only when explicit permissoin is required to start video recording (for example, the user denied permission after calling start())
+async function startVideo() {
+    await jam.startVideoCapturing();
+
+    startButton.disabled = true;
+    stopButton.disabled = false;
+    shareButton.disabled = false;
+    captureInfoDiv.innerHTML = 'Started successfully! (jam.state = ' + jam.state + ')';
+}
+
+async function stop() {
+    await jam.stop();
+}
+
+// Generates and uploads a Fiddler Jam log share URL (async method).
+async function share() {
+    /* 
+        The jam.share() method accepts argument of type:
+        { 
+            workspaceId: string, // The unique ID of your workspace
+            submittedBy: string, // Free-form text
+            password: string     // Min 8 characters, contain lowercase and uppercase letters, and contain a number.
+        }
+    */
+    jamShareUrl = await jam.share(); // When the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection.
+    jamShareUrlDiv.innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '" target="_blank">'+ jamShareUrl +'</a>';
+
+    await navigator.clipboard.writeText(jamShareUrl);
+}
+
+async function reset() {
+    await jam.reset();
+}
+
+function updateUI(newState) {
     if (jam.options) captureOptions = jam.options;
 
     captureVideoCheckbox.checked = captureOptions.captureVideo;
@@ -326,122 +374,102 @@ function updateUI() {
     captureStorageCheckbox.checked = captureOptions.captureStorage;
     captureLogsCheckbox.checked = captureOptions.captureConsole;
 
-    jam.state === 'started' ? document.getElementById('btn-stop').disabled = false : document.getElementById('btn-stop').disabled = true; 
+    switch (newState) {
+        case 'started':
+            startButton.disabled = true;
+            stopButton.disabled = false;
+            shareButton.disabled = true;
+            resetButton.disabled = true;
+            captureInfoDiv.innerHTML = 'Started successfully!<br/>' 
+                                    + 'jam.state = ' + newState + ';<br/>'
+                                    + 'captureVideo = ' + captureOptions.captureVideo + ';<br/>' 
+                                    + 'videoFormat = "'+ captureOptions.videoFormat + ';<br/>'
+                                    + 'captureScreenshots = ' + captureOptions.captureScreenshots + '";<br/>'
+                                    + 'captureConsole = ' + captureOptions.captureConsole + '<br/>'
+                                    + 'captureStorage = ' + captureOptions.captureStorage +';';
+            break;
+        case 'stopped': 
+            startButton.disabled = true;
+            stopButton.disabled = true;
+            shareButton.disabled = false;
+            resetButton.disabled = false;
+            captureInfoDiv.innerHTML = 'Capturing Stopped! (jam.state = ' + newState + ').<br/>'
+                                    +'Use "Share" to upload the log and generating share URL.<br/>'
+                                    +'Use "Reset Capture" to clean and prepare Jam Embedded for new capture';
+            lastErrorDiv.innerHTML = '';
+            lastErrorInfoDiv.innerHTML = '';
+            break;
+        case 'sharing':
+            resetButton.disabled = true;
+            captureInfoDiv.innerHTML = 'Processing generated log! (jam.state = ' + newState + ')';
+            jamShareUrlDiv.innerHTML = 'Please wait! Uploading the log and generating share URL ...';
+            break;
+        case 'shared':
+            resetButton.disabled = false;
+            captureInfoDiv.innerHTML = 'Log generation completed! (jam.state = ' + newState + ')';
+            lastErrorDiv.innerHTML = 'Use "Reset Capture" to clean and prepare Jam Embedded for new capture';
+            lastErrorInfoDiv.innerHTML = '';
+            break;
+        case 'initialized':
+            startButton.disabled = false;
+            startVideoButton.hidden = true;
+            stopButton.disabled = true;
+            shareButton.disabled = true;
+            captureInfoDiv.innerHTML = 'Fiddler Jam Embedded reset and ready for new capture! (jam.state = ' + newState + ')';
+            jamShareUrlDiv.innerHTML = '';
+            lastErrorDiv.innerHTML = '';
+            lastErrorInfoDiv.innerHTML = '';
+            break;
+        default:
+            break;
+    }
 }
 
 function initSettingsEvents() {
-    captureVideoCheckbox.addEventListener('change', (e) => {
-        captureOptions.captureVideo = e.target.checked;
+    captureVideoCheckbox.addEventListener('change', (args) => {
+        captureOptions.captureVideo = args.target.checked;
     });
 
-    const userAgentString = navigator.userAgent;
-    let safariAgent = userAgentString.toLowerCase().indexOf('safari') > -1;
-    let chromeAgent = userAgentString.toLowerCase().indexOf('chrome') > -1;
-    let firefoxAgent = userAgentString.toLowerCase().indexOf('firefox') > -1;
-    if ((chromeAgent) && (safariAgent)) safariAgent = false;
-    if (firefoxAgent || safariAgent) {
-        pixelRadioInput.disabled = true;
-        document.getElementById('pixel-lbl').innerHTML = 'videoFormat: "pixel-perfect" not available for Firefox and Safari';
-   }
-
-    const rad = document.myForm.myRadios;
-    for (var i = 0; i < rad.length; i++) {
-        rad[i].addEventListener('change', function() {
-            captureOptions.videoFormat = this.value; // "dom" | "pixel-perfect"
-
-            captureOptions.videoFormat === "pixel-perfect" ? maskSensitiveDataCheckbox.disabled = true : maskSensitiveDataCheckbox.disabled = false;
-            captureOptions.videoFormat === "pixel-perfect" ? maskSelectorField.disabled = true : maskSelectorField.disabled  = false;
-            captureOptions.videoFormat === "pixel-perfect" ? document.getElementById("mask-test-lbl").innerHTML = "Video masking is not currently supported for pixel-perfect videos!" : document.getElementById("mask-test-lbl").innerHTML = "Use selector .my-class to test masking of data in video recordings"
-        });
-    }
-
-    maskSensitiveDataCheckbox.addEventListener('change', (e) => {
-        captureOptions.maskSensitiveData = e.target.checked;
+    maskSensitiveDataCheckbox.addEventListener('change', (args) => {
+        captureOptions.maskSensitiveData = args.target.checked;
     });
 
-    maskSelectorField.addEventListener('input', (e) => {
+    maskSelectorField.addEventListener('input', (args) => {
         console.log("The video reocrding will mask the following selectors: " + e.target.value);
         captureOptions.maskSelector = e.target.value;
     });
 
-    captureScreenshotsCheckbox.addEventListener('change', (e) => {
-        captureOptions.captureScreenshots = e.target.checked;
+    captureScreenshotsCheckbox.addEventListener('change', (args) => {
+        captureOptions.captureScreenshots = args.target.checked;
     });
 
-    captureStorageCheckbox.addEventListener('change', (e) => {
-        captureOptions.captureStorage = e.target.checked;
+    captureStorageCheckbox.addEventListener('change', (args) => {
+        captureOptions.captureStorage = args.target.checked;
     });
 
-    captureLogsCheckbox.addEventListener('change', (e) => {
-        captureOptions.captureConsole = e.target.checked;
+    captureLogsCheckbox.addEventListener('change', (args) => {
+        captureOptions.captureConsole = args.target.checked;
     });
-}
 
-// Start capture (async method)
-async function start() {
-    await jam.start(captureOptions);
+    let safariAgent = navigator.userAgent.toLowerCase().indexOf('safari') > -1;
+    let chromeAgent = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+    let firefoxAgent = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    if ((chromeAgent) && (safariAgent)) safariAgent = false; // ensure Safari agent
+    if (firefoxAgent || safariAgent) {
+        pixelRadioInput.disabled = true;
+        pixellbl.innerHTML = 'videoFormat: "pixel-perfect" is not supported on Firefox and Safari';
+    }
 
-    document.getElementById('btn-start').disabled = true;
-    document.getElementById('btn-stop').disabled = false;
-    document.getElementById('btn-share').disabled = false;
-    document.getElementById('capture-info').innerHTML = 'Started successfully!<br/>jam.state = ' + jam.state + 
-                                                        ';<br/>captureVideo = ' + captureOptions.captureVideo +
-                                                        ';<br/>videoFormat = "'+ captureOptions.videoFormat + 
-                                                        '";<br/>captureScreenshots = ' + captureOptions.captureScreenshots +
-                                                        ';<br/>captureConsole = ' + captureOptions.captureConsole +
-                                                        ';<br/>captureStorage = ' + captureOptions.captureStorage +';';
-}
+    const rad = document.myForm.myRadios;
+    for (var i = 0; i < rad.length; i++) {
+        rad[i].addEventListener('change', (args) => {
+            captureOptions.videoFormat = args.target.value; // "dom" | "pixel-perfect"
 
-// Starts pixel-perfect video recording (async method)
-// Use this method when explicit permissoin is required to start video recording (for example, the user denied permission after calling start())
-async function startVideo() {
-    await jam.startVideoCapturing();
-
-    document.getElementById('btn-start').disabled = true;
-    document.getElementById('btn-stop').disabled = false;
-    document.getElementById('btn-share').disabled = false;
-    document.getElementById('capture-info').innerHTML = 'Started successfully! (jam.state = ' + jam.state + ')';
-}
-
-// Stop capture (async method)
-async function stop() {
-    await jam.stop();
-
-    document.getElementById('btn-start').disabled = true;
-    document.getElementById('btn-stop').disabled = true;
-    document.getElementById('btn-share').disabled = false;
-    document.getElementById('capture-info').innerHTML = 'Capturing Stopped! (jam.state = ' + jam.state + ')';
-    document.getElementById('last-error').innerHTML = '';
-    document.getElementById('last-error-info').innerHTML = '';
-}
-
-// Generates and uploads a Fiddler Jam log share URL (async method).
-async function share() {
-    document.getElementById('capture-info').innerHTML = 'Processing generated log! (jam.state = ' + jam.state + ')';
-    document.getElementById('jam-share-url').innerHTML = 'Please wait! Uploading the log and generating share URL ...';
-
-    // The jam.share() method accepts argument of type { workspaceId: string, submittedBy: string, password: string }
-    const jamShareUrl = await jam.share(); // when the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection.
-    document.getElementById('capture-info').innerHTML = 'Log generation completed! (jam.state = ' + jam.state + ')';
-    document.getElementById('jam-share-url').innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '" target="_blank">'+ jamShareUrl +'</a>';
-    document.getElementById('last-error').innerHTML = 'Use "Reset Capture" to clean and prepare Jam Embedded for new capture';
-    document.getElementById('last-error-info').innerHTML = '';
-
-    await navigator.clipboard.writeText(jamShareUrl);
-}
-
-async function reset() {
-    document.getElementById('btn-start').disabled = false;
-    document.getElementById('btn-start-video').hidden = true;
-    document.getElementById('btn-stop').disabled = true;
-    document.getElementById('btn-share').disabled = true;
-
-    await jam.reset();
-
-    document.getElementById('capture-info').innerHTML = 'Fiddler Jam Embedded reset and ready for new capture! (jam.state = ' + jam.state + ')';
-    document.getElementById('jam-share-url').innerHTML = '';
-    document.getElementById('last-error').innerHTML = '';
-    document.getElementById('last-error-info').innerHTML = '';
+            captureOptions.videoFormat === "pixel-perfect" ? maskSensitiveDataCheckbox.disabled = true : maskSensitiveDataCheckbox.disabled = false;
+            captureOptions.videoFormat === "pixel-perfect" ? maskSelectorField.disabled = true : maskSelectorField.disabled  = false;
+            captureOptions.videoFormat === "pixel-perfect" ? maskTestLbl.innerHTML = "Video masking is not currently supported for pixel-perfect videos!" : maskTestLbl.innerHTML = "Use selector .my-class to test masking of data in video recordings"
+        });
+    }
 }
 ```
 
