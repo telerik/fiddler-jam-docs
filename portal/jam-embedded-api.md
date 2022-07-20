@@ -159,7 +159,7 @@ maskSelector: '[autocomplete="cc-number"],form[action*="oppwa.com"],[name="addCr
 
 ## Basic Implementation
 
-The following code snippets demonstrate a basic Fiddler Jam Embedded implementation.
+The code snippets below demonstrate a basic Fiddler Jam Embedded implementation (contains the following files - **service-worker.js**, **index.html**, and **local-jam-embedded-implementation.js**).
 
 - Service worker file (for example, a file called `./service-worker.js`).
 
