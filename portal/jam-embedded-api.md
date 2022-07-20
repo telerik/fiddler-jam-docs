@@ -14,11 +14,11 @@ Fiddler Jam Embedded is a JavaScript library that provides an API to integrate t
 
 Follow the steps below to include and use the Fiddler Jam Embedded library in your webpage:
 
-1. Obtain your unique Fiddler Jam Embedded API key. [Learn more on how to generate your Fiddler Jam API key here...](#generating-api-key)
+* Obtain your unique Fiddler Jam Embedded API key. [Learn more on how to generate your Fiddler Jam API key here...](#generating-api-key)
 
-1. Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js.
+* Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js.
 
-1. Initialize the Fiddler Jam Embedded object with your Fiddler Jam API key. The Fiddler Jam Embedded object is attached to the [`window`](https://www.w3schools.com/jsref/obj_window.asp) object of the page as a property called `_fiddlerJamEmbedded`. Use the `load` event of the Fiddler Jam Embedded object to initialize the Jam API and to add your custom implementation.
+* Initialize the Fiddler Jam Embedded object with your Fiddler Jam API key. The Fiddler Jam Embedded object is attached to the [`window`](https://www.w3schools.com/jsref/obj_window.asp) object of the page as a property called `_fiddlerJamEmbedded`. Use the `load` event of the Fiddler Jam Embedded object to initialize the Jam API and to add your custom implementation.
 
 ```html
     <html lang="en">
@@ -28,7 +28,9 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
         
             <title>Fiddler Jam Embedded</title>
 
-            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" crossorigin="anonymous" async></script>
+            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" 
+                    id="jamEmbeddedScript" crossorigin="anonymous" async>
+            </script>
             <script>
                 const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
                 jamEmbeddedScript.addEventListener('load', () => {
@@ -46,7 +48,7 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
 
 >important The Fiddler Jam API key is unique per organization and grants access to your organizational workspaces.
 
-1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js. By default, the `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN. 
+* Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js. By default, the `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN. 
     
 ```JavaScript
 self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`); // minified script for production
