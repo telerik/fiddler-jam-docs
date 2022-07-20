@@ -20,31 +20,31 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
 
 1. Initialize the Fiddler Jam Embedded object with your Fiddler Jam API key. The Fiddler Jam Embedded object is attached to the [`window`](https://www.w3schools.com/jsref/obj_window.asp) object of the page as a property called `_fiddlerJamEmbedded`. Use the `load` event of the Fiddler Jam Embedded object to initialize the Jam API and to add your custom implementation.
 
-    ```html
-        <html lang="en">
-            <head>
-                <meta charset='utf-8'>
-                <meta name='viewport' content='width=device-width,initial-scale=1'>
-            
-                <title>Fiddler Jam Embedded</title>
+```html
+    <html lang="en">
+        <head>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width,initial-scale=1'>
+        
+            <title>Fiddler Jam Embedded</title>
 
-                <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" crossorigin="anonymous" async></script>
-                <script>
-                    const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
-                    jamEmbeddedScript.addEventListener('load', () => {
-                        const jam = window['_fiddlerJamEmbedded'];
-                        jam.init({
-                            apiKey: 'API_KEY'
-                        });
-
-                        // Custom implementation follows here
+            <script src="https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js" id="jamEmbeddedScript" crossorigin="anonymous" async></script>
+            <script>
+                const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
+                jamEmbeddedScript.addEventListener('load', () => {
+                    const jam = window['_fiddlerJamEmbedded'];
+                    jam.init({
+                        apiKey: 'API_KEY'
                     });
-                </script>
-            </head>
-        </html>        
-    ```
 
-    >important The Fiddler Jam API key is unique per organization and grants access to your organizational workspaces.
+                    // Custom implementation follows here
+                });
+            </script>
+        </head>
+    </html>        
+```
+
+>important The Fiddler Jam API key is unique per organization and grants access to your organizational workspaces.
 
 1. Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js. By default, the `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN. 
     
@@ -495,26 +495,30 @@ If you want to regenerate the key, please get in touch with us at [support@getfi
 
 While incorporating your own Fiddler Jam Embedded tool into your website, note that some specifics are related to different browsers and the core Fiddler Jam Embedded functionalities.
 
-1. A generated Fiddler Jam Log contains captured HTTP/HTTPS traffic, and (depending on the pre-set `StartOptions`) screenshots, storage information, video recording, and development console logs. Consider informing your end-users about the possibility of revealing sensitive data when a log is shared.
+* A generated Fiddler Jam Log contains captured HTTP/HTTPS traffic, and (depending on the pre-set `StartOptions`) screenshots, storage information, video recording, and development console logs. Consider informing your end-users about the possibility of revealing sensitive data when a log is shared.
 
-1. You can **record a DOM video** while setting  `captureVideo: true` and `videoFormat: 'dom'` (default values). The DOM video recording is not pixel-perfect, and does not contain recordings from iframes. This method for video recording **does not require explicit confirmation** from the user.
+* You can **record a DOM video** while setting  `captureVideo: true` and `videoFormat: 'dom'` (default values). The DOM video recording is not pixel-perfect, and does not contain recordings from iframes. This method for video recording **does not require explicit confirmation** from the user.
 
-1. DOM video recordings are supported on Firefox, Safari, and on all Chromium-based browsers. 
+* DOM video recordings are supported on Firefox, Safari, and on all Chromium-based browsers. 
 
-1. The DOM video recording starts without explicit permission from the end-user, so consider warning your users about the possibility of revealing sensitive data.
+* The DOM video recording starts without explicit permission from the end-user, so consider warning your users about the possibility of revealing sensitive data.
 
-1. Masking of sensitive data is supported only for DOM video recording.
+* Masking of sensitive data is supported only for DOM video recording.
 
-1. You can **record a pixel-perfect video** through while setting `captureVideo: true` and `videoFormat: 'pixel-perfect'` . The video recording is pixel perfect and contains recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points below).
+* Masking of sensitive data is **not** supported for screenshots.
 
-1. Pixel-perfect video is currently supported only on Chromium-based browsers (like Chrome, Edge, Brave, etc.). 
+* You can **record a pixel-perfect video** through while setting `captureVideo: true` and `videoFormat: 'pixel-perfect'` . The video recording is pixel perfect and contains recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points below).
 
-1. Pixel-perfect video recordings are **not** supported on Firefox and Safari.
+* Pixel-perfect video is currently supported only on Chromium-based browsers (like Chrome, Edge, Brave, etc.). 
 
-1. To capture a pixel-perfect video recording without reloading a page, you can call the `start()` method (through `reloadPage: false`, `captureVideo: true`, and `videoFormat: 'pixel-perfect'`).
+* Pixel-perfect video recordings are **not** supported on Firefox and Safari.
 
-1. You can turn off the video recording while setting `captureVideo: false`. The log will still contain the network capture and other explicitly enabled data like console logs, screenshots, etc.
+* To capture a pixel-perfect video recording without reloading a page, you can call the `start()` method (through `reloadPage: false`, `captureVideo: true`, and `videoFormat: 'pixel-perfect'`).
 
-1. When capturing a pixel-perfect video recording, a Chromium-based browser (like Chrome, Edge, Brave, Vivaldi, and similar) pops a native window once the `start()` method is called. The window provides multiple recording options to record the current tab, a new tab, a whole OS window, or the entire screen. It would be best if you used the Fiddler Jam reporting within the current browser instance, so it is strongly recommended to continuously guide your users to select the **This Tab** option.
+* You can turn off the video recording while setting `captureVideo: false`. The log will still contain the network capture and other explicitly enabled data like console logs, screenshots, etc.
 
-1. Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
+* When capturing a pixel-perfect video recording, a Chromium-based browser (like Chrome, Edge, Brave, Vivaldi, and similar) pops a native window once the `start()` method is called. The window provides multiple recording options to record the current tab, a new tab, a whole OS window, or the entire screen. It would be best if you used the Fiddler Jam reporting within the current browser instance, so it is strongly recommended to continuously guide your users to select the **This Tab** option.
+
+* Browser cookies are not recorded and won't be contained in the generated Fiddler Jam log.
+
+* Enabling screenshot capturing on larger applications might cause performance issues on some clients' devices (as numerous screenshots might be rendered during the log generation).
