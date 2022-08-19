@@ -507,6 +507,8 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
 
 * Masking of sensitive data is supported only for DOM video recording.
 
+* The screenshot capturing option is available for all Chromium-based browsers (Google Chrome, Edge, Brave, etc.) and Firefox. Screenshot capturing is currently unavailable for Safari (macOS).
+
 * Masking of sensitive data is **not** supported for screenshots.
 
 * You can **record a pixel-perfect video** through while setting `captureVideo: true` and `videoFormat: 'pixel-perfect'` . The video recording is pixel perfect and contains recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points below).

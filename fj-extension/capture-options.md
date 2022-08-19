@@ -43,7 +43,7 @@ By design, the Jam extension will try to recognize and **mask sensitive data** i
 
 ## Capturing Screenshots
 
-The **Capture screenshots** option allows you to take a screenshot of a user activity that occurred during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The user activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, and so on.
+The **Capture screenshots** option allows you to take a screenshot of a user activity that occurred during the capturing process. Each screenshot is added to the ongoing recording as a PNG file. The user activities that trigger a screenshot are clickable actions (buttons, links), interactions with forms, and so on. The option is available for all Chromium-based browsers (Google Chrome, Edge, Brave, etc.) and Firefox. Screenshot capturing is currently unavailable for Safari.
 
 The submitted screenshots are accessible for Fiddler Jam Portal users only. A recorded log, exported as a HAR file or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere), won't contain the screenshots. By default, the **Capture screenshots** option is enabled.
 
