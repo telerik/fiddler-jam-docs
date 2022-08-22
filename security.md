@@ -155,6 +155,7 @@ Before you record a log, consider the following security concerns:
 
 - **Clear cookies, cache, and storage on start**&mdash;(Disabled by default) Clear cookies, cache, and storage of the starting page when the capturing is started.
 
+
 >tip As per your requirements, always check if the **Capture screenshots** and **Capture video** options are enabled or disabled. When enabled, the options may expose sensitive data (if any) even if that data is masked in the captured HTTP sessions.
 
 ## Sharing Links Securely
