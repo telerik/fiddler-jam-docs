@@ -34,7 +34,7 @@ The **Reload page on start** option will force reload the entry point URL when t
 
 ## Capturing Videos
 
-The **Capture video** option allows you to capture video recordings from the inspected Google Chrome tab. Only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequently opened tabs won't be present in the video recording. The default video format is **Pixel-perfect** but the option can be combined with the [**Use DOM Video** option](#using-dom-video) to enable **DOM** video recording. [Learn more about the differences between both formats here...](#pixel-perfect-vs-dom-formats)
+The **Capture video** option allows you to capture video recordings from the inspected Google Chrome tab. Only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequently opened tabs won't be present in the video recording. The default video format is **Pixel-perfect** but the option can be combined with the [**Use DOM Video** option](#using-dom-video) to enable **DOM** video recording. [Learn more about the differences between both formats here...](#pixel-perfect-vs-dom-format)
 
 Consider the following when using the related video switches from the advanced options.
 
