@@ -34,21 +34,23 @@ The **Reload page on start** option will force reload the entry point URL when t
 
 ## Capturing Videos
 
-The **Capture video** option allows you to capture video recordings from the inspected Google Chrome tab. Only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequently opened tabs won't be present in the video recording. The default video format is **Pixel-perfect** but the option can be combined with the [**Use DOM Video** option](#using-dom-video) to enable **DOM** video recording. [Learn more about the differences between both formats here...](#pixel-perfect-vs-dom-format)
+The **Capture video** option allows you to capture video recordings from the inspected Google Chrome tab. Only the tab from which the Fiddler Jam log recording has started will be recorded, and subsequently opened tabs won't be present in the video recording. The default video format is **Pixel-perfect** but the option can be combined with the [**Use DOM Video** option](#using-dom-video) to enable **DOM** video recording. [Learn more about the differences between both formats here...](#pixel-perfect-and-dom-formats)
 
 Consider the following when using the related video switches from the advanced options.
 
-- **Capture video**: ON and **Use DOM video**: OFF&mdash;Records Pixel-perfect video
-- **Capture video**: ON and **Use DOM video**: ON&mdash;Records Dom video 
-- **Capture video**: OFF and **Use DOM video**: OFF&mdash;No video recording
-- **Capture video**: OFF and **Use DOM video**; ON&mdash;No video recording
+- **Capture video**: ON and **Use DOM video**: OFF&mdash;Records Pixel-perfect video (default state).
+- **Capture video**: ON and **Use DOM video**: ON&mdash;Records Dom video.
+- **Capture video**: OFF and **Use DOM video**: OFF&mdash;No video recording.
+- **Capture video**: OFF and **Use DOM video**; ON&mdash;No video recording.
 
 
-### Pixel-perfect vs DOM format
+### Pixel-Perfect and DOM formats
 
-- **"DOM":** The DOM video recording produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method).
+Fiddler Jam supports two conceptually different video recording formats known as **DOM** and **pixel-perfect** (enabled by default). Both have their advantages and limitations, as listed below;
 
-- **"Pixel-perfect"**: The pixel-perfect video uses the native browser recording options. It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups).
+- **"DOM":** The DOM video recording produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after the capturing starts). The user can choose and [submit only a portion of the recorded DOM video]({%slug fj-link-options%}#submitting-video-duration) so that you won't have to submit lengthy videos to your workspace or to protect sensitive data.
+
+- **"Pixel-perfect"**: The pixel-perfect video uses the native browser recording options. It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups after the capturing starts).
 
 ### Submitted Videos
 
