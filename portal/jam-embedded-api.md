@@ -142,7 +142,7 @@ Alternatively, you can use the `share` method without the optional `ShareOptions
 
 Apart from the HTTPS capturing, a Fiddler Jam log might contain a video recording when the `captureVideo` option is set to `true`. By default, the recorded video will be of DOM type. Still, you can control the type of the video recording by explicitly setting the `videoFormat` option to one of the following string values:
 
-- **"dom":** The DOM video recording is supported on all major browsers (Chrome, Edge, Safari, Firefox, Brave, etc.) and produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method).
+- **"dom":** The DOM video recording is supported on all major browsers (Chrome, Edge, Safari, Firefox, Brave, etc.) and produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method). The user can choose and submit only a portion of the captured log (through the `sessionDurationInSeconds`) so that you won't have to submit lengthy videos to your workspace or to protect sensitive data.
 
 - **"pixel-perfect"**: The pixel-perfect video uses native recording options but is currently supported only on Chromium-based browsers (Chrome, Edge, Brave, Vivaldi). It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups).
 
@@ -512,6 +512,8 @@ While incorporating your own Fiddler Jam Embedded tool into your website, note t
 * The screenshot capturing option is available for all Chromium-based browsers (Google Chrome, Edge, Brave, etc.) and Firefox. Screenshot capturing is currently unavailable for Safari (macOS).
 
 * Masking of sensitive data is **not** supported for screenshots.
+
+* Submitting only a specific portion of the captured data is possible only when using DOM video recording. Refer to [ShareOptions](#shareoptions-specifics) for more details on how to portion a log.
 
 * You can **record a pixel-perfect video** through while setting `captureVideo: true` and `videoFormat: 'pixel-perfect'` . The video recording is pixel perfect and contains recordings from iframes. This method for video recording **requires explicit confirmation** from the user (refer to points below).
 

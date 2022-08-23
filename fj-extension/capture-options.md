@@ -48,7 +48,7 @@ Consider the following when using the related video switches from the advanced o
 
 Fiddler Jam supports two conceptually different video recording formats known as **DOM** and **pixel-perfect** (enabled by default). Both have their advantages and limitations, as listed below;
 
-- **"DOM":** The DOM video recording produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after the capturing starts). The user can choose and [submit only a portion of the recorded DOM video]({%slug fj-link-options%}#submitting-video-duration) so that you won't have to submit lengthy videos to your workspace or to protect sensitive data.
+- **"DOM":** The DOM video recording produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after the capturing starts). The user can choose and [submit only a portion of the captured log]({%slug fj-link-options%}#submitting-duration) so that you won't have to submit lengthy videos to your workspace or to protect sensitive data.
 
 - **"Pixel-perfect"**: The pixel-perfect video uses the native browser recording options. It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups after the capturing starts).
 
@@ -63,7 +63,7 @@ By design, the Jam extension will try to recognize and **mask sensitive data** i
 
 ## Using DOM Video
 
-The **Use DOM Video** option (combined with active [**Capture Video** option](#capturing-videos)), changes the video format from pixel-perfect to DOM format. The main benefit of the DOM format is that it doesn't require explicit permission from the user. The DOM recording can also be cut so the user can [submit only a portion of the captured log]({%slug fj-link-options%}#submitting-video-duration)
+The **Use DOM Video** option (combined with active [**Capture Video** option](#capturing-videos)), changes the video format from pixel-perfect to DOM format. The main benefit of the DOM format is that it doesn't require explicit permission from the user. The DOM recording can also be cut so the user can [submit only a portion of the captured log]({%slug fj-link-options%}#submitting-duration)
 
 ## Capturing Screenshots
 
