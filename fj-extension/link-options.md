@@ -14,9 +14,9 @@ The Fiddler Jam Chrome Extension enables you to submit the recorded logs either 
 When creating a log containing DOM video recording, you can also choose to upload only a specific video portion.
 
 
-## Submitting Duration
+## Submitting Specific Duration
 
-When recording a video in [DOM format]({%slug fj-capture-options%}#pixel-perfect-and-dom-formats), Fiddler Jam provides the option to submit only a portion of the recorded log. This way, you can protect sensitive data (like entered personal data, passwords, etc.) AND to avoid lengthy videos being uploaded to your organizational workspace (which could take more time to upload and spend networking resources).
+When recording a video in [DOM format]({%slug fj-capture-options%}#pixel-perfect-and-dom-formats), Fiddler Jam provides the option to submit only a portion of the recorded log. This way, you can protect sensitive data (like entered personal data, passwords, etc.) and avoid lengthy videos being uploaded to your organizational workspace (which could take more time to upload and spend networking resources).
 
 Use the **Submit specific duration** option and set the portion (in hours/minutes/seconds) you would like to submit. The submitted log will contain the last part of the capturing (as set in the duration fields) and will crop the remaining recording.
 
