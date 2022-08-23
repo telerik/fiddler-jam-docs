@@ -63,7 +63,7 @@ By design, the Jam extension will try to recognize and **mask sensitive data** i
 
 ## Using DOM Video
 
-The **Use DOM Video** option (combined with active [**Capture Video** option](#capturing-videos)), changes the video format from pixel-perfect to DOM format. The main benefit of the DOM format is that it doesn't require explicit permission from the user.
+The **Use DOM Video** option (combined with active [**Capture Video** option](#capturing-videos)), changes the video format from pixel-perfect to DOM format. The main benefit of the DOM format is that it doesn't require explicit permission from the user. The DOM recording can also be cut so the user can [submit only a portion of the recorded video]({%slug fj-link-options%}#submitting-video-duration)
 
 ## Capturing Screenshots
 
