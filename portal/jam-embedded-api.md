@@ -80,7 +80,7 @@ The Fiddler Jam Embedded object provides the following methods:
 | `start(options: StartOptions)` |  `StartOptions` is an object of type `{ captureScreenshots: boolean,  captureConsole: boolean,  captureStorage: boolean, captureVideo: boolean, videoFormat: string; openNewTab: boolean, reloadPage: boolean, maskSensitiveData: boolean, maskSelector: string }` | An asynchronous method that starts the capturing with the explicitly activated start options. |
 | `startVideoCapturing()` |  n/a |  An asynchronous method that explicitly ask for user permission to start video recording (pixel-peffect video only) |
 | `stop()` | n/a | An asynchronous method that stops the capturing and sets the state property to `"stopped"`. |
-| `share(options: ShareOptions)` |  `ShareOptions` is an object of type `{ workspaceId: string, submittedBy: string, password: string }` | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted, the log will be automatically uploaded to the default organizational workspace. |
+| `share(options: ShareOptions)` |  `ShareOptions` is an object of type `{ workspaceId: string, submittedBy: string, password: string, sessionDurationInSeconds: number }` | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted, the log will be automatically uploaded to the default organizational workspace. |
 | `reset()` |  n/a | Stops and completely resets the capturing, its state, and its properties. |
 | `addErrorEventListener(handler)` |  `ErrorEventHandler` of type `(error => void)` | An event listener to detect errors during the capturing processes. |
 | `addStateChangedEventListener(handler)` |  `StateChangedEventHandler` of type `(state) => void)` | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
@@ -108,7 +108,8 @@ let startOptions =  {
 
 All settings are optional, with default values shown in the example above. The following rules apply:
 
-- The `captureVideo` enables or disables video capturing with the default format "dom".
+- The `captureVideo` enables or disables video capturing with the default format "pixel-perfect". Use `videoFormat` to explicitly change the format to "dom".
+- When "pixel-perfect" is selected as video recording format, the capture video is uploaded in its entity. When "dom" is selected as video recording format, you have the option to submit only a portion of the video through using the `sessionDurationInSeconds` from the 'ShareOptions' object.
 - When `maskSensitiveData` is enabled, but the `maskSelector` is omitted, the masking will use a built-in list of selectors commonly used in payment and transaction forms.
 - When custom selectors are added through the `maskSelector` string property, the built-in list of selectors will be dismissed.
 
@@ -121,7 +122,8 @@ The `share` method accepts an optional argument of the `ShareOptions` object typ
 let shareOptions = {
     workspaceId: "<the-unique-workspace-id>",
     submittedBy: "niliev-page-admin",
-    password: "custom-password-here"
+    password: "custom-password-here",
+    sessionDurationInSeconds: 42 // set the portion of captuging (from its end) that will be uploaded. Works only with DOM recording ON
 };
 ```
 
@@ -350,10 +352,10 @@ async function share() {
     /* 
         The jam.share() method accepts argument of type:
         { 
-            workspaceId: string, // The unique ID of your workspace
-            submittedBy: string, // Free-form text
-            password: string     // Min 8 characters, contain lowercase and uppercase letters, and contain a number.
-        }
+            workspaceId: string,                // The unique ID of your workspace
+            submittedBy: string,                // Free-form text
+            password: string,                   // Min 8 characters, contain lowercase and uppercase letters, and contain a number.
+            sessionDurationInSeconds: number    // (with OM recording only) Crops a portion of the capturing (from its end) and uploads only that part.
     */
     jamShareUrl = await jam.share(); // When the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection.
     jamShareUrlDiv.innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '" target="_blank">'+ jamShareUrl +'</a>';
