@@ -26,9 +26,9 @@ When capturing and sharing Fiddler Jam logs, consider the availability of the fo
 
     ![Fiddler Jam screenshot and video warning](./images/ext/ext-images/extension-start-capturing-warning.png)
 
-- When a Jam logs contains video recording in **pixel-perfect** format it will be upload in its whole.
+- When a Jam log contains a video recording in **pixel-perfect** format, it will be uploaded in its whole.
 
-- When a Jam logs contains video recording in **DOM** format the user (that uses the Jam extension) can decide which part of the video recording to upload by [submitting a portion of the recording]({%slug fj-link-options%}#submitting-specific-duration).
+- When a Jam log contains a video recording in **DOM** format, the user (that uses the Jam extension) can decide which part of the video recording to upload by [submitting a portion of the recording]({%slug fj-link-options%}#submitting-specific-duration).
 
 - The Fiddler Jam Chrome Extension captures the content of the Chrome tab in which the capturing was initialized, of all the tabs and windows opened from that particular tab, and all tabs and windows opened from them.
 
