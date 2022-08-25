@@ -22,6 +22,8 @@ Use the **Submit specific duration** option and set the portion (in hours/minute
 
 ![Submitting video portion](../images/ext/ext-images/extension-link-options-video-duration.png)
 
+>tip When a pixel-perfect video recording is created, Fiddler Jam will always submit the whole length of the video recording. This is one of the differences between [pixel-perfect and DOM video recording formats]({%slug fj-capture-options%}#pixel-perfect-and-dom-formats).
+
 ## Sharing the Generated Link
 
 Use the **Share as Link** option to generate a link that can be shared with [registered Fiddler Jam Portal users]({%slug fj-users%}#portal-users) and is not accessible to anonymous users (not public). After using the **Share as Link** option, the captured log (alongside all active capturing options like screenshots, video recordings, console logs, etc.) is uploaded to the Fiddler Jam cloud space. 

@@ -353,11 +353,18 @@ async function share() {
         The jam.share() method accepts an argument of type:
         { 
             workspaceId: string,                // The unique ID of your workspace
-            submittedBy: string,                // Free-form text
+            submittedBy: string,                // Free-form text 
             password: string,                   // Min 8 characters, contain lowercase and uppercase letters, and contain a number.
             sessionDurationInSeconds: number    // (with DOM recording only) Crops a portion of the capturing (from its end) and uploads only that part.
     */
-    jamShareUrl = await jam.share(); // When the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection.
+
+    /*  Example for shareOptions for workspace with ID 0d96e1b7-f94e-4fb1-9bbc-de674119ebcf. 
+        Note that you need to pass your unique workspace ID to be able to access the shared log. 
+        In the below options (and if DOM recording is enabled), only the last 16 seconds of the captured log will be submitted (as set through sessionDurationInSeconds).
+    */
+    let shareOptions = {workspaceId:"0d96e1b7-f94e-4fb1-9bbc-de674119ebcf", submittedBy: "site-admin", password: "Qw123456", sessionDurationInSeconds: 16};
+
+    jamShareUrl = await jam.share(shareOptions); // If the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection. 
     jamShareUrlDiv.innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '" target="_blank">'+ jamShareUrl +'</a>';
 
     await navigator.clipboard.writeText(jamShareUrl);
