@@ -9,7 +9,7 @@ previous_url: /extension/capture-options, /get-started/capture-options
 
 # Capturing Options
 
-The Fiddler Jam Chrome Extension provides many configurable settings for capturing logs, which enable you to modify the recorded output. Some of these advanced capturing options are enabled or disabled by default. The capture options add tremendous flexibility to your log creation by providing you the power to choose what content should be available in the final output. The options are available on the extension start page and are organized as follows:
+The Fiddler Jam Chrome Extension provides many configurable settings for capturing logs, which enable you to modify the recorded output. Some of these advanced capturing options are enabled or disabled by default. The capture options add tremendous flexibility to your log creation by providing you the power to choose what content should be available in the final output. The options are available on the extension start page and are structured as follows:
 
 - [Clear cookies, cache, and storage on start](#clear-cookies-cache-and-storage-on-start)
 - [Reload page on start](#reload-page-on-start)
@@ -56,7 +56,7 @@ Fiddler Jam supports two conceptually different video recording formats known as
 
 The submitted videos are accessible for Fiddler Jam Portal users only. A recorded log, exported as a HAR file or opened directly in [Fiddler Everywhere](https://www.telerik.com/download/fiddler-everywhere), won't contain the video recording. By default, the **Capture video** option is enabled.
 
-The video recordings may contain and display sensitive input data, for example, data entered in forms, fields, and so on. Be careful when submitting sensitive data such as credit card information and passwords, and make sure you share them with trusted parties only. 
+The video recordings may contain and display sensitive input data, for example, data entered in forms, fields, etc. Be careful when submitting sensitive data such as credit card information and passwords, and make sure you share them with trusted parties only. Users can upload only a porting of the captured video when [using the DOM video format](#using-dom-video).
 
 By design, the Jam extension will try to recognize and **mask sensitive data** in the output video recording. If your sensitive payment data is not automatically hidden in the output video, please use the [**Report Issue** portal functionality]({%slug fj-report-issue%}) to report the case to the core Fiddler team.
 
