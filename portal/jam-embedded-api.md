@@ -48,7 +48,7 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
 
 >important The Fiddler Jam API key is unique per organization and grants access to your organizational workspaces.
 
-* Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js. By default, the `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN. 
+* Create a `service-worker.js` file and import the service worker script from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js. The `service-worker.js` file must be on the same level as the HTML page containing the `fiddler-jam-embedded.js` CDN script. You can change the default path of the worker file through the `InitOptions` object and its `serviceWorkerPath` property. Below is an example of importing the service worker from the Fiddler CDN. 
     
 ```JavaScript
 self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`); // minified script for production
@@ -78,9 +78,9 @@ The Fiddler Jam Embedded object provides the following methods:
 | ---------------     |  ---------- | ------------  | -----------                                       |
 | `init(options: InitOptions)`| `InitOptions` is an object of type `{ apiKey: string, serviceWorkerPath:string }` | Initialize the Fiddler Jam Embedded process with an unique API key through the `apiKey` argument. The `serviceWorkerPath` is not a mandatory argument and if omitted will default to `./service-worker.js`. |
 | `start(options: StartOptions)` |  `StartOptions` is an object of type `{ captureScreenshots: boolean,  captureConsole: boolean,  captureStorage: boolean, captureVideo: boolean, videoFormat: string; openNewTab: boolean, reloadPage: boolean, maskSensitiveData: boolean, maskSelector: string }` | An asynchronous method that starts the capturing with the explicitly activated start options. |
-| `startVideoCapturing()` |  n/a |  An asynchronous method that explicitly ask for user permission to start video recording (pixel-peffect video only) |
+| `startVideoCapturing()` |  n/a |  An asynchronous method that explicitly ask for user permission to start video recording (pixel-perfect video only) |
 | `stop()` | n/a | An asynchronous method that stops the capturing and sets the state property to `"stopped"`. |
-| `share(options: ShareOptions)` |  `ShareOptions` is an object of type `{ workspaceId: string, submittedBy: string, password: string, sessionDurationInSeconds: number }` | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional and if omitted, the log will be automatically uploaded to the default organizational workspace. |
+| `share(options: ShareOptions)` |  `ShareOptions` is an object of type `{ workspaceId: string, submittedBy: string, password: string, sessionDurationInSeconds: number }` | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional, and if omitted, the log will be automatically uploaded to the default organizational workspace. |
 | `reset()` |  n/a | Stops and completely resets the capturing, its state, and its properties. |
 | `addErrorEventListener(handler)` |  `ErrorEventHandler` of type `(error => void)` | An event listener to detect errors during the capturing processes. |
 | `addStateChangedEventListener(handler)` |  `StateChangedEventHandler` of type `(state) => void)` | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
@@ -99,9 +99,9 @@ let startOptions =  {
     captureStorage: true, // adds or removes local storage information
     captureVideo: true, // enables or disable video recording
     videoFormat: "dom", // sets the video recording to "dom" or "pixel-perfect" video formats
-    openNewTab: false, // when set to true will explcitly start the log recording in a new browser tab
-    reloadPage: false, // when set to true will explicitly reload the page prior to the klog recording start
-    maskSensitiveData: true, // enalbes or disables sensitive data masking in video recording (DOM format only)
+    openNewTab: false, // when set to true will explicitly start the log recording in a new browser tab
+    reloadPage: false, // when set to true will explicitly reload the page prior to the log recording start
+    maskSensitiveData: true, // enables or disables sensitive data masking in video recording (DOM format only)
     maskSelector: null // accepts comma-separated list of selectors for masking (for example: ".my-class, #custom-id")
 };
 ```
@@ -109,7 +109,7 @@ let startOptions =  {
 All settings are optional, with default values shown in the example above. The following rules apply:
 
 - The `captureVideo` enables or disables video capturing with the default format "pixel-perfect". Use `videoFormat` to explicitly change the format to "dom".
-- When "pixel-perfect" is selected as video recording format, the capture video is uploaded in its entity. When "dom" is selected as video recording format, you have the option to submit only a portion of the video through using the `sessionDurationInSeconds` from the 'ShareOptions' object.
+- When "pixel-perfect" is selected as video recording format, the captured video is uploaded in its entity. When "dom" is selected as the video recording format, you can submit only a portion of the video using the `sessionDurationInSeconds` from the 'ShareOptions' object.
 - When `maskSensitiveData` is enabled, but the `maskSelector` is omitted, the masking will use a built-in list of selectors commonly used in payment and transaction forms.
 - When custom selectors are added through the `maskSelector` string property, the built-in list of selectors will be dismissed.
 
@@ -120,10 +120,10 @@ The `share` method accepts an optional argument of the `ShareOptions` object typ
 
 ```JavaScript
 let shareOptions = {
-    workspaceId: "<the-unique-workspace-id>",
-    submittedBy: "niliev-page-admin",
-    password: "custom-password-here",
-    sessionDurationInSeconds: 42 // set the portion of captuging (from its end) that will be uploaded. Works only with DOM recording ON
+    workspaceId: "<unique-workspace-id>",
+    submittedBy: "<username>",
+    password: "<custom-password-here>",
+    sessionDurationInSeconds: 42 // set a portion of capturing (from its end) that will be uploaded. Works only with DOM video recording ON.
 };
 ```
 
@@ -142,7 +142,7 @@ Alternatively, you can use the `share` method without the optional `ShareOptions
 
 Apart from the HTTPS capturing, a Fiddler Jam log might contain a video recording when the `captureVideo` option is set to `true`. By default, the recorded video will be of DOM type. Still, you can control the type of the video recording by explicitly setting the `videoFormat` option to one of the following string values:
 
-- **"dom":** The DOM video recording is supported on all major browsers (Chrome, Edge, Safari, Firefox, Brave, etc.) and produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method). The user can choose and submit only a portion of the captured log (through the `sessionDurationInSeconds`) so that you won't have to submit lengthy videos to your workspace or to protect sensitive data.
+- **"dom":** The DOM video recording is supported on all major browsers (Chrome, Edge, Safari, Firefox, Brave, etc.) and produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method). When DOM video recording is enabled, the user can choose and submit only a portion of the captured log ([through the `sessionDurationInSeconds`](#shareoptions-specifics)) so that you won't have to submit lengthy videos to your workspace or to protect sensitive data.
 
 - **"pixel-perfect"**: The pixel-perfect video uses native recording options but is currently supported only on Chromium-based browsers (Chrome, Edge, Brave, Vivaldi). It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups).
 
@@ -151,7 +151,7 @@ Apart from the HTTPS capturing, a Fiddler Jam log might contain a video recordin
 
 The DOM video recording supports automatic masking of sensitive data through the `maskingSensitiveData` boolean property and the `maskSelector` string property. By default, the sensitive data masking is enabled (even if the `maskingSensitiveData` is omitted) and uses a built-in list of selectors commonly used in payment forms. To overwrite the built-in selectors, you can use the `maskSelector` string property and provide a comma-separated list of selectors.
 
-Example usage of `maskSelector` with custom list of selectors
+Example usage of `maskSelector` with a custom list of selectors
 
 ```javascript
 maskSensitiveData: true,
@@ -259,7 +259,7 @@ self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-wo
     Note that you must replace `<API_KEY>` with your actual Fiddler Jam Embedded API key.
 
 ```JavaScript
-// The Fiddler Jam Embedded object attached to the DOM window object through _fiddlerJamEmbedded.
+// The Fiddler Jam Embedded object is attached to the DOM window object through _fiddlerJamEmbedded.
 const jam = window['_fiddlerJamEmbedded'];
 
 // Setting the default capture options
@@ -333,7 +333,7 @@ async function start() {
 }
 
 // Starts pixel-perfect video recording (async method)
-// Use this method only when explicit permissoin is required to start video recording (for example, the user denied permission after calling start())
+// Use this method only when explicit permission is required to start video recording (for example, the user denied permission after calling start())
 async function startVideo() {
     await jam.startVideoCapturing();
 
@@ -350,12 +350,12 @@ async function stop() {
 // Generates and uploads a Fiddler Jam log share URL (async method).
 async function share() {
     /* 
-        The jam.share() method accepts argument of type:
+        The jam.share() method accepts an argument of type:
         { 
             workspaceId: string,                // The unique ID of your workspace
             submittedBy: string,                // Free-form text
             password: string,                   // Min 8 characters, contain lowercase and uppercase letters, and contain a number.
-            sessionDurationInSeconds: number    // (with OM recording only) Crops a portion of the capturing (from its end) and uploads only that part.
+            sessionDurationInSeconds: number    // (with DOM recording only) Crops a portion of the capturing (from its end) and uploads only that part.
     */
     jamShareUrl = await jam.share(); // When the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection.
     jamShareUrlDiv.innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '" target="_blank">'+ jamShareUrl +'</a>';
@@ -398,7 +398,7 @@ function updateUI(newState) {
             shareButton.disabled = false;
             resetButton.disabled = false;
             captureInfoDiv.innerHTML = 'Capturing Stopped! (jam.state = ' + newState + ').<br/>'
-                                    +'Use "Share" to upload the log and generating share URL.<br/>'
+                                    +'Use "Share" to upload the log and generate share URL.<br/>'
                                     +'Use "Reset Capture" to clean and prepare Jam Embedded for new capture';
             lastErrorDiv.innerHTML = '';
             lastErrorInfoDiv.innerHTML = '';
@@ -499,11 +499,11 @@ If you want to regenerate the key, please get in touch with us at [support@getfi
 
 While incorporating your own Fiddler Jam Embedded tool into your website, note that some specifics are related to different browsers and the core Fiddler Jam Embedded functionalities.
 
-* A generated Fiddler Jam Log contains captured HTTP/HTTPS traffic, and (depending on the pre-set `StartOptions`) screenshots, storage information, video recording, and development console logs. Consider informing your end-users about the possibility of revealing sensitive data when a log is shared.
+* A generated Fiddler Jam Log contains captured HTTP/HTTPS traffic and (depending on the pre-set `StartOptions`) screenshots, storage information, video recording, and development console logs. Consider informing end-users about the possibility of revealing sensitive data when a log is shared.
 
 * You can **record a DOM video** while setting  `captureVideo: true` and `videoFormat: 'dom'` (default values). The DOM video recording is not pixel-perfect, and does not contain recordings from iframes. This method for video recording **does not require explicit confirmation** from the user.
 
-* DOM video recordings are supported on Firefox, Safari, and on all Chromium-based browsers. 
+* DOM video recordings are supported on Firefox, Safari, and all Chromium-based browsers. 
 
 * The DOM video recording starts without explicit permission from the end-user, so consider warning your users about the possibility of revealing sensitive data.
 
