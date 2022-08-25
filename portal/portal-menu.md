@@ -61,7 +61,7 @@ To subscribe or unsubscribe from participating in the sharing of usage statistic
 
 #### Legal
 
-The options provide quick links to the following legal documents:
+The option provides quick links to the following legal documents:
 
 - [Terms of Services (also known as end-user license agreement)](https://www.telerik.com/purchase/license-agreement/fiddler-jam)
 - [Privacy Policy](https://www.progress.com/legal/privacy-policy)
@@ -71,7 +71,7 @@ The options provide quick links to the following legal documents:
 
 #### Integrations
 
-The option provide quick login links for the [third-party tracking solution systems]({%slug fj-integrations%}).
+The option provides quick login links for the [third-party tracking solution systems]({%slug fj-integrations%}).
 
 
 ### My Resources
