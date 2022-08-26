@@ -151,12 +151,12 @@ The Fiddler Jam Embedded object provides the following methods:
 | `addStateChangedEventListener(handler)` |  `StateChangedEventHandler` of type `(state) => void)` | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
 
 
-### InitOption Specifics
+### InitOptions Specifics
 
 Use the `InitOptions` to specify the required initialization options, such as the unique API key, to change the default path where the service worker file resides, and to enable/disable the usage of the default layout.
 
 ```JavaScript
-let initOption = {
+let initOptions = {
     /* 
         (optional) Use only when embedding the default layout provided by the library. 
         Whem ommited, the user must provide custom UI corresponding the API functionalities.
