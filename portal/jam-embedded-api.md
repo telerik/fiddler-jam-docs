@@ -1,16 +1,16 @@
 ---
 title: Jam Embedded API
-description: "Learn how to use the Fiddler Jam API to embed the Fiddler Jam log service into your webpage."
+description: "Learn how to use the Fiddler Jam Embedded API to embed the Fiddler Jam log HTTPS capturing, video recording, and other services into your webpage."
 slug: fj-embed-api
-publish: false
+publish: true
 position: 56
 ---
 
 # Fiddler Jam Embedded
 
-Fiddler Jam Embedded is a JavaScript library that provides an API to integrate the capture and share functionalities into your page while using your UI. 
+Fiddler Jam Embedded is a JavaScript library that provides an API to implement and embed the HTTPS capturing, video recording, and all other Jam extension functionalities on your page. The tool can be integrated while [using custom UI](#integrate-jam-embedded-with-custom-ui) or the [default layout](#integrate-jam-embedded-with-the-default-layout) as provided by the tool. 
 
-## Integrate Fiddler Jam into Your App
+## Integrate Jam Embedded with custom UI
 
 Follow the steps below to include and use the Fiddler Jam Embedded library in your webpage:
 
@@ -36,13 +36,16 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
                 jamEmbeddedScript.addEventListener('load', () => {
                     const jam = window['_fiddlerJamEmbedded'];
                     jam.init({
-                        apiKey: 'API_KEY'
+                        apiKey: '<API_KEY>'
                     });
 
-                    // Custom implementation follows here
+                    /* Custom Fiddler Jam Embedded implementation follows here... */
                 });
             </script>
         </head>
+        <body>
+            <!-- Create a custom user interface for Fiddler Jam Embedded -->
+        <body>
     </html>        
 ```
 
@@ -54,6 +57,67 @@ Follow the steps below to include and use the Fiddler Jam Embedded library in yo
 self.importScripts(`https://downloads.getfiddler.com/jam-embedded/fje-service-worker.js`); // minified script for production
 ```
 
+>tip Instead of coding your own user interface, you can directly use [the Fiddler Jam Embedded API default layout](#integrate-jam-embedded-with-the-default-layout). The default layout provides a pre-built minimalistic user interface ready for embedding into your websites.
+
+
+## Integrate Jam Embedded with the Default Layout
+
+Fiddler Jam Embedded provides an option to directly use the tool's default layout and skip the creation of a custom user interface. Follow the steps below to use the Fiddler Jam Embedded in your page through the default layout:
+
+* Obtain your unique Fiddler Jam Embedded API key. [Learn more on how to generate your Fiddler Jam API key here...](#generating-api-key)
+
+* Import the Fiddler Jam API script into your HTML page from the following CDN link: https://downloads.getfiddler.com/jam-embedded/fiddler-jam-embedded.js.
+
+* Initialize the Fiddler Jam Embedded object with your Fiddler Jam API key. The Fiddler Jam Embedded object is attached to the [`window`](https://www.w3schools.com/jsref/obj_window.asp) object of the page as a property called `_fiddlerJamEmbedded`. Use the `load` event of the Fiddler Jam Embedded object to initialize the Jam API and to add your custom implementation.
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1'>
+        <title>Fiddler Jam Embedded</title>
+
+        <script src="https://downloads.getfiddler.be/jam-embedded/fiddler-jam-embedded.js" 
+                id="jamEmbeddedScript"
+                crossorigin="anonymous" async></script>
+        <script>
+            const jam = window._fiddlerJamEmbedded;
+            jam.init({
+                apiKey: '<API_KEY>',
+                defaultLayout: {
+                    enabled: true,
+                    containerId: 'fje-container' /* (optional, the 'fje-container' value is set by default) */
+
+                    /* startOptions are optional, when omitted will default to the following values */
+                    // startOptions: {
+                    //   captureConsole: true,
+                    //   captureStorage: true,
+                    //   captureVideo: true,
+                    //   videoFormat: 'dom',
+                    //   openNewTab: false,
+                    //   reloadPage: false,
+                    //   maskSensitiveData: true,
+                    //   maskSelector: ''
+                    // }, 
+
+                    /* shareOptions optional, when omitted will default to the following values */
+                    // shareOptions: {
+                    //     workspaceId: "", // Uploads to default workspace (as no workspace ID is explicitly provided).
+                    //     submittedBy: "",
+                    //     password: "",
+                    //     sessionDurationInSeconds: null // Null by default and will upload the whole DOM capturing.
+                    // } 
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="fje-container"></div> <!-- Use this container to load the Jam Embedded default layout -->
+    </body>
+</html>
+```
 
 ## Fiddler Jam API
 
@@ -76,11 +140,11 @@ The Fiddler Jam Embedded object provides the following methods:
 
 | Method Name       |   Accepted Arguments   | Description    |
 | ---------------     |  ---------- | ------------  | -----------                                       |
-| `init(options: InitOptions)`| `InitOptions` is an object of type `{ apiKey: string, serviceWorkerPath:string }` | Initialize the Fiddler Jam Embedded process with an unique API key through the `apiKey` argument. The `serviceWorkerPath` is not a mandatory argument and if omitted will default to `./service-worker.js`. |
+| `init(options: InitOptions)`| `InitOptions` is an object of type `{ defaultLayout: DefaultLayout, apiKey: string, serviceWorkerPath:string }` | Initialize the Fiddler Jam Embedded process with an unique API key through the `apiKey` argument. The `serviceWorkerPath` is not a mandatory argument and, if omitted, will default to `./service-worker.js`. |
 | `start(options: StartOptions)` |  `StartOptions` is an object of type `{ captureScreenshots: boolean,  captureConsole: boolean,  captureStorage: boolean, captureVideo: boolean, videoFormat: string; openNewTab: boolean, reloadPage: boolean, maskSensitiveData: boolean, maskSelector: string }` | An asynchronous method that starts the capturing with the explicitly activated start options. |
 | `startVideoCapturing()` |  n/a |  An asynchronous method that explicitly ask for user permission to start video recording (pixel-perfect video only) |
 | `stop()` | n/a | An asynchronous method that stops the capturing and sets the state property to `"stopped"`. |
-| `share(options: ShareOptions)` |  `ShareOptions` is an object of type `{ workspaceId: string, submittedBy: string, password: string, sessionDurationInSeconds: number }` | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional, and if omitted, the log will be automatically uploaded to the default organizational workspace. |
+| `share(options: ShareOptions)` |  `ShareOptions` is an object of type `{ workspaceId: string, submittedBy: string, password: string, sessionDurationInSeconds: number }` | An asynchronous method that returns a string with the generated Fiddler Jam Log share URL. The `ShareOptions` argument is optional; if omitted, the log automatically uploads to the default organizational workspace. |
 | `reset()` |  n/a | Stops and completely resets the capturing, its state, and its properties. |
 | `addErrorEventListener(handler)` |  `ErrorEventHandler` of type `(error => void)` | An event listener to detect errors during the capturing processes. |
 | `addStateChangedEventListener(handler)` |  `StateChangedEventHandler` of type `(state) => void)` | An event listener to detect changes in the `state` property of the Fiddler Jam Embedded object. |
@@ -138,18 +202,46 @@ The shared log will be encrypted if a password is set. The password requires you
 Alternatively, you can use the `share` method without the optional `ShareOptions` argument. In that case, the log won't be encrypted and will be uploaded to the default organizational workspace.
 
 
+### DefaultLayout Object Specifics
+
+The `DefaultLayout`
+
+```JavaScript
+let defaultLayoutObj =  {
+        enabled: true,
+        containerId: 'fje-container', /* (optional, the value 'fje-container' is set by default) */
+        startOptions: {
+          captureConsole: true,
+          captureStorage: true,
+          captureVideo: true,
+          videoFormat: 'dom',
+          openNewTab: false,
+          reloadPage: false,
+          maskSensitiveData: true,
+          maskSelector: ''
+        },
+        shareOptions: {
+            workspaceId: "",
+            submittedBy: "",
+            password: "",
+            sessionDurationInSeconds: null // In case no numerical value is passed (or the key is entirely omitted), the whole DOM recording uploads.
+        }
+    }
+```
+
+
 ### DOM versus Pixel-Perfect Video Recording
 
 Apart from the HTTPS capturing, a Fiddler Jam log might contain a video recording when the `captureVideo` option is set to `true`. By default, the recorded video will be of DOM type. Still, you can control the type of the video recording by explicitly setting the `videoFormat` option to one of the following string values:
 
 - **"dom":** The DOM video recording is supported on all major browsers (Chrome, Edge, Safari, Firefox, Brave, etc.) and produces a video that records all user activity except one from iframes. The main benefits of this recording type are the excellent browser compatibility, it supports masking sensitive data, and it doesn't require explicit permission from the user (the video recording starts immediately after calling the start() method). When DOM video recording is enabled, the user can choose and submit only a portion of the captured log ([through the `sessionDurationInSeconds`](#shareoptions-specifics)) so that you won't have to submit lengthy videos to your workspace or to protect sensitive data.
 
-- **"pixel-perfect"**: The pixel-perfect video uses native recording options but is currently supported only on Chromium-based browsers (Chrome, Edge, Brave, Vivaldi). It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record video from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups).
+- **"pixel-perfect"**: The pixel-perfect video uses native recording options but is currently supported only on Chromium-based browsers (Chrome, Edge, Brave, Vivaldi). It produces a video that records all user activities and can be set to record different tabs, the whole screen, etc. It will also record videos from nested iframes. The pixel-perfect recording requires explicit permission from the end-user (through a series of native popups).
 
 
 ### Masking Sensitive Data
 
-The DOM video recording supports automatic masking of sensitive data through the `maskingSensitiveData` boolean property and the `maskSelector` string property. By default, the sensitive data masking is enabled (even if the `maskingSensitiveData` is omitted) and uses a built-in list of selectors commonly used in payment forms. To overwrite the built-in selectors, you can use the `maskSelector` string property and provide a comma-separated list of selectors.
+The DOM video recording supports the automatic masking of sensitive data through the `maskingSensitiveData` boolean property and the `maskSelector` string property. By default, the sensitive data masking is enabled (even if the `maskingSensitiveData` is omitted) and uses a built-in list of selectors commonly used in payment forms. To overwrite the built-in selectors, you can use the `maskSelector` string property and provide a comma-separated list of selectors.
 
 Example usage of `maskSelector` with a custom list of selectors
 
@@ -317,7 +409,7 @@ jam.addErrorEventListener((e) => {
 
 // Initialization of the Jam Embedded process. The serviceWorkerPath can be used to set alternative worker path.
 jam.init({
-    apiKey: '<API_KEY>',
+    apiKey: '<API-KEY>',
     serviceWorkerPath: 'service-worker.js',
 });
 
@@ -359,10 +451,10 @@ async function share() {
     */
 
     /*  Example for shareOptions for workspace with ID 0d96e1b7-f94e-4fb1-9bbc-de674119ebcf. 
-        Note that you need to pass your unique workspace ID to be able to access the shared log. 
+        Note that you need to pass your unique workspace ID to access the shared log. 
         In the below options (and if DOM recording is enabled), only the last 16 seconds of the captured log will be submitted (as set through sessionDurationInSeconds).
     */
-    let shareOptions = {workspaceId:"0d96e1b7-f94e-4fb1-9bbc-de674119ebcf", submittedBy: "site-admin", password: "Qw123456", sessionDurationInSeconds: 16};
+    let shareOptions = {workspaceId:"0d96e1b7-f94e-4fb1-9bbc-de674119ebcf", submittedBy: "site-admin", password: "Qw123456", sessionDurationInSeconds: null};
 
     jamShareUrl = await jam.share(shareOptions); // If the ShareOptions are omitted, the is uploaded to the default organization workspace without encryption protection. 
     jamShareUrlDiv.innerHTML = 'Share URL: ' +  '<a href="' + jamShareUrl + '" target="_blank">'+ jamShareUrl +'</a>';
@@ -405,7 +497,7 @@ function updateUI(newState) {
             shareButton.disabled = false;
             resetButton.disabled = false;
             captureInfoDiv.innerHTML = 'Capturing Stopped! (jam.state = ' + newState + ').<br/>'
-                                    +'Use "Share" to upload the log and generate share URL.<br/>'
+                                    +'Use "Share" to upload the log and generate the share URL.<br/>'
                                     +'Use "Reset Capture" to clean and prepare Jam Embedded for new capture';
             lastErrorDiv.innerHTML = '';
             lastErrorInfoDiv.innerHTML = '';
@@ -446,8 +538,8 @@ function initSettingsEvents() {
     });
 
     maskSelectorField.addEventListener('input', (args) => {
-        console.log("The video reocrding will mask the following selectors: " + e.target.value);
-        captureOptions.maskSelector = e.target.value;
+        console.log("The video reocrding will mask the following selectors: " + args.target.value);
+        captureOptions.maskSelector = args.target.value;
     });
 
     captureScreenshotsCheckbox.addEventListener('change', (args) => {
