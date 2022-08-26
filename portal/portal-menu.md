@@ -18,7 +18,7 @@ The Jam portal menu is located in the top-right corner of the page.
 
 ## Feedback
 
-**Feedback** displays options for collecting information from the users regarding the Fiddler Jam Portal experience such as its features, documentation, and so on. Leaving a comment with additional details is optional if your feedback is positive, and mandatory if your feedback is neutral or straightforward negative.
+**Feedback** displays options for collecting information from the users regarding the Fiddler Jam Portal experience, such as its features, documentation, etc. Leaving a comment with additional details is optional if your feedback is positive and mandatory if your feedback is neutral or straightforward negative.
 
 ![Feedback option](../images/portal/menu/menu-feedback.png)
 
@@ -30,7 +30,7 @@ All Fiddler Jam portal users can submit a support ticket through the **Contact S
 
 The **Report Issue** functionality allows you to send a detailed Fiddler Jam log with HTTPS capturing, screenshots of the user interactions, and video recording from a selected page within the Fiddler Jam portal. Use this option to report any issues, leave feedback, or suggest improvements related to the Fiddler Jam portal. The core team developers and support engineers review the submitted logs regularly. [Learn more about how to submit an issue here...]({%slug fj-report-issue%})
 
->tip Behind the scenes, the used technology is called **Fiddler Jam Embedded** and this option demonstrates how you can integrate Fiddler Jam logs directly into your website. 
+>tip Behind the scenes, the used technology is called **Fiddler Jam Embedded**, and this option demonstrates how you can integrate Fiddler Jam logs directly into your website. 
 
 ![Report Issue](../images/portal/menu/menu-report-issue.png)
 
@@ -61,13 +61,17 @@ To subscribe or unsubscribe from participating in the sharing of usage statistic
 
 #### Legal
 
-The options provide quick links to the following legal documents:
+The option provides quick links to the following legal documents:
 
 - [Terms of Services (also known as end-user license agreement)](https://www.telerik.com/purchase/license-agreement/fiddler-jam)
 - [Privacy Policy](https://www.progress.com/legal/privacy-policy)
 - **Third-Party services** opens a list of the third-party services used by Fiddler Jam.
 
 ![Legal links](../images/portal/menu/menu-legal.png)
+
+#### Integrations
+
+The option provides quick login links for the [third-party tracking solution systems]({%slug fj-integrations%}).
 
 
 ### My Resources
@@ -78,4 +82,4 @@ The options provide quick links to the following legal documents:
 
 ### Sign Out
 
-**Sign Out** allows you to log out of the currently logged user and navigate to an introduction page that provides options for creating a new user or for using another account.
+**Sign Out** allows you to log out of the currently logged user and navigate to an introduction page that provides options for creating a new user or using another account.

@@ -16,7 +16,7 @@ The access to the log details depends on the link generation options selected by
 * Links generated through the **Share with specific people** option are accessible only for the specified Fiddler Jam Portal users.
 * Links generated with the **password-protection** option are accessible for Fiddler Jam Portal users aware of the password.
 
-Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space. The Fiddler Jam Portal keeps any submitted logs in the storage for 31 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted.
+Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space. The Fiddler Jam Portal keeps any submitted logs in storage for 31 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted.
 
 In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}#user-role) with access rights can save, organize, analyze, and work with the provided records.
 
@@ -37,7 +37,7 @@ To enable a [Portal Viewer]({%slug fj-users%}#viewer-role) to open the submitted
 
 ## Options for Working with Logs
 
-Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provides the multiple possibilities for managing and using the log:
+Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provides multiple possibilities for managing and using the log:
 
 - [Investigating the captured data of the requests and responses](#inspecting-traffic)&mdash;The session data includes the headers and bodies of each HTTP or HTTPS Request and response. With Fiddler Jam version 1.4.0 and above, you can also inspect WebSocket handshake and messages.
 
@@ -45,9 +45,7 @@ Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provide
 
 - [Inspecting the taken screenshots](#inspecting-browser-events)&mdash;When the Extension User explicitly enables the **Capture Screenshots** option, a new screenshot is added for each user interaction on a clickable element (applicable for **click** and **double-click** events only).
 
-- [Inspecting the screen recording](#inspecting-video-recordings)&mdash;When the Extension User explicitly enables the **Capture video** option, the whole capturing process is output in the **Screen Recording** tab.
-
-- [Analyzing the developer console logs](#inspecting-console-logs), which is available when the Extension User has selected the **Capture console** option.
+- [Inspecting the video recording](#inspecting-video-recordings)&mdash;When the Extension User explicitly enables the **Capture video** option, the whole capturing process is output in the **Screen Recording** tab.
 
 - [Analyzing the developer console logs](#inspecting-console-logs), which is available when the Extension User has selected the **Capture console** option.
 
@@ -59,15 +57,15 @@ Once a submitted log gets uploaded to the Fiddler Jam Portal, the Portal provide
 
 - [Adding submitted logs to desired organizational workspaces]({%slug fj-workspaces%}#Aadd-submitted-log-to-workspace).
 
-The capture options of the Fiddler Jam Chrome Extension also provide features for you to mask sensitive data, such as cookies and post-data, and disable the browser cache.
+The Fiddler Jam Chrome Extension capture options also provide features for you to mask sensitive data, such as cookies and post-data, and disable the browser cache.
 
 ## Available Tabs and Inspectors
 
-To debug and investigate in detail any reported issue, you can use the Fiddler Jam Portal tabs and inspectors.
+To debug and investigate any reported issue, you can use the Fiddler Jam Portal tabs and inspectors.
 
 Each log contains a list of entries containing different recorded information such as HTTP or HTTPS sessions, WebSocket sessions, console logs, screenshots, browser events, etc.
 
-The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and **Captured Logs** primary tabs on the left, and **Screen Recording** and **Inspectors** primary tabs on the right.
+The **Log** page in the Fiddler Jam Portal displays the **Storage Details** and **Captured Logs** primary tabs on the left and **Screen Recording** and **Inspectors** primary tabs on the right.
 
 - **Storage Details** contains lists of the entries stored in the **Local Storage** and the **Session Storage**. The tab renders data only when the Extension User has explicitly used the **Capture storage info** from the [**Advanced options**]({%slug fj-capture-options%}).
 
@@ -158,6 +156,8 @@ Note that the Jam extension will try to detect and mask any sensitive data relat
 ![Example for masked video output](../images/portal/masking/video-mask-example.png)
 
 
+>tip Fiddler Jam extension users can choose to record native **pixel-perfect** videos or **DOM** videos. [Learn more about the two formats and the possibilities they provide here...]({%slug fj-capture-options%}#pixel-perfect-and-dom-formats)
+
 ### Inspecting Storage Details
 
 The **Storage Details** tab displays the **Local Storage** and **Session Storage** data.
@@ -168,7 +168,7 @@ The following example demonstrates captured storage data.
 
 ## User Interface of the Log Dashboard
 
-The Fiddler Jam portal user interface provides options to observe the recorded data the user-defined log details such as log title and description. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension. Through the user interface, you can optimize your inspection and debug processes (through filters, conceptual inspectors, a video tab, export options, mocking options) and optimize your support story.
+The Fiddler Jam portal user interface provides options to observe the recorded data and the user-defined log details such as log title and description. Every log also contains an immutable [**Details**](#details) tab, storing technical and environmental data extracted from the Extension. You can optimize your inspection and debug processes (through the user interface (filters, conceptual inspectors, a video tab, export options, mocking options) and optimize your support story.
 
 
 ### Details
@@ -225,6 +225,6 @@ The standalone Fiddler Everywhere application can load Fiddler Jam logs for furt
 
     ![Edit log details](../images/portal/logs/fj-portal-log-edit-details.png)
 
-- **Delete**&mdash;Permanently deletes the opened log from all workspaces. It is important to note that the deletion will remove the log for the extensions's **My Captures** section and **any** Fiddler Jam portal workspace where the log was added. The deletion is permanent and irreversible.
+- **Delete**&mdash;Permanently deletes the opened log from all workspaces. It is important to note that the deletion will remove the log for the extensions' **My Captures** section and **any** Fiddler Jam portal workspace where the log was added. The deletion is permanent and irreversible.
 
-- **View Workspace**&mdash;Fast link to the current workspace. When the opened logs are not yet added to the workspace, the option will be replaced by **Add to Workspace** button.
+- **View Workspace**&mdash;Fast link to the current workspace. When the opened logs are not yet added to the workspace, the option will be replaced by the **Add to Workspace** button.

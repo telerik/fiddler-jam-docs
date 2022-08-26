@@ -1,31 +1,43 @@
 ---
-title: Log Sharing Options
-description: "Learn how to share the Chrome Extension recorded logs with a generated link or with specific Fiddler Jam portal users, and use optional password protection."
+title: Log Submit Options
+description: "Learn how to share the Chrome Extension recorded logs with a generated link or specific Fiddler Jam portal users, and use optional password protection."
 slug: fj-link-options
 publish: true
 position: 50
 previous_url: /extension/link-options, /get-started/link-options
 ---
 
-# Log Sharing Options
+# Log Submit Options
 
-The Fiddler Jam Chrome Extension enables you to submit the recorded logs either by sharing the generated link for that log, by sharing the log with specific people. or by directly uploading the recorded log to a workspace (available only for authenticated users).
+The Fiddler Jam Chrome Extension enables you to submit the recorded logs either by sharing the generated link for that log, by sharing the log with specific people, or by directly uploading the recorded log to a workspace (available only for authenticated users). All alternatives allow you to provide additional security by setting a password.
 
-All alternatives allow you to provide additional security through setting a password.
+When creating a log containing DOM video recording, you can also choose to upload only a specific video portion.
+
+
+## Submitting Specific Duration
+
+When recording a video in [DOM format]({%slug fj-capture-options%}#pixel-perfect-and-dom-formats), Fiddler Jam provides the option to submit only a portion of the recorded log. This way, you can protect sensitive data (like entered personal data, passwords, etc.) and avoid lengthy videos being uploaded to your organizational workspace (which could take more time to upload and spend networking resources).
+
+Use the **Submit specific duration** option and set the portion (in hours/minutes/seconds) you would like to submit. The submitted log will contain the last part of the capturing (as set in the duration fields) and will crop the remaining recording.
+
+![Submitting video portion](../images/ext/ext-images/extension-link-options-video-duration.png)
+
+>tip When a pixel-perfect video recording is created, Fiddler Jam will always submit the whole length of the video recording. This is one of the differences between [pixel-perfect and DOM video recording formats]({%slug fj-capture-options%}#pixel-perfect-and-dom-formats).
 
 ## Sharing the Generated Link
 
-Link sharing allows [registered Fiddler Jam Portal users]({%slug fj-users%}#portal-users) with that link to open the recorded log.
+Use the **Share as Link** option to generate a link that can be shared with [registered Fiddler Jam Portal users]({%slug fj-users%}#portal-users) and is not accessible to anonymous users (not public). After using the **Share as Link** option, the captured log (alongside all active capturing options like screenshots, video recordings, console logs, etc.) is uploaded to the Fiddler Jam cloud space. 
 
-Additionally, you can protect the log with a password. Only Fiddler Jam Portal users who know the password will have access to the recorded information.
+Additionally, you can protect the log with a password. Only Fiddler Jam Portal users who know the password can access the recorded information.
 
 ![Link generation options](../images/ext/ext-images/extension-link-options.png)
 
 ## Sharing the Log with Specific People
 
-To share the recorded log with specific Fiddler Jam Portal users, you need to explicitly list their account emails. Only users from that email list will be able to open the recorded log.
 
-Additionally, you can protect the log with a password. Only the specified Fiddler Jam Portal users who know the password will have access to the recorded information.
+Use the **Sharing the Log with Specific People** option to share the recorded log with specific Fiddler Jam Portal users. Only [registered Fiddler Jam Portal users]({%slug fj-users%}#portal-users) from the particular email list will be able to open the recorded log. After using the **Sharing the Log with Specific People** option, the captured log (alongside all active capturing options like screenshots, video recordings, console logs, etc.) is uploaded to the Fiddler Jam cloud space.
+
+Additionally, you can protect the log with a password. Only the specified Fiddler Jam Portal users who know the password will access the recorded information.
 
 ![Share with specific people](../images/ext/ext-images/extension-link-options-sharing-via-emails.png)
 
@@ -39,7 +51,7 @@ The option **Upload to a workspace** is available only for authenticated users t
 
 ## Password Protection for Recorded Logs
 
-All recorded logs can be protected with a password, no matter if they are shared with a link , with specific users, or if they are directly uploaded to an organizational workspace.
+All recorded logs can be protected with a password, whether shared with a link, specific users or directly uploaded to a company workspace.
 
 To create a password for your recorded log, use the **Password protection** switch. The password requires you to consider that it has to:
 
