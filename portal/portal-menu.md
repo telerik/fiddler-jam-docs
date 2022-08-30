@@ -4,7 +4,7 @@ description: "Learn how to subscribe or unsubscribe from sharing your user stati
 slug: fj-portal-menu
 publish: true
 position: 90
-previous_url: portal/fiddler-jam-portal
+previous_url: /portal/fiddler-jam-portal
 ---
 
 # Fiddler Jam Portal Menu
