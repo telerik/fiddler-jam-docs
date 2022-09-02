@@ -84,34 +84,38 @@ Fiddler Jam Embedded provides an option to directly use the tool's default layou
                 id="jamEmbeddedScript"
                 crossorigin="anonymous" async></script>
         <script>
-            const jam = window._fiddlerJamEmbedded;
-            jam.init({
-                apiKey: '<API_KEY>',
-                defaultLayout: {
-                    enabled: true,
-                    containerId: 'fje-container' /* (optional, the 'fje-container' value is set by default) */
+            const jamEmbeddedScript = document.getElementById('jamEmbeddedScript');
+            jamEmbeddedScript.addEventListener('load', () => { 
+                const jam = window._fiddlerJamEmbedded;
+                jam.init({
+                    apiKey: '<API_KEY>',
+                    defaultLayout: {
+                        enabled: true,
+                        containerId: 'fje-container' /* (optional, the 'fje-container' value is set by default) */
 
-                    /* startOptions are optional, when omitted will default to the following values */
-                    // startOptions: {
-                    //   captureConsole: true,
-                    //   captureStorage: true,
-                    //   captureVideo: true,
-                    //   videoFormat: 'dom',
-                    //   openNewTab: false,
-                    //   reloadPage: false,
-                    //   maskSensitiveData: true,
-                    //   maskSelector: ''
-                    // }, 
+                        /* startOptions are optional, when omitted will default to the following values */
+                        // startOptions: {
+                        //   captureConsole: true,
+                        //   captureStorage: true,
+                        //   captureVideo: true,
+                        //   videoFormat: 'dom',
+                        //   openNewTab: false,
+                        //   reloadPage: false,
+                        //   maskSensitiveData: true,
+                        //   maskSelector: ''
+                        // }, 
 
-                    /* shareOptions optional, when omitted will default to the following values */
-                    // shareOptions: {
-                    //     workspaceId: "", // Uploads to default workspace (as no workspace ID is explicitly provided).
-                    //     submittedBy: "",
-                    //     password: "",
-                    //     sessionDurationInSeconds: null // Null by default and will upload the whole DOM capturing.
-                    // } 
-                }
+                        /* shareOptions optional, when omitted will default to the following values */
+                        // shareOptions: {
+                        //     workspaceId: "", // Uploads to default workspace (as no workspace ID is explicitly provided).
+                        //     submittedBy: "",
+                        //     password: "",
+                        //     sessionDurationInSeconds: null // Null by default and will upload the whole DOM capturing.
+                        // } 
+                    }
+                });
             });
+
         </script>
     </head>
     <body>
