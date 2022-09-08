@@ -18,7 +18,7 @@ The access to the log details depends on the link generation options selected by
 
 Once [an Extension User]({%slug fj-users%}#extension-users) submits recorded traffic, the log uploads to the Fiddler Jam Portal cloud space. The Fiddler Jam Portal keeps any submitted logs in storage for 31 days. After that period, if the log is not added to [a workspace]({%slug fj-workspaces%}), it will be automatically deleted.
 
-In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}#user-role) with access rights can save, organize, analyze, and work with the provided records.
+In the Fiddler Jam Portal, any [Portal User]({%slug fj-users%}) with access rights can save, organize, analyze, and work with the provided records.
 
 ## Opening Submitted Logs
 
@@ -28,12 +28,8 @@ Fiddler Jam protects the content of the submitted logs through the following rul
 
 - All logs are captured with applied masking for [any data Fiddler considers is sensitive]({%slug fj-security%}#masking-sensitive-data).
 - The submitted log can be opened only by Portal Users who meet the access rights requirements that the Extension User set through [the link generation options]({%slug fj-link-options%})).
-- The submitted log can be added to a workspace by Portal Users with the respective access rights. Any log that is not added to a workspace will be automatically deleted after 31 days. A warning note with the expiration counter appears on the top-right corner of each submitted log. [Learn how to preserve the submitted log for a longer period by adding it to a workspace...](#adding-and-sharing-the-log-in-the-workspace)
+- The submitted log can be added to a workspace by a Portal User. Any log that is not added to a workspace will be automatically deleted after 31 days. A warning note with the expiration counter appears on the top-right corner of each submitted log. [Learn how to preserve the submitted log for a longer period by adding it to a workspace...](#adding-and-sharing-the-log-in-the-workspace)
 
-To enable a [Portal Viewer]({%slug fj-users%}#viewer-role) to open the submitted log:
-
-1. The Extension User must set the appropriate access rights during the link generation.
-1. The Portal User must add the log to a workspace.
 
 ## Options for Working with Logs
 
