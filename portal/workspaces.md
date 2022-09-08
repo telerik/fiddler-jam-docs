@@ -10,7 +10,7 @@ position: 30
 
 The Fiddler Jam portal uses workspaces to save and organize the submitted logs.
 
-Through the workspaces, you can manage teams and permissions based on your organization or requirements. Only Portal [Users]({%slug fj-users%}#user-role) can create, edit, and delete a workspace, and add newly submitted logs to an existing workspace. Portal [Viewers]({%slug fj-users%}#viewer-role) can only access and review logs added to the account workspace.
+Through the workspaces, you can manage teams and permissions based on your organization or requirements. Only Portal [Users]({%slug fj-users%}) can create, edit, and delete a workspace, and add newly submitted logs to an existing workspace.
 
 Currently, Fiddler Jam doesn't provide options for Portal Users to create additional workspaces. To create multiple workspaces, [directly contact the Fiddler team](mailto:support@getfiddler.com).
 
