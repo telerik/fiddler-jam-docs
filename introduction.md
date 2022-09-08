@@ -62,7 +62,7 @@ The Fiddler Jam Portal options are available for registered users with active se
 
 ### User Roles and Access Rights
 
-The Fiddler Jam Portal provides a set of user roles, each with specific access rights&mdash;for example, anyone with the viewer role can access all logs added to the workspace of an organization while anyone with the user role can access, edit, remove, and share logs that are not necessarily part of any workspace. [Read more about the Fiddler Jam Portal roles...]({% slug fj-users %})  
+The Fiddler Jam Extensions and the Jam Portal provide a set of roles, each with specific access rights&mdash;for example, any portal user can access, edit, remove, and share logs submitted to the Jam portal, where the extension users can only create and share logs but don't have access to these logs in the Jam portal (unless they are also portal users). [Read more about the Fiddler Jam Portal roles...]({% slug fj-users %})  
 
 ### One-Click Integration with Fiddler Everywhere
 
