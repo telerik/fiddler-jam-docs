@@ -36,7 +36,7 @@ When a Portal User with access rights first opens the submitted link, it won't b
 
 A Portal User can add the submitted log to the workspace in the following way:
 
-1. Go to the **Add To Workspace** button in the top-right corner of the dashboard. Note that password-protected logs will require you to enter the log password before you execute the action.
+1. Go to the **Add To Workspace** button in the top-right corner of the portal. Note that password-protected logs will require you to enter the log password before you execute the action.
 
 1. Enter the following details:
 

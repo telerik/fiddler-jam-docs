@@ -12,7 +12,7 @@ The number of users who access the Fiddler Jam Portal depends on the active subs
 
 ## Account Owner
 
-The account owner is the user who purchased the Fiddler Jam license from [the Fiddler dashboard](https://dashboard.getfiddler.com/). From the dashboard, the Account Owner can manage the subscription seats, payment, and the assigning of the user seats.
+The account owner is the user who manages the Fiddler Jam license from the [unified Telerik system](https://www.telerik.com/account/). From the [Telerik's "Your Licenses" section](https://www.telerik.com/account/your-licenses), the account owner can manage the subscription seats, payment, and the assigning of the user seats.
 
 Each subscription plan, supports unlimited number of users. [Learn more about the subscription plan perks...](https://www.telerik.com/purchase/fiddler-jam)
 
@@ -42,7 +42,7 @@ The Fiddler Jam portal provides different access levels:
 
 Depending on the active Fiddler Jam [subscription plan]({%slug fj-portal-license%}), the Account Owner assigns a different number of seats with access to the company portals.
 
-A portal user can view and maintain submitted logs and workspace logs based on the Fiddler Jam account quota. The portal users have full access to the Fiddler Jam dashboard functionalities.
+A portal user can view and maintain submitted logs and workspace logs based on the Fiddler Jam account quota. The portal users have full access to the Fiddler Jam portal functionalities.
 
 The portal user seat comes with the following advantages:
 

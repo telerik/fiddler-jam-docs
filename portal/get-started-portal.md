@@ -42,7 +42,7 @@ Submitted logs will automatically expire after 31 days unless added to a workspa
 
 In this step, you'll add the submitted log to your default organization workspace. Note that to add new workspaces to your organization, you [need to contact the Fiddler Jam Support team]({% slug fj-workspaces %}#creating-and-renaming-workspaces).
 
-1. Go to the **Add to Workspace** button in the top-right corner of the dashboard.
+1. Go to the **Add to Workspace** button in the top-right corner of the portal.
 
 1. Enter the required information in the **Title**, **Submitted by**, and **Workspace** fields. Optionally, add some content in the **Description** field.
 
