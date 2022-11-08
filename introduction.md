@@ -58,7 +58,7 @@ The Fiddler Jam Portal options are available for registered users with active se
 
 * To subscribe to Fiddler Jam, refer to the [Fiddler Jam purchase page](https://www.telerik.com/purchase/fiddler-jam).
 
-* To activate licenses and seats, refer to the [Fiddler Jam dashboard site](https://dashboard.getfiddler.com).
+* To activate licenses and seats, refer to the [unified Telerik system](https://www.telerik.com/account/).
 
 ### User Roles and Access Rights
 
@@ -74,3 +74,8 @@ For more complex scenarios where engineers need to run an in-depth investigation
 * [Introducing Fiddler Jam (Video)](https://www.youtube.com/watch?v=l0x1eGW2AUY)
 * [Quickstart with the Fiddler Jam Chrome Extension (Step-by-Step Guide)]({% slug first_steps_extension %})
 * [Quickstart with the Fiddler Jam Portal (Step-by-Step Guide)]({% slug first_steps_portal %})
+- [Telerik Account Section Overview](https://www.telerik.com/account/)
+- [Telerik "Your Account" FAQ](https://www.telerik.com/account/faqs)
+- [Telerik "Your Licenses" Section](https://www.telerik.com/account/your-licenses)
+- [Telerik Purchasing & Licensing FAQs](https://www.telerik.com/purchase/faq/licensing-purchasing)
+- [Support Center](https://www.telerik.com/account/support-center)
